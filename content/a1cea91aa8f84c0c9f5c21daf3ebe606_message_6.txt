@@ -1,0 +1,303 @@
+--[[
+    DEOBFUSCATED CODE - NTT Obfuscator
+    Original: Obfuscated with NTT VM-based obfuscator
+    Deobfuscated by: Analysis tool
+    Date: 2026-02-04
+
+    NOTE: This is PARTIAL deobfuscation - only strings are decrypted.
+    The actual logic is still VM-bytecode encrypted.
+]]--
+
+-- DECRYPTED STRING TABLE
+-- These strings were XOR encrypted in the original
+
+local DECRYPTED_STRINGS = {
+    [1] = "pcall",
+    [2] = "FishTime",
+    [3] = "Players",
+    [4] = "Peli",
+    [5] = "IsClient",
+    [6] = "Position",
+    [7] = "Strength",
+    [8] = "endChat",
+    [9] = "Destroy",
+    [10] = "Regular",
+    [11] = "create",
+    [12] = "ReplicatedStorage",
+    [13] = "UDim2",
+    [14] = "RobloxPromptGui",
+    [15] = "byte",
+    [16] = "promptOverlay",
+    [17] = "Container",
+    [18] = "distancey",
+    [19] = "Melee",
+    [20] = "Play",
+    [21] = "safe1",
+    [22] = "CombatAnimations",
+    [23] = "Anchored",
+    [24] = "credit",
+    [25] = "insert",
+    [26] = "lv",
+    [27] = "Frame",
+    [28] = "__FAKE_DECRYPT_KEY__",
+    [29] = "Stats",
+    [30] = "RenderStepped",
+    [31] = "Idled",
+    [32] = "HUD",
+    [33] = "index_key",
+    [34] = "TouchGui",
+    [35] = "Env",
+    [36] = "Block",
+    [37] = "getrenv",
+    [38] = "Start",
+    [39] = "Size",
+    [40] = "ChangeState",
+    [41] = "Teleport",
+    [42] = "typeof",
+    [43] = "Instance",
+    [44] = "EquipTool",
+    [45] = "real_lv",
+    [46] = "warn",
+    [47] = "task",
+    [48] = "Text",
+    [49] = "SelectedObject",
+    [50] = "TouchControlFrame",
+    [51] = "IsA",
+    [52] = "Name",
+    [53] = "upper",
+    [54] = "expired",
+    [55] = "StatusCode",
+    [56] = "Wait",
+    [57] = "NPCCHAT",
+    [58] = "Descend",
+    [59] = "Parent",
+    [60] = "Color3",
+    [61] = "Group005",
+    [62] = "Options",
+    [63] = "PrivateServersPanel",
+    [64] = "MaxHealth",
+    [65] = "CameraType",
+    [66] = "Disable",
+    [67] = "CanCollide",
+    [68] = "TextLabel",
+    [69] = "OptionsFrame",
+    [70] = "bait",
+    [71] = "MerchentShop",
+    [72] = "PrivateServersButton",
+    [73] = "spawn",
+    [74] = "Main",
+    [75] = "os",
+    [76] = "webhook",
+    [77] = "JSONEncode",
+    [78] = "code_sever",
+    [79] = "Scriptable",
+    [80] = "Value",
+    [81] = "Y",
+    [82] = "HumanoidStateType",
+    [83] = "Menu",
+    [84] = "Notifications",
+    [85] = "Events",
+    [86] = "GetService",
+    [87] = "PlaceId",
+    [88] = "getrawmetatable",
+    [89] = "Inventory",
+    [90] = "pro",
+    [91] = "Statistics",
+    [92] = "CFrame",
+    [93] = "connect",
+    [94] = "WaitForChild",
+    [95] = "setmetatable",
+    [96] = "Group003",
+    [97] = "request",
+    [98] = "noclip",
+    [99] = "char",
+    [100] = "new",
+    [101] = "p_ntt",
+    [102] = "Z",
+    [103] = "island",
+    [104] = "t",
+    [105] = "List",
+    [106] = "Character",
+    [107] = "Enum",
+    [108] = "Create",
+    [109] = "setclipboard",
+    [110] = "Level",
+    [111] = "go",
+    [112] = "print",
+    [113] = "CombatRegister",
+    [114] = "HumanoidRootPart",
+    [115] = "getconnections",
+    [116] = "Accept",
+    [117] = "MenuWheel",
+    [118] = "sp",
+    [119] = "df",
+    [120] = "Fire",
+    [121] = "CompassGuider",
+    [122] = "Bars",
+    [123] = "vip",
+    [124] = "table_bait",
+    [125] = "string",
+    [126] = "Tools",
+    [127] = "chooseType",
+    [128] = "LocalPlayer",
+    [129] = "Detail",
+    [130] = "Add",
+    [131] = "Connect",
+    [132] = "BuyableItems",
+    [133] = "HttpGet",
+    [134] = "is",
+    [135] = "MaxForce",
+    [136] = "Guiders",
+    [137] = "Vector2",
+    [138] = "game",
+    [139] = "Vector3",
+    [140] = "Button",
+    [141] = "Transparency",
+    [142] = "Magnitude",
+    [143] = "FishToSell",
+    [144] = "ServerCodeBox",
+    [145] = "safe3",
+    [146] = "PlatformStand",
+    [147] = "Quest",
+    [148] = "Workspace",
+    [149] = "type",
+    [150] = "Health",
+    [151] = "newcclosure",
+    [152] = "lower",
+    [153] = "info",
+    [154] = "tick",
+    [155] = "Shop",
+    [156] = "Kick",
+    [157] = "sever_pivate",
+    [158] = "ClassName",
+    [159] = "Redeemables",
+    [160] = "Experience",
+    [161] = "Jumping",
+    [162] = "PlayerGui",
+    [163] = "UpperTorso",
+    [164] = "InvokeServer",
+    [165] = "CurrentCamera",
+    [166] = "MessageArea",
+    [167] = "PlayButton",
+    [168] = "Humanoid",
+    [169] = "ConfirmationPrompt",
+    [170] = "PrivateServers",
+    [171] = "getnamecallmethod",
+    [172] = "yield",
+    [173] = "NPCs",
+    [174] = "concat",
+    [175] = "find",
+    [176] = "ChildAdded",
+    [177] = "GetChildren",
+    [178] = "X",
+    [179] = "ProximityPrompt",
+    [180] = "Custom",
+    [181] = "FindFirstChildOfClass",
+    [182] = "time",
+    [183] = "__namecall",
+    [184] = "Buttons",
+    [185] = "Backpack",
+    [186] = "gsub",
+    [187] = "randomseed",
+    [188] = "_G",
+    [189] = "__CONFIG__",
+    [190] = "workspace",
+    [191] = "Compass",
+    [192] = "Stepped",
+    [193] = "UnequipTools",
+    [194] = "loadstring",
+    [195] = "FishingShopRemote",
+    [196] = "Prompt",
+    [197] = "CharacterAdded",
+    [198] = "ipairs",
+    [199] = "TextBox",
+    [200] = "ToolTip",
+    [201] = "FindFirstChild",
+    [202] = "Velocity",
+    [203] = "content",
+    [204] = "__IS_ADMIN_USER__",
+    [205] = "resume",
+    [206] = "c",
+    [207] = "Visible",
+    [208] = "safe2",
+    [209] = "SendKeyEvent",
+    [210] = "random",
+    [211] = "Name Player",
+    [212] = "value",
+    [213] = "inline",
+    [214] = "Buy",
+    [215] = "```X1 Mythical Fruit Chest```",
+    [216] = "Merchant Shop",
+    [217] = "```",
+    [218] = "Content-Type",
+    [219] = "application/json",
+    [220] = "Body",
+    [221] = "POST",
+    [222] = "Headers",
+    [223] = "Fishman Karate User",
+    [224] = "Basic combat",
+    [225] = "swingsfx",
+    [226] = "Ground",
+    [227] = "Punch1",
+    [228] = "damage",
+    [229] = "aircombo",
+    [230] = "CoreGui",
+    [231] = "ErrorPrompt",
+    [232] = "ErrorFrame",
+    [233] = "TeleportService",
+    [234] = "BodyClip",
+    [235] = "BodyVelocity",
+}
+
+--[[
+    ANALYSIS BASED ON DECRYPTED STRINGS:
+
+    This appears to be a Roblox game script with following features:
+
+    1. GAME DETECTION:
+       - Uses 'PlaceId' to detect game
+       - Has 'IsClient' checks
+
+    2. MAIN FEATURES DETECTED:
+       - Fishing system: 'FishTime', 'FishToSell', 'bait', 'FishingShopRemote'
+       - Combat system: 'Melee', 'CombatAnimations', 'Strength', 'Punch1', 'damage'
+       - Shop/Merchant: 'MerchentShop', 'BuyableItems', 'Buy'
+       - Teleport: 'Teleport', 'TeleportService'
+       - Noclip: 'noclip', 'CanCollide'
+       - Quest system: 'Quest'
+       - Inventory: 'Inventory', 'Tools', 'EquipTool'
+
+    3. GUI ELEMENTS:
+       - HUD, Menu, Notifications
+       - ProximityPrompt, TextBox, TextLabel
+       - Options, OptionsFrame
+
+    4. ANTI-DETECTION:
+       - Uses 'getrawmetatable', 'getnamecallmethod'
+       - Has '__namecall' hook
+       - 'newcclosure' for protecting functions
+
+    5. EXTERNAL COMMUNICATION:
+       - Webhook system detected
+       - HTTP requests: 'HttpGet', 'request'
+       - JSON encoding: 'JSONEncode'
+       - Posts to webhook with content
+
+    6. PREMIUM FEATURES:
+       - 'vip', 'pro' checks
+       - Private servers: 'PrivateServers', 'code_sever'
+       - Admin user check: '__IS_ADMIN_USER__'
+
+    CONCLUSION: This is likely a game automation/exploit script
+    with premium features and webhook notifications.
+]]--
+
+
+-- ORIGINAL OBFUSCATED CODE BELOW
+-- (VM bytecode - still encrypted)
+
+--Version 68
+_G.credit=[[Obfucator NTT - https://discord.gg/YAdrT39SWq]]
+local _WaaURNOqgwJRw={[1]={{247,57,139,215,198,28,},153,},[2]={{95,78,232,50,50,32,85,221,229,},4,},[3]={{115,235,100,204,74,58,158,16,179,204,206,73,22,79,},44,},[4]={{136,102,74,194,235,115,98,132,171,118,},219,},[5]={{17,122,81,201,155,208,71,10,107,252,243,},49,},[6]={{},5,},[7]={{145,51,54,235,247,249,100,212,82,206,249,74,252,210,178,255,},194,},[8]={{85,207,94,240,73,85,213,91,7,144,107,99,241,102,97,76,85,38,226,187,},19,},[9]={{13,183,38,184,97,173,61,147,},107,},[10]={{199,109,201,196,},241,},[11]={{209,217,194,118,112,17,169,21,234,},142,},[12]={{39,234,169,230,},31,},[13]={{135,205,83,149,225,215,218,201,116,},216,},[14]={{69,15,},42,},[15]={{106,40,},8,},[16]={{228,210,149,188,74,200,209,55,46,24,46,143,90,91,},183,},[17]={{72,},32,},[18]={{165,132,144,},146,},[19]={{136,},233,},[20]={{207,217,93,222,104,234,},189,},[21]={{48,172,139,82,219,},68,},[22]={{93,255,81,133,166,58,},46,},[23]={{141,143,9,142,},191,},[24]={{130,109,41,137,102,142,154,141,70,},221,},[25]={{176,62,17,86,},131,},[26]={{34,161,176,162,163,158,215,183,158,},125,},[27]={{234,101,53,105,246,77,},137,},[28]={{252,208,230,54,149,0,199,241,167,62,},144,},[29]={{176,187,30,},132,},[30]={{111,235,224,200,243,79,11,27,},1,},[31]={{157,},229,},[32]={{129,18,132,77,222,96,213,19,102,173,114,179,204,140,33,231,213,81,111,228,241,165,108,209,90,198,231,},210,},[33]={{27,11,162,153,186,222,100,205,138,182,},122,},[34]={{93,73,228,224,36,17,149,185,108,210,118,60,243,},57,},[35]={{55,153,4,202,85,249,85,131,169,53,196,55,69,20,},82,},[36]={{101,235,203,134,114,103,79,252,72,255,70,84,245,229,},3,},[37]={{87,70,164,132,166,46,31,},8,},[38]={{123,50,167,187,233,182,77,148,189,233,},36,},[39]={{254,59,104,204,96,67,71,25,56,183,143,16,44,94,105,193,22,39,19,76,140,81,},161,},[40]={{90,},118,},[41]={{22,},62,},[42]={{25,},103,},[43]={{11,},34,},[44]={{159,},181,},[45]={{19,},62,},[46]={{26,36,23,},49,},[47]={{4,146,},58,},[48]=
+
+[... TRUNCATED - See original file for full code ...]
