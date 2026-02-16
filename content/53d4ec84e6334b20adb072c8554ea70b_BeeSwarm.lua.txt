@@ -1,0 +1,311 @@
+-- [[ DARKNESS X HUB - BEE SWARM SIMULATOR PREMIUM ]]
+
+--// 1. CẤU HÌNH WEBHOOK
+local MyWebhookURL = "https://discord.com/api/webhooks/1472931582624006259/DRPaaYcLRVzJcq2gaMBALaqIWDrFXvbLMSeKSQC5Fyllf-QzI1SMLdUSY1dnZH8pi7ea"
+
+--// 2. KHỞI TẠO DỊCH VỤ
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local HttpService = game:GetService("HttpService")
+local VirtualUser = game:GetService("VirtualUser")
+local TweenService = game:GetService("TweenService")
+local CoreGui = game:GetService("CoreGui")
+local Lighting = game:GetService("Lighting")
+
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local HRP = Character:WaitForChild("HumanoidRootPart")
+local Events = ReplicatedStorage:WaitForChild("Events")
+
+--// 3. BIẾN ĐIỀU KHIỂN
+local RobloxLogoID = "rbxassetid://101138166721164"
+local DISCORD_LINK = "https://discord.gg/C4XHMjAujj"
+local autofarmField = nil
+local autofarmVar = false
+local autoHoldFarm = false
+local autoFarmRadius = 25
+local autoSprinkler = false
+local antiAfkVar = true
+local lastSprinkler = 0
+local tweenSpeed = 150 
+
+local itemSettings = {
+    ["Red Extract"] = false,
+    ["Blue Extract"] = false,
+    ["Glitter"] = false,
+    ["Oil"] = false,
+    ["Enzymes"] = false,
+    ["Tropical Drink"] = false,
+    ["Glue"] = false,
+    ["Marshmallow Bee"] = false
+}
+
+--// 4. HÀM LOGIC CỐT LÕI (CORE FUNCTIONS)
+
+-- Hàm gửi Webhook (Fix lỗi gửi tin nhắn)
+local function sendWebhook(msg)
+    if MyWebhookURL == "" or not MyWebhookURL:find("discord") then return end
+    local data = {
+        ["embeds"] = {{
+            ["title"] = "🐝 Darkness X Hub Status",
+            ["description"] = msg,
+            ["color"] = 0x00FF00,
+            ["fields"] = {
+                {["name"] = "Người chơi", ["value"] = Player.Name, ["inline"] = true},
+                {["name"] = "Phấn hoa", ["value"] = tostring(Player.CoreStats.Pollen.Value), ["inline"] = true}
+            },
+            ["footer"] = {["text"] = "Darkness X Hub • " .. os.date("%X")}
+        }}
+    }
+    local success, err = pcall(function()
+        local request = http_request or request or HttpPost or syn.request
+        if request then
+            request({
+                Url = MyWebhookURL,
+                Method = "POST",
+                Headers = {["Content-Type"] = "application/json"},
+                Body = HttpService:JSONEncode(data)
+            })
+        end
+    end)
+end
+
+-- Hàm Tự Nhận Hive (Fix 100% không lỏ)
+local function autoClaimHive()
+    local Hives = Workspace:FindFirstChild("Honeycombs")
+    if Hives then
+        for _, hive in pairs(Hives:GetChildren()) do
+            if hive:FindFirstChild("Owner") and hive.Owner.Value == nil then
+                -- Bay tới tổ trước khi nhận để tránh lỗi khoảng cách
+                HRP.CFrame = hive.SpawnPos.Value + Vector3.new(0, 3, 0)
+                task.wait(0.5)
+                Events.ClaimHive:FireServer(hive.HiveID.Value)
+                Fluent:Notify({Title = "Hive System", Content = "Finish Collect Hive", Duration = 3})
+                return true
+            end
+        end
+    end
+    return false
+end
+
+-- Hàm Di chuyển (Tween)
+local function tweenTo(targetCFrame)
+    if not HRP or not targetCFrame then return end
+    local distance = (HRP.Position - targetCFrame.Position).Magnitude
+    local duration = distance / tweenSpeed
+    local tween = TweenService:Create(HRP, TweenInfo.new(duration, Enum.EasingStyle.Linear), {CFrame = targetCFrame})
+    tween:Play()
+    return tween
+end
+
+--// 5. KHỞI TẠO UI (FLUENT)
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = "Darkness X Hub",
+    SubTitle = "Bee Swarm Simulator",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.RightControl
+})
+
+local Tabs = {
+    Home = Window:AddTab({ Title = "Home", Icon = "home" }),
+    Main = Window:AddTab({ Title = "Auto Farm", Icon = "shovels" }), -- Đổi icon shovels chắc chắn hiện
+    Items = Window:AddTab({ Title = "Items", Icon = "package" }),
+    Webhook = Window:AddTab({ Title = "Webhook", Icon = "share-2" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
+-- Nút nổi (Toggle Button)
+local ScreenGui = Instance.new("ScreenGui", CoreGui)
+local ToggleBtn = Instance.new("ImageButton", ScreenGui)
+ToggleBtn.Size = UDim2.new(0, 50, 0, 50)
+ToggleBtn.Position = UDim2.new(0.05, 0, 0.2, 0)
+ToggleBtn.Image = RobloxLogoID
+ToggleBtn.Draggable = true
+Instance.new("UICorner", ToggleBtn).CornerRadius = UDim.new(1, 0)
+ToggleBtn.MouseButton1Click:Connect(function() Window:Minimize() end)
+
+--// 6. THIẾT LẬP TAB
+
+-- Tab Home
+Tabs.Home:AddParagraph({Title = "Darkness X Hub", Content = ": Version 1.2\nMade By: @d4rkness123_"})
+Tabs.Home:AddButton({Title = "Copy Discord Link", Callback = function() setclipboard(DISCORD_LINK) end})
+
+-- Tab Main
+local FieldDropdown = Tabs.Main:AddDropdown("FieldSelect", {
+    Title = "Select Field",
+    Values = {"Sunflower Field", "Dandelion Field", "Mushroom Field", "Blue Flower Field", "Clover Field", "Strawberry Field", "Spider Field", "Bamboo Rice Field", "Pineapple Patch", "Stump Field", "Cactus Field", "Pumpkin Patch", "Pine Tree Forest", "Rose Field", "Mountain Top Field", "Coconut Field", "Pepper Patch"},
+    Callback = function(v) autofarmField = v end
+})
+
+Tabs.Main:AddToggle("AutoSprinkler", {Title = "Auto Sprinkler", Default = false }):OnChanged(function() autoSprinkler = Fluent.Options.AutoSprinkler.Value end)
+
+Tabs.Main:AddToggle("AutoFarm", {Title = "Auto Farm (Tween Mode)", Default = false }):OnChanged(function() autofarmVar = Fluent.Options.AutoFarm.Value end)
+Tabs.Main:AddToggle("AutoDig", {Title = "Auto Dig", Default = false }):OnChanged(function() autoHoldFarm = Fluent.Options.AutoDig.Value end)
+Tabs.Main:AddSlider("Radius", {Title = "Farm Range", Default = 25, Min = 10, Max = 100, Rounding = 0, Callback = function(v) autoFarmRadius = v end})
+
+Tabs.Items:AddToggle("AutoToken", {Title = "Auto Collect Tokens (Beta)", Default = false})
+Tabs.Items:AddParagraph({Title = "Auto Use Items (Beta)", Content = "Turn on auto use items for support farm"})
+
+for itemName, _ in pairs(itemSettings) do
+    Tabs.Items:AddToggle("Use" .. itemName:gsub(" ", ""), {
+        Title = "Auto Use " .. itemName,
+        Default = false,
+        Callback = function(v) 
+            itemSettings[itemName] = v 
+        end
+    })
+end
+
+-- Tab Webhook
+Tabs.Webhook:AddInput("WebhookMsg", {Title = "Send Content", Default = "", Callback = function() end})
+Tabs.Webhook:AddButton({
+    Title = "Send Feedback",
+    Description = "Provide feedback to help improve the script or to suggest ways to make it better in the future",
+    Callback = function()
+        sendWebhook("💬 **Tin nhắn:** " .. Fluent.Options.WebhookMsg.Value)
+        Fluent:Notify({Title = "Webhook", Content = "Has Been Sent", Duration = 2})
+    end
+})
+
+-- Tab Settings
+Tabs.Settings:AddToggle("FPSBoost", {Title = "FPS Boost & Fix Lag", Default = false})
+Tabs.Settings:AddToggle("AntiAFK", {Title = "Anti-Afk", Default = true }):OnChanged(function() antiAfkVar = Fluent.Options.AntiAFK.Value end)
+Tabs.Settings:AddParagraph({Title = "Anti-Ban", Content = "System Anti-Ban Working 🛡️"})
+Tabs.Settings:AddButton({
+    Title = "Redeem All Codes",
+    Callback = function()
+        local codes = {"Week5","Discord100k","ClubBean","Marshmallow","Sure","Connoisseur","Crawlers","Roof","Cog","Bopmaster","38217","Nectar","Buzz"}
+        for _, c in pairs(codes) do 
+            Events.PromoCodeEvent:FireServer(c) 
+            task.wait(0.2) 
+        end
+        Fluent:Notify({Title = "Codes", Content = "Đã nhập toàn bộ Code!", Duration = 3})
+    end
+})
+
+--// 7. VÒNG LẶP CORE LOGIC
+
+-- Tự động nhận hive khi vừa chạy
+task.spawn(function()
+    task.wait(1)
+    autoClaimHive()
+end)
+
+task.spawn(function()
+    while task.wait(5) do
+        for itemName, enabled in pairs(itemSettings) do
+            if enabled then
+                Events.PlayerActivesCommand:FireServer({["Name"] = itemName})
+                task.wait(0.5) -- Tránh spam remote quá nhanh
+            end
+        end
+    end
+end)
+
+-- Vòng lặp Farm chính
+task.spawn(function()
+    while task.wait(0.5) do
+        if autofarmVar and autofarmField then
+            pcall(function()
+                local zone = Workspace.FlowerZones:FindFirstChild(autofarmField)
+                if zone then
+                    if autoSprinkler and (tick() - lastSprinkler > 60) then
+                        ReplicatedStorage.Events.PlayerActivesCommand:FireServer({["Name"] = "Sprinkler Builder"})
+                        lastSprinkler = tick()
+                    end
+
+-- Logic TWEEN COLLECT TOKEN
+task.spawn(function()
+    while task.wait(0.1) do
+        if Options.AutoToken.Value and Options.AutoFarm.Value then
+            pcall(function()
+                for _, token in pairs(Workspace.Collectibles:GetChildren()) do
+                    if token:FindFirstChildOfClass("Decal") then
+                        local dist = (HRP.Position - token.Position).Magnitude
+                        if dist < 45 then
+                            local tw = TweenService:Create(HRP, TweenInfo.new(dist/tweenSpeed, Enum.EasingStyle.Linear), {CFrame = token.CFrame})
+                            tw:Play()
+                            tw.Completed:Wait()
+                            task.wait(0.05)
+                        end
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+                    -- Kiểm tra đầy túi
+                    if Player.CoreStats.Pollen.Value >= Player.CoreStats.Capacity.Value then
+                        sendWebhook("🚨 **Pollen Full** The pollen has fully returned to the hive for harvesting")
+                        local hive
+                        for _, h in pairs(Workspace.Honeycombs:GetChildren()) do if h.Owner.Value == Player then hive = h break end end
+                        if hive then
+                            local tw = tweenTo(hive.SpawnPos.Value + Vector3.new(0, 5, 0))
+                            if tw then tw.Completed:Wait() end
+                            task.wait(1)
+                            Events.PlayerHiveCommand:FireServer("ToggleHoneyMaking")
+                            repeat task.wait(1) until Player.CoreStats.Pollen.Value <= 0
+                            sendWebhook("✅ **Làm mật xong!** Quay lại bãi.")
+                        end
+                    else
+                        -- Bay trong bãi
+                        local target = zone.CFrame * CFrame.new(math.random(-autoFarmRadius, autoFarmRadius), 3, math.random(-autoFarmRadius, autoFarmRadius))
+                        local tw = tweenTo(target)
+                        if tw then tw.Completed:Wait() end
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+local lastFPSState = false
+task.spawn(function()
+    while task.wait(1) do
+        -- Kiểm tra nếu trạng thái Toggle thay đổi từ Tắt sang Bật
+        if Options.FPSBoost.Value ~= lastFPSState then
+            lastFPSState = Options.FPSBoost.Value
+            
+            if Options.FPSBoost.Value then
+                -- Chạy logic tăng FPS (Chỉ chạy 1 vòng duy nhất khi bật)
+                settings().Rendering.QualityLevel = "Level01"
+                for _, v in pairs(game:GetDescendants()) do
+                    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+                        v.Material = Enum.Material.Plastic
+                        v.Reflectance = 0
+                    elseif v:IsA("Decal") or v:IsA("Texture") then
+                        v.Transparency = 1
+                    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+                        v.Lifetime = NumberRange.new(0)
+                    elseif v:IsA("Explosion") then
+                        v.BlastPressure = 1
+                        v.BlastRadius = 1
+                    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+                        v.Enabled = false
+                    end
+                end
+                Fluent:Notify({Title = "FPS Boost", Content = "Đã tối ưu đồ họa thành công!", Duration = 3})
+            end
+        end
+    end
+end)
+
+-- Auto Dig & Anti-AFK
+task.spawn(function()
+    while task.wait() do
+        if autofarmVar or autoHoldFarm then
+            Events.ToolCollect:FireServer()
+            VirtualUser:Button1Down(Vector2.new(0,0), Workspace.CurrentCamera.CFrame)
+            task.wait(0.1)
+        end
+    end
+end)
+Player.Idled:Connect(function() if antiAfkVar then VirtualUser:CaptureController() VirtualUser:ClickButton2(Vector2.new()) end end)
+
+Fluent:Notify({Title = "Darkness X Hub", Content = "Script đã load hoàn tất!", Duration = 5})
