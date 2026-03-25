@@ -1,0 +1,5147 @@
+_G.name_game = "King_Legacy2ug"
+_G.Setting = {
+    main_tool = {
+        "Tool : Mele"
+    },
+    auto_farm = {
+        false,
+        "m_b2"
+    },
+    mobdis = {
+        false,
+        "m_b3"
+    },
+    distancemob = {
+        200
+    },
+    distance = {
+        8
+    },
+    lowheath = {
+        50
+    },
+    mele = {
+        false,
+        "s_b1"
+    },
+    defense = {
+        false,
+        "s_b2"
+    },
+    sword = {
+        false,
+        "s_b3"
+    },
+    fruit = {
+        false,
+        "s_b4"
+    },
+    buso = {
+        true,
+        "st_b1"
+    },
+    ken = {
+        true,
+        "st_b2"
+    },
+    hao = {
+        true,
+        "st_b3"
+    },
+    z = {
+        true,
+        "st_b4"
+    },
+    x = {
+        true,
+        "st_b5"
+    },
+    c = {
+        true,
+        "st_b6"
+    },
+    v = {
+        true,
+        "st_b7"
+    },
+    f = {
+        true,
+        "st_b8"
+    },
+    b = {
+        true,
+        "st_b9"
+    },
+    e = {
+        true,
+        "st_b10"
+    },
+    hidenitemdrop = {
+        false,
+        "st_b11"
+    },
+    infjump = {
+        false,
+        "pm_b1"
+    },
+    speed = {
+        false,
+        "pm_b2"
+    },
+    vspeed = {
+        200
+    },
+    snowclick = {
+        false,
+        "pm_b3"
+    },
+    wow = {
+        false,
+        "pm_b4"
+    },
+    modskill = {
+        false,
+        "pm_b5"
+    },
+    player = {
+        "Player : Select"
+    },
+    aimbot = {
+        false,
+        "cb_b4"
+    },
+    aimbotnear = {
+        false,
+        "cb_b5"
+    },
+    aimbotd = {
+        400
+    },
+    circle = {
+        false,
+        "cb_b6"
+    },
+    circlez = {
+        0
+    },
+    esp_prl = {
+        false,
+        "e_b1"
+    },
+    material = {
+        "Material : Select"
+    },
+    farmmaterial = {
+        false,
+        "ib_mb"
+    },
+    allboss = {
+        false,
+        "ib_b"
+    },
+    skhd = {
+        false,
+        "ib_b2"
+    },
+    gs = {
+        false,
+        "ib_b3"
+    },
+    ship = {
+        false,
+        "ib_b4"
+    },
+    seaevent = {
+        false,
+        "ib_b6"
+    },
+    island = {
+        "Island : Select"
+    },
+    dungeon_select = {
+        "Dungeon : Select"
+    },
+    dungeon = {
+        false,
+        "d_b2"
+    },
+    dungeon2 = {
+        false,
+        "d_b3"
+    },
+    dodgev2 = {
+        true,
+        "d_b4"
+    },
+    fish_cf = {
+        "CFrame.new(0,0,0)"
+    },
+    fish = {
+        false,
+        "f_b2"
+    },
+    key_count = {
+        1
+    },
+    key1 = {
+        "Key : Select"
+    },
+    key2 = {
+        "Key : Select"
+    },
+    buykey = {
+        false,
+        "shop_bkey"
+    },
+    _end = {
+        "_end"
+    }
+}
+function LoadSettings()
+    if readfile and (writefile and (isfile and isfolder)) then
+        if not isfolder("NTT HUB") then
+            makefolder("NTT HUB")
+        end
+        if not isfolder("NTT HUB/Save Script/") then
+            makefolder("NTT HUB/Save Script/")
+        end
+        local vu1 = "NTT HUB/Save Script/" .. _G.name_game .. ".json"
+        if isfile(vu1) and readfile(vu1) ~= "" then
+            local v2, v3 = pcall(function()
+                return game:GetService("HttpService"):JSONDecode(readfile(vu1))
+            end)
+            if v2 then
+                local v4, v5, v6 = pairs(v3)
+                while true do
+                    local v7
+                    v6, v7 = v4(v5, v6)
+                    if v6 == nil then
+                        break
+                    end
+                    _G.Setting[v6] = v7
+                end
+            else
+                writefile(vu1, game:GetService("HttpService"):JSONEncode(_G.Setting))
+            end
+        else
+            writefile(vu1, game:GetService("HttpService"):JSONEncode(_G.Setting))
+        end
+    else
+        local _ = warn
+    end
+end
+function SaveSettings()
+    if readfile and (writefile and (isfile and isfolder)) then
+        local v8 = "NTT HUB/Save Script/" .. _G.name_game .. ".json"
+        if isfile(v8) then
+            local v9, v10, v11 = pairs(_G.Setting)
+            local v12 = {}
+            while true do
+                local v13
+                v11, v13 = v9(v10, v11)
+                if v11 == nil then
+                    break
+                end
+                v12[v11] = v13
+            end
+            writefile(v8, game:GetService("HttpService"):JSONEncode(v12))
+        else
+            LoadSettings()
+        end
+    else
+        local _ = warn
+    end
+end
+LoadSettings()
+var = {}
+var1 = {}
+local v14, v15, v16 = pairs(_G.Setting)
+while true do
+    local v17, _ = v14(v15, v16)
+    if v17 == nil then
+        break
+    end
+    v16 = v17
+    if # _G.Setting[v17] > 1 then
+        table.insert(var1, v17)
+        table.insert(var, _G.Setting[v17][2])
+    end
+end
+value = 1
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if value >= # var then
+                value = 1
+                SaveSettings()
+            else
+                value = value + 1
+                if _G.Setting[var1[value] ][1] then
+                    loadstring(var[value] .. ".Text=\'X\'")()
+                else
+                    loadstring(var[value] .. ".Text=\'\'")()
+                end
+            end
+        end)
+    end
+end)
+if _G.linkdis == nil then
+    _G.linkdis = 111
+end
+local v18 = Instance.new("ScreenGui")
+local vu19 = Instance.new("Frame")
+local vu20 = Instance.new("TextLabel")
+local v21 = Instance.new("TextLabel")
+local vu22 = Instance.new("ScrollingFrame")
+local vu23 = Instance.new("ScrollingFrame")
+local vu24 = Instance.new("ScrollingFrame")
+local vu25 = Instance.new("ScrollingFrame")
+local vu26 = Instance.new("ScrollingFrame")
+local vu27 = Instance.new("ScrollingFrame")
+local vu28 = Instance.new("ScrollingFrame")
+local vu29 = Instance.new("ScrollingFrame")
+local vu30 = Instance.new("ScrollingFrame")
+local vu31 = Instance.new("ScrollingFrame")
+local vu32 = Instance.new("ScrollingFrame")
+local vu33 = Instance.new("ScrollingFrame")
+Instance.new("ScrollingFrame")
+Instance.new("ScrollingFrame")
+Instance.new("ScrollingFrame")
+local vu34 = Instance.new("Frame")
+local vu35 = Instance.new("ScrollingFrame")
+bar_1 = Instance.new("Frame")
+local v36 = Instance.new("TextButton")
+local v37 = Instance.new("TextButton")
+local v38 = Instance.new("TextButton")
+local v39 = Instance.new("TextButton")
+local v40 = Instance.new("TextButton")
+local v41 = Instance.new("TextButton")
+local v42 = Instance.new("TextButton")
+local v43 = Instance.new("TextButton")
+local v44 = Instance.new("TextButton")
+local v45 = Instance.new("TextButton")
+local v46 = Instance.new("TextButton")
+local v47 = Instance.new("TextButton")
+Instance.new("TextButton")
+Instance.new("TextButton")
+m_tbar = Instance.new("ScrollingFrame")
+m_f1 = Instance.new("TextLabel")
+m_b1 = Instance.new("TextButton")
+m_f2 = Instance.new("TextLabel")
+m_b2 = Instance.new("TextButton")
+m_f3 = Instance.new("TextLabel")
+m_b3 = Instance.new("TextButton")
+m_f4 = Instance.new("TextLabel")
+m_b4 = Instance.new("TextButton")
+m_f5 = Instance.new("TextLabel")
+m_b5 = Instance.new("TextButton")
+m_f6 = Instance.new("TextLabel")
+m_b6 = Instance.new("TextButton")
+s_f1 = Instance.new("TextLabel")
+s_b1 = Instance.new("TextButton")
+s_f2 = Instance.new("TextLabel")
+s_b2 = Instance.new("TextButton")
+s_f3 = Instance.new("TextLabel")
+s_b3 = Instance.new("TextButton")
+s_f4 = Instance.new("TextLabel")
+s_b4 = Instance.new("TextButton")
+s_f5 = Instance.new("TextLabel")
+s_b5 = Instance.new("TextButton")
+t_ibar = Instance.new("ScrollingFrame")
+t_itp = Instance.new("TextButton")
+t_npcbar = Instance.new("ScrollingFrame")
+t_npctp = Instance.new("TextButton")
+t_f1 = Instance.new("TextLabel")
+t_f2 = Instance.new("TextLabel")
+t_f3 = Instance.new("TextLabel")
+t_f4 = Instance.new("TextLabel")
+t_f5 = Instance.new("TextLabel")
+t_f6 = Instance.new("TextLabel")
+t_f7 = Instance.new("TextLabel")
+t_b1 = Instance.new("TextButton")
+t_b2 = Instance.new("TextButton")
+t_b3 = Instance.new("TextButton")
+t_b4 = Instance.new("TextButton")
+t_b5 = Instance.new("TextButton")
+t_b6 = Instance.new("TextButton")
+t_b7 = Instance.new("TextButton")
+st_f1 = Instance.new("TextLabel")
+st_f2 = Instance.new("TextLabel")
+st_f3 = Instance.new("TextLabel")
+st_f4 = Instance.new("TextLabel")
+st_f5 = Instance.new("TextLabel")
+st_f6 = Instance.new("TextLabel")
+st_f7 = Instance.new("TextLabel")
+st_f8 = Instance.new("TextLabel")
+st_f9 = Instance.new("TextLabel")
+st_f10 = Instance.new("TextLabel")
+st_f11 = Instance.new("TextLabel")
+st_b1 = Instance.new("TextButton")
+st_b2 = Instance.new("TextButton")
+st_b3 = Instance.new("TextButton")
+st_b4 = Instance.new("TextButton")
+st_b5 = Instance.new("TextButton")
+st_b6 = Instance.new("TextButton")
+st_b7 = Instance.new("TextButton")
+st_b8 = Instance.new("TextButton")
+st_b9 = Instance.new("TextButton")
+st_b10 = Instance.new("TextButton")
+st_b11 = Instance.new("TextButton")
+cb_tbar = Instance.new("ScrollingFrame")
+cb_pbar = Instance.new("ScrollingFrame")
+cb_b1 = Instance.new("TextButton")
+cb_b2 = Instance.new("TextButton")
+cb_b3 = Instance.new("TextButton")
+cb_b4 = Instance.new("TextButton")
+cb_b5 = Instance.new("TextButton")
+cb_b6 = Instance.new("TextButton")
+cb_f1 = Instance.new("TextLabel")
+cb_f2 = Instance.new("TextLabel")
+cb_f3 = Instance.new("TextLabel")
+cb_f4 = Instance.new("TextLabel")
+cb_f5 = Instance.new("TextLabel")
+cb_f6 = Instance.new("TextLabel")
+pm_f1 = Instance.new("TextLabel")
+pm_f2 = Instance.new("TextLabel")
+pm_f3 = Instance.new("TextLabel")
+pm_f4 = Instance.new("TextLabel")
+pm_f5 = Instance.new("TextLabel")
+pm_f6 = Instance.new("TextLabel")
+pm_f7 = Instance.new("TextLabel")
+pm_b1 = Instance.new("TextButton")
+pm_b2 = Instance.new("TextButton")
+pm_b3 = Instance.new("TextButton")
+pm_b4 = Instance.new("TextButton")
+pm_b5 = Instance.new("TextButton")
+pm_b6 = Instance.new("TextButton")
+pm_b7 = Instance.new("TextButton")
+ib_mbar = Instance.new("ScrollingFrame")
+ib_mb = Instance.new("TextButton")
+ib_f1 = Instance.new("TextLabel")
+ib_b1 = Instance.new("TextButton")
+ib_f = Instance.new("TextLabel")
+ib_b = Instance.new("TextButton")
+ib_f2 = Instance.new("TextLabel")
+ib_b2 = Instance.new("TextButton")
+ib_f3 = Instance.new("TextLabel")
+ib_b3 = Instance.new("TextButton")
+ib_f4 = Instance.new("TextLabel")
+ib_b4 = Instance.new("TextButton")
+ib_f5 = Instance.new("TextLabel")
+ib_b5 = Instance.new("TextButton")
+ib_f6 = Instance.new("TextLabel")
+ib_b6 = Instance.new("TextButton")
+sever_t1 = Instance.new("TextBox")
+sever_f1 = Instance.new("TextLabel")
+sever_b1 = Instance.new("TextButton")
+d_dbar = Instance.new("ScrollingFrame")
+d_b1 = Instance.new("TextButton")
+d_b2 = Instance.new("TextButton")
+d_b3 = Instance.new("TextButton")
+d_b4 = Instance.new("TextButton")
+d_b5 = Instance.new("TextButton")
+d_b6 = Instance.new("TextButton")
+d_f1 = Instance.new("TextLabel")
+d_f2 = Instance.new("TextLabel")
+d_f3 = Instance.new("TextLabel")
+d_f4 = Instance.new("TextLabel")
+d_f5 = Instance.new("TextLabel")
+d_f6 = Instance.new("TextLabel")
+f_f1 = Instance.new("TextLabel")
+f_b1 = Instance.new("TextButton")
+f_f2 = Instance.new("TextLabel")
+f_b2 = Instance.new("TextButton")
+e_b1 = Instance.new("TextButton")
+e_b2 = Instance.new("TextButton")
+e_b3 = Instance.new("TextButton")
+e_b4 = Instance.new("TextButton")
+e_b5 = Instance.new("TextButton")
+e_b6 = Instance.new("TextButton")
+e_f1 = Instance.new("TextLabel")
+e_f2 = Instance.new("TextLabel")
+e_f3 = Instance.new("TextLabel")
+e_f4 = Instance.new("TextLabel")
+e_f5 = Instance.new("TextLabel")
+e_f6 = Instance.new("TextLabel")
+shop_keybar = Instance.new("ScrollingFrame")
+shop_bkey = Instance.new("TextButton")
+shop_f1 = Instance.new("TextLabel")
+shop_b1 = Instance.new("TextButton")
+shop_randombar = Instance.new("ScrollingFrame")
+shop_b2 = Instance.new("TextButton")
+shop_f2 = Instance.new("TextLabel")
+shop_b3 = Instance.new("TextButton")
+shop_f3 = Instance.new("TextLabel")
+shop_b4 = Instance.new("TextButton")
+shop_f4 = Instance.new("TextLabel")
+shop_b5 = Instance.new("TextButton")
+shop_f5 = Instance.new("TextLabel")
+function _(p48)
+    return _G.Setting[p48][1]
+end
+function __(p49, p50)
+    _G.Setting[p49][1] = p50
+end
+function make_screengui(p51)
+    p51.Name = "name1"
+    p51.Parent = game.CoreGui
+    p51.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+end
+function make_select3(p52, p53, p54, p55, p56, p57)
+    p52.Parent = p55
+    p52.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p52.Position = p57
+    p52.Size = UDim2.new(0, 498, 0, 30)
+    p52.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p52.Font = Enum.Font.Ubuntu
+    p52.Text = ""
+    p52.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p52.TextSize = 14
+    p52.TextWrapped = true
+    p52.TextXAlignment = Enum.TextXAlignment.Left
+    p53.Name = "name2"
+    p53.Parent = p52
+    p53.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p53.Size = UDim2.new(0, 180, 0, 30)
+    p53.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p53.Font = Enum.Font.SourceSans
+    p53.Text = p56
+    p53.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p53.TextSize = 18
+    p53.TextXAlignment = Enum.TextXAlignment.Left
+    p54.Name = "name3"
+    p54.Parent = p52
+    p54.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p54.Position = UDim2.new(0.94, 0, 0.12, 0)
+    p54.Size = UDim2.new(0, 20, 0, 20)
+    p54.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p54.Font = Enum.Font.SourceSans
+    p54.Text = ""
+    p54.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p54.TextSize = 30
+end
+function make_mainscrollingframe(p58, _, p59)
+    p58.Name = "name1"
+    p58.Parent = vu19
+    p58.Active = true
+    p58.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p58.BackgroundTransparency = 1
+    p58.BorderSizePixel = 0
+    p58.Size = UDim2.new(0, 498, 0, 230)
+    p58.ScrollBarThickness = 0
+    p58.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+    p58.Visible = p59
+end
+function make_textlabel(p60, p61, p62)
+    local v63 = Instance.new("TextLabel")
+    v63.Parent = p60
+    v63.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    v63.Position = UDim2.new(0, 0, p62, 0)
+    v63.Size = UDim2.new(0, 498, 0, 30)
+    v63.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    v63.Font = Enum.Font.Ubuntu
+    v63.Text = p61
+    v63.TextColor3 = Color3.fromRGB(255, 255, 255)
+    v63.TextSize = 14
+    v63.TextWrapped = true
+end
+function make_mainbutton(p64, p65, p66, p67)
+    p64.Parent = p65
+    p64.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    p64.Position = p67
+    p64.Size = UDim2.new(0, 100, 0, 25)
+    p64.Font = Enum.Font.Ubuntu
+    p64.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p64.Text = p66
+    p64.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p64.TextSize = 14
+    p64.TextWrapped = false
+    p64.TextXAlignment = Enum.TextXAlignment.Left
+end
+function make_together(p68, p69, p70, p71, p72)
+    p68.Parent = p70
+    p68.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p68.Position = UDim2.new(0, 0, p72, 0)
+    p68.Size = UDim2.new(0, 498, 0, 30)
+    p68.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p68.Font = Enum.Font.Ubuntu
+    p68.Text = p71
+    p68.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p68.TextSize = 14
+    p68.TextWrapped = true
+    p68.TextXAlignment = Enum.TextXAlignment.Left
+    p69.Name = "name2"
+    p69.Parent = p68
+    p69.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p69.Position = UDim2.new(0.94, 0, 0.12, 0)
+    p69.Size = UDim2.new(0, 20, 0, 20)
+    p69.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p69.Font = Enum.Font.SourceSans
+    p69.Text = ""
+    p69.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p69.TextSize = 30
+end
+function make_select2(p73, p74, p75, p76, p77, p78)
+    p73.Parent = p76
+    p73.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p73.Position = UDim2.new(0, 0, p78, 0)
+    p73.Size = UDim2.new(0, 498, 0, 30)
+    p73.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p73.Font = Enum.Font.Ubuntu
+    p73.Text = ""
+    p73.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p73.TextSize = 14
+    p73.TextWrapped = true
+    p73.TextXAlignment = Enum.TextXAlignment.Left
+    p74.Name = "name2"
+    p74.Parent = p73
+    p74.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p74.Size = UDim2.new(0, 350, 0, 30)
+    p74.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p74.Font = Enum.Font.SourceSans
+    p74.Text = p77
+    p74.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p74.TextSize = 18
+    p74.TextXAlignment = Enum.TextXAlignment.Left
+    p75.Name = "name3"
+    p75.Parent = p73
+    p75.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p75.Position = UDim2.new(0.94, 0, 0.12, 0)
+    p75.Size = UDim2.new(0, 20, 0, 20)
+    p75.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p75.Font = Enum.Font.SourceSans
+    p75.Text = ""
+    p75.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p75.TextSize = 30
+end
+function make_auto_selectbutton(p79, p80, p81, p82, p83, p84)
+    loadstring("name1=" .. # p81)()
+    for v85 = 1, name1 do
+        if v85 == 1 then
+            make_selectbutton(p79, p80, p81[v85], p82 .. " : " .. p81[v85], UDim2.new(0, 0, 0, 0), p84)
+        elseif v85 >= 2 then
+            make_selectbutton(p79, p80, p81[v85], p82 .. " : " .. p81[v85], UDim2.new(0, 0, p83 * (v85 - 1), 0), p84)
+        end
+    end
+end
+function make_selectbutton(pu86, pu87, p88, pu89, p90, pu91)
+    name1 = Instance.new("TextLabel")
+    name1.Parent = pu87
+    name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    name1.Position = p90
+    name1.Size = UDim2.new(0, 340, 0, 20)
+    name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    name1.Font = Enum.Font.Ubuntu
+    name1.Text = p88
+    name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    name1.TextSize = 14
+    name1.TextWrapped = true
+    name1.TextXAlignment = Enum.TextXAlignment.Left
+    name2 = Instance.new("TextButton")
+    name2.Parent = name1
+    name2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+    name2.Position = UDim2.new(0.8, 0, 0, 0)
+    name2.Size = UDim2.new(0, 65, 0, 20)
+    name2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    name2.Font = Enum.Font.SourceSans
+    name2.Text = "Button"
+    name2.TextColor3 = Color3.fromRGB(0, 0, 0)
+    name2.TextSize = 14
+    name2.MouseButton1Down:connect(function()
+        pu86.Text = pu89
+        pu87.Visible = false
+        __(pu91, pu86.Text)
+    end)
+end
+function make_selectscrollingframe(p92, p93, p94)
+    p92.Name = "name1"
+    p92.Parent = p93
+    p92.Active = true
+    p92.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p92.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p92.Position = UDim2.new(0, 0, p94, 0)
+    p92.Size = UDim2.new(0, 350, 0, 140)
+    p92.BorderSizePixel = 1
+    p92.ZIndex = 2
+    p92.Visible = false
+end
+function make_mainframe(p95, p96, p97, p98, p99)
+    p95.Name = "name1"
+    p95.Parent = p98
+    p95.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p95.Position = UDim2.new(0.180126051, 0, 0.228999169, 0)
+    p95.Size = UDim2.new(0, 640, 0, 280)
+    p95.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p95.Active = true
+    p95.Draggable = true
+    p95.Visible = false
+    p96.Parent = p95
+    p96.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p96.BackgroundTransparency = 0
+    p96.Position = UDim2.new(0, 0, 0, 0)
+    p96.Size = UDim2.new(0, 640, 0, 26)
+    p96.Font = Enum.Font.Ubuntu
+    p96.Text = p99
+    p96.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p96.TextSize = 14
+    p96.TextWrapped = true
+    p96.TextXAlignment = Enum.TextXAlignment.Left
+    p96.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p97.Name = "name3"
+    p97.Parent = p95
+    p97.Active = true
+    p97.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p97.Size = UDim2.new(0, 100, 0, 250)
+    p97.ScrollBarThickness = 0
+    p97.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p97.Position = UDim2.new(0, 0, 0.102285722, 0)
+end
+function make_select1(p100, p101, p102, p103, p104)
+    p100.Parent = p102
+    p100.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p100.Position = UDim2.new(0, 0, p104, 0)
+    p100.Size = UDim2.new(0, 498, 0, 30)
+    p100.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p100.Font = Enum.Font.Ubuntu
+    p100.Text = ""
+    p100.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p100.TextSize = 14
+    p100.TextWrapped = true
+    p100.TextXAlignment = Enum.TextXAlignment.Left
+    p101.Name = "name2"
+    p101.Parent = p100
+    p101.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p101.Size = UDim2.new(0, 350, 0, 30)
+    p101.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p101.Font = Enum.Font.SourceSans
+    p101.Text = p103
+    p101.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p101.TextSize = 18
+    p101.TextXAlignment = Enum.TextXAlignment.Left
+end
+function make_buttonnumber(p105, p106, p107, p108, p109, p110, p111)
+    p105.Parent = p107
+    p105.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p105.Position = UDim2.new(0, 0, p110, 0)
+    p105.Size = UDim2.new(0, 498, 0, 30)
+    p105.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p105.Font = Enum.Font.Ubuntu
+    p105.Text = p108
+    p105.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p105.TextSize = 14
+    p105.TextWrapped = true
+    p105.TextXAlignment = Enum.TextXAlignment.Left
+    p106.Name = "name2"
+    p106.Parent = p105
+    p106.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    p106.Position = UDim2.new(p111, 0, 0, 0)
+    p106.Size = UDim2.new(0, 30, 0, 30)
+    p106.Font = Enum.Font.Ubuntu
+    p106.BackgroundTransparency = 1
+    p106.Text = p109
+    p106.TextColor3 = Color3.fromRGB(250, 250, 250)
+    p106.TextSize = 14
+end
+function make_button(p112, p113, p114, p115, p116)
+    p112.Parent = p114
+    p112.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    p112.Position = UDim2.new(0, 0, p116, 0)
+    p112.Size = UDim2.new(0, 498, 0, 30)
+    p112.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p112.Font = Enum.Font.Ubuntu
+    p112.Text = p115
+    p112.TextColor3 = Color3.fromRGB(255, 255, 255)
+    p112.TextSize = 14
+    p112.TextWrapped = true
+    p112.TextXAlignment = Enum.TextXAlignment.Left
+    p113.Name = "name2"
+    p113.Parent = p112
+    p113.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+    p113.Position = UDim2.new(0.85, 0, 0.05, 0)
+    p113.Size = UDim2.new(0, 80, 0, 25)
+    p113.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    p113.Font = Enum.Font.SourceSans
+    p113.Text = "Button"
+    p113.TextColor3 = Color3.fromRGB(0, 0, 0)
+    p113.TextSize = 16
+end
+function make_textbox(p117, p118, p119, p120)
+    p117.Parent = p118
+    p117.BackgroundColor3 = Color3.fromRGB(250, 255, 255)
+    p117.Position = UDim2.new(0, 0, p120, 0)
+    p117.Size = UDim2.new(0, 498, 0, 30)
+    p117.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    p117.Font = Enum.Font.Ubuntu
+    p117.Text = p119
+    p117.TextColor3 = Color3.fromRGB(5, 5, 5)
+    p117.TextSize = 14
+    p117.TextWrapped = true
+    p117.TextXAlignment = Enum.TextXAlignment.Left
+end
+function make_slider_value(p121, pu122, pu123, pu124, p125, pu126)
+    if pu124 < _(pu126) then
+        __(pu126, pu124)
+    end
+    local v127 = Instance.new("TextLabel", p121)
+    v127.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    v127.Position = UDim2.new(0, 0, p125, 0)
+    v127.Size = UDim2.new(0, 498, 0, 30)
+    v127.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    v127.Font = Enum.Font.Ubuntu
+    v127.Text = ""
+    v127.TextColor3 = Color3.fromRGB(255, 255, 255)
+    v127.TextSize = 14
+    v127.TextWrapped = true
+    v127.TextXAlignment = Enum.TextXAlignment.Left
+    local vu128 = Instance.new("Frame", v127)
+    vu128.AnchorPoint = Vector2.new(0.5, 0.5)
+    vu128.Position = UDim2.new(0.27, 0, 0.5, 0)
+    vu128.Size = UDim2.new(0.5, 0, 0, 6)
+    vu128.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    vu128.BorderSizePixel = 0
+    vu128.Name = "Bar"
+    local vu129 = Instance.new("Frame", vu128)
+    vu129.BackgroundColor3 = Color3.fromRGB(250, 250, 255)
+    vu129.BorderSizePixel = 0
+    vu129.Size = UDim2.new(0, 0, 1, 0)
+    vu129.Name = "Fill"
+    local vu130 = Instance.new("Frame", vu128)
+    vu130.Size = UDim2.new(0, 14, 0, 14)
+    vu130.AnchorPoint = Vector2.new(0.5, 0.5)
+    vu130.Position = UDim2.new(0, 0, 0.5, 0)
+    vu130.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    vu130.BorderSizePixel = 0
+    vu130.Name = "Knob"
+    local vu131 = Instance.new("TextLabel", v127)
+    vu131.AnchorPoint = Vector2.new(0.5, 0.5)
+    vu131.Position = UDim2.new(0.85, 0, 0.5, 0)
+    vu131.BackgroundTransparency = 1
+    vu131.TextColor3 = Color3.new(1, 1, 1)
+    vu131.TextScaled = true
+    vu131.Font = Enum.Font.Ubuntu
+    vu131.TextXAlignment = Enum.TextXAlignment.Left
+    vu131.Size = UDim2.new(0.6, 0, 0.5, 0)
+    local v132 = game:GetService("UserInputService")
+    local vu133 = false
+    local function vu139(p134)
+        local v135 = vu128.AbsolutePosition.X
+        local v136 = vu128.AbsoluteSize.X
+        local v137 = math.clamp(p134 - v135, 0, v136) / v136
+        local v138 = math.floor(pu123 + v137 * (pu124 - pu123))
+        __(pu126, v138)
+        vu129.Size = UDim2.new(v137, 0, 1, 0)
+        vu130.Position = UDim2.new(v137, 0, 0.5, 0)
+        vu131.Text = pu122 .. " : " .. tostring(v138)
+    end
+    vu130.InputBegan:Connect(function(p140)
+        if p140.UserInputType == Enum.UserInputType.MouseButton1 or p140.UserInputType == Enum.UserInputType.Touch then
+            vu133 = true
+        end
+    end)
+    v132.InputChanged:Connect(function(p141)
+        if vu133 and (p141.UserInputType == Enum.UserInputType.MouseMovement or p141.UserInputType == Enum.UserInputType.Touch) then
+            vu139(p141.Position.X)
+        end
+    end)
+    v132.InputEnded:Connect(function(p142)
+        if p142.UserInputType == Enum.UserInputType.MouseButton1 or p142.UserInputType == Enum.UserInputType.Touch then
+            vu133 = false
+        end
+    end)
+    local v143 = (_(pu126) - pu123) / (pu124 - pu123)
+    vu129.Size = UDim2.new(v143, 0, 1, 0)
+    vu130.Position = UDim2.new(v143, 0, 0.5, 0)
+    vu131.Text = pu122 .. " : " .. tostring(_(pu126))
+end
+function make_onof(pu144, p145)
+    local vu146 = Instance.new("TextButton")
+    local v147 = Instance.new("UICorner")
+    vu146.Parent = p145
+    vu146.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    vu146.Position = UDim2.new(0.15162201, 0, 0.233285708, 0)
+    vu146.Size = UDim2.new(0, 50, 0, 50)
+    vu146.Font = Enum.Font.ArialBold
+    vu146.Text = "Open"
+    vu146.TextColor3 = Color3.fromRGB(250, 255, 250)
+    vu146.TextSize = 20
+    vu146.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    vu146.Transparency = 0
+    v147.Parent = vu146
+    vu146.MouseButton1Down:connect(function()
+        if vu146.Text ~= "Open" then
+            if vu146.Text == "Close" then
+                vu146.Text = "Open"
+                pu144.Visible = false
+            end
+        else
+            vu146.Text = "Close"
+            pu144.Visible = true
+        end
+    end)
+end
+make_screengui(v18)
+make_mainframe(vu19, vu20, vu35, v18, "NTT HUB | Main | " .. _G.linkdis)
+make_onof(vu19, v18)
+v21.Name = "sea"
+v21.Parent = vu19
+v21.BackgroundTransparency = 1
+v21.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+v21.BorderSizePixel = 0
+v21.Position = UDim2.new(0.85, 0, 0, 0)
+v21.Size = UDim2.new(0, 90, 0, 26)
+v21.Font = Enum.Font.Ubuntu
+v21.TextColor3 = Color3.fromRGB(255, 255, 255)
+v21.TextSize = 14
+v21.Text = "King Legacy"
+make_mainscrollingframe(vu22, vu19, true)
+make_mainscrollingframe(vu23, vu19, false)
+make_mainscrollingframe(vu25, vu19, false)
+make_mainscrollingframe(vu26, vu19, false)
+make_mainscrollingframe(vu27, vu19, false)
+make_mainscrollingframe(vu24, vu19, false)
+make_mainscrollingframe(vu28, vu19, false)
+make_mainscrollingframe(vu29, vu19, false)
+make_mainscrollingframe(vu30, vu19, false)
+make_mainscrollingframe(vu31, vu19, false)
+make_mainscrollingframe(vu32, vu19, false)
+make_mainscrollingframe(vu33, vu19, false)
+make_mainbutton(v36, vu35, "   Main", UDim2.new(0, 0, 0, 0))
+make_mainbutton(v37, vu35, "   Stat", UDim2.new(0, 0, 0.05, 0))
+make_mainbutton(v42, vu35, "   Item/Boss", UDim2.new(0, 0, 0.15, 0))
+make_mainbutton(v41, vu35, "   Combat", UDim2.new(0, 0, 0.15, 0))
+make_mainbutton(v46, vu35, "   Esp", UDim2.new(0, 0, 0.1, 0))
+make_mainbutton(v44, vu35, "   Dungeon", UDim2.new(0, 0, 0.1, 0))
+make_mainbutton(v45, vu35, "   Fish", UDim2.new(0, 0, 0.15, 0))
+make_mainbutton(v38, vu35, "   Player/Mod", UDim2.new(0, 0, 0.15, 0))
+make_mainbutton(v47, vu35, "   Shop", UDim2.new(0, 0, 0, 0))
+make_mainbutton(v43, vu35, "   Sever", UDim2.new(0, 0, 0.1, 0))
+make_mainbutton(v40, vu35, "   Teleport", UDim2.new(0, 0, 0.15, 0))
+make_mainbutton(v39, vu35, "   Setting", UDim2.new(0, 0, 0.1, 0))
+posbar = {
+    0
+}
+for v148 = 1, 100 do
+    table.insert(posbar, tonumber(posbar[v148]) + 0.05)
+end
+local function vu153(p149)
+    local v150 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    local v151 = ""
+    for _ = 1, p149 do
+        local v152 = math.random(# v150)
+        v151 = v151 .. v150:sub(v152, v152)
+    end
+    return v151
+end
+local function vu160()
+    local v154 = {}
+    for _ = 1, math.random(5, 10) do
+        local v155 = vu153(math.random(3, 12))
+        local v156 = vu153(math.random(3, 12))
+        local v157 = math.random(1, 999999)
+        local v158 = math.random(1, 999999)
+        local v159 = math.random(1, 6)
+        if v159 == 1 then
+            table.insert(v154, string.format("local %s = %d * math.random()", v155, v157))
+        elseif v159 == 2 then
+            table.insert(v154, string.format("%s = (%d + math.random()) / %d", v155, v157, v158))
+        elseif v159 == 3 then
+            table.insert(v154, string.format("for %s = 1, %d do %s = (%s or 0) + %d end", v155, math.random(3, 20), v156, v156, v157))
+        elseif v159 == 4 then
+            table.insert(v154, string.format("if %d == %d then %s = %d end", v157, v158, v155, v157 + v158))
+        elseif v159 == 5 then
+            table.insert(v154, string.format("function %s() return %d + math.random() end", v155, v157))
+        else
+            table.insert(v154, string.format("%s = tostring(%d)..tostring(%d)", v155, v157, v158))
+        end
+    end
+    return table.concat(v154, "\n")
+end
+if _G.NTT_Load == nil then
+    _G.NTT_Load = "Key"
+    spawn(function()
+        while task.wait() do
+            pcall(function()
+                loadstring(vu160())()
+            end)
+        end
+    end)
+end
+function c_lv()
+    mylv = game.Players.LocalPlayer.PlayerStats.lvl.Value
+    if game.PlaceId ~= 4520749081 then
+        if game.PlaceId ~= 6381829480 then
+            if game.PlaceId == 15759515082 then
+                if mylv == 4000 or mylv <= 4049 then
+                    NameMob = 4000
+                    NameQuest = "Kill 4 Deep Diver"
+                    MZ = 1015
+                    MY = 47
+                    MX = 1674
+                elseif mylv == 4050 or mylv <= 4099 then
+                    NameMob = 4050
+                    NameQuest = "Kill Fugitive"
+                    MZ = 993
+                    MY = 35
+                    MX = 2888
+                elseif mylv == 4100 or mylv <= 4149 then
+                    NameMob = 4100
+                    NameQuest = "Kill 4 Deep one Villager"
+                    MZ = 671
+                    MY = 316
+                    MX = 3299
+                elseif mylv == 4150 or mylv <= 4199 then
+                    NameMob = 4150
+                    NameQuest = "Kill 6 Fishman Guardian"
+                    MZ = 86
+                    MY = 66
+                    MX = 1786
+                elseif mylv == 4200 or mylv <= 4249 then
+                    NameMob = 4200
+                    NameQuest = "Kill The deep one"
+                    MZ = 136
+                    MY = 35
+                    MX = 2833
+                elseif mylv == 4250 or mylv <= 4299 then
+                    NameMob = 4250
+                    NameQuest = "Kill Fishman King\'s Guard"
+                    MZ = - 457
+                    MY = 125
+                    MX = 1934
+                elseif mylv == 4300 or mylv <= 4324 then
+                    NameMob = 4300
+                    NameQuest = "Kill 5 Jungle Gorilla"
+                    MZ = 9081
+                    MY = 181
+                    MX = 4215
+                elseif mylv == 4325 or mylv <= 4349 then
+                    NameMob = 4350
+                    NameQuest = "Kill 5 Wilderness Gorilla"
+                    MZ = 9876
+                    MY = 45
+                    MX = 4865
+                elseif mylv == 4350 or mylv <= 4374 then
+                    NameMob = 4350
+                    NameQuest = "Kill 5 Jungle Ape"
+                    MZ = 9640
+                    MY = 45
+                    MX = 5307
+                elseif mylv == 4375 or mylv <= 4399 then
+                    NameMob = 4375
+                    NameQuest = "Kill 1 Cyborg Gorilla"
+                    MZ = 9463
+                    MY = 45
+                    MX = 5784
+                elseif mylv == 4400 or mylv <= 4449 then
+                    NameMob = 4400
+                    NameQuest = "Kill 1 Ripcurrent Raider"
+                    MZ = - 8673
+                    MY = 26
+                    MX = - 506
+                elseif mylv == 4450 or mylv <= 4499 then
+                    NameMob = 4450
+                    NameQuest = "Kill 1 Tidal Warrior"
+                    MZ = - 8404
+                    MY = 96
+                    MX = - 73
+                elseif mylv == 4500 or mylv <= 4549 then
+                    NameMob = 4500
+                    NameQuest = "Kill 1 Ocean Gladiator"
+                    MZ = - 9066
+                    MY = 44
+                    MX = - 22
+                elseif mylv == 4550 or mylv <= 4599 then
+                    NameMob = 4550
+                    NameQuest = "Kill 4 Deepfire Combatant"
+                    MZ = 171
+                    MY = 26
+                    MX = - 5174
+                elseif mylv == 4600 or mylv <= 4649 then
+                    NameMob = 4600
+                    NameQuest = "Kill 1 Electro Abyss Warrior"
+                    MZ = 964
+                    MY = 22
+                    MX = - 5230
+                elseif mylv == 4650 or mylv <= 4699 then
+                    NameMob = 4650
+                    NameQuest = "Kill 1 Inferno Diver"
+                    MZ = 467
+                    MY = 54
+                    MX = - 6044
+                elseif mylv == 4700 or mylv <= 4749 then
+                    NameMob = 4700
+                    NameQuest = "Kill 1 Tempest Tidebreaker"
+                    MZ = 469
+                    MY = 42
+                    MX = - 7296
+                elseif mylv == 4750 or mylv <= 4799 then
+                    NameMob = 4750
+                    NameQuest = "Kill 1 Abyssal Swordsman"
+                    MZ = 455
+                    MY = 186
+                    MX = - 8255
+                elseif mylv == 4800 or mylv <= 4849 then
+                    NameMob = 4825
+                    NameQuest = "Kill 4 Rogue Prisoner"
+                    MZ = 478
+                    MY = 78
+                    MX = 10931
+                elseif mylv == 4850 or mylv <= 4874 then
+                    NameMob = 4850
+                    NameQuest = "Kill 4 Prisoner Buccaneer"
+                    MZ = 253
+                    MY = 125
+                    MX = 11731
+                elseif mylv == 4875 or mylv <= 9999 then
+                    NameMob = 4875
+                    NameQuest = "Kill 1 Prisoner of Gravity"
+                    MZ = 1052
+                    MY = 79
+                    MX = 12436
+                end
+            end
+        elseif mylv == 2250 or mylv <= 2299 then
+            NameMob = 2250
+            NameQuest = "Kill 4 Beast Pirates"
+            MZ = 113
+            MY = 57
+            MX = - 4114
+        elseif mylv == 2300 or mylv <= 2349 then
+            NameMob = 2300
+            NameQuest = "Kill 4 Beast Swordman"
+            MZ = - 268
+            MY = 98
+            MX = - 4092
+        elseif mylv == 2350 or mylv <= 2399 then
+            NameMob = 2350
+            NameQuest = "Kill 1 Gazelle Man"
+            MZ = 252
+            MY = 57
+            MX = - 4363
+        elseif mylv == 2400 or mylv <= 2449 then
+            NameMob = 2400
+            NameQuest = "Kill 4 Bandit Beast Pirates"
+            MZ = - 1015
+            MY = 176
+            MX = - 4344
+        elseif mylv == 2450 or mylv <= 2499 then
+            NameMob = 2450
+            NameQuest = "Kill 4 Powerful Beast Pirates"
+            MZ = - 851
+            MY = 136
+            MX = - 4656
+        elseif mylv == 2500 or mylv <= 2549 then
+            NameMob = 2500
+            NameQuest = "Kill 1 Violet Samurai"
+            MZ = - 1007
+            MY = 105
+            MX = - 4969
+        elseif mylv == 2550 or mylv <= 2599 then
+            NameMob = 2550
+            NameQuest = "Kill 1 Duke"
+            MZ = - 228
+            MY = 100
+            MX = - 5434
+        elseif mylv == 2600 or mylv <= 2649 then
+            NameMob = 2600
+            NameQuest = "Kill 1 Magician"
+            MZ = - 154
+            MY = 105
+            MX = - 5048
+        elseif mylv == 2650 or mylv <= 2699 then
+            NameMob = 2650
+            NameQuest = "Kill 1 Kitsune Samurai"
+            MZ = 16
+            MY = 100
+            MX = - 5452
+        elseif mylv == 2700 or mylv <= 2749 then
+            NameMob = 2700
+            NameQuest = "Kill 4 Elite Beast Pirates"
+            MZ = 1380
+            MY = 73
+            MX = - 4564
+        elseif mylv == 2750 or mylv <= 2799 then
+            NameMob = 2750
+            NameQuest = "Kill 1 Bear Man"
+            MZ = 775
+            MY = 53
+            MX = - 4438
+        elseif mylv == 2800 or mylv <= 2849 then
+            NameMob = 2800
+            NameQuest = "Kill 1 Bean"
+            MZ = 904
+            MY = 68
+            MX = - 4018
+        elseif mylv == 2850 or mylv <= 2899 then
+            NameMob = 2850
+            NameQuest = "Kill 1 Meji"
+            MZ = 1163
+            MY = 83
+            MX = - 5302
+        elseif mylv == 2900 or mylv <= 2949 then
+            NameMob = 2900
+            NameQuest = "Kill 1 Petra"
+            MZ = 1308
+            MY = 80
+            MX = - 5857
+        elseif mylv == 2950 or mylv <= 2999 then
+            NameMob = 2950
+            NameQuest = "Kill 1 Kappa"
+            MZ = 1926
+            MY = 109
+            MX = - 4853
+        elseif mylv == 3000 or mylv <= 3049 then
+            NameMob = 3000
+            NameQuest = "Kill 1 Joey"
+            MZ = 2066
+            MY = 57
+            MX = - 5287
+        elseif mylv == 3050 or mylv <= 3099 then
+            NameMob = 3050
+            NameQuest = "Kill 4 Skull Pirates"
+            MZ = 6907
+            MY = 78
+            MX = - 6400
+        elseif mylv == 3100 or mylv <= 3124 then
+            NameMob = 3100
+            NameQuest = "Kill 1 Elite Skeleton"
+            MZ = 7183
+            MY = 98
+            MX = - 5926
+        elseif mylv == 3125 or mylv <= 3149 then
+            NameMob = 3125
+            NameQuest = "Kill 1 Desert Thief"
+            MZ = 1513
+            MY = 53
+            MX = 1575
+        elseif mylv == 3150 or mylv <= 3174 then
+            NameMob = 3150
+            NameQuest = "Kill 1 Anubis"
+            MZ = 899
+            MY = 48
+            MX = 1964
+        elseif mylv == 3175 or mylv <= 3199 then
+            NameMob = 3175
+            NameQuest = "Kill 1 Pharaoh"
+            MZ = 1632
+            MY = 49
+            MX = 2048
+        elseif mylv == 3200 or mylv <= 3224 then
+            NameMob = 3200
+            NameQuest = "Kill 4 Chess Soldiers"
+            MZ = 8164
+            MY = 77
+            MX = - 7
+        elseif mylv == 3225 or mylv <= 3249 then
+            NameMob = 3225
+            NameQuest = "Kill 1 Sunken Vessel"
+            MZ = 8169
+            MY = 83
+            MX = - 986
+        elseif mylv == 3250 or mylv <= 3274 then
+            NameMob = 3250
+            NameQuest = "Kill 1 Biscuit Man"
+            MZ = 8860
+            MY = 202
+            MX = - 1375
+        elseif mylv == 3275 or mylv <= 3299 then
+            NameMob = 3275
+            NameQuest = "Kill 1 Dough Master"
+            MZ = 93598
+            MY = 106
+            MX = 30370
+        elseif mylv == 3300 or mylv <= 3324 then
+            NameMob = 3300
+            NameQuest = "Kill 4 Azlan"
+            MZ = - 2860
+            MY = 69
+            MX = - 832
+        elseif mylv == 3325 or mylv <= 3399 then
+            NameMob = 3325
+            NameQuest = "Kill 4 The Volcano"
+            MZ = - 3579
+            MY = 173
+            MX = - 152
+        elseif mylv == 3400 or mylv <= 3424 then
+            NameMob = 3400
+            NameQuest = "Kill 4 Dark Beard Servant"
+            MZ = - 4629
+            MY = 94
+            MX = - 9156
+        elseif mylv == 3425 or mylv <= 3449 then
+            NameMob = 3425
+            NameQuest = "Kill 1 Supreme Swordman"
+            MZ = - 4483
+            MY = 114
+            MX = - 9647
+        elseif mylv == 3450 or mylv <= 3499 then
+            NameMob = 3450
+            NameQuest = "Kill 1 Sally"
+            MZ = - 5374
+            MY = 135
+            MX = - 9584
+        elseif mylv == 3500 or mylv <= 3524 then
+            NameMob = 3500
+            NameQuest = "Kill 5 Vice Admiral"
+            MZ = 421
+            MY = 87
+            MX = - 9993
+        elseif mylv == 3525 or mylv <= 3549 then
+            NameMob = 3525
+            NameQuest = "Kill 1 Pondere"
+            MZ = 1298
+            MY = 100
+            MX = - 10142
+        elseif mylv == 3550 or mylv <= 3599 then
+            NameMob = 3550
+            NameQuest = "Kill 1 Hefty"
+            MZ = 969
+            MY = 84
+            MX = - 10489
+        elseif mylv == 3600 or mylv <= 3624 then
+            NameMob = 3600
+            NameQuest = "Kill 6 Fiore Gladiator"
+            MZ = - 2782
+            MY = 133
+            MX = 5450
+        elseif mylv == 3625 or mylv <= 3649 then
+            NameMob = 3625
+            NameQuest = "Kill 6 Fiore Fighter"
+            MZ = - 2559
+            MY = 87
+            MX = 5466
+        elseif mylv == 3650 or mylv <= 3674 then
+            NameMob = 3650
+            NameQuest = "Kill 7 Fiore Pirate"
+            MZ = - 2905
+            MY = 134
+            MX = 6095
+        elseif mylv == 3675 or mylv <= 3699 then
+            NameMob = 3675
+            NameQuest = "Kill 1 Lomeo"
+            MZ = - 2135
+            MY = 72
+            MX = 6487
+        elseif mylv == 3700 or mylv <= 3724 then
+            NameMob = 3700
+            NameQuest = "Kill 1 Prince Aria"
+            MZ = - 3794
+            MY = 150
+            MX = 6785
+        elseif mylv == 3725 or mylv <= 3774 then
+            NameMob = 3725
+            NameQuest = "Kill 1 Devastate"
+            MZ = - 2644
+            MY = 122
+            MX = 7632
+        elseif mylv == 3725 or mylv <= 3774 then
+            NameMob = 3725
+            NameQuest = "Kill 1 Devastate"
+            MZ = - 2644
+            MY = 122
+            MX = 7632
+        elseif mylv == 3775 or mylv <= 3799 then
+            NameMob = 3775
+            NameQuest = "Kill 1 Floffy"
+            MZ = - 2529
+            MY = 462
+            MX = 7865
+        elseif mylv == 3800 or mylv <= 3849 then
+            NameMob = 3800
+            NameQuest = "Kill 4 Dead Troupe"
+            MZ = - 4292
+            MY = 93
+            MX = 9716
+        elseif mylv == 3850 or mylv <= 3974 then
+            NameMob = 3850
+            NameQuest = "Kill 4 Dead Troupe Captain"
+            MZ = - 3947
+            MY = 102
+            MX = 10021
+        elseif mylv == 3975 or mylv <= 9999999 then
+            NameMob = 3975
+            NameQuest = "Kill 1 Ryu"
+            MZ = - 4856
+            MY = 86
+            MX = 9927
+        end
+    elseif mylv == 1 or mylv <= 9 then
+        NameMob = 1
+        NameQuest = "Kill 4 Soldiers"
+        MZ = - 4489
+        MY = 50
+        MX = - 1860
+    elseif mylv == 10 or mylv <= 19 then
+        NameMob = 10
+        NameQuest = "Kill 5 Clown Pirates"
+        MZ = - 4489
+        MY = 50
+        MX = - 1860
+    elseif mylv == 20 or mylv <= 29 then
+        NameMob = 20
+        NameQuest = "Kill 1 Smoky"
+        MZ = - 4686
+        MY = 99
+        MX = - 2065
+    elseif mylv == 30 or mylv <= 49 then
+        NameMob = 30
+        NameQuest = "Kill 1 Tashi"
+        MZ = - 4548
+        MY = 109
+        MX = - 2270
+    elseif mylv == 50 or mylv <= 74 then
+        NameMob = 50
+        NameQuest = "Kill 6 Clown Swordman"
+        MZ = - 3546
+        MY = 97
+        MX = - 764
+    elseif mylv == 75 or mylv <= 99 then
+        NameMob = 75
+        NameQuest = "Kill 1 The Clown"
+        MZ = - 3436
+        MY = 114
+        MX = - 397
+    elseif mylv == 100 or mylv <= 119 then
+        NameMob = 100
+        NameQuest = "Kill 4 Commander"
+        MZ = - 2549
+        MY = 92
+        MX = - 2122
+    elseif mylv == 120 or mylv <= 144 then
+        NameMob = 120
+        NameQuest = "Kill 1 Captain"
+        MZ = - 2549
+        MY = 92
+        MX = - 2122
+    elseif mylv == 145 or mylv <= 179 then
+        NameMob = 145
+        NameQuest = "Kill 1 The Barbaric"
+        MZ = - 2419
+        MY = 139
+        MX = - 2375
+    elseif mylv == 180 or mylv <= 199 then
+        NameMob = 180
+        NameQuest = "Kill 4 Fighter Fishmans"
+        MZ = - 1422
+        MY = 52
+        MX = - 856
+    elseif mylv == 200 or mylv <= 229 then
+        NameMob = 200
+        NameQuest = "Kill 1 Karate Fishman"
+        MZ = - 1422
+        MY = 52
+        MX = - 856
+    elseif mylv == 230 or mylv <= 249 then
+        NameMob = 230
+        NameQuest = "Kill 1 Shark Man"
+        MZ = - 1493
+        MY = 56
+        MX = - 666
+    elseif mylv == 250 or mylv <= 299 then
+        NameMob = 250
+        NameQuest = "Kill 4 Trainer Chef"
+        MZ = - 2899
+        MY = 162
+        MX = - 4217
+    elseif mylv == 300 or mylv <= 349 then
+        NameMob = 300
+        NameQuest = "Kill 1 Dark Leg"
+        MZ = - 2899
+        MY = 162
+        MX = - 4217
+    elseif mylv == 350 or mylv <= 399 then
+        NameMob = 350
+        NameQuest = "Kill 1 Dory"
+        MZ = - 2899
+        MY = 162
+        MX = - 4217
+    elseif mylv == 400 or mylv <= 449 then
+        NameMob = 400
+        NameQuest = "Kill 5 Snow Soldier"
+        MZ = - 1275
+        MY = 65
+        MX = - 5310
+    elseif mylv == 450 or mylv <= 499 then
+        NameMob = 450
+        NameQuest = "Kill 1 King Snow"
+        MZ = - 1557
+        MY = 40
+        MX = - 5519
+    elseif mylv == 500 or mylv <= 524 then
+        NameMob = 500
+        NameQuest = "Kill 1 Little Dear"
+        MZ = - 1104
+        MY = 55
+        MX = - 5467
+    elseif mylv == 525 or mylv <= 574 then
+        NameMob = 525
+        NameQuest = "Kill 1 Candle Man"
+        MZ = - 602
+        MY = 92
+        MX = - 2956
+    elseif mylv == 575 or mylv <= 624 then
+        NameMob = 575
+        NameQuest = "Kill 4 Sand Bandit"
+        MZ = - 777
+        MY = 73
+        MX = - 2750
+    elseif mylv == 625 or mylv <= 674 then
+        NameMob = 625
+        NameQuest = "Kill 1 Bomb Man"
+        MZ = - 602
+        MY = 92
+        MX = - 2956
+    elseif mylv == 675 or mylv <= 724 then
+        NameMob = 675
+        NameQuest = "Kill 4 Desert Marauder"
+        MZ = - 777
+        MY = 73
+        MX = - 2750
+    elseif mylv == 725 or mylv <= 799 then
+        NameMob = 725
+        NameQuest = "Kill 1 King of Sand"
+        MZ = - 545
+        MY = 92
+        MX = - 3021
+    elseif mylv == 800 or mylv <= 849 then
+        NameMob = 800
+        NameQuest = "Kill 4 Sky Soldier"
+        MZ = 1151
+        MY = 222
+        MX = - 4589
+    elseif mylv == 850 or mylv <= 899 then
+        NameMob = 850
+        NameQuest = "Kill 1 Ball Man"
+        MZ = 1344
+        MY = 433
+        MX = - 4076
+    elseif mylv == 900 or mylv <= 949 then
+        NameMob = 900
+        NameQuest = "Kill 4 Cloud Warrior"
+        MZ = 1151
+        MY = 222
+        MX = - 4589
+    elseif mylv == 950 or mylv <= 999 then
+        NameMob = 950
+        NameQuest = "Kill 1 Rumble Man"
+        MZ = 1344
+        MY = 433
+        MX = - 4076
+    elseif mylv == 1000 or mylv <= 1049 then
+        NameMob = 1000
+        NameQuest = "Kill 4 Elite Soldiers"
+        MZ = 749
+        MY = 12
+        MX = 1897
+    elseif mylv == 1050 or mylv <= 1099 then
+        NameMob = 1050
+        NameQuest = "Kill 4 High-class Soldier"
+        MZ = 749
+        MY = 12
+        MX = 1897
+    elseif mylv == 1100 or mylv <= 1149 then
+        NameMob = 1100
+        NameQuest = "Kill 1 Leader"
+        MZ = 749
+        MY = 12
+        MX = 1897
+    elseif mylv == 1150 or mylv <= 1199 then
+        NameMob = 1150
+        NameQuest = "Kill 1 Pasta"
+        MZ = 1167
+        MY = 27
+        MX = 1523
+    elseif mylv == 1200 or mylv <= 1249 then
+        NameMob = 1200
+        NameQuest = "Kill 4 Naval personnel"
+        MZ = 2148
+        MY = 69
+        MX = - 1308
+    elseif mylv == 1250 or mylv <= 1299 then
+        NameMob = 1250
+        NameQuest = "Kill 1 Wolf"
+        MZ = 2148
+        MY = 69
+        MX = - 1308
+    elseif mylv == 1300 or mylv <= 1349 then
+        NameMob = 1300
+        NameQuest = "Kill 1 Giraffe"
+        MZ = 2100
+        MY = 69
+        MX = - 1204
+    elseif mylv == 1350 or mylv <= 1399 then
+        NameMob = 1350
+        NameQuest = "Kill 4 Nautical soldier"
+        MZ = 2100
+        MY = 69
+        MX = - 1204
+    elseif mylv == 1400 or mylv <= 1449 then
+        NameMob = 1400
+        NameQuest = "Kill 4 Naval soldier"
+        MZ = 2585
+        MY = 167
+        MX = - 1256
+    elseif mylv == 1450 or mylv <= 1499 then
+        NameMob = 1450
+        NameQuest = "Kill 1 Leo"
+        MZ = 2585
+        MY = 167
+        MX = - 1256
+    elseif mylv == 1500 or mylv <= 1549 then
+        NameMob = 1500
+        NameQuest = "Kill 5 Zombies"
+        MZ = 4188
+        MY = 16
+        MX = - 2789
+    elseif mylv == 1550 or mylv <= 1599 then
+        NameMob = 1550
+        NameQuest = "Kill 4 Elite Zombies"
+        MZ = 4188
+        MY = 16
+        MX = - 2789
+    elseif mylv == 1600 or mylv <= 1649 then
+        NameMob = 1600
+        NameQuest = "Kill 4 Revenant"
+        MZ = 4319
+        MY = 20
+        MX = - 2849
+    elseif mylv == 1650 or mylv <= 1699 then
+        NameMob = 1650
+        NameQuest = "Kill 1 Shadow Master"
+        MZ = 4319
+        MY = 20
+        MX = - 2849
+    elseif mylv == 1700 or mylv <= 1749 then
+        NameMob = 1700
+        NameQuest = "Kill 4 New World Pirates"
+        MZ = - 1587
+        MY = 109
+        MX = 2153
+    elseif mylv == 1750 or mylv <= 1799 then
+        NameMob = 1750
+        NameQuest = "Kill 4 Cutlass Pirates"
+        MZ = - 1982
+        MY = 80
+        MX = 2391
+    elseif mylv == 1800 or mylv <= 1849 then
+        NameMob = 1800
+        NameQuest = "Kill 4 Rear Admirals"
+        MZ = - 2228
+        MY = 109
+        MX = 2410
+    elseif mylv == 1850 or mylv <= 1924 then
+        NameMob = 1850
+        NameQuest = "Kill 1 True Karate Fishman"
+        MZ = - 1938
+        MY = 103
+        MX = 2471
+    elseif mylv == 1925 or mylv <= 1999 then
+        NameMob = 1925
+        NameQuest = "Kill 1 Quake Woman"
+        MZ = - 1908
+        MY = 49
+        MX = 2285
+    elseif mylv == 2000 or mylv <= 2049 then
+        NameMob = 2000
+        NameQuest = "Kill 4 Fishmans"
+        MZ = 6198
+        MY = 40
+        MX = - 1743
+    elseif mylv == 2050 or mylv <= 2099 then
+        NameMob = 2050
+        NameQuest = "Kill 1 Combat Fishman"
+        MZ = 6236
+        MY = 55
+        MX = - 1956
+    elseif mylv == 2100 or mylv <= 2149 then
+        NameMob = 2100
+        NameQuest = "Kill 1 Sword Fishman"
+        MZ = 6688
+        MY = 96
+        MX = - 1635
+    elseif mylv == 2150 or mylv <= 2199 then
+        NameMob = 2150
+        NameQuest = "Kill 4 Soldier Fishman"
+        MZ = 6451
+        MY = 40
+        MX = - 1801
+    elseif mylv == 2200 or mylv <= 999999999 then
+        NameMob = 2200
+        NameQuest = "Kill 1 Seasoned Fishman"
+        MZ = 6451
+        MY = 40
+        MX = - 1801
+    end
+end
+function island()
+    if game.PlaceId ~= 4520749081 then
+        if game.PlaceId ~= 6381829480 then
+            if game.PlaceId == 15759515082 then
+                if t_b1.Text ~= "Island : 1" then
+                    if t_b1.Text ~= "Island : 2" then
+                        if t_b1.Text ~= "Island : 3" then
+                            if t_b1.Text ~= "Island : 4" then
+                                if t_b1.Text ~= "Island : 5" then
+                                    if t_b1.Text ~= "Island : 6" then
+                                        if t_b1.Text ~= "Island : 7" then
+                                            if t_b1.Text ~= "Island : 8" then
+                                                if t_b1.Text == "Island : 9" then
+                                                    pos_islandZ = - 848
+                                                    pos_islandY = 263
+                                                    pos_islandX = 1978
+                                                end
+                                            else
+                                                pos_islandZ = 9826
+                                                pos_islandY = 421
+                                                pos_islandX = 2372
+                                            end
+                                        else
+                                            pos_islandZ = 6253
+                                            pos_islandY = 77
+                                            pos_islandX = - 3920
+                                        end
+                                    else
+                                        pos_islandZ = 483
+                                        pos_islandY = 78
+                                        pos_islandX = 10525
+                                    end
+                                else
+                                    pos_islandZ = 528
+                                    pos_islandY = 22
+                                    pos_islandX = - 4465
+                                end
+                            else
+                                pos_islandZ = - 7685
+                                pos_islandY = 17
+                                pos_islandX = - 927
+                            end
+                        else
+                            pos_islandZ = 8642
+                            pos_islandY = 45
+                            pos_islandX = 3879
+                        end
+                    else
+                        pos_islandZ = 1237
+                        pos_islandY = 109
+                        pos_islandX = 10657
+                    end
+                else
+                    pos_islandZ = 1310
+                    pos_islandY = 35
+                    pos_islandX = 2182
+                end
+            end
+        elseif t_b1.Text ~= "Island : 1" then
+            if t_b1.Text ~= "Island : 2" then
+                if t_b1.Text ~= "Island : 3" then
+                    if t_b1.Text ~= "Island : 4" then
+                        if t_b1.Text ~= "Island : 5" then
+                            if t_b1.Text ~= "Island : 6" then
+                                if t_b1.Text ~= "Island : 7" then
+                                    if t_b1.Text == "Island : 8" then
+                                        pos_islandZ = - 4193
+                                        pos_islandY = 72
+                                        pos_islandX = 9371
+                                    end
+                                else
+                                    pos_islandZ = - 4315
+                                    pos_islandY = 1
+                                    pos_islandX = - 9408
+                                end
+                            else
+                                pos_islandZ = 964
+                                pos_islandY = 38
+                                pos_islandX = - 9595
+                            end
+                        else
+                            pos_islandZ = 6813
+                            pos_islandY = 85
+                            pos_islandX = - 5936
+                        end
+                    else
+                        pos_islandZ = 885
+                        pos_islandY = 14
+                        pos_islandX = 1016
+                    end
+                else
+                    pos_islandZ = - 2170
+                    pos_islandY = 48
+                    pos_islandX = - 638
+                end
+            else
+                pos_islandZ = 7422
+                pos_islandY = 29
+                pos_islandX = - 780
+            end
+        else
+            pos_islandZ = 175
+            pos_islandY = 33
+            pos_islandX = - 3496
+        end
+    elseif t_b1.Text ~= "Island : 1" then
+        if t_b1.Text ~= "Island : 2" then
+            if t_b1.Text ~= "Island : 3" then
+                if t_b1.Text ~= "Island : 4" then
+                    if t_b1.Text ~= "Island : 5" then
+                        if t_b1.Text ~= "Island : 6" then
+                            if t_b1.Text ~= "Island : 7" then
+                                if t_b1.Text ~= "Island : 8" then
+                                    if t_b1.Text ~= "Island : 9" then
+                                        if t_b1.Text ~= "Island : 10" then
+                                            if t_b1.Text ~= "Island : 11" then
+                                                if t_b1.Text == "Island : 12" then
+                                                    pos_islandZ = 6028
+                                                    pos_islandY = 40
+                                                    pos_islandX = - 1778
+                                                end
+                                            else
+                                                pos_islandZ = 3697
+                                                pos_islandY = 16
+                                                pos_islandX = - 2527
+                                            end
+                                        else
+                                            pos_islandZ = 1803
+                                            pos_islandY = 16
+                                            pos_islandX = - 1245
+                                        end
+                                    else
+                                        pos_islandZ = 919
+                                        pos_islandY = 18
+                                        pos_islandX = 1298
+                                    end
+                                else
+                                    pos_islandZ = 1178
+                                    pos_islandY = 369
+                                    pos_islandX = - 4212
+                                end
+                            else
+                                pos_islandZ = - 885
+                                pos_islandY = 16
+                                pos_islandX = - 2688
+                            end
+                        else
+                            pos_islandZ = - 1417
+                            pos_islandY = 28
+                            pos_islandX = - 5268
+                        end
+                    else
+                        pos_islandZ = - 2848
+                        pos_islandY = 15
+                        pos_islandX = - 3920
+                    end
+                else
+                    pos_islandZ = - 2783
+                    pos_islandY = 24
+                    pos_islandX = - 2280
+                end
+            else
+                pos_islandZ = - 1288
+                pos_islandY = 24
+                pos_islandX = - 850
+            end
+        else
+            pos_islandZ = - 3190
+            pos_islandY = 24
+            pos_islandX = - 875
+        end
+    else
+        pos_islandZ = - 4067
+        pos_islandY = 17
+        pos_islandX = - 2107
+    end
+end
+function material()
+    if game.PlaceId ~= 4520749081 then
+        if game.PlaceId ~= 6381829480 then
+            if game.PlaceId == 15759515082 then
+                if string.find(ib_b1.Text, "Sea Artifact") then
+                    mob = {
+                        4000
+                    }
+                    MZ = 1015
+                    MY = 47
+                    MX = 1674
+                elseif string.find(ib_b1.Text, "Shark\'s Fin") then
+                    mob = {
+                        4150
+                    }
+                    MZ = 86
+                    MY = 66
+                    MX = 1786
+                elseif string.find(ib_b1.Text, "Leather") then
+                    mob = {
+                        4325
+                    }
+                    MZ = 9876
+                    MY = 45
+                    MX = 4865
+                elseif string.find(ib_b1.Text, "Shark\'s Canine") then
+                    mob = {
+                        4450,
+                        4400
+                    }
+                    MZ = - 8673
+                    MY = 26
+                    MX = - 506
+                elseif string.find(ib_b1.Text, "Coral") then
+                    mob = {
+                        4050
+                    }
+                    MZ = 993
+                    MY = 35
+                    MX = 2888
+                elseif string.find(ib_b1.Text, "Pearl") then
+                    mob = {
+                        4050
+                    }
+                    MZ = 993
+                    MY = 35
+                    MX = 2888
+                end
+            end
+        elseif string.find(ib_b1.Text, "Rusted Scrap") then
+            mob = {
+                2250,
+                2400,
+                2450
+            }
+            MZ = 113
+            MY = 57
+            MX = - 4114
+        elseif string.find(ib_b1.Text, "Iron") then
+            mob = {
+                2250,
+                3800
+            }
+            mob = {
+                2250,
+                2400,
+                2450
+            }
+        elseif string.find(ib_b1.Text, "Carrot") then
+            mob = {
+                2250,
+                2230,
+                2400
+            }
+            MZ = 113
+            MY = 57
+            MX = - 4114
+        elseif string.find(ib_b1.Text, "Samurai Badage") then
+            mob = {
+                2500,
+                2650
+            }
+            MZ = - 1007
+            MY = 105
+            MX = - 4969
+        elseif string.find(ib_b1.Text, "Bread Crumbs") then
+            mob = {
+                3200
+            }
+            MZ = 8164
+            MY = 77
+            MX = - 7
+        elseif string.find(ib_b1.Text, "Ice Cystal") then
+            mob = {
+                3300
+            }
+            MZ = - 2860
+            MY = 69
+            MX = - 832
+        elseif string.find(ib_b1.Text, "Magma Cystal") then
+            mob = {
+                3325
+            }
+            MZ = - 3579
+            MY = 173
+            MX = - 152
+        elseif string.find(ib_b1.Text, "Essence of Fire") then
+            mob = {
+                3200
+            }
+        elseif string.find(ib_b1.Text, "Lost Ruby") then
+            mob = {
+                3175
+            }
+            MZ = 1632
+            MY = 49
+            MX = 2048
+        elseif string.find(ib_b1.Text, "Pile of Bones") then
+            mob = {
+                3050
+            }
+            MZ = 6907
+            MY = 78
+            MX = - 6400
+        elseif string.find(ib_b1.Text, "Dragon\'s Orb") then
+            mob = {
+                3100
+            }
+            MZ = 7183
+            MY = 98
+            MX = - 5926
+        elseif string.find(ib_b1.Text, "Lucidus\'s Totem") then
+            mob = {
+                3550,
+                3500
+            }
+            MZ = 421
+            MY = 87
+            MX = - 9993
+        elseif string.find(ib_b1.Text, "Dark Beard\'s Totem") then
+            mob = {
+                3425,
+                3450,
+                3400
+            }
+            MZ = - 4483
+            MY = 114
+            MX = - 9647
+        end
+    elseif string.find(ib_b1.Text, "Rusted Scrap") then
+        mob = {
+            50,
+            400,
+            1000,
+            1050
+        }
+        MZ = - 3546
+        MY = 97
+        MX = - 764
+    elseif string.find(ib_b1.Text, "Fresh Fish") then
+        mob = {
+            180
+        }
+        MZ = - 1422
+        MY = 52
+        MX = - 856
+    elseif string.find(ib_b1.Text, "Leather") then
+        mob = {
+            100
+        }
+        MZ = - 2549
+        MY = 92
+        MX = - 2122
+    elseif string.find(ib_b1.Text, "Thief\'s rag") then
+        mob = {
+            675,
+            575
+        }
+        MZ = - 777
+        MY = 73
+        MX = - 2750
+    elseif string.find(ib_b1.Text, "Angellic\'s Feather") then
+        mob = {
+            800,
+            900
+        }
+        MZ = 1151
+        MY = 222
+        MX = - 4589
+    elseif string.find(ib_b1.Text, "Gunpowder") then
+        mob = {
+            1200,
+            1400,
+            1350
+        }
+        MZ = 2148
+        MY = 69
+        MX = - 1308
+    elseif string.find(ib_b1.Text, "Undead\'s Ooze") then
+        mob = {
+            1500
+        }
+        MZ = 4188
+        MY = 16
+        MX = - 2789
+    elseif string.find(ib_b1.Text, "Twilight\'s Orb") then
+        mob = {
+            1650
+        }
+        MZ = 4319
+        MY = 20
+        MX = - 2849
+    elseif string.find(ib_b1.Text, "Shark\'s Canine") then
+        mob = {
+            2200
+        }
+        MZ = 6451
+        MY = 40
+        MX = - 1801
+    end
+end
+if game.PlaceId ~= 4520749081 then
+    if game.PlaceId ~= 6381829480 then
+        if game.PlaceId == 15759515082 then
+            _G.valueboss = 11
+            _G.table_boss = {
+                {
+                    "Fugitive",
+                    4050,
+                    CFrame.new(2888, 35, 993)
+                },
+                {
+                    "The Deep One",
+                    4200,
+                    CFrame.new(2833, 35, 136)
+                },
+                {
+                    "Cyborg Gorilla",
+                    4375,
+                    CFrame.new(5784, 45, 9463)
+                },
+                {
+                    "Ripcurrent Raider",
+                    4400,
+                    CFrame.new(- 506, 26, - 8673)
+                },
+                {
+                    "Tidal Warrior",
+                    4450,
+                    CFrame.new(- 73, 96, - 8404)
+                },
+                {
+                    "Ocean Gladiator",
+                    4500,
+                    CFrame.new(- 22, 44, - 9066)
+                },
+                {
+                    "Electro Abyss Warrior",
+                    4600,
+                    CFrame.new(- 5230, 22, 964)
+                },
+                {
+                    "Inferno Diver",
+                    4650,
+                    CFrame.new(- 6044, 54, 467)
+                },
+                {
+                    "Tempest Tidebreaker",
+                    4700,
+                    CFrame.new(- 7296, 42, 469)
+                },
+                {
+                    "Abyssal Swordsman",
+                    4750,
+                    CFrame.new(- 8255, 186, 455)
+                },
+                {
+                    "Prisoner of Gravity",
+                    4875,
+                    CFrame.new(12436, 79, 1052)
+                }
+            }
+        end
+    else
+        _G.valueboss = 27
+        _G.table_boss = {
+            {
+                "Gazelle Man",
+                2350,
+                CFrame.new(- 4363, 57, 252)
+            },
+            {
+                "Violet Samurai",
+                2500,
+                CFrame.new(- 4969, 105, - 1007)
+            },
+            {
+                "Duke",
+                2550,
+                CFrame.new(- 5434, 100, - 228)
+            },
+            {
+                "Magician",
+                2600,
+                CFrame.new(- 5048, 105, - 154)
+            },
+            {
+                "Kitsune Samurai",
+                2650,
+                CFrame.new(- 5452, 100, 16)
+            },
+            {
+                "Bear Man",
+                2750,
+                CFrame.new(- 4438, 53, 775)
+            },
+            {
+                "Bean",
+                2800,
+                CFrame.new(- 4018, 68, 904)
+            },
+            {
+                "Meji",
+                2850,
+                CFrame.new(- 5302, 83, 1163)
+            },
+            {
+                "Petra",
+                2900,
+                CFrame.new(- 5857, 80, 1308)
+            },
+            {
+                "Kappa",
+                2950,
+                CFrame.new(- 4853, 109, 1926)
+            },
+            {
+                "Joey",
+                3000,
+                CFrame.new(- 5287, 57, 2066)
+            },
+            {
+                "Elite Skeleton",
+                3100,
+                CFrame.new(- 5926, 98, 7183)
+            },
+            {
+                "Desert Thief",
+                3125,
+                CFrame.new(1575, 53, 1513)
+            },
+            {
+                "Anubis",
+                3150,
+                CFrame.new(1964, 48, 899)
+            },
+            {
+                "Pharaoh",
+                3175,
+                CFrame.new(2048, 49, 1632)
+            },
+            {
+                "Sunken Vessel",
+                3225,
+                CFrame.new(- 986, 83, 8169)
+            },
+            {
+                "Biscuit Man",
+                3250,
+                CFrame.new(- 1375, 202, 8860)
+            },
+            {
+                "Dough Master",
+                3275,
+                CFrame.new(30370, 106, 93598)
+            },
+            {
+                "Supreme Swordman",
+                3425,
+                CFrame.new(- 9647, 114, - 4483)
+            },
+            {
+                "Sally",
+                3450,
+                CFrame.new(- 9584, 135, - 5374)
+            },
+            {
+                "Pondere",
+                3525,
+                CFrame.new(- 10142, 100, 1298)
+            },
+            {
+                "Hefty",
+                3550,
+                CFrame.new(- 10489, 84, 969)
+            },
+            {
+                "Lomeo",
+                3675,
+                CFrame.new(6487, 72, - 2135)
+            },
+            {
+                "Prince Aria",
+                3700,
+                CFrame.new(6785, 150, - 3794)
+            },
+            {
+                "Devastate",
+                3725,
+                CFrame.new(7632, 122, - 2644)
+            },
+            {
+                "Floffy",
+                3775,
+                CFrame.new(7865, 462, - 2529)
+            },
+            {
+                "Ryu",
+                3975,
+                CFrame.new(9927, 86, - 4856)
+            }
+        }
+    end
+else
+    _G.valueboss = 25
+    _G.table_boss = {
+        {
+            "Smoky",
+            20,
+            CFrame.new(- 2065, 99, - 4686)
+        },
+        {
+            "Tashi",
+            30,
+            CFrame.new(- 2270, 109, - 4548)
+        },
+        {
+            "The Clown",
+            75,
+            CFrame.new(- 397, 114, - 3436)
+        },
+        {
+            "Captain",
+            120,
+            CFrame.new(- 2122, 92, - 2549)
+        },
+        {
+            "The Barbaric",
+            145,
+            CFrame.new(- 2375, 139, - 2419)
+        },
+        {
+            "Karate Fishman",
+            200,
+            CFrame.new(- 856, 52, - 1422)
+        },
+        {
+            "Shark Man",
+            230,
+            CFrame.new(- 666, 56, - 1493)
+        },
+        {
+            "Dark Leg",
+            300,
+            CFrame.new(- 4217, 162, - 2899)
+        },
+        {
+            "King Snow",
+            450,
+            CFrame.new(- 5519, 40, - 1557)
+        },
+        {
+            "Little Dear",
+            500,
+            CFrame.new(- 5467, 55, - 1104)
+        },
+        {
+            "Bomb Man",
+            625,
+            CFrame.new(- 2956, 92, - 602)
+        },
+        {
+            "King of Sand",
+            725,
+            CFrame.new(- 3021, 92, - 545)
+        },
+        {
+            "Ball Man",
+            850,
+            CFrame.new(- 4076, 433, 1344)
+        },
+        {
+            "Rumble Man",
+            950,
+            CFrame.new(- 4076, 433, 1344)
+        },
+        {
+            "Leader",
+            1100,
+            CFrame.new(1897, 12, 749)
+        },
+        {
+            "Pasta",
+            1150,
+            CFrame.new(1523, 27, 1167)
+        },
+        {
+            "Wolf",
+            1250,
+            CFrame.new(- 1308, 69, 2148)
+        },
+        {
+            "Giraffe",
+            1300,
+            CFrame.new(- 1204, 69, 2100)
+        },
+        {
+            "Leo",
+            1450,
+            CFrame.new(- 1256, 167, 2585)
+        },
+        {
+            "Shadow Master",
+            1650,
+            CFrame.new(- 2849, 20, 4319)
+        },
+        {
+            "True Karate Fishman",
+            1850,
+            CFrame.new(2471, 103, - 1938)
+        },
+        {
+            "Quake Woman",
+            1925,
+            CFrame.new(2285, 49, - 1908)
+        },
+        {
+            "Combat Fishman",
+            2050,
+            CFrame.new(- 1956, 55, 6236)
+        },
+        {
+            "Sword Fishman",
+            2100,
+            CFrame.new(- 1635, 96, 6688)
+        },
+        {
+            "Seasoned Fishman",
+            2200,
+            CFrame.new(- 1801, 40, 6451)
+        }
+    }
+end
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if # vu35:GetChildren() > 0 then
+                for v161 = 1, # vu35:GetChildren() do
+                    vu35:GetChildren()[v161].Position = UDim2.new(0, 0, posbar[v161], 0)
+                end
+            end
+        end)
+    end
+end)
+function tooltip(p162)
+    local v163, v164, v165 = pairs(game.Players.LocalPlayer.Backpack:GetChildren())
+    while true do
+        local v166
+        v165, v166 = v163(v164, v165)
+        if v165 == nil then
+            break
+        end
+        if v166:IsA("Tool") and v166.ToolTip == p162 then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v166)
+        end
+    end
+end
+function toolname(p167)
+    local v168, v169, v170 = pairs(game.Players.LocalPlayer.Backpack:GetChildren())
+    while true do
+        local v171
+        v170, v171 = v168(v169, v170)
+        if v170 == nil then
+            break
+        end
+        if v171:IsA("Tool") and v171.Name == p167 then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v171)
+        end
+    end
+end
+function distance(p172)
+    return (p172 - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+end
+function click()
+    local v173, v174, v175 = pairs(game:GetService("Players").LocalPlayer.Character:GetChildren())
+    while true do
+        local v176
+        v175, v176 = v173(v174, v175)
+        if v175 == nil then
+            break
+        end
+        if v176.ClassName == "Tool" then
+            local v177 = {
+                "FS_" .. v176.Name .. "_M1",
+                {
+                    MouseHit = _G.pos_skill
+                }
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(v177))
+            local v178 = {
+                "SW_" .. v176.Name .. "_M1",
+                {
+                    MouseHit = _G.pos_skill
+                }
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(v178))
+            local v179 = {
+                "DF_" .. v176.Name .. "_M1",
+                {
+                    MouseHit = _G.pos_skill
+                }
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(v179))
+        end
+    end
+end
+function up_start(p180)
+    game:GetService("Players").LocalPlayer.PlayerGui.MainGui.StarterFrame.StatsFrame.RemoteEvent:FireServer(p180, 1)
+end
+function keyboard(p181)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, p181, false, game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(false, p181, false, game)
+end
+function autoskill()
+    if _("z") then
+        keyboard("Z")
+    end
+    if _("x") then
+        keyboard("X")
+    end
+    if _("c") then
+        keyboard("C")
+    end
+    if _("v") then
+        keyboard("V")
+    end
+    if _("f") then
+        keyboard("F")
+    end
+    if _("b") then
+        keyboard("B")
+    end
+    if _("e") then
+        keyboard("E")
+    end
+end
+function usetool()
+    if m_b1.Text ~= "Tool : Mele" then
+        if m_b1.Text ~= "Tool : Sword" then
+            if m_b1.Text == "Tool : Fruit" then
+                tooltip("Fruit Power")
+            end
+        else
+            tooltip("Sword")
+        end
+    else
+        tooltip("Combat")
+    end
+end
+function buso()
+    if game:GetService("Workspace").PlayerCharacters[game:GetService("Players").LocalPlayer.Name].Services.Haki.Value == 0 then
+        game:GetService("ReplicatedStorage").Chest.Remotes.Events.Armament:FireServer()
+    end
+end
+function ken()
+    if game:GetService("Workspace").PlayerCharacters[game:GetService("Players").LocalPlayer.Name].Services.KenOpen.Value == false then
+        game:GetService("ReplicatedStorage").Chest.Remotes.Functions.KenEvent:InvokeServer()
+    end
+end
+function tp(p182)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = p182
+end
+gamepass_sea = game.Players.LocalPlayer.PlayerGui.MainGui.StarterFrame.LegacyPoseFrame.SecondSea
+local function vu192(p183)
+    local v184, v185, v186 = pairs({
+        "MouseButton1Up",
+        "MouseButton1Down",
+        "MouseButton1Click",
+        "Activated"
+    })
+    while true do
+        local v187
+        v186, v187 = v184(v185, v186)
+        if v186 == nil then
+            break
+        end
+        local v188, v189, v190 = pairs(getconnections(p183[v187]))
+        while true do
+            local v191
+            v190, v191 = v188(v189, v190)
+            if v190 == nil then
+                break
+            end
+            v191:Fire()
+        end
+    end
+end
+function opez()
+    local v193 = {
+        "DF_OpOp_Z",
+        {
+            Type = "Down",
+            MouseHit = CFrame.new(2173.1943359375, 32.32448959350586, 1239.6748046875) * CFrame.Angles(- 0, - 0, - 0)
+        }
+    }
+    game:GetService("ReplicatedStorage").Chest.Remotes.Functions.SkillAction:InvokeServer(unpack(v193))
+    local v194 = {
+        "DF_OpOp_Z",
+        {
+            Type = "Up",
+            MouseHit = CFrame.new(2258.1875, 57.05387878417969, 1145.2451171875) * CFrame.Angles(- 0, - 0, - 0)
+        }
+    }
+    game:GetService("ReplicatedStorage").Chest.Remotes.Functions.SkillAction:InvokeServer(unpack(v194))
+end
+local vu195 = "NTT_HUB"
+local vu196 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+local function vu205(p197)
+    return (p197:gsub(".", function(p198)
+        local v199 = p198:byte()
+        local v200 = ""
+        for v201 = 8, 1, - 1 do
+            v200 = v200 .. (v199 % 2 ^ v201 - v199 % 2 ^ (v201 - 1) > 0 and "1" or "0")
+        end
+        return v200
+    end) .. "0000"):gsub("%d%d%d?%d?%d?%d?", function(p202)
+        if # p202 < 6 then
+            return ""
+        end
+        local v203 = 0
+        for v204 = 1, 6 do
+            v203 = v203 + (p202:sub(v204, v204) == "1" and 2 ^ (6 - v204) or 0)
+        end
+        return vu196:sub(v203 + 1, v203 + 1)
+    end) .. ({
+        "",
+        "==",
+        "="
+    })[# p197 % 3 + 1]
+end
+local function vu214(p206)
+    return p206:gsub("[^" .. vu196 .. "=]", ""):gsub(".", function(p207)
+        if p207 == "=" then
+            return ""
+        end
+        local v208 = vu196:find(p207) - 1
+        local v209 = ""
+        for v210 = 6, 1, - 1 do
+            v209 = v209 .. (v208 % 2 ^ v210 - v208 % 2 ^ (v210 - 1) > 0 and "1" or "0")
+        end
+        return v209
+    end):gsub("%d%d%d?%d?%d?%d?%d?%d?", function(p211)
+        if # p211 ~= 8 then
+            return ""
+        end
+        local v212 = 0
+        for v213 = 1, 8 do
+            v212 = v212 + (p211:sub(v213, v213) == "1" and 2 ^ (8 - v213) or 0)
+        end
+        return string.char(v212)
+    end)
+end
+local function vu221(p215, p216)
+    local v217 = {}
+    for v218 = 1, # p215 do
+        local v219 = string.byte(p216, (v218 - 1) % # p216 + 1)
+        local v220 = string.byte(p215, v218)
+        table.insert(v217, string.char(bit32.bxor(v220, v219)))
+    end
+    return table.concat(v217)
+end
+function encode(p222)
+    return vu205(vu221(p222, vu195))
+end
+function decode(p223)
+    return vu221(vu214(p223), vu195)
+end
+make_select1(m_f1, m_b1, vu22, _("main_tool"), 0.03)
+m_b1.MouseButton1Down:connect(function()
+    m_tbar.Visible = true
+end)
+_G.table_tool = {
+    "Mele",
+    "Fruit",
+    "Sword"
+}
+make_selectscrollingframe(m_tbar, vu22, 0.1, 0)
+make_auto_selectbutton(m_b1, m_tbar, _G.table_tool, "Tool", 0.05, "main_tool")
+make_together(m_f2, m_b2, vu22, "   Auto Farm Level", 0.1)
+m_b2.MouseButton1Down:connect(function()
+    if m_b2.Text ~= "" then
+        m_b2.Text = ""
+        _G.m_b2 = false
+    else
+        m_b2.Text = "X"
+        _G.m_b2 = true
+    end
+    __("auto_farm", _G.m_b2)
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("auto_farm") then
+        c_lv()
+        CFrameMob = CFrame.new(MX, MY, MZ)
+        EditNameMob = "Lv. " .. NameMob .. "]"
+        tp(CFrameMob)
+        local v224, v225, v226 = pairs(game.Workspace.Monster:GetChildren())
+        while true do
+            local v227
+            v226, v227 = v224(v225, v226)
+            if v226 == nil then
+                break
+            end
+            if v227.ClassName == "Folder" then
+                local v228, v229, v230 = pairs(v227:GetChildren())
+                while true do
+                    local v231
+                    v230, v231 = v228(v229, v230)
+                    if v230 == nil then
+                        break
+                    end
+                    if string.find(v231.Name, EditNameMob) and v231.Humanoid.Health > 0 then
+                        v231.Humanoid.WalkSpeed = 300
+                        tp(v231.HumanoidRootPart.CFrame * CFrame.new(0, _("distance"), 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                        if distance(v231.HumanoidRootPart.Position) < 50 then
+                            _G.pos_skill = v231.HumanoidRootPart.CFrame
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
+            if _("auto_farm") then
+                c_lv()
+                game:GetService("ReplicatedStorage").Chest.Remotes.Functions.Quest:InvokeServer("take", NameQuest)
+            end
+        end)
+    end
+end)
+make_together(m_f3, m_b3, vu22, "   Auto kill Mob Distance", 0.17)
+m_b3.MouseButton1Down:connect(function()
+    if m_b3.Text ~= "" then
+        m_b3.Text = ""
+        _G.m_b3 = false
+    else
+        m_b3.Text = "X"
+        _G.m_b3 = true
+    end
+    __("mobdis", _G.m_b3)
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("mobdis") then
+        local v232, v233, v234 = pairs(game.Workspace.Monster:GetChildren())
+        while true do
+            local v235
+            v234, v235 = v232(v233, v234)
+            if v234 == nil then
+                break
+            end
+            if v235.ClassName == "Folder" then
+                local v236, v237, v238 = pairs(v235:GetChildren())
+                while true do
+                    local v239
+                    v238, v239 = v236(v237, v238)
+                    if v238 == nil then
+                        break
+                    end
+                    if v239.ClassName == "Model" and (distance(v239.HumanoidRootPart.Position) < _("distancemob") and v239.Humanoid.Health > 0) then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v239.HumanoidRootPart.CFrame * CFrame.new(0, _("distance"), 0) * CFrame.Angles(math.rad(- 90), 0, 0)
+                        if (v239.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 50 then
+                            _G.pos_skill = v239.HumanoidRootPart.CFrame
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+make_slider_value(vu22, "Distance", 200, 1000, 0.24, "distancemob")
+make_together(s_f1, s_b1, vu23, "   Mele", 0.03)
+s_b1.MouseButton1Down:connect(function()
+    if s_b1.Text ~= "" then
+        s_b1.Text = ""
+        _G.s_b1 = false
+    else
+        s_b1.Text = "X"
+        _G.s_b1 = true
+    end
+    __("mele", _G.s_b1)
+end)
+make_together(s_f2, s_b2, vu23, "   Defense", 0.1)
+s_b2.MouseButton1Down:connect(function()
+    if s_b2.Text ~= "" then
+        s_b2.Text = ""
+        _G.s_b2 = false
+    else
+        s_b2.Text = "X"
+        _G.s_b2 = true
+    end
+    __("defense", _G.s_b2)
+end)
+make_together(s_f3, s_b3, vu23, "   Sword", 0.17)
+s_b3.MouseButton1Down:connect(function()
+    if s_b3.Text ~= "" then
+        s_b3.Text = ""
+        _G.s_b3 = false
+    else
+        s_b3.Text = "X"
+        _G.s_b3 = true
+    end
+    __("sword", _G.s_b3)
+end)
+make_together(s_f4, s_b4, vu23, "   Fruit", 0.24)
+s_b4.MouseButton1Down:connect(function()
+    if s_b4.Text ~= "" then
+        s_b4.Text = ""
+        _G.s_b4 = false
+    else
+        s_b4.Text = "X"
+        _G.s_b4 = true
+    end
+    __("fruit", _G.s_b4)
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("mele") then
+        up_start("Melee")
+    end
+    if _("defense") then
+        up_start("Defense")
+    end
+    if _("sword") then
+        up_start("Sword")
+    end
+    if _("fruit") then
+        up_start("Fruit")
+    end
+end)
+make_slider_value(vu25, "Distance", 8, 20, 0.03, "distance")
+make_together(st_f1, st_b1, vu25, "   Buso", 0.1)
+st_b1.MouseButton1Down:connect(function()
+    if st_b1.Text ~= "" then
+        st_b1.Text = ""
+        _G.st_b1 = false
+    else
+        st_b1.Text = "X"
+        _G.st_b1 = true
+    end
+    __("buso", _G.st_b1)
+end)
+make_together(st_f2, st_b2, vu25, "   Ken", 0.17)
+st_b2.MouseButton1Down:connect(function()
+    if st_b2.Text ~= "" then
+        st_b2.Text = ""
+        _G.st_b2 = false
+    else
+        st_b2.Text = "X"
+        _G.st_b2 = true
+    end
+    __("ken", _G.st_b2)
+end)
+make_together(st_f3, st_b3, vu25, "   Hao", 0.24)
+st_b3.MouseButton1Down:connect(function()
+    if st_b3.Text ~= "" then
+        st_b3.Text = ""
+        _G.st_b3 = false
+    else
+        st_b3.Text = "X"
+        _G.st_b3 = true
+    end
+    __("hao", _G.st_b3)
+end)
+make_textlabel(vu25, "Skill Setting", 0.31)
+make_together(st_f4, st_b4, vu25, "   Skill Z", 0.38)
+st_b4.MouseButton1Down:connect(function()
+    if st_b4.Text ~= "" then
+        st_b4.Text = ""
+        _G.st_b4 = false
+    else
+        st_b4.Text = "X"
+        _G.st_b4 = true
+    end
+    __("z", _G.st_b4)
+end)
+make_together(st_f5, st_b5, vu25, "   Skill X", 0.45)
+st_b5.MouseButton1Down:connect(function()
+    if st_b5.Text ~= "" then
+        st_b5.Text = ""
+        _G.st_b5 = false
+    else
+        st_b5.Text = "X"
+        _G.st_b5 = true
+    end
+    __("x", _G.st_b5)
+end)
+make_together(st_f6, st_b6, vu25, "   Skill C", 0.52)
+st_b6.MouseButton1Down:connect(function()
+    if st_b6.Text ~= "" then
+        st_b6.Text = ""
+        _G.st_b6 = false
+    else
+        st_b6.Text = "X"
+        _G.st_b6 = true
+    end
+    __("c", _G.st_b6)
+end)
+make_together(st_f7, st_b7, vu25, "   Skill V", 0.59)
+st_b7.MouseButton1Down:connect(function()
+    if st_b7.Text ~= "" then
+        st_b7.Text = ""
+        _G.st_b7 = false
+    else
+        st_b7.Text = "X"
+        _G.st_b7 = true
+    end
+    __("v", _G.st_b7)
+end)
+make_together(st_f8, st_b8, vu25, "   Skill F", 0.66)
+st_b8.MouseButton1Down:connect(function()
+    if st_b8.Text ~= "" then
+        st_b8.Text = ""
+        _G.st_b8 = false
+    else
+        st_b8.Text = "X"
+        _G.st_b8 = true
+    end
+    __("f", _G.st_b8)
+end)
+make_together(st_f9, st_b9, vu25, "   Skill B", 0.73)
+st_b9.MouseButton1Down:connect(function()
+    if st_b9.Text ~= "" then
+        st_b9.Text = ""
+        _G.st_b9 = false
+    else
+        st_b9.Text = "X"
+        _G.st_b9 = true
+    end
+    __("b", _G.st_b9)
+end)
+make_together(st_f10, st_b10, vu25, "   skill E", 0.8)
+st_b10.MouseButton1Down:connect(function()
+    if st_b10.Text ~= "" then
+        st_b10.Text = ""
+        _G.st_b10 = false
+    else
+        st_b10.Text = "X"
+        _G.st_b10 = true
+    end
+    __("e", _G.st_b10)
+end)
+make_textlabel(vu25, "Oder Setting", 0.87)
+make_together(st_f11, st_b11, vu25, "   Hiden Item Drop", 0.94)
+st_b11.MouseButton1Down:connect(function()
+    if st_b11.Text ~= "" then
+        st_b11.Text = ""
+        _G.st_b11 = false
+    else
+        st_b11.Text = "X"
+        _G.st_b11 = true
+    end
+    __("hidenitemdrop", _G.st_b11)
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("hidenitemdrop") or (_("dungeon") or _("dungeon2")) then
+        game.Players.LocalPlayer.PlayerGui.Popup.Frame.Visible = false
+    else
+        game.Players.LocalPlayer.PlayerGui.Popup.Frame.Visible = true
+    end
+end)
+make_textlabel(vu26, "Teleport Island", 0.03)
+make_select2(t_f1, t_b1, t_itp, vu26, "Island : Select", 0.1)
+t_b1.MouseButton1Down:connect(function()
+    t_ibar.Visible = true
+end)
+t_itp.MouseButton1Down:connect(function()
+    if t_itp.Text ~= "" then
+        _G.t_itp = false
+        t_itp.Text = ""
+    else
+        t_itp.Text = "X"
+        _G.t_itp = true
+    end
+end)
+_G.table_island = {}
+if game.PlaceId ~= 4520749081 then
+    if game.PlaceId ~= 6381829480 then
+        if game.PlaceId == 15759515082 then
+            for v240 = 1, 9 do
+                table.insert(_G.table_island, v240)
+            end
+        end
+    else
+        for v241 = 1, 8 do
+            table.insert(_G.table_island, v241)
+        end
+    end
+else
+    for v242 = 1, 12 do
+        table.insert(_G.table_island, v242)
+    end
+end
+make_selectscrollingframe(t_ibar, vu26, 0.17)
+make_auto_selectbutton(t_b1, t_ibar, _G.table_island, "Island", 0.05, "island")
+game:GetService("RunService").RenderStepped:connect(function()
+    if _G.t_itp then
+        island()
+        tp(CFrame.new(pos_islandX, pos_islandY, pos_islandZ))
+    end
+end)
+make_textlabel(vu26, "Teleport NPC", 0.17)
+make_select2(t_f2, t_b2, t_npctp, vu26, "NPC : Select", 0.24)
+t_b2.MouseButton1Down:connect(function()
+    t_npcbar.Visible = true
+end)
+t_npctp.MouseButton1Down:connect(function()
+    if t_npctp.Text ~= "" then
+        _G.t_npctp = false
+        t_npctp.Text = ""
+    else
+        t_npctp.Text = "X"
+        _G.t_npctp = true
+    end
+end)
+function listnpc()
+    if vu26:FindFirstChild("t_npcbar") then
+        vu26:FindFirstChild("t_npcbar"):Destroy()
+    end
+    _G.table_npc = {}
+    for v243 = 1, # game.Workspace.AllNPC:GetChildren() do
+        npcname = game.Workspace.AllNPC:GetChildren()[v243].Name
+        if not (string.find(npcname, "SetSpawn") or (string.find(npcname, "Quest") or string.find(npcname, "BuyShips"))) then
+            table.insert(_G.table_npc, npcname)
+        end
+        if # game.Workspace.AllNPC:GetChildren() <= v243 then
+            make_selectscrollingframe(t_npcbar, vu26, 0.31)
+            t_npcbar.CanvasSize = UDim2.new(0, 0, 0, 2000)
+            make_auto_selectbutton(t_b2, t_npcbar, _G.table_npc, "NPC", 0.0125, "npc")
+        end
+    end
+end
+listnpc()
+game:GetService("RunService").RenderStepped:connect(function()
+    if _G.t_npctp then
+        tp(game.Workspace.AllNPC[string.sub(t_b2.Text, 7)].CFrame)
+    end
+end)
+make_button(t_f3, t_b3, vu26, "Rejoin", 0.31)
+t_b3.MouseButton1Down:connect(function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId)
+end)
+make_button(t_f4, t_b4, vu26, "Sever Hop", 0.38)
+t_b4.MouseButton1Down:connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NTTTTTTTT/Main/main/Svv"))()
+end)
+make_select1(cb_f1, cb_b1, vu27, _("player"), 0.03)
+cb_b1.MouseButton1Down:connect(function()
+    cb_pbar.Visible = true
+end)
+function listprl()
+    if vu27:FindFirstChild("cb_pbar") then
+        vu27:FindFirstChild("cb_pbar"):Destroy()
+    end
+    _G.table_prl = {}
+    for v244 = 1, # game:GetService("Players"):GetPlayers() do
+        local vu245 = v244
+        pcall(function()
+            table.insert(_G.table_prl, game:GetService("Players"):GetPlayers()[vu245].Name)
+        end)
+        if # game:GetService("Players"):GetPlayers() <= vu245 then
+            _G.table_prl[1] = "No Data"
+            make_selectscrollingframe(cb_pbar, vu27, 0.1)
+            make_auto_selectbutton(cb_b1, cb_pbar, _G.table_prl, "Player", 0.05, "player")
+        end
+    end
+end
+listprl()
+make_button(cb_f2, cb_b2, vu27, "   Refresh list", 0.1)
+cb_b2.MouseButton1Down:connect(function()
+    listprl()
+end)
+make_together(cb_f3, cb_b3, vu27, "   Teleport to Player", 0.17)
+cb_b3.MouseButton1Down:connect(function()
+    if cb_b3.Text ~= "" then
+        if cb_b3.Text == "X" then
+            cb_b3.Text = ""
+            _G.cb_b3 = false
+        end
+    else
+        cb_b3.Text = "X"
+        _G.cb_b3 = true
+    end
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+    if _G.cb_b3 then
+        nameprl = string.sub(cb_b1.Text, 10)
+        if game:GetService("Players"):FindFirstChild(nameprl) then
+            tp(game:GetService("Players")[nameprl].Character.HumanoidRootPart.CFrame * CFrame.new(0, 20, 0))
+        end
+    end
+end)
+make_together(cb_f4, cb_b4, vu27, "   Aim Skill Player You Select", 0.24)
+cb_b4.MouseButton1Down:connect(function()
+    if cb_b4.Text ~= "" then
+        if cb_b4.Text == "X" then
+            cb_b4.Text = ""
+            _G.cb_b4 = false
+        end
+    else
+        cb_b4.Text = "X"
+        _G.cb_b4 = true
+    end
+    __("aimbot", _G.cb_b4)
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+    if _("aimbot") then
+        nameprl = string.sub(cb_b1.Text, 10)
+        if game:GetService("Players"):FindFirstChild(nameprl) then
+            _G.pos_skill = game:GetService("Players")[nameprl].Character.HumanoidRootPart.CFrame
+        end
+    end
+end)
+make_together(cb_f5, cb_b5, vu27, "   Auto Aim Skill Player Near", 0.31)
+cb_b5.MouseButton1Down:connect(function()
+    if cb_b5.Text ~= "" then
+        if cb_b5.Text == "X" then
+            cb_b5.Text = ""
+            _G.cb_b5 = false
+        end
+    else
+        cb_b5.Text = "X"
+        _G.cb_b5 = true
+    end
+    __("aimbotnear", _G.cb_b5)
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+    if _("aimbotnear") then
+        local v246, v247, v248 = pairs(game.Players:GetChildren())
+        while true do
+            local v249
+            v248, v249 = v246(v247, v248)
+            if v248 == nil then
+                break
+            end
+            if v249.Name ~= game.Players.LocalPlayer.Name and (not v249.Character.Head:FindFirstChild("AllyGUI") and (v249.PlayerStats.PVP.Value and distance(v249.Character.HumanoidRootPart.Position) < _("aimbotd"))) then
+                _G.pos_skill = v249.Character.HumanoidRootPart.CFrame
+            end
+        end
+    end
+end)
+make_slider_value(vu27, "Distance", 200, 1000, 0.38, "aimbotd")
+make_together(cb_f6, cb_b6, vu27, "   Turn On Aim Circle", 0.45)
+cb_b6.MouseButton1Down:connect(function()
+    if cb_b6.Text ~= "" then
+        if cb_b6.Text == "X" then
+            cb_b6.Text = ""
+            _G.cb_b6 = false
+        end
+    else
+        cb_b6.Text = "X"
+        _G.cb_b6 = true
+    end
+    __("circle", _G.cb_b6)
+end)
+make_slider_value(vu27, "Size", 0, 400, 0.52, "circlez")
+Players = game:GetService("Players")
+UIS = game:GetService("UserInputService")
+RunService = game:GetService("RunService")
+player = Players.LocalPlayer
+mouse = player:GetMouse()
+gui = Instance.new("ScreenGui")
+gui.Parent = game.CoreGui
+circle = Instance.new("Frame")
+circle.Size = UDim2.new(0, 150, 0, 150)
+circle.AnchorPoint = Vector2.new(0.5, 0.5)
+circle.Position = UDim2.new(0.5, 0, 0.5, 0)
+circle.BackgroundTransparency = 1
+circle.Parent = gui
+uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(1, 0)
+uiCorner.Parent = circle
+uiStroke = Instance.new("UIStroke")
+uiStroke.Thickness = 3
+uiStroke.Color = Color3.fromRGB(255, 0, 0)
+uiStroke.Parent = circle
+RunService.RenderStepped:Connect(function()
+    circle.Size = UDim2.new(0, 150 + _("circlez"), 0, 150 + _("circlez"))
+    circle.Position = UDim2.fromOffset(mouse.X, mouse.Y)
+    local v250, v251, v252 = ipairs(Players:GetPlayers())
+    local v253 = nil
+    while true do
+        local v254
+        v252, v254 = v250(v251, v252)
+        if v252 == nil then
+            v254 = v253
+            break
+        end
+        if v254 ~= player and v254.Character and v254.Character:FindFirstChild("HumanoidRootPart") then
+            local v255 = v254.Character.HumanoidRootPart
+            local v256, v257 = workspace.CurrentCamera:WorldToViewportPoint(v255.Position)
+            if v257 and (Vector2.new(mouse.X, mouse.Y) - Vector2.new(v256.X, v256.Y)).Magnitude <= circle.AbsoluteSize.X / 2 then
+                break
+            end
+        end
+    end
+    if v254 then
+        uiStroke.Color = Color3.fromRGB(0, 255, 0)
+        _G.pos_skill = v254.Character.HumanoidRootPart.CFrame
+    else
+        uiStroke.Color = Color3.fromRGB(255, 0, 0)
+    end
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+    if _("circle") then
+        circle.Visible = true
+    else
+        circle.Visible = false
+    end
+end)
+make_together(e_f1, e_b1, vu32, "   Esp Player", 0.03)
+e_b1.MouseButton1Down:connect(function()
+    if e_b1.Text ~= "" then
+        if e_b1.Text == "X" then
+            e_b1.Text = ""
+            _G.e_b1 = false
+        end
+    else
+        e_b1.Text = "X"
+        _G.e_b1 = true
+    end
+    __("esp_prl", _G.e_b1)
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _("esp_prl") then
+                local v258, v259, v260 = pairs(game.Players:GetChildren())
+                while true do
+                    local v261
+                    v260, v261 = v258(v259, v260)
+                    if v260 == nil then
+                        break
+                    end
+                    if v261.Name ~= game.Players.LocalPlayer.Name then
+                        if not v261.Character.Head:FindFirstChild("PlayerESP") then
+                            local v262 = Instance.new("BillboardGui")
+                            local v263 = Instance.new("TextLabel")
+                            v262.Parent = v261.Character.Head
+                            v262.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                            v262.Active = true
+                            v262.Name = "PlayerESP"
+                            v262.AlwaysOnTop = true
+                            v262.LightInfluence = 1
+                            v262.Size = UDim2.new(0, 200, 0, 50)
+                            v262.StudsOffset = Vector3.new(0, 2.5, 0)
+                            v263.Parent = v262
+                            v263.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            v263.BackgroundTransparency = 1
+                            v263.Size = UDim2.new(0, 200, 0, 50)
+                            v263.Font = Enum.Font.GothamBold
+                            v263.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            v263.Text.Size = 100
+                            v263.TextStrokeTransparency = 0
+                            v263.TextWrapped = true
+                        end
+                        local v264 = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v261.Character.Head.Position).Magnitude)
+                        local v265 = v261.PlayerStats.lvl.Value
+                        if v261.PlayerStats.PVP.Value then
+                            pvp = "PVP : On"
+                        else
+                            pvp = "PVP : Off"
+                        end
+                        v261.Character.Head:FindFirstChild("PlayerESP").TextLabel.Text = v261.Name .. " | Level : " .. v265 .. " | " .. pvp .. "\n\n" .. v264 .. " M"
+                    end
+                end
+            else
+                local v266, v267, v268 = pairs(game.Players:GetChildren())
+                while true do
+                    local v269
+                    v268, v269 = v266(v267, v268)
+                    if v268 == nil then
+                        break
+                    end
+                    if v269.Name ~= game.Players.LocalPlayer.Name and v269.Character.Head:FindFirstChild("PlayerESP") then
+                        v269.Character.Head.PlayerESP:Destroy()
+                    end
+                end
+            end
+        end)
+    end
+end)
+make_together(pm_f1, pm_b1, vu24, "   Inf Jump", 0.03)
+pm_b1.MouseButton1Down:connect(function()
+    if pm_b1.Text ~= "" then
+        pm_b1.Text = ""
+        _G.pm_b1 = false
+    else
+        pm_b1.Text = "X"
+        _G.pm_b1 = true
+    end
+    __("infjump", _G.pm_b1)
+end)
+game:GetService("UserInputService").JumpRequest:connect(function()
+    if _("infjump") then
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end
+end)
+make_together(pm_f2, pm_b2, vu24, "   Speed", 0.1)
+pm_b2.MouseButton1Down:connect(function()
+    if pm_b2.Text ~= "" then
+        pm_b2.Text = ""
+        _G.pm_b2 = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
+    else
+        pm_b2.Text = "X"
+        _G.pm_b2 = true
+    end
+    __("speed", _G.pm_b2)
+end)
+game:GetService("RunService").RenderStepped:connect(function(_)
+    if _("speed") then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = _("vspeed")
+    end
+end)
+make_slider_value(vu24, "Speed", 35, 500, 0.17, "vspeed")
+make_together(pm_f3, pm_b3, vu24, "   Snow Blade Click - Only in Snow", 0.24)
+pm_b3.MouseButton1Down:connect(function()
+    if pm_b3.Text ~= "" then
+        pm_b3.Text = ""
+        _G.pm_b3 = false
+    else
+        pm_b3.Text = "X"
+        _G.pm_b3 = true
+    end
+    __("snowclick", _G.pm_b3)
+end)
+mouse = game.Players.LocalPlayer:GetMouse()
+mouse.Button1Down:Connect(function()
+    if _("snowclick") then
+        local v270 = mouse.Hit
+        local v271, v272, v273 = pairs(game:GetService("Players").LocalPlayer.Character:GetChildren())
+        while true do
+            local v274
+            v273, v274 = v271(v272, v273)
+            if v273 == nil then
+                break
+            end
+            if v274.ClassName == "Tool" then
+                local v275 = {
+                    "DF_" .. v274.Name .. "_M1",
+                    {
+                        MouseHit = v270
+                    }
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(v275))
+            end
+        end
+    end
+end)
+make_together(pm_f4, pm_b4, vu24, "   Walk On Water", 0.31)
+pm_b4.MouseButton1Down:connect(function()
+    if pm_b4.Text ~= "" then
+        pm_b4.Text = ""
+        _G.pm_b4 = false
+    else
+        pm_b4.Text = "X"
+        _G.pm_b4 = true
+    end
+    __("wow", _G.pm_b4)
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+    if _("wow") then
+        game.Workspace.SeaFolder.Sea.CanCollide = true
+    else
+        game.Workspace.SeaFolder.Sea.CanCollide = false
+    end
+end)
+make_together(pm_f5, pm_b5, vu24, "   Mod Skill | Not Work In Aim Bot", 0.38)
+pm_b5.MouseButton1Down:connect(function()
+    if pm_b5.Text ~= "" then
+        pm_b5.Text = ""
+        _G.pm_b5 = false
+    else
+        pm_b5.Text = "X"
+        _G.pm_b5 = true
+    end
+    __("modskill", _G.pm_b5)
+end)
+function modskill()
+    local vu276 = game:GetService("Players")
+    local v277 = game:GetService("ReplicatedStorage")
+    local vu278 = vu276.LocalPlayer
+    local vu279 = vu278.Character.HumanoidRootPart
+    local v280 = vu278
+    local vu281 = vu278.GetMouse(v280)
+    local vu282 = v277.Chest.Remotes.Events.Skill_Effect
+    local function vu283()
+        return CFrame.lookAt(vu279.Position, vu281.Hit.Position)
+    end
+    local function vu284()
+        return vu276[vu278.Name], workspace.PlayerCharacters[vu278.Name]
+    end
+    function hell_z()
+        local v285 = game:GetService("Players")
+        local v286 = game:GetService("ReplicatedStorage")
+        local v287 = v285.LocalPlayer
+        local v288 = v287.Character.HumanoidRootPart
+        local v289 = v286.Chest.Remotes.Events.Skill_Effect
+        local v290 = v287:GetMouse()
+        local v291 = CFrame.lookAt(v288.Position, v290.Hit.Position)
+        local v292 = v287.Name
+        local v293 = v285[v292]
+        local _ = workspace.PlayerCharacters[v292]
+        firesignal(v289.OnClientEvent, v293, v291, {
+            v288
+        }, "CookieSword_Z")
+        firesignal(v289.OnClientEvent, v293, v291, {
+            CF = v291 * CFrame.new(0, 0, - 30),
+            Mode = "Katana Z Revamp",
+            Range = 16,
+            ToCF = v291
+        }, "Storage 3")
+        firesignal(v289.OnClientEvent, v293, v291, {
+            Mode = "Hell Sword Z",
+            StartCF = v291
+        }, "Storage 3")
+    end
+    function hell_x()
+        local v294 = game:GetService("Players")
+        local v295 = game:GetService("ReplicatedStorage")
+        local v296 = workspace.CurrentCamera
+        local v297 = v294.LocalPlayer
+        local v298 = v297.Character.HumanoidRootPart
+        local v299 = v295.Chest.Remotes.Events.Skill_Effect
+        local v300 = CFrame.lookAt(v298.Position, v296.CFrame.Position + v296.CFrame.LookVector * 9999)
+        local v301 = v297.Name
+        local v302 = v294[v301]
+        local v303 = workspace.PlayerCharacters[v301]
+        firesignal(v299.OnClientEvent, v302, v300, {
+            ChargeFolder = ChargeFolder,
+            Character = v303,
+            Mode = "Bisento Z",
+            RootPart = v298,
+            EndCF = v300
+        }, "Storage 3")
+        firesignal(v299.OnClientEvent, v302, v300, {
+            Mode = "Pondere Blade X",
+            StartCF = v300
+        }, "Storage 2")
+        firesignal(v299.OnClientEvent, v302, v300, {
+            Mode = "Jitte X",
+            Character = v303,
+            RootPart = v298,
+            StartCF = v300
+        }, "Storage 3")
+        firesignal(v299.OnClientEvent, v302, CFrame.new(- 2110, 20, - 4104), {
+            RootPart = v298,
+            Mode = "Seasoned Fishman Z"
+        }, "Fishland Mode")
+    end
+    function anchor_z()
+        local v304, v305 = vu284()
+        local v306 = vu283()
+        firesignal(vu282.OnClientEvent, v304, v306, {
+            ChargeFolder = ChargeFolder,
+            Character = v305,
+            Mode = "Bisento Z",
+            RootPart = vu279,
+            EndCF = v306
+        }, "Storage 3")
+        firesignal(vu282.OnClientEvent, v304, v306, {
+            Mode = "Pondere Blade X",
+            StartCF = v306
+        }, "Storage 2")
+    end
+    function anchor_x()
+        local v307, _ = vu284()
+        local v308 = vu283()
+        firesignal(vu282.OnClientEvent, v307, v308, {
+            Mode = "Authentic Mace Z",
+            StartCF = v308
+        }, "Storage 4")
+        for _ = 1, 5 do
+            firesignal(vu282.OnClientEvent, v307, v308 * CFrame.new(0, 0, - 100), {
+                CFMouse = v308 * CFrame.new(0, 0, - 100),
+                Mode = "Daybreak Cleaver X Re",
+                RootPart = vu279,
+                StartCF = v308
+            }, "Storage 2")
+        end
+        local v309 = {
+            vu279
+        }
+        firesignal(vu282.OnClientEvent, v307, v308, v309, "CookieSword_X")
+    end
+    function ethereal_z()
+        local v310, _ = vu284()
+        local v311 = vu283()
+        for _ = 1, 3 do
+            local v312 = {
+                Mode = "Ethereal Z",
+                RootPart = vu279,
+                StartCF = v311
+            }
+            firesignal(vu282.OnClientEvent, v310, v311, v312, "Storage 5")
+            task.wait(0.05)
+        end
+    end
+    function ethereal_x()
+        local v313, v314 = vu284()
+        local v315 = vu283()
+        for _ = 1, 5 do
+            local v316 = {
+                Character = v314,
+                Time = 0,
+                StartCF = v315,
+                EndCF = v315,
+                Mode = "Acroscyth Z",
+                RootPart = vu279,
+                Magnitude = 9.9
+            }
+            firesignal(vu282.OnClientEvent, v313, v315, v316, "Storage 8")
+            task.wait(0.1)
+        end
+        task.wait(0.6)
+        local v317 = vu283()
+        firesignal(vu282.OnClientEvent, v313, v317, {
+            Mode = "Adventure Knife X",
+            StartCF = v317
+        }, "Storage 3")
+    end
+    function apollos_z()
+        local v318, v319 = vu284()
+        local v320 = vu283()
+        firesignal(vu282.OnClientEvent, v318, v320, {
+            Mode = "Anubis Axe X",
+            Character = v319,
+            RootPart = vu279,
+            StartCF = _G.posi
+        }, "Storage 3")
+        task.wait(0.5)
+        local v321 = vu283()
+        firesignal(vu282.OnClientEvent, v318, v321, {
+            Mode = "Pondere Blade X",
+            StartCF = _G.posi
+        }, "Storage 2")
+    end
+    function tripkatana_z()
+        local v322, _ = vu284()
+        local v323 = vu283()
+        local v324 = {
+            vu279
+        }
+        firesignal(vu282.OnClientEvent, v322, v323, v324, "CookieSword_Z")
+        task.wait(0.2)
+        local v325 = vu283()
+        firesignal(vu282.OnClientEvent, v322, v325, {
+            Mode = "Adventure Knife X",
+            StartCF = v325
+        }, "Storage 3")
+    end
+    function tripkatana_x()
+        local v326, _ = vu284()
+        local v327 = vu283()
+        firesignal(vu282.OnClientEvent, v326, v327, {
+            Mode = "Authentic Mace Z",
+            StartCF = v327
+        }, "Storage 4")
+        firesignal(vu282.OnClientEvent, v326, v327, {
+            Mode = "Hell Sword Z",
+            StartCF = v327
+        }, "Storage 3")
+    end
+    spawn(function()
+        while task.wait() do
+            pcall(function()
+                if _G.hell_z then
+                    _G.hell_z = false
+                    hell_z()
+                elseif _G.hell_x then
+                    _G.hell_x = false
+                    hell_x()
+                elseif _G.anchor_z then
+                    _G.anchor_z = false
+                    anchor_z()
+                elseif _G.anchor_x then
+                    _G.anchor_x = false
+                    anchor_x()
+                elseif _G.ethereal_z then
+                    _G.ethereal_z = false
+                    ethereal_z()
+                elseif _G.ethereal_x then
+                    _G.ethereal_x = false
+                    ethereal_x()
+                elseif _G.apollos_z then
+                    _G.apollos_z = false
+                    apollos_z()
+                elseif _G.tripkatana_z then
+                    _G.tripkatana_z = false
+                    tripkatana_z()
+                elseif _G.tripkatana_x then
+                    _G.tripkatana_x = false
+                    tripkatana_x()
+                end
+            end)
+        end
+    end)
+    pcall(function()
+        local v328 = getrawmetatable(game)
+        local vu329 = v328.__namecall
+        setreadonly(v328, false)
+        v328.__namecall = newcclosure(function(p330, ...)
+            local v331 = {
+                ...
+            }
+            if getnamecallmethod() ~= "InvokeServer" or tostring(p330) ~= "SkillAction" then
+                return vu329(p330, ...)
+            end
+            if _("modskill") then
+                if # v331 ~= 1 then
+                    if typeof(v331[2]) == "table" and (v331[2].Type and v331[2].Type == "Up") then
+                        _G.posi = v331[2].MouseHit
+                        if v331[1] ~= "SW_Hell Sword_Z" then
+                            if v331[1] ~= "SW_Hell Sword_X" then
+                                if v331[1] ~= "SW_Aquatic Anchor_Z" then
+                                    if v331[1] ~= "SW_Aquatic Anchor_X" then
+                                        if v331[1] ~= "SW_Ethereal_Z" then
+                                            if v331[1] ~= "SW_Ethereal_X" then
+                                                if v331[1] ~= "SW_Apollos_Z" then
+                                                    if v331[1] ~= "SW_Authentic Triple Katana_Z" then
+                                                        if v331[1] == "SW_Authentic Triple Katana_X" then
+                                                            _G.tripkatana_x = true
+                                                        end
+                                                    else
+                                                        _G.tripkatana_z = true
+                                                    end
+                                                else
+                                                    _G.apollos_z = true
+                                                end
+                                            else
+                                                _G.ethereal_x = true
+                                            end
+                                        else
+                                            _G.ethereal_z = true
+                                        end
+                                    else
+                                        _G.anchor_x = true
+                                    end
+                                else
+                                    _G.anchor_z = true
+                                end
+                            else
+                                _G.hell_x = true
+                            end
+                        else
+                            _G.hell_z = true
+                        end
+                    end
+                else
+                    _G.click = true
+                end
+            end
+            return vu329(p330, unpack(v331))
+        end)
+    end)
+end
+modskill()
+make_textlabel(vu28, "Farm Material", 0.03)
+make_select2(ib_f1, ib_b1, ib_mb, vu28, _("material"), 0.1)
+ib_b1.MouseButton1Down:connect(function()
+    ib_mbar.Visible = true
+end)
+ib_mb.MouseButton1Down:connect(function()
+    if ib_mb.Text ~= "" then
+        _G.ib_mb = false
+        ib_mb.Text = ""
+    else
+        ib_mb.Text = "X"
+        _G.ib_mb = true
+    end
+    __("farmmaterial", _G.ib_mb)
+end)
+_G.table_material = {}
+if game.PlaceId ~= 4520749081 then
+    if game.PlaceId ~= 6381829480 then
+        if game.PlaceId == 15759515082 then
+            _G.table_material = {
+                "Sea Artifact",
+                "Shark\'s Fin",
+                "Leather",
+                "Shark\'s Canine",
+                "Coral",
+                "Pearl"
+            }
+        end
+    else
+        _G.table_material = {
+            "Iron",
+            "Rusted Scrap",
+            "Carrot",
+            "Samurai Badage",
+            "Bread Crumbs",
+            "Ice Cystal",
+            "Magma Cystal",
+            "Essence of Fire",
+            "Lost Ruby",
+            "Pile of Bones",
+            "Dragon\'s Orb",
+            "Lucidus\'s Totem",
+            "Dark Beard\'s Totem"
+        }
+    end
+else
+    _G.table_material = {
+        "Rusted Scrap",
+        "Fresh Fish",
+        "Leather",
+        "Thief\'s rag",
+        "Angellic\'s Feather",
+        "Gunpowder",
+        "Undead\'s Ooze",
+        "Twilight\'s Orb",
+        "Shark\'s Canine"
+    }
+end
+make_selectscrollingframe(ib_mbar, vu28, 0.17)
+make_auto_selectbutton(ib_b1, ib_mbar, _G.table_material, "Material", 0.05, "material")
+game:GetService("RunService").Stepped:Connect(function()
+    if _G.ib_mb then
+        _G.check = false
+        material()
+        CFrameMob = CFrame.new(MX, MY, MZ)
+        tp(CFrameMob)
+        for v332 = 1, # mob do
+            EditItemMob = "Lv. " .. mob[v332] .. "]"
+            local v333, v334, v335 = pairs(game.Workspace.Monster:GetChildren())
+            while true do
+                local v336
+                v335, v336 = v333(v334, v335)
+                if v335 == nil then
+                    break
+                end
+                if v336.ClassName == "Folder" then
+                    local v337, v338, v339 = pairs(v336:GetChildren())
+                    while true do
+                        local v340
+                        v339, v340 = v337(v338, v339)
+                        if v339 == nil then
+                            break
+                        end
+                        if string.find(v340.Name, EditItemMob) and v340.Humanoid.Health > 0 then
+                            tp(v340.HumanoidRootPart.CFrame * CFrame.new(0, _("distance"), 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                            if distance(v340.HumanoidRootPart.Position) < 50 then
+                                _G.check = true
+                                _G.pos_skill = v340.HumanoidRootPart.CFrame
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+make_together(ib_f, ib_b, vu28, "   Auto Kill All Boss", 0.17)
+ib_b.MouseButton1Down:connect(function()
+    if ib_b.Text ~= "" then
+        ib_b.Text = ""
+        _G.ib_b = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
+    else
+        ib_b.Text = "X"
+        _G.ib_b = true
+    end
+    __("allboss", _G.ib_b)
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("allboss") then
+        _G.haveboss = false
+        for v341 = 1, _G.valueboss do
+            EditNameMob = "Lv. " .. _G.table_boss[v341][2] .. "]"
+            local v342, v343, v344 = pairs(game.Workspace.Monster:GetChildren())
+            while true do
+                local v345
+                v344, v345 = v342(v343, v344)
+                if v344 == nil then
+                    break
+                end
+                if v345.ClassName == "Folder" then
+                    local v346, v347, v348 = pairs(v345:GetChildren())
+                    while true do
+                        local v349
+                        v348, v349 = v346(v347, v348)
+                        if v348 == nil then
+                            break
+                        end
+                        if string.find(v349.Name, EditNameMob) and v349.Humanoid.Health > 0 then
+                            tp(v349.HumanoidRootPart.CFrame * CFrame.new(0, _("distance"), 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                            if distance(v349.HumanoidRootPart.Position) < 50 then
+                                _G.pos_skill = v349.HumanoidRootPart.CFrame
+                                _G.haveboss = true
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
+            if _("allboss") and _G.haveboss == false then
+                for v350 = 1, _G.valueboss do
+                    if _("allboss") then
+                        if _G.haveboss == false then
+                            tp(_G.table_boss[v350][3])
+                            task.wait(0.5)
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
+if game.PlaceId == 6381829480 then
+    make_together(ib_f2, ib_b2, vu28, "   Auto Kill Sea King - Hydra", 0.24)
+    ib_b2.MouseButton1Down:connect(function()
+        if ib_b2.Text ~= "" then
+            ib_b2.Text = ""
+            _G.ib_b2 = false
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
+        else
+            ib_b2.Text = "X"
+            _G.ib_b2 = true
+        end
+        __("skhd", _G.ib_b2)
+    end)
+    game:GetService("RunService").Stepped:Connect(function()
+        ib_f2.Text = "Auto Kill Sea King - Hydra | " .. gamepass_sea.SKTimeLabel.Text
+        if _("skhd") then
+            local v351, v352, v353 = pairs(game:GetService("Workspace").Island:GetChildren())
+            while true do
+                local v354
+                v353, v354 = v351(v352, v353)
+                if v353 == nil then
+                    break
+                end
+                if string.find(v354.Name, "Sea King") or string.find(v354.Name, "Legacy Island") then
+                    if v354:FindFirstChild("HydraStand") then
+                        tp(v354.HydraStand.CFrame)
+                        if game:GetService("Workspace").SeaMonster:FindFirstChild("HydraSeaKing") and game:GetService("Workspace").SeaMonster:FindFirstChild("HydraSeaKing").Humanoid.Health > 0 then
+                            _G.pos_skill = game:GetService("Workspace").SeaMonster:FindFirstChild("HydraSeaKing").HumanoidRootPart.CFrame
+                            tp(game:GetService("Workspace").SeaMonster:FindFirstChild("HydraSeaKing").HumanoidRootPart.CFrame)
+                            if game:GetService("Workspace").SeaMonster:FindFirstChild("HydraSeaKing").HumanoidRootPart.Position.Y <= - 4 then
+                                tp(game:GetService("Workspace").SeaMonster:FindFirstChild("HydraSeaKing").HumanoidRootPart.CFrame * CFrame.new(0, 50, 0))
+                            end
+                        end
+                    end
+                    if v354:FindFirstChild("ChestSpawner") then
+                        tp(v354.ChestSpawner.CFrame * CFrame.new(0, 0, 0))
+                        if game:GetService("Workspace").SeaMonster:FindFirstChild("SeaKing") and game:GetService("Workspace").SeaMonster:FindFirstChild("SeaKing").Humanoid.Health > 0 then
+                            _G.pos_skill = game:GetService("Workspace").SeaMonster:FindFirstChild("SeaKing").HumanoidRootPart.CFrame
+                            tp(game:GetService("Workspace").SeaMonster:FindFirstChild("SeaKing").HumanoidRootPart.CFrame)
+                        end
+                    end
+                end
+            end
+        end
+    end)
+    make_together(ib_f3, ib_b3, vu28, "   Auto Kill Ghost Ship", 0.31)
+    ib_b3.MouseButton1Down:connect(function()
+        if ib_b3.Text ~= "" then
+            ib_b3.Text = ""
+            _G.ib_b3 = false
+        else
+            ib_b3.Text = "X"
+            _G.ib_b3 = true
+        end
+        __("gs", _G.ib_b3)
+    end)
+    game:GetService("RunService").Stepped:Connect(function()
+        ib_f3.Text = "Auto Kill Ghost Ship | " .. gamepass_sea.GSTimeLabel.Text
+        if _("gs") and (game.Workspace.GhostMonster:FindFirstChild("Ghost Ship") and (game.Workspace.GhostMonster:FindFirstChild("Ghost Ship").Humanoid.Health > 0 and game.Workspace.GhostMonster["Ghost Ship"]:FindFirstChild("HumanoidRootPart"))) then
+            _G.pos_skill = game.Workspace.GhostMonster:FindFirstChild("Ghost Ship").HumanoidRootPart.CFrame
+            tp(game.Workspace.GhostMonster:FindFirstChild("Ghost Ship").HumanoidRootPart.CFrame * CFrame.new(0, 0, 0))
+        end
+    end)
+    spawn(function()
+        while task.wait() do
+            pcall(function()
+                if _("gs") then
+                    for v355 = 1, 6 do
+                        if game.Workspace["Chest" .. v355] then
+                            tp(game.Workspace["Chest" .. v355].RootPart.CFrame * CFrame.new(0, 5, 0))
+                            task.wait(0.2)
+                        end
+                    end
+                end
+            end)
+        end
+    end)
+end
+if game.PlaceId == 15759515082 then
+    make_together(ib_f4, ib_b4, vu28, "   Auto Kill Galleon", 0.24)
+    ib_b4.MouseButton1Down:connect(function()
+        if ib_b4.Text ~= "" then
+            ib_b4.Text = ""
+            _G.ib_b4 = false
+        else
+            ib_b4.Text = "X"
+            _G.ib_b4 = true
+        end
+        __("ship", _G.ib_b4)
+    end)
+    game:GetService("RunService").Stepped:Connect(function()
+        ib_f4.Text = "   Auto Kill Galleon | Not Spawn"
+        local v356, v357, v358 = pairs(game.Workspace.SeaMonster:GetChildren())
+        while true do
+            local v359
+            v358, v359 = v356(v357, v358)
+            if v358 == nil then
+                break
+            end
+            if string.find(v359.Name, "Galleon") then
+                ib_f4.Text = "   Auto Kill Galleon | " .. v359.Name
+                if _("ship") then
+                    cf = v359.HumanoidRootPart.CFrame
+                    _G.pos_skill = cf
+                    tp(cf)
+                end
+            end
+        end
+    end)
+    make_together(ib_f5, ib_b5, vu28, "   Teleport Island Race", 0.31)
+    ib_b5.MouseButton1Down:connect(function()
+        if ib_b5.Text ~= "" then
+            ib_b5.Text = ""
+            _G.ib_b5 = false
+        else
+            ib_b5.Text = "X"
+            _G.ib_b5 = true
+        end
+    end)
+    game:GetService("RunService").Stepped:Connect(function()
+        ib_f5.Text = "   Teleport Island Race | Not Spawn"
+        local v360, v361, v362 = pairs(game:GetService("Workspace").Island:GetChildren())
+        while true do
+            local v363
+            v362, v363 = v360(v361, v362)
+            if v362 == nil then
+                break
+            end
+            if string.find(v363.Name, "Human") or (string.find(v363.Name, "SeaKing") or (string.find(v363.Name, "Angel") or (string.find(v363.Name, "Animal") or (string.find(v363.Name, "Fish") or string.find(v363.Name, "Demon"))))) then
+                ib_f5.Text = "   Teleport Island Race | " .. v363.Name
+                if _G.ib_b5 then
+                    part = v363:FindFirstChildWhichIsA("BasePart")
+                    if part then
+                        tp(part.CFrame * CFrame.new(0, 10, 0))
+                    end
+                end
+            end
+        end
+    end)
+    make_together(ib_f6, ib_b6, vu28, "   Auto Set Sail", 0.38)
+    ib_b6.MouseButton1Down:connect(function()
+        if ib_b6.Text ~= "" then
+            ib_b6.Text = ""
+            _G.ib_b6 = false
+        else
+            ib_b6.Text = "X"
+            _G.ib_b6 = true
+        end
+        __("seaevent", _G.ib_b6)
+    end)
+    game:GetService("RunService").Stepped:Connect(function()
+        ib_f6.Text = "   Auto Boss Event | Not Spawn"
+        local v364, v365, v366 = pairs(game.Workspace.SeaMonster:GetChildren())
+        while true do
+            local v367
+            v366, v367 = v364(v365, v366)
+            if v366 == nil then
+                break
+            end
+            if not string.find(v367.Name, "Galleon") then
+                ib_f6.Text = "   Auto Boss Event | " .. v367.Name
+                if _("seaevent") and v367:FindFirstChild("HumanoidRootPart") then
+                    local v368 = v367.HumanoidRootPart.CFrame
+                    _G.pos_skill = v368
+                    tp(v368)
+                end
+            end
+        end
+        local v369, v370, v371 = pairs(game.Workspace.Monster:GetChildren())
+        while true do
+            local v372
+            v371, v372 = v369(v370, v371)
+            if v371 == nil then
+                break
+            end
+            if v372.Name == "Boss" and v372:FindFirstChild("FuryTentacle") then
+                ib_f6.Text = "   Auto Boss Event | Kraken"
+                if _("seaevent") and v372.FuryTentacle:FindFirstChild("HumanoidRootPart") then
+                    local v373 = v372.FuryTentacle.HumanoidRootPart.CFrame
+                    _G.pos_skill = v373
+                    tp(v373)
+                end
+            end
+        end
+    end)
+end
+make_textlabel(vu29, "Join Sever", 0.03)
+make_textbox(sever_t1, vu29, "Enter Code Join Sever", 0.1)
+make_button(sever_f1, sever_b1, vu29, "   Join Sever", 0.17)
+sever_b1.MouseButton1Down:connect(function()
+    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, decode(sever_t1.Text), game.Players.LocalPlayer)
+end)
+make_select1(d_f1, d_b1, vu30, _("dungeon_select"), 0.03)
+d_b1.MouseButton1Down:connect(function()
+    d_dbar.Visible = true
+end)
+_G.table_dungeon = {
+    "Easy",
+    "Normal",
+    "Hard"
+}
+make_selectscrollingframe(d_dbar, vu30, 0.1, 0)
+make_auto_selectbutton(d_b1, d_dbar, _G.table_dungeon, "Dungeon", 0.05, "dungeon_select")
+game:GetService("RunService").Stepped:Connect(function()
+    if _("dungeon") or _("dungeon2") then
+        plg = game.Players.LocalPlayer.PlayerGui
+        if plg:FindFirstChild("DungeonUI") then
+            _G.inraid = true
+        else
+            _G.inraid = false
+            if game.PlaceId ~= 4520749081 then
+                if game.PlaceId ~= 6381829480 then
+                    if game.PlaceId == 15759515082 then
+                        tp(CFrame.new(10960, 133, 1250))
+                    end
+                else
+                    tp(CFrame.new(- 2428, 57, - 1566))
+                end
+            else
+                tp(CFrame.new(- 4610, 33, - 6009))
+            end
+            if plg:FindFirstChild("ChooseMap") and plg.ChooseMap.ChooseMapFrame.MapFrame:FindFirstChild(string.sub(d_b1.Text, 11)) then
+                vu192(plg.ChooseMap.ChooseMapFrame.MapFrame:FindFirstChild(string.sub(d_b1.Text, 11)))
+            end
+        end
+    end
+end)
+make_together(d_f2, d_b2, vu30, "   Auto Dungeon | Easy, Nomal", 0.1)
+d_b2.MouseButton1Down:connect(function()
+    if d_b2.Text ~= "" then
+        d_b2.Text = ""
+        _G.d_b2 = false
+    else
+        d_b2.Text = "X"
+        _G.d_b2 = true
+    end
+    __("dungeon", _G.d_b2)
+end)
+cfrd = {
+    - 70,
+    70
+}
+function dcf()
+    return cfrd[math.random(1, # cfrd)]
+end
+td = {
+    "Sword",
+    "Fruit Power",
+    "Combat"
+}
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            for v374 = 1, # td do
+                if _("dungeon") and _G.inraid then
+                    tooltip(td[v374])
+                end
+                task.wait(0.4)
+            end
+        end)
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _("dungeon") and _G.inraid then
+                local v375, v376, v377 = pairs(game.Workspace.MOB:GetChildren())
+                while true do
+                    local v378
+                    v377, v378 = v375(v376, v377)
+                    if v377 == nil then
+                        break
+                    end
+                    if v378.ClassName == "Model" and v378.Humanoid.Health > 0 then
+                        _G.pos_skill = v378.HumanoidRootPart.CFrame
+                        tp(v378.HumanoidRootPart.CFrame * CFrame.new(dcf(), 70, dcf()))
+                        task.wait(0.1)
+                    end
+                end
+            end
+        end)
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _("dungeon") and _G.inraid then
+                click()
+                if distance(_G.pos_skill.Position) < 400 and # game.Workspace.MOB:GetChildren() > 0 then
+                    autoskill()
+                end
+            end
+        end)
+    end
+end)
+make_together(d_f3, d_b3, vu30, "   Auto Dungeon | Need : Ope V2, Kioru V2, Sea Beast V3, Melee", 0.17)
+d_b3.MouseButton1Down:connect(function()
+    if d_b3.Text ~= "" then
+        d_b3.Text = ""
+        _G.d_b3 = false
+    else
+        d_b3.Text = "X"
+        _G.d_b3 = true
+    end
+    __("dungeon2", _G.d_b3)
+end)
+table_boss_dungeon = {
+    "Gravity Warden",
+    "Ice Warden",
+    "Flame Warden",
+    "Dark Warden",
+    "Crab"
+}
+game:GetService("RunService").Stepped:Connect(function()
+    if _("dungeon2") and _G.inraid then
+        _G.boss_dungeon = false
+        local v379, v380, v381 = pairs(game.Workspace.MOB:GetChildren())
+        while true do
+            local v382
+            v381, v382 = v379(v380, v381)
+            if v381 == nil then
+                break
+            end
+            for v383 = 1, # table_boss_dungeon do
+                if string.find(v382.Name, table_boss_dungeon[v383]) then
+                    _G.boss_dungeon = true
+                    if game.Players.LocalPlayer.Character.Humanoid.Health < game.Players.LocalPlayer.Character.Humanoid.MaxHealth * _("lowheath") / 100 then
+                        keyboard("R")
+                    end
+                end
+            end
+        end
+    end
+end)
+spawn(function()
+    while task.wait(0.5) do
+        pcall(function()
+            if _("dungeon2") and _G.inraid then
+                if _G.dungeon_ken then
+                    ken()
+                elseif game:GetService("Workspace").PlayerCharacters[game:GetService("Players").LocalPlayer.Name].Services.KenOpen.Value == true then
+                    keyboard("Y")
+                end
+            end
+        end)
+    end
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("dungeon2") and _G.inraid then
+        _G.ball = false
+        _G.gravity = false
+        local v384, v385, v386 = pairs(game.Workspace.Effects:GetChildren())
+        while true do
+            local v387
+            v386, v387 = v384(v385, v386)
+            if v386 == nil then
+                break
+            end
+            if (string.find(v387.Name, "ball") or string.find(v387.Name, "Ball")) and distance(v387:FindFirstChildWhichIsA("BasePart").Position) < 300 then
+                _G.ball = true
+            end
+            if (string.find(v387.Name, "Gravity") or (string.find(v387.Name, "gravity") or (string.find(v387.Name, "Meteo") or string.find(v387.Name, "meteo")))) and distance(v387:FindFirstChildWhichIsA("BasePart").Position) < 300 then
+                _G.gravity = true
+            end
+        end
+        if game.Workspace.Effects:FindFirstChild("warning") then
+            more_distance = 250
+            _G.warning = true
+        else
+            more_distance = 0
+            _G.warning = false
+        end
+        if _G.gravity then
+            graviry_distance = 230
+        else
+            graviry_distance = 0
+        end
+    end
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    _G.dungeon_ken = false
+    if _("dungeon2") and _G.inraid then
+        local v388, v389, v390 = pairs(game.Workspace.MOB:GetChildren())
+        while true do
+            local v391
+            v390, v391 = v388(v389, v390)
+            if v390 == nil then
+                break
+            end
+            if _G.boss_dungeon then
+                if string.find(v391.Name, "Dark Warden") then
+                    if _G.ball then
+                        tp(v391.HumanoidRootPart.CFrame * CFrame.new(0, 200, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                    else
+                        tp(v391.HumanoidRootPart.CFrame * CFrame.new(0, 8, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                        _G.pos_skill = v391.HumanoidRootPart.CFrame
+                    end
+                end
+                if string.find(v391.Name, "Flame Warden") then
+                    if _G.ball then
+                        tp(v391.HumanoidRootPart.CFrame * CFrame.new(70, 200, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                    else
+                        tp(v391.HumanoidRootPart.CFrame * CFrame.new(0, 8, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                        _G.pos_skill = v391.HumanoidRootPart.CFrame
+                    end
+                end
+                if game.Workspace.MOB:FindFirstChild("Ice Warden [Lv. 5000]") and game.Workspace.MOB:FindFirstChild("Ice Warden [Lv. 5000]").Humanoid.Health > 0 then
+                    tp(game.Workspace.MOB:FindFirstChild("Ice Warden [Lv. 5000]").HumanoidRootPart.CFrame * CFrame.new(0, 8, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                    _G.pos_skill = game.Workspace.MOB:FindFirstChild("Ice Warden [Lv. 5000]").HumanoidRootPart.CFrame
+                    _G.dungeon_ken = true
+                end
+                if game.Workspace.MOB:FindFirstChild("Gravity Warden [Lv. 4000]") and game.Workspace.MOB:FindFirstChild("Gravity Warden [Lv. 4000]").Humanoid.Health > 0 then
+                    tp(game.Workspace.MOB:FindFirstChild("Gravity Warden [Lv. 4000]").HumanoidRootPart.CFrame * CFrame.new(0, 8 + graviry_distance, 0 + graviry_distance) * CFrame.Angles(math.rad(- 90), 0, 0))
+                    _G.pos_skill = game.Workspace.MOB:FindFirstChild("Gravity Warden [Lv. 4000]").HumanoidRootPart.CFrame
+                    _G.dungeon_ken = true
+                end
+                if string.find(v391.Name, "Craberno") then
+                    tp(v391.HumanoidRootPart.CFrame * CFrame.new(0, 15 + more_distance, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                    _G.pos_skill = v391.HumanoidRootPart.CFrame
+                    _G.dungeon_ken = true
+                end
+                if string.find(v391.Name, "Chaos Crab") then
+                    tp(v391.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0) * CFrame.Angles(math.rad(- 90), 0, 0))
+                    _G.pos_skill = v391.HumanoidRootPart.CFrame
+                    _G.dungeon_ken = true
+                    if _G.warning then
+                        local v392, v393, v394 = pairs(game.Workspace.Island:GetChildren())
+                        while true do
+                            local v395
+                            v394, v395 = v392(v393, v394)
+                            if v394 == nil then
+                                break
+                            end
+                            if string.find(v395.Name, "(Real)") then
+                                tp(v395.Elevator.MeshPart.CFrame * CFrame.new(0, 280, 0))
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _("dungeon2") and (_G.inraid and (_("dodgev2") == false and _G.boss_dungeon == false)) then
+                local v396, v397, v398 = pairs(game.Workspace.MOB:GetChildren())
+                while true do
+                    local v399
+                    v398, v399 = v396(v397, v398)
+                    if v398 == nil then
+                        break
+                    end
+                    if v399.ClassName == "Model" and v399.Humanoid.Health > 0 then
+                        tp(v399.HumanoidRootPart.CFrame * CFrame.new(dcf(), 100, dcf()))
+                        if game.Workspace:FindFirstChild("OpeRoom" .. game.Players.LocalPlayer.Name) and (v399.HumanoidRootPart.Position - game.Workspace:FindFirstChild("OpeRoom" .. game.Players.LocalPlayer.Name).Position).Magnitude < 350 then
+                            tp(v399.HumanoidRootPart.CFrame * CFrame.new(dcf(), 90, dcf()))
+                            _G.pos_skill = v399.HumanoidRootPart.CFrame
+                        end
+                        task.wait(0.1)
+                    end
+                end
+            end
+        end)
+    end
+end)
+local vu400 = 0
+local vu401 = 150
+game:GetService("RunService").Stepped:Connect(function()
+    if _("dungeon2") and (_G.inraid and (_("dodgev2") and _G.boss_dungeon == false)) then
+        local v402, v403, v404 = pairs(game.Workspace.Island:GetChildren())
+        while true do
+            local v405
+            v404, v405 = v402(v403, v404)
+            if v404 == nil then
+                break
+            end
+            if string.find(v405.Name, "(Real)") and v405 then
+                local v406 = v405:FindFirstChild("Elevator")
+                if v406 and v406:FindFirstChild("MeshPart") then
+                    vu400 = vu400 + 10
+                    local v407 = v406.MeshPart.Position
+                    local v408 = v407.Y + 100
+                    local v409 = v407.X + math.cos(math.rad(vu400)) * vu401
+                    local v410 = v407.Z + math.sin(math.rad(vu400)) * vu401
+                    local v411 = CFrame.new(v409, v408, v410)
+                    local v412 = game.Players.LocalPlayer.Character
+                    if v412 and v412:FindFirstChild("HumanoidRootPart") then
+                        v412.HumanoidRootPart.CFrame = v411
+                    end
+                end
+            end
+        end
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _("dungeon2") and (_G.inraid and _G.boss_dungeon == false) then
+                local v413, v414, v415 = pairs(game.Workspace.MOB:GetChildren())
+                while true do
+                    local v416
+                    v415, v416 = v413(v414, v415)
+                    if v415 == nil then
+                        break
+                    end
+                    if v416.ClassName == "Model" and v416.Humanoid.Health > 0 and (game.Workspace:FindFirstChild("OpeRoom" .. game.Players.LocalPlayer.Name) and (v416.HumanoidRootPart.Position - game.Workspace:FindFirstChild("OpeRoom" .. game.Players.LocalPlayer.Name).Position).Magnitude < 350) then
+                        _G.pos_skill = v416.HumanoidRootPart.CFrame
+                    end
+                end
+            end
+        end)
+    end
+end)
+opskill = {
+    "Z",
+    "X",
+    "C",
+    "E",
+    "V"
+}
+game:GetService("RunService").Stepped:Connect(function()
+    if _("dungeon2") and _G.inraid then
+        if game.Workspace:FindFirstChild("OpeRoom" .. game.Players.LocalPlayer.Name) then
+            if distance(game.Workspace:FindFirstChild("OpeRoom" .. game.Players.LocalPlayer.Name).Position) >= 350 then
+                _G.inop = false
+                opez()
+            else
+                _G.opz = true
+                _G.inop = true
+                click()
+                for v417 = 1, # opskill do
+                    if # game.Workspace.MOB:GetChildren() > 0 then
+                        keyboard(opskill[v417])
+                    end
+                end
+            end
+        else
+            opez()
+        end
+    end
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    local v418, v419, v420 = pairs(game.Players.LocalPlayer.PlayerGui.MainGui.StarterFrame.BossesHealthBar.Frames:GetChildren())
+    while true do
+        local v421
+        v420, v421 = v418(v419, v420)
+        if v420 == nil then
+            break
+        end
+        if v421.ClassName == "Frame" then
+            if _("dungeon") or _("dungeon2") then
+                v421.HPFrame.Damages.Visible = false
+            else
+                v421.HPFrame.Damages.Visible = true
+            end
+        end
+    end
+end)
+td2 = {
+    "Sword",
+    "Combat"
+}
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            for v422 = 1, # td2 do
+                if _("dungeon2") and (_G.inop and _G.inraid) then
+                    tooltip(td2[v422])
+                end
+                task.wait(0.1)
+            end
+        end)
+    end
+end)
+make_textlabel(vu30, "Setting Dungeon", 0.24)
+make_together(d_f4, d_b4, vu30, "   Auto Dodge V2", 0.31)
+d_b4.MouseButton1Down:connect(function()
+    if d_b4.Text ~= "" then
+        d_b4.Text = ""
+        _G.d_b4 = false
+    else
+        d_b4.Text = "X"
+        _G.d_b4 = true
+    end
+    __("dodgev2", _G.d_b4)
+end)
+make_slider_value(vu30, "% Heath On Race", 0, 100, 0.38, "lowheath")
+make_button(f_f1, f_b1, vu31, "   CFrame : " .. _("fish_cf"), 0.03)
+f_b1.MouseButton1Down:connect(function()
+    __("fish_cf", "CFrame.new(" .. tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame) .. ")")
+    f_f1.Text = "   CFrame : " .. _("fish_cf")
+end)
+make_together(f_f2, f_b2, vu31, "   Auto Fish", 0.1)
+f_b2.MouseButton1Down:connect(function()
+    if f_b2.Text ~= "" then
+        if f_b2.Text == "X" then
+            f_b2.Text = ""
+            _G.f_b2 = false
+        end
+    else
+        f_b2.Text = "X"
+        _G.f_b2 = true
+    end
+    __("fish", _G.f_b2)
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("fish") then
+        loadstring("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=" .. _("fish_cf"))()
+        tooltip("")
+        local v423 = {
+            "SW_Basic Rod_M1",
+            {
+                MouseHit = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 5),
+                Charge = 100
+            }
+        }
+        game:GetService("ReplicatedStorage").Chest.Remotes.Functions.SkillAction:InvokeServer(unpack(v423))
+    end
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if _("fish") then
+        plg = game.Players.LocalPlayer.PlayerGui
+        if plg:FindFirstChild("FishingUI") then
+            vu34 = plg.FishingUI.FishingBackground.FishingBar
+            fish = plg.FishingUI.FishingBackground.FishLabel
+            fish.Position = vu34.Position
+        end
+    end
+end)
+make_textlabel(vu33, "Buy Key", 0.03)
+make_select2(shop_f1, shop_b1, shop_bkey, vu33, _("key1"), 0.1)
+shop_b1.MouseButton1Down:connect(function()
+    shop_keybar.Visible = true
+end)
+shop_bkey.MouseButton1Down:connect(function()
+    if shop_bkey.Text ~= "" then
+        _G.shop_bkey = false
+        shop_bkey.Text = ""
+    else
+        shop_bkey.Text = "X"
+        _G.shop_bkey = true
+    end
+    __("buykey", _G.shop_bkey)
+end)
+make_slider_value(vu33, "Value", 1, 99, 0.17, "key_count")
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
+            if _("buykey") then
+                local v424 = {
+                    string.sub(shop_b1.Text, 7, # shop_b1.Text),
+                    _("key_count")
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("BuyKey"):InvokeServer(unpack(v424))
+            end
+        end)
+    end
+end)
+_G.table_key = {
+    "Copper Key",
+    "Iron Key",
+    "Gold Key",
+    "Platinum Key"
+}
+make_selectscrollingframe(shop_keybar, vu33, 0.24)
+make_auto_selectbutton(shop_b1, shop_keybar, _G.table_key, "Key", 0.05, "key1")
+make_textlabel(vu33, "Random Fruit", 0.24)
+make_select1(shop_f2, shop_b2, vu33, _("key2"), 0.31)
+shop_b2.MouseButton1Down:connect(function()
+    shop_randombar.Visible = true
+end)
+make_selectscrollingframe(shop_randombar, vu33, 0.38, 0)
+make_auto_selectbutton(shop_b2, shop_randombar, _G.table_key, "Key", 0.05, "key2")
+function rd_fruit(p425)
+    local v426 = {
+        string.sub(shop_b2.Text, 7, # shop_b2.Text),
+        p425
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("UseKey"):InvokeServer(unpack(v426))
+end
+make_together(shop_f3, shop_b3, vu33, "   Random x1", 0.38)
+shop_b3.MouseButton1Down:connect(function()
+    if shop_b3.Text ~= "" then
+        if shop_b3.Text == "X" then
+            shop_b3.Text = ""
+            _G.shop_b3 = false
+        end
+    else
+        shop_b3.Text = "X"
+        _G.shop_b3 = true
+    end
+end)
+make_together(shop_f4, shop_b4, vu33, "   Random x3", 0.45)
+shop_b4.MouseButton1Down:connect(function()
+    if shop_b4.Text ~= "" then
+        if shop_b4.Text == "X" then
+            shop_b4.Text = ""
+            _G.shop_b4 = false
+        end
+    else
+        shop_b4.Text = "X"
+        _G.shop_b4 = true
+    end
+end)
+make_together(shop_f5, shop_b5, vu33, "   Random x10", 0.52)
+shop_b5.MouseButton1Down:connect(function()
+    if shop_b5.Text ~= "" then
+        if shop_b5.Text == "X" then
+            shop_b5.Text = ""
+            _G.shop_b5 = false
+        end
+    else
+        shop_b5.Text = "X"
+        _G.shop_b5 = true
+    end
+end)
+spawn(function()
+    while task.wait(0.5) do
+        pcall(function()
+            if _G.shop_b3 then
+                rd_fruit("Open1")
+            end
+            if _G.shop_b4 then
+                rd_fruit("Open3")
+            end
+            if _G.shop_b5 then
+                rd_fruit("Open10")
+            end
+        end)
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if game.PlaceId ~= 6381829480 then
+                if game.PlaceId == 15759515082 then
+                    if _("ship") or _("seaevent") then
+                        _G.sea3 = true
+                    else
+                        _G.sea3 = false
+                    end
+                end
+            elseif _("skhd") or _("gs") then
+                _G.sea2 = true
+            else
+                _G.sea2 = false
+            end
+        end)
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            _G.aimbot = false
+            _G.usetool = false
+            if _("allboss") or (_("auto_farm") or (_("mobdis") or (_("farmmaterial") or (_G.sea2 or _G.sea3)))) then
+                _G.aimbot = true
+                _G.usetool = true
+                click()
+                if _("ken") then
+                    ken()
+                end
+                if distance(_G.pos_skill.Position) < 400 then
+                    autoskill()
+                end
+            else
+                _G.aimbot = false
+            end
+        end)
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.usetool then
+                usetool()
+            end
+        end)
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.sea2 or _G.sea3 then
+                tooltip("Combat")
+                task.wait(0.5)
+                tooltip("Sword")
+                task.wait(0.5)
+                tooltip("Fruit Power")
+                task.wait(0.5)
+            end
+        end)
+    end
+end)
+pcall(function()
+    local v427 = getrawmetatable(game)
+    local vu428 = v427.__namecall
+    setreadonly(v427, false)
+    v427.__namecall = newcclosure(function(p429, ...)
+        local v430 = {
+            ...
+        }
+        if getnamecallmethod() ~= "InvokeServer" or tostring(p429) ~= "SkillAction" then
+            return vu428(p429, ...)
+        end
+        if (_("aimbot") or (_("circle") or (_("dungeon") or (_("aimbotnear") or (_G.aimbot or _("dungeon2")))))) and (typeof(v430[2]) == "table" and (v430[2].Type and (v430[2].Type == "Up" and _G.pos_skill))) then
+            v430[2].MouseHit = _G.pos_skill
+        end
+        return vu428(p429, unpack(v430))
+    end)
+end)
+spawn(function()
+    pcall(function()
+        game:GetService("RunService").Stepped:Connect(function()
+            if _G.ib_b6 or (_("fish") or (_G.cb_b3 or (_G.t_itp or (_G.aimbot or (_("dungeon") or _("dungeon2")))))) then
+                game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").PlatformStand = true
+                if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()
+                end
+                if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+                    local v431 = Instance.new("BodyVelocity")
+                    v431.Name = "BodyClip"
+                    v431.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+                    v431.MaxForce = Vector3.new(100000, 100000, 100000)
+                    v431.Velocity = Vector3.new(0, 0, 0)
+                end
+            else
+                game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").PlatformStand = false
+                if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()
+                end
+            end
+        end)
+    end)
+end)
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
+            if _("buso") then
+                buso()
+            end
+        end)
+    end
+end)
+dl = false
+function clickgui(p432)
+    if dl == false then
+        game:GetService("GuiService").SelectedObject = p432
+        if game:GetService("GuiService").SelectedObject == p432 then
+            dl = true
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, 13, false, game)
+            task.wait()
+            game:GetService("VirtualInputManager"):SendKeyEvent(false, 13, false, game)
+        end
+        task.wait()
+        game:GetService("GuiService").SelectedObject = nil
+        dl = false
+    end
+end
+t_play = 0
+game:GetService("RunService").Stepped:Connect(function(_, p433)
+    t_play = p433 + t_play
+    if t_play >= 0.1 then
+        dl = false
+        if game.Players.LocalPlayer.PlayerGui:FindFirstChild("LoadingGUI") and (game.Players.LocalPlayer.PlayerGui.LoadingGUI:FindFirstChild("Play") and game.Players.LocalPlayer.PlayerGui.LoadingGUI.Play.Visible == true) then
+            clickgui(game.Players.LocalPlayer.PlayerGui.LoadingGUI.Play)
+        end
+        t_play = 0
+    end
+end)
+function b_page(p434, p435)
+    vu22.Visible = false
+    vu23.Visible = false
+    vu25.Visible = false
+    vu26.Visible = false
+    vu27.Visible = false
+    vu24.Visible = false
+    vu28.Visible = false
+    vu29.Visible = false
+    vu30.Visible = false
+    vu31.Visible = false
+    vu32.Visible = false
+    vu33.Visible = false
+    p434.Visible = true
+    vu20.Text = p435
+end
+v36.MouseButton1Down:connect(function()
+    b_page(vu22, "NTT HUB | Main | " .. _G.linkdis)
+end)
+v37.MouseButton1Down:connect(function()
+    b_page(vu23, "NTT HUB | Start | " .. _G.linkdis)
+end)
+v39.MouseButton1Down:connect(function()
+    b_page(vu25, "NTT HUB | Setting | " .. _G.linkdis)
+end)
+v40.MouseButton1Down:connect(function()
+    b_page(vu26, "NTT HUB | Teleport | " .. _G.linkdis)
+end)
+v41.MouseButton1Down:connect(function()
+    b_page(vu27, "NTT HUB | Combat | " .. _G.linkdis)
+end)
+v38.MouseButton1Down:connect(function()
+    b_page(vu24, "NTT HUB | Player/Mod | " .. _G.linkdis)
+end)
+v42.MouseButton1Down:connect(function()
+    b_page(vu28, "NTT HUB | Item/Boss | " .. _G.linkdis)
+end)
+v43.MouseButton1Down:connect(function()
+    b_page(vu29, "NTT HUB | Sever | " .. _G.linkdis)
+end)
+v44.MouseButton1Down:connect(function()
+    b_page(vu30, "NTT HUB | Dungeon | " .. _G.linkdis)
+end)
+v45.MouseButton1Down:connect(function()
+    b_page(vu31, "NTT HUB | Fish | " .. _G.linkdis)
+end)
+v46.MouseButton1Down:connect(function()
+    b_page(vu32, "NTT HUB | Esp | " .. _G.linkdis)
+end)
+v47.MouseButton1Down:connect(function()
+    b_page(vu33, "NTT HUB | Shop | " .. _G.linkdis)
+end)
+_G.webhook = {
+    sk = "https://discord.com/api/webhooks/1276927002359758930/VOB9dUxSgoZSYpuZAeBAGNxHLqXrkvGuOlhpLVS1wBky1UXDA4FtI5TQcQ1V5c5V_a-z",
+    hd = "https://discord.com/api/webhooks/1276926958600458280/2_xCpNb1_VUjrI3dplTO6nuNMWnbUfGAOSZlXqNYetZCOVPLdQ1v5GTaMpYEakmjjOtX",
+    gs = "https://discord.com/api/webhooks/1434514100553125939/9CXSqNJzudDV40p-ETbLQDwVRAgKw48g-gjtIfn1kJS2Niyzoj57zGzlZ13-WSK-Gygy",
+    ks = "https://discord.com/api/webhooks/1434514144425410631/iJVpEw7gtVvrhmzUj6oQ80nJYeJ00jagytbyJE7t-7yXZ654S6uc-i6l5N-_7HwD9NuG",
+    race = "https://discord.com/api/webhooks/1434514210670383198/TJhxkz4zmuB3wRuLmC3r1Fron7a-RGaJ9o4OBaEXFkjI6PU9VkF3wesWey85oUPwJDzq",
+    ss = "https://discord.com/api/webhooks/1434514181784076380/PHs_Hw8sjtqLpAlIaU-GL70DAJZrcx4uAfctubssy53wi3mUFByrL03KxiKT0uIbmgp5"
+}
+function done(p436)
+    if not p436:FindFirstChild("done") then
+        local v437 = Instance.new("Folder")
+        v437.Name = "done"
+        v437.Parent = p436
+    end
+end
+hs = game:GetService("HttpService")
+req = http_request or (request or syn.request)
+playerCount = # game:GetService("Players"):GetPlayers()
+jobid = encode(game.JobId)
+if game.PlaceId ~= 6381829480 then
+    if game.PlaceId == 15759515082 then
+        spawn(function()
+            while task.wait(1) do
+                pcall(function()
+                    local v438, v439, v440 = pairs(game.Workspace.SeaMonster:GetChildren())
+                    while true do
+                        local v441
+                        v440, v441 = v438(v439, v440)
+                        if v440 == nil then
+                            break
+                        end
+                        if string.find(v441.Name, "Galleon") and not v441:FindFirstChild("done") then
+                            done(v441)
+                            local v442 = req
+                            local v443 = {
+                                Url = _G.webhook.ks,
+                                Method = "POST",
+                                Headers = {
+                                    ["Content-Type"] = "application/json"
+                                }
+                            }
+                            local v444 = hs
+                            local v445 = v444.JSONEncode
+                            local v446 = {
+                                embeds = {
+                                    {
+                                        title = "```" .. v441.Name .. "```",
+                                        color = 7498202,
+                                        fields = {
+                                            {
+                                                name = "Player Count",
+                                                value = "```" .. playerCount .. "/12```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Pc",
+                                                value = "```" .. jobid .. "```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Mobile",
+                                                value = "" .. jobid .. "",
+                                                inline = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            v443.Body = v445(v444, v446)
+                            v442(v443)
+                        end
+                    end
+                end)
+            end
+        end)
+        spawn(function()
+            while task.wait(1) do
+                pcall(function()
+                    local v447, v448, v449 = pairs(game:GetService("Workspace").Island:GetChildren())
+                    while true do
+                        local v450
+                        v449, v450 = v447(v448, v449)
+                        if v449 == nil then
+                            break
+                        end
+                        if (string.find(v450.Name, "Human") or (string.find(v450.Name, "Gale") or (string.find(v450.Name, "SeaKing") or (string.find(v450.Name, "Angel") or (string.find(v450.Name, "Animal") or (string.find(v450.Name, "Fish") or string.find(v450.Name, "Demon"))))))) and not v450:FindFirstChild("done") then
+                            done(v450)
+                            local v451 = req
+                            local v452 = {
+                                Url = _G.webhook.race,
+                                Method = "POST",
+                                Headers = {
+                                    ["Content-Type"] = "application/json"
+                                },
+                                Body = hs:JSONEncode({
+                                    embeds = {
+                                        {
+                                            title = "```" .. v450.Name .. "```",
+                                            color = 7498202,
+                                            fields = {
+                                                {
+                                                    name = "Player Count",
+                                                    value = "```" .. playerCount .. "/12```",
+                                                    inline = true
+                                                },
+                                                {
+                                                    name = "Code Pc",
+                                                    value = "```" .. jobid .. "```",
+                                                    inline = true
+                                                },
+                                                {
+                                                    name = "Code Mobile",
+                                                    value = "" .. jobid .. "",
+                                                    inline = true
+                                                }
+                                            }
+                                        }
+                                    }
+                                })
+                            }
+                            v451(v452)
+                        end
+                    end
+                end)
+            end
+        end)
+        spawn(function()
+            while task.wait(1) do
+                pcall(function()
+                    local v453, v454, v455 = pairs(game.Workspace.SeaMonster:GetChildren())
+                    while true do
+                        local v456
+                        v455, v456 = v453(v454, v455)
+                        if v455 == nil then
+                            break
+                        end
+                        if not (string.find(v456.Name, "Galleon") or v456:FindFirstChild("done")) then
+                            done(v456)
+                            local v457 = req
+                            local v458 = {
+                                Url = _G.webhook.ss,
+                                Method = "POST",
+                                Headers = {
+                                    ["Content-Type"] = "application/json"
+                                }
+                            }
+                            local v459 = hs
+                            local v460 = v459.JSONEncode
+                            local v461 = {
+                                embeds = {
+                                    {
+                                        title = "```" .. v456.Name .. "```",
+                                        color = 7498202,
+                                        fields = {
+                                            {
+                                                name = "Player Count",
+                                                value = "```" .. playerCount .. "/12```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Pc",
+                                                value = "```" .. jobid .. "```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Mobile",
+                                                value = "" .. jobid .. "",
+                                                inline = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            v458.Body = v460(v459, v461)
+                            v457(v458)
+                        end
+                    end
+                end)
+            end
+        end)
+        spawn(function()
+            while task.wait(1) do
+                pcall(function()
+                    _G.karken = false
+                    local v462, v463, v464 = pairs(game.Workspace.Monster:GetChildren())
+                    while true do
+                        local v465
+                        v464, v465 = v462(v463, v464)
+                        if v464 == nil then
+                            break
+                        end
+                        if v465.Name == "Boss" and v465:FindFirstChild("FuryTentacle") then
+                            _G.karken = true
+                        end
+                    end
+                    if _G.karken then
+                        if not game.Workspace.Monster.Boss:FindFirstChild("done") then
+                            done(game.Workspace.Monster.Boss)
+                            local v466 = req
+                            local v467 = {
+                                Url = _G.webhook.ss,
+                                Method = "POST",
+                                Headers = {
+                                    ["Content-Type"] = "application/json"
+                                }
+                            }
+                            local v468 = hs
+                            local v469 = v468.JSONEncode
+                            local v470 = {
+                                embeds = {
+                                    {
+                                        title = "```Kraken```",
+                                        color = 7498202,
+                                        fields = {
+                                            {
+                                                name = "Player Count",
+                                                value = "```" .. playerCount .. "/12```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Pc",
+                                                value = "```" .. jobid .. "```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Mobile",
+                                                value = "" .. jobid .. "",
+                                                inline = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            v467.Body = v469(v468, v470)
+                            v466(v467)
+                        end
+                    elseif game.Workspace.Monster.Boss:FindFirstChild("done") then
+                        game.Workspace.Monster.Boss:FindFirstChild("done"):Destroy()
+                    end
+                end)
+            end
+        end)
+    end
+else
+    spawn(function()
+        while task.wait(1) do
+            pcall(function()
+                local v471, v472, v473 = pairs(game:GetService("Workspace").Island:GetChildren())
+                while true do
+                    local v474
+                    v473, v474 = v471(v472, v473)
+                    if v473 == nil then
+                        break
+                    end
+                    if string.find(v474.Name, "Sea King") or string.find(v474.Name, "Legacy Island") then
+                        if v474:FindFirstChild("HydraStand") and not v474:FindFirstChild("done") then
+                            done(v474)
+                            local v475 = req
+                            local v476 = {
+                                Url = _G.webhook.hd,
+                                Method = "POST",
+                                Headers = {
+                                    ["Content-Type"] = "application/json"
+                                }
+                            }
+                            local v477 = hs
+                            local v478 = v477.JSONEncode
+                            local v479 = {
+                                embeds = {
+                                    {
+                                        title = "```Hydra```",
+                                        color = 7498202,
+                                        fields = {
+                                            {
+                                                name = "Player Count",
+                                                value = "```" .. playerCount .. "/12```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Pc",
+                                                value = "```" .. jobid .. "```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Mobile",
+                                                value = "" .. jobid .. "",
+                                                inline = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            v476.Body = v478(v477, v479)
+                            v475(v476)
+                        end
+                        if v474:FindFirstChild("ChestSpawner") and not v474:FindFirstChild("done") then
+                            done(v474)
+                            local v480 = req
+                            local v481 = {
+                                Url = _G.webhook.sk,
+                                Method = "POST",
+                                Headers = {
+                                    ["Content-Type"] = "application/json"
+                                }
+                            }
+                            local v482 = hs
+                            local v483 = v482.JSONEncode
+                            local v484 = {
+                                embeds = {
+                                    {
+                                        title = "```Seaking```",
+                                        color = 7498202,
+                                        fields = {
+                                            {
+                                                name = "Player Count",
+                                                value = "```" .. playerCount .. "/12```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Pc",
+                                                value = "```" .. jobid .. "```",
+                                                inline = true
+                                            },
+                                            {
+                                                name = "Code Mobile",
+                                                value = "" .. jobid .. "",
+                                                inline = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            v481.Body = v483(v482, v484)
+                            v480(v481)
+                        end
+                    end
+                end
+            end)
+        end
+    end)
+    spawn(function()
+        while task.wait(1) do
+            pcall(function()
+                if game.Workspace.GhostMonster:FindFirstChild("Ghost Ship") and (game.Workspace.GhostMonster:FindFirstChild("Ghost Ship").Humanoid.Health > 0 and (game.Workspace.GhostMonster["Ghost Ship"]:FindFirstChild("HumanoidRootPart") and not game.Workspace.GhostMonster["Ghost Ship"]:FindFirstChild("done"))) then
+                    done(game.Workspace.GhostMonster["Ghost Ship"])
+                    local v485 = req
+                    local v486 = {
+                        Url = _G.webhook.gs,
+                        Method = "POST",
+                        Headers = {
+                            ["Content-Type"] = "application/json"
+                        },
+                        Body = hs:JSONEncode({
+                            embeds = {
+                                {
+                                    title = "```Ghost Ship```",
+                                    color = 7498202,
+                                    fields = {
+                                        {
+                                            name = "Player Count",
+                                            value = "```" .. playerCount .. "/12```",
+                                            inline = true
+                                        },
+                                        {
+                                            name = "Code Pc",
+                                            value = "```" .. jobid .. "```",
+                                            inline = true
+                                        },
+                                        {
+                                            name = "Code Mobile",
+                                            value = "" .. jobid .. "",
+                                            inline = true
+                                        }
+                                    }
+                                }
+                            }
+                        })
+                    }
+                    v485(v486)
+                end
+            end)
+        end
+    end)
+end
+local function vu495(p487, p488)
+    data = ""
+    local v489 = p488 or 0
+    local v490 = string.rep("  ", v489)
+    if typeof(p487) == "table" then
+        local v491, v492, v493 = pairs(p487)
+        while true do
+            local v494
+            v493, v494 = v491(v492, v493)
+            if v493 == nil then
+                break
+            end
+            if typeof(v494) ~= "table" then
+                if data ~= "" then
+                    data = data .. "\n" .. v490 .. "" .. tostring(v493)
+                else
+                    data = v490 .. "" .. tostring(v493)
+                end
+            else
+                print(v490 .. "[" .. tostring(v493) .. "] = {")
+                vu495(v494, v489 + 1)
+                print(v490 .. "}")
+            end
+        end
+    else
+        print(v490 .. tostring(p487))
+    end
+end
+vu495(game:GetService("ReplicatedStorage").Chest.Remotes.Functions.GetDFShop:InvokeServer())
+local v496 = req
+local v497 = {
+    Url = "https://discord.com/api/webhooks/1443254589859041372/71fLy3Fqn8iLGR5lbJ8h9mF9m4510RdU9WVvZspEqzyweKQf8BhKkRVeF3fstT6UlQY3",
+    Method = "POST",
+    Headers = {
+        ["Content-Type"] = "application/json"
+    },
+    Body = hs:JSONEncode({
+        embeds = {
+            {
+                title = "```Notification```",
+                color = 7498202,
+                fields = {
+                    {
+                        name = "Stock Fruit",
+                        value = "```" .. data .. "```",
+                        inline = true
+                    }
+                }
+            }
+        }
+    })
+}
+v496(v497)
