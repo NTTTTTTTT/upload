@@ -1,0 +1,4015 @@
+
+
+local fenv = getfenv();
+_G.credit = "Obfucator NTT - https://(discord invite)";
+local v2 = game:GetService("Players");
+fenv._wUFcuNyY = function(p1, p2, a, b, c)
+    return nil;
+end;
+fenv._tVMOhYhA = 3735928559;
+fenv._AFQoZCcW = function(a_2, b_2, c_2)
+    return false;
+end;
+fenv._aIyuXfEN = setmetatable({}, {
+    ["__index"] = function(p1_0, p2_0, a_0, b_0, c_0) end,
+    ["__newindex"] = function(p1_0, p2_0, p3_0, a_0, b_0, c_0) end
+});
+_G.__IS_ADMIN_USER__ = function(a_3, b_3, c_3, ...)
+    return _G.__IS_ADMIN_USER__(a_3, b_3, c_3, ...);
+end;
+_G.__FAKE_DECRYPT_KEY__ = function(a_4, b_4, c_4, ...)
+    return _G.__FAKE_DECRYPT_KEY__(a_4, b_4, c_4, ...);
+end;
+spawn(function()
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 2
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 3
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 4
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 5
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 6
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 7
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 8
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 9
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 10
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 11
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 12
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 13
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 14
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 15
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 16
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 17
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 18
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 19
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 20
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 21
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 22
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 23
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 24
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 25
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 26
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 27
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 28
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 29
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 30
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 31
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 32
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 33
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 34
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 35
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 36
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 37
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 38
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 39
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 40
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 41
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 42
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 43
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 44
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 45
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 46
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 47
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 48
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 49
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 50
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 51
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 52
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 53
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 54
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 55
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 56
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 57
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 58
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 59
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 60
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 61
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 62
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 63
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 64
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 65
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 66
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 67
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 68
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 69
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 70
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 71
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 72
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 73
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 74
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 75
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 76
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 77
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 78
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 79
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 80
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 81
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 82
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 83
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 84
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 85
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 86
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 87
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 88
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 89
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 90
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 91
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 92
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 93
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 94
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 95
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 96
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 97
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 98
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 99
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 100
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 101
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 102
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 103
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 104
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 105
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 106
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 107
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 108
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 109
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 110
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 111
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 112
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 113
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 114
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 115
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 116
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 117
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 118
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 119
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 120
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 121
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 122
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 123
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 124
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 125
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 126
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 127
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 128
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 129
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 130
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 131
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 132
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 133
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 134
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 135
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 136
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 137
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 138
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 139
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 140
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 141
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 142
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 143
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 144
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 145
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 146
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 147
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 148
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 149
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 150
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 151
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 152
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 153
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 154
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 155
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 156
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 157
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 158
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 159
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 160
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 161
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 162
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 163
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 164
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 165
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 166
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 167
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 168
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 169
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 170
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 171
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 172
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 173
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 174
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 175
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 176
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 177
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 178
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 179
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 180
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 181
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 182
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 183
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 184
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 185
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 186
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 187
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 188
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 189
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 190
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 191
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 192
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 193
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 194
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 195
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 196
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 197
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 198
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 199
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 200
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 201
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 202
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 203
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 204
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 205
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 206
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 207
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 208
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 209
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 210
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 211
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 212
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 213
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 214
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 215
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 216
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 217
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 218
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 219
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 220
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 221
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 222
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 223
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 224
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 225
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 226
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 227
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 228
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 229
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 230
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 231
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 232
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 233
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 234
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 235
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 236
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 237
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 238
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 239
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 240
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 241
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 242
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 243
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 244
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 245
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 246
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 247
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 248
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 249
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 250
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 251
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 252
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 253
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 254
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 255
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 256
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 257
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 258
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 259
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 260
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 261
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 262
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 263
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 264
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 265
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 266
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 267
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 268
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 269
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 270
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 271
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 272
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 273
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 274
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 275
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 276
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 277
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 278
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 279
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 280
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 281
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 282
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 283
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 284
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 285
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 286
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 287
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 288
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 289
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 290
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 291
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 292
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 293
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 294
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 295
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 296
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 297
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 298
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 299
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 300
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 301
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 302
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 303
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 304
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 305
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 306
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 307
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 308
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 309
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 310
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 311
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 312
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 313
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 314
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 315
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 316
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 317
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 318
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 319
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 320
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 321
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 322
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 323
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 324
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 325
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 326
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 327
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 328
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 329
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 330
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 331
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 332
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 333
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 334
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 335
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 336
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 337
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 338
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 339
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 340
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 341
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 342
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 343
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 344
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 345
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 346
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 347
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 348
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 349
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 350
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 351
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 352
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 353
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 354
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 355
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 356
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 357
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 358
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 359
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 360
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 361
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 362
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 363
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 364
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 365
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 366
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 367
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 368
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 369
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 370
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 371
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 372
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 373
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 374
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 375
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 376
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 377
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 378
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 379
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 380
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 381
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 382
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 383
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 384
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 385
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 386
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 387
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 388
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 389
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 390
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 391
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 392
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 393
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 394
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 395
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 396
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 397
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 398
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 399
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 400
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 401
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 402
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 403
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 404
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 405
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 406
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 407
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 408
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 409
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 410
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 411
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 412
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 413
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 414
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 415
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 416
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 417
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 418
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 419
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 420
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 421
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 422
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 423
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 424
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 425
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 426
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 427
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 428
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 429
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 430
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 431
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 432
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 433
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 434
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 435
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 436
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 437
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 438
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 439
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 440
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 441
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 442
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 443
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 444
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 445
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 446
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 447
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 448
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 449
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 450
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 451
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 452
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 453
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 454
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 455
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 456
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 457
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 458
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 459
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 460
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 461
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 462
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 463
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 464
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 465
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 466
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 467
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 468
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 469
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 470
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 471
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 472
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 473
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 474
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 475
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 476
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 477
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 478
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 479
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 480
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 481
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 482
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 483
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 484
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 485
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 486
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 487
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 488
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 489
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 490
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 491
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 492
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 493
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 494
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 495
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 496
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 497
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 498
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 499
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 500
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 501
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 502
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 503
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 504
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 505
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 506
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 507
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 508
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 509
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 510
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 511
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 512
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 513
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 514
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 515
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 516
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 517
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 518
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 519
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 520
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 521
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 522
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 523
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 524
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 525
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 526
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 527
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 528
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 529
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 530
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 531
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 532
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 533
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 534
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 535
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 536
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 537
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 538
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 539
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 540
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 541
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 542
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 543
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 544
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 545
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 546
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 547
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 548
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 549
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 550
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 551
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 552
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 553
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 554
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 555
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 556
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 557
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 558
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 559
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 560
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 561
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 562
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 563
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 564
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 565
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 566
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 567
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 568
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 569
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 570
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 571
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 572
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 573
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 574
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 575
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 576
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 577
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 578
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 579
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 580
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 581
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 582
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 583
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 584
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 585
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 586
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 587
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 588
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 589
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 590
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 591
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 592
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 593
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 594
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 595
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 596
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 597
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 598
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 599
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 600
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 601
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 602
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 603
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 604
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 605
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 606
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 607
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 608
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 609
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 610
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 611
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 612
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 613
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 614
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 615
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 616
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 617
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 618
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 619
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 620
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 621
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 622
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 623
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 624
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 625
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 626
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 627
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 628
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 629
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 630
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 631
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 632
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 633
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 634
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 635
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 636
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 637
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 638
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 639
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 640
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 641
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 642
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 643
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 644
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 645
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 646
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 647
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 648
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 649
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 650
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 651
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 652
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 653
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 654
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 655
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 656
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 657
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 658
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 659
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 660
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 661
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 662
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 663
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 664
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 665
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 666
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 667
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 668
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 669
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 670
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 671
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 672
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 673
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 674
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 675
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 676
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 677
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 678
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 679
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 680
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 681
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 682
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 683
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 684
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 685
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 686
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 687
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 688
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 689
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 690
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 691
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 692
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 693
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 694
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 695
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 696
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 697
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 698
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 699
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 700
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 701
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 702
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 703
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 704
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 705
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 706
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 707
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 708
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 709
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 710
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 711
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 712
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 713
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 714
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 715
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 716
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 717
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 718
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 719
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 720
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 721
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 722
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 723
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 724
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 725
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 726
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 727
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 728
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 729
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 730
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 731
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 732
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 733
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 734
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 735
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 736
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 737
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 738
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 739
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 740
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 741
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 742
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 743
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 744
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 745
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 746
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 747
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 748
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 749
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 750
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 751
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 752
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 753
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 754
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 755
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 756
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 757
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 758
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 759
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 760
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 761
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 762
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 763
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 764
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 765
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 766
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 767
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 768
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 769
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 770
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 771
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 772
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 773
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 774
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 775
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 776
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 777
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 778
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 779
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 780
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 781
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 782
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 783
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 784
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 785
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 786
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 787
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 788
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 789
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 790
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 791
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 792
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 793
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 794
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 795
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 796
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 797
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 798
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 799
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 800
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 801
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 802
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 803
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 804
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 805
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 806
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 807
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 808
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 809
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 810
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 811
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 812
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 813
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 814
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 815
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 816
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 817
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 818
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 819
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 820
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 821
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 822
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 823
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 824
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 825
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 826
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 827
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 828
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 829
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 830
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 831
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 832
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 833
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 834
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 835
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 836
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 837
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 838
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 839
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 840
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 841
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 842
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 843
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 844
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 845
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 846
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 847
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 848
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 849
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 850
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 851
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 852
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 853
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 854
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 855
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 856
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 857
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 858
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 859
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 860
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 861
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 862
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 863
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 864
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 865
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 866
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 867
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 868
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 869
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 870
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 871
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 872
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 873
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 874
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 875
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 876
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 877
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 878
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 879
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 880
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 881
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 882
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 883
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 884
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 885
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 886
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 887
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 888
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 889
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 890
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 891
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 892
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 893
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 894
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 895
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 896
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 897
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 898
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 899
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 900
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 901
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 902
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 903
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 904
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 905
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 906
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 907
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 908
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 909
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 910
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 911
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 912
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 913
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 914
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 915
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 916
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 917
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 918
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 919
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 920
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 921
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 922
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 923
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 924
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 925
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 926
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 927
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 928
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 929
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 930
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 931
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 932
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 933
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 934
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 935
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 936
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 937
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 938
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 939
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 940
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 941
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 942
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 943
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 944
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 945
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 946
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 947
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 948
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 949
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 950
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 951
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 952
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 953
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 954
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 955
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 956
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 957
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 958
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 959
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 960
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 961
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 962
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 963
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 964
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 965
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 966
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 967
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 968
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 969
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 970
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 971
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 972
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 973
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 974
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 975
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 976
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 977
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 978
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 979
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 980
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 981
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 982
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 983
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 984
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 985
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 986
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 987
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 988
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 989
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 990
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 991
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 992
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 993
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 994
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 995
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 996
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 997
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 998
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 999
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1000
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1001
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1002
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1003
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1004
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1005
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1006
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1007
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1008
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1009
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1010
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1011
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1012
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1013
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1014
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1015
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1016
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1017
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1018
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1019
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1020
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1021
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1022
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1023
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1024
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1025
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1026
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1027
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1028
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1029
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1030
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1031
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1032
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1033
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1034
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1035
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1036
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1037
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1038
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1039
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1040
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1041
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1042
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1043
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1044
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1045
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1046
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1047
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1048
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1049
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1050
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1051
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1052
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1053
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1054
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1055
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1056
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1057
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1058
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1059
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1060
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1061
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1062
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1063
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1064
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1065
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1066
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1067
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1068
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1069
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1070
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1071
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1072
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1073
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1074
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1075
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1076
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1077
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1078
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1079
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1080
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1081
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1082
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1083
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1084
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1085
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1086
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1087
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1088
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1089
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1090
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1091
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1092
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1093
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1094
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1095
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1096
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1097
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1098
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1099
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1100
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1101
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1102
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1103
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1104
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1105
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1106
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1107
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1108
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1109
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1110
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1111
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1112
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1113
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1114
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1115
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1116
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1117
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1118
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1119
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1120
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1121
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1122
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1123
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1124
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1125
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1126
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1127
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1128
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1129
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1130
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1131
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1132
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1133
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1134
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1135
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1136
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1137
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1138
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1139
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1140
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1141
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1142
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1143
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1144
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1145
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1146
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1147
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1148
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1149
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1150
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1151
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1152
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1153
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1154
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1155
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1156
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1157
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1158
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1159
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1160
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1161
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1162
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1163
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1164
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1165
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1166
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1167
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1168
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1169
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1170
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1171
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1172
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1173
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1174
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1175
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1176
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1177
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1178
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1179
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1180
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1181
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1182
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1183
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1184
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1185
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1186
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1187
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1188
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1189
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1190
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1191
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1192
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1193
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1194
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1195
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1196
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1197
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1198
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1199
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1200
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1201
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1202
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1203
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1204
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1205
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1206
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1207
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1208
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1209
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1210
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1211
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1212
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1213
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1214
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1215
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1216
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1217
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1218
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1219
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1220
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1221
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1222
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1223
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1224
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1225
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1226
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1227
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1228
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1229
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1230
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1231
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1232
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1233
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1234
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1235
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1236
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1237
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1238
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1239
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1240
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1241
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1242
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1243
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1244
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1245
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1246
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1247
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1248
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1249
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1250
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1251
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1252
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1253
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1254
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1255
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1256
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1257
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1258
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1259
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1260
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1261
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1262
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1263
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1264
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1265
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1266
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1267
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1268
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1269
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1270
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1271
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1272
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1273
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1274
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1275
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1276
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1277
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1278
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1279
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1280
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1281
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1282
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1283
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1284
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1285
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1286
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1287
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1288
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1289
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1290
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1291
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1292
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1293
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1294
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1295
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1296
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1297
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1298
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1299
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1300
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1301
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1302
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1303
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1304
+    end;
+    if (
+        (_wUFcuNyY == nil) or (_AFQoZCcW == nil)
+    ) or false then -- didnt run, if id: 1305
+    end;
+    wait(1);
+    if (_wUFcuNyY ~= _wUFcuNyY) then -- didnt run, if id: 1306
+    end;
+    if (_AFQoZCcW ~= _AFQoZCcW) then -- didnt run, if id: 1307
+    end;
+end);
+fenv._DbMKadgY = function(a_5, b_5, c_5) end;
+math.randomseed(
+    os.time()
+);
+local _ = "" .. ({
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+})[math.random(62)];
+if v2.LocalPlayer then -- ran, if id: 1308
+    error"attempt to call missing method 'find' of table";
+end;
