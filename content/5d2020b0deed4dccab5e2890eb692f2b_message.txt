@@ -1,0 +1,280 @@
+return ({
+cff_table={((888641+3280)-888641),((9583)-9),((4688)-4),(6275-5494),((9608)-21),((377086+3231)-377086),(3841-248)},
+A=string,B=table,Y=bit32,U=(table.unpack or unpack),C=type,W="__index",
+S=(570849-8393),
+CS="}r0^!w>t=po[aMZR|Y<Eqnf%GBPN-d7Db`lc){eAS#yJkhLT]2@?U6Q(W5uV8K*$IivO;.19x/CH_jgF~4sz&",
+ag=function(W)
+ local M={} local C=W.CS
+ for i=1,#C do M[W.A.byte(C,i)]=i-1 end
+ W.R=M return M
+end,
+gHH=function(W,ch)
+ local R=W.R or W:ag()
+ return R[W.A.byte(ch)] or 0
+end,
+xcr=function(W,s)
+ local R={} local p=1 local key=W:gHH(W.A.sub(s,1,1)) local pad=W:gHH(W.A.sub(s,2,2)) local salt=W:gHH(W.A.sub(s,3,3))
+ for i=4,#s,5 do
+  local n=0
+  for j=0,4 do n=n*85+W:gHH(W.A.sub(s,i+j,i+j)) end
+  R[p]=W.Y.band(W.Y.rshift(n,24),255);p=p+1
+  R[p]=W.Y.band(W.Y.rshift(n,16),255);p=p+1
+  R[p]=W.Y.band(W.Y.rshift(n,8),255);p=p+1
+  R[p]=W.Y.band(n,255);p=p+1
+ end
+ for i=1,pad do R[#R]=nil end
+ return R,key,salt
+end,
+gJ=function(W,s)
+ local C=W.POOL if C and C[s] then return C[s] end
+ local T,k,salt=W:xcr(s) local O={}
+ for i=1,#T do
+  local m=(k+i*17+salt+((i*salt)%251))%256
+  local b=W.Y.bxor(T[i],m)
+  O[i]=W.A.char(b)
+  k=(k*131+i+salt+(b%17))%256
+ end
+ local R=W.B.concat(O);W.POOL=W.POOL or {};W.POOL[s]=R;return R
+end,
+c9s=function(W,s)
+ local z=W:gJ(s) local T={}
+ for i=1,#z do T[i]=W.A.byte(z,i) end
+ return T
+end,
+FJ=function(W,s)
+ local E=(getfenv and getfenv(1))or _ENV or _G
+ return E[W:gJ(s)]
+end,
+tDI=function(W,f,...)
+ return f(...)
+end,
+Sn3=function(W,...)
+ local n=select("#",...)
+ if n==0 then return "" end
+ if n==1 then return (...) end
+ local T=W.__ct or {};W.__ct=T
+ for i=1,n do T[i]=select(i,...) end
+ for i=n+1,#T do T[i]=nil end
+ return W.B.concat(T,"",1,n)
+end,
+zm5b=function(W,o,m,...)
+ local f=o[m];return f(o,...)
+end,
+PF=function(W,T)
+ local R={}
+ for i=1,#T do
+  local e=T[i];local o=W:FJ(e[1]);local f=o[W:gJ(e[2])]
+  R[i]=f(W:gJ(e[3]))
+ end
+ return R
+end,
+VQZ=function(W,BC,K,...)
+ local env=(getfenv and getfenv(1))or _ENV or _G
+ local Proto={K,BC,select("#",...),{...}}
+ local constants,Inst,RegB,Consts,RegA,Prototypes,RegC=Proto[1],{},{},{},{},{},{}
+ local Stack,Top={},1
+ local BytePos,pc,i={},1,1
+ local function Put(Op,A,B,C,D,E)Inst[pc]=Op;RegA[pc]=A or 0;RegB[pc]=B or 0;RegC[pc]=C or 0;Consts[pc]=D;Prototypes[pc]=E end
+ while i<=#BC do
+  local Pos=i;local Op=BC[i];i=i+1;BytePos[Pos]=pc
+  if Op==((1364)/22) then
+   Put(Op,BC[i],BC[i+1]);i=i+2
+  elseif Op==(2511-2441) then
+   Put(Op,BC[i],BC[i+1]);i=i+2
+  elseif Op==bit32.bxor(173,217) then
+   Put(Op,BC[i],BC[i+1]);i=i+2
+  elseif Op==bit32.bxor(47,254) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==bit32.bxor(133,55) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==((7347)/31) then
+   Put(Op,BC[i],BC[i+1]);i=i+2
+  elseif Op==((398966+175)-398966) then
+   Put(Op,BC[i]*256+BC[i+1]);i=i+2
+  elseif Op==((98719+45)-98719) then
+   Put(Op,BC[i],BC[i+1]*256+BC[i+2]);i=i+3
+  elseif Op==(8819-8621) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==(5944-5861) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==((158)/2) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==bit32.bxor(250,136) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==bit32.bxor(185,199) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==(347-124) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==((2090)/11) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==((1230)/15) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==((521185+207)-521185) then
+   Put(Op,BC[i],BC[i+1]);i=i+2
+  elseif Op==(2235-2160) then
+   Put(Op,BC[i],BC[i+1]);i=i+2
+  elseif Op==((935600+241)-935600) then
+   Put(Op,BC[i],BC[i+1],BC[i+2]);i=i+3
+  elseif Op==((959418+74)-959418) then
+   Put(Op,BC[i]);i=i+1
+  else
+   return nil
+  end
+  pc=pc+1
+ end
+ for j=1,#Inst do
+  if Inst[j]==((2275)/13) then RegA[j]=BytePos[RegA[j]] or (#Inst+1)
+  elseif Inst[j]==((405)/9) then RegB[j]=BytePos[RegB[j]] or (#Inst+1) end
+ end
+ local VIP=1;local Enum;local jumped=false
+ while true do
+  Enum=Inst[VIP]
+  if Enum==nil then return nil end
+  jumped=false
+  if Enum<((3276)/26) then
+   if Enum<((158)/2) then
+    if Enum<bit32.bxor(14,72) then
+     if Enum<bit32.bxor(26,36) then
+      if Enum==bit32.bxor(212,249) then
+       if not Stack[RegA[VIP]] then VIP=RegB[VIP];jumped=true end
+      end
+     else
+      if Enum==bit32.bxor(59,5) then
+       local A=RegA[VIP];Stack[A]=Stack[RegB[VIP]]
+      end
+     end
+    else
+     if Enum<(8451-8377) then
+      if Enum==((891418+70)-891418) then
+       local A=RegA[VIP]
+       Stack[A]=env[W:gJ(constants[RegB[VIP]])]
+      end
+     else
+      if Enum<(4340-4265) then
+       if Enum==(481-407) then
+        return Stack[RegA[VIP] or 0]
+       end
+      else
+       if Enum==(3949-3874) then
+        local P=constants[RegB[VIP]]
+        Stack[RegA[VIP]]=function(...)return W:VQZ(P[1],P[2],...)end
+       end
+      end
+     end
+    end
+   else
+    if Enum<((2241)/27) then
+     if Enum<((410)/5) then
+      if Enum==((1975)/25) then
+       Stack[RegA[VIP]]=(Stack[RegB[VIP]]<=Stack[RegC[VIP]])
+      end
+     else
+      if Enum==((696163+82)-696163) then
+       Stack[RegA[VIP]]=Stack[RegB[VIP]]%Stack[RegC[VIP]]
+      end
+     end
+    else
+     if Enum<bit32.bxor(122,8) then
+      if Enum==(9219-9136) then
+       Stack[RegA[VIP]]=(Stack[RegB[VIP]]<Stack[RegC[VIP]])
+      end
+     else
+      if Enum<bit32.bxor(234,158) then
+       if Enum==bit32.bxor(124,14) then
+        Stack[RegA[VIP]]=Stack[RegB[VIP]]+Stack[RegC[VIP]]
+       end
+      else
+       if Enum==bit32.bxor(138,254) then
+        env[W:gJ(constants[RegA[VIP]])]=Stack[RegB[VIP]]
+       end
+      end
+     end
+    end
+   end
+  else
+   if Enum<(5498-5291) then
+    if Enum<((4450)/25) then
+     if Enum<bit32.bxor(164,11) then
+      if Enum==bit32.bxor(100,26) then
+       Stack[RegA[VIP]]=Stack[RegB[VIP]]-Stack[RegC[VIP]]
+      end
+     else
+      if Enum==((4025)/23) then
+       VIP=RegA[VIP];jumped=true
+      end
+     end
+    else
+     if Enum<((264547+190)-264547) then
+      if Enum==bit32.bxor(122,200) then
+       Stack[RegA[VIP]][Stack[RegB[VIP]]]=Stack[RegC[VIP]]
+      end
+     else
+      if Enum<(9793-9595) then
+       if Enum==((737982+190)-737982) then
+        Stack[RegA[VIP]]=Stack[RegB[VIP]]/Stack[RegC[VIP]]
+       end
+      else
+       if Enum==(6114-5916) then
+        Stack[RegA[VIP]]=(Stack[RegB[VIP]]==Stack[RegC[VIP]])
+       end
+      end
+     end
+    end
+   else
+    if Enum<bit32.bxor(245,42) then
+     if Enum<((2717)/13) then
+      if Enum==(4132-3925) then
+       Stack[RegA[VIP]]=not Stack[RegB[VIP]]
+      end
+     else
+      if Enum==((105796+209)-105796) then
+       Stack[RegA[VIP]]=Stack[RegB[VIP]][Stack[RegC[VIP]]]
+      end
+     end
+    else
+     if Enum<((709804+237)-709804) then
+      if Enum==(4375-4152) then
+       Stack[RegA[VIP]]=Stack[RegB[VIP]]*Stack[RegC[VIP]]
+      end
+     else
+      if Enum<(5937-5696) then
+       if Enum==(5269-5032) then
+        local V=constants[RegB[VIP]]
+        if W.C(V)=="string" then V=W:gJ(V) end
+        Stack[RegA[VIP]]=V
+       end
+      else
+       if Enum==bit32.bxor(1,240) then
+        local A=RegA[VIP];local N=RegB[VIP];local F=Stack[A]
+        if N==0 then Stack[A]=F()
+        elseif N==1 then Stack[A]=F(Stack[A+1])
+        elseif N==2 then Stack[A]=F(Stack[A+1],Stack[A+2])
+        elseif N==3 then Stack[A]=F(Stack[A+1],Stack[A+2],Stack[A+3])
+        else local Args={} for i=1,N do Args[i]=Stack[A+i] end local R={F(W.U(Args))} Stack[A]=R[1] end
+        Top=A
+       end
+      end
+     end
+    end
+   end
+  end
+  if not jumped then VIP=VIP+1 end
+ end
+end,
+oY=function(W)
+ local ok=(W.C(W.A.byte)=="function" and W.C(W.B.concat)=="function" and W.C(W.Y.bxor)=="function")
+ if not ok then while true do end end
+ local h=0 for i=1,#W.CS do h=(h+W.A.byte(W.CS,i)*i)%65521 end
+ if h==0 then while true do end end
+ W.H=h return h
+end,
+Ko=function(W,...)
+ W:oY()
+ do
+  W:VQZ(W:c9s("G^zkfy1$9)6ObJocg`4~~bjWWM~j>pwrE"),{"B^6/k^EJAY_F{","~0YH?)-CUK5g0tg2)f",nil})
+ end
+end,
+Main=function(W,...)
+ return W:Ko(...)
+end
+}):Main(...)
