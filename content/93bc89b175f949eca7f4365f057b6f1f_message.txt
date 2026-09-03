@@ -1,0 +1,1220 @@
+-- Readable static deobfuscation of the supplied NTT Obfucator v6.40 output.
+-- Decoded: pooled strings/constants, environment/global lookups, comparison wrappers, boolean-condition VM, string concatenation helper.
+-- Simplified: obvious constant-only dispatcher tables where safe.
+-- Not executed: this file was deobfuscated statically; runtime-only behavior remains as source.
+
+local Gb = game:GetService(("Players"))
+local function Iv8()
+    local kpR = Gb ["LocalPlayer"]
+    if(not not(kpR)) then
+    end
+end
+USaTB = function(aSvFE, rJfr)
+    Iv8()
+    return(nil)
+end
+g3R = 0xDEADBEEF srm5 = function()
+    Iv8()
+    return(false)
+end
+local GRU = {admin_mode = false, debug_enabled = false, encryption_key = "fake_key_12345"} ye4AS = setmetatable({}, {["__index"] = function(NdTW, rJfr)
+    Iv8()
+    return GRU [rJfr]
+end, ["__newindex"] = function(NdTW, rJfr, VXk4)
+    Iv8()
+end,})
+local b4 = (pcall)
+local KA = (xpcall)
+local hvXf = (type)
+local xFo = (rawget)
+local jUc = (pairs)
+local n8YNp = tostring((pcall))
+local Uk2 = tostring((xpcall))
+local function NI7r1(FAczJ, ...)
+    return b4(FAczJ, ...)
+end
+local iJ = bit32.bxor(bit32.band(math.floor(((tick) and tick() or 0x001) * 0x9E37), 0xFFFF), 0xA5C3)
+local cAHq = iJ
+local Bdoo = bit32.bxor(iJ, 0xFFFF)
+local function dmEtJ()
+    return((cAHq) == (iJ))
+end
+local function xP()
+    cAHq = Bdoo iJ = 0x0
+end
+local pvr = 0x0
+local O1SrD = bit32.band(math.floor(((tick) and tick() or 0x1) * 0x539 + 0xBEEF), 0xFFFF)
+local function Ub(d1O2)
+    local y9 = O1SrD
+    local zq = {}
+    for CqF = 0x1, #d1O2 do
+        local umxgb = bit32.bxor(string.byte(d1O2, CqF), bit32.band(y9, 0xFF)) zq [CqF] = string.format(("%02x"), umxgb) y9 = bit32.band(y9 * 0x1F + CqF, 0xFFFF)
+    end
+    return table.concat(zq)
+end
+local ZQC = (function()
+    local onE9DW = {};
+    local OYmU = (0x89cd);
+    local kQn = 0x17FE;
+    local Ao = {[0x00] = onE9DW};
+    while not Ao [OYmU - kQn] do
+        if Ao [OYmU - 0x002ad5] then
+            local A2J = (0x005);
+            onE9DW [A2J] = (Ub(("http")));
+            local lUv = (0x6);
+            onE9DW [lUv] = (Ub(("net")));
+            OYmU = (0xf6ff)
+        elseif Ao [OYmU - (0x89cd)] then
+            local CY4OZ = (0x1);
+            local ugpr = (Ub(("hook")));
+            onE9DW [CY4OZ] = ugpr;
+            local MkovY = (0x2);
+            onE9DW [MkovY] = (Ub(("env")));
+            local IPn = (0x3);
+            local lVPt = (Ub(("dbg")));
+            onE9DW [IPn] = lVPt;
+            local OQ = (0x4);
+            local tj6E = (Ub(("gc")));
+            onE9DW [OQ] = tj6E;
+            OYmU = (0x2ad5)
+        elseif Ao [OYmU - 0x43d7] then
+            local QRtP = (0x8);
+            onE9DW [QRtP] = (Ub(("fs")));
+            local Q6x = (0x9);
+            onE9DW [Q6x] = (Ub(("svc")));
+            local EImXB = (0xa);
+            onE9DW [EImXB] = (Ub(("env2")));
+            OYmU = 0x17FE
+        elseif Ao [OYmU - 0xf6ff] then
+            local oPrw = (0x7);
+            onE9DW [oPrw] = (Ub(("id")));
+            OYmU = (0x43d7)
+        else
+            OYmU = kQn
+        end
+    end
+    return onE9DW
+end)()
+local function Ot(rG89)
+    pvr = rG89 xP()
+    local TJ = ZQC [rG89] or Ub(tostring(rG89)) or("??")
+    local PNs = bit32.band(math.floor(((tick) and tick() or 0x0) * 0x3e5), 0xFF)
+    local dg8 = string.format(("%x:%s:%x"), rG89, TJ, PNs) b4(function()
+        error(dg8, 0x000)
+    end) b4(function()
+        local hGLm = coroutine.running()
+        if(not not(hGLm)) then
+            coroutine.close(hGLm)
+        end
+    end) b4(function()
+        if(not not((task))) and(not not((task.cancel))) then
+            task.cancel(coroutine.running())
+        end
+    end)
+    local pK = (tick) and tick() or 0x0
+    while(true) do
+        if((0x218711a00) < (((tick) and tick() or 0x00) - pK)) then
+            break
+        end
+        b4(function()
+            error(dg8, 0x000)
+        end)
+    end
+end
+local function dX35I(FAczJ)
+    if(not((dmEtJ()))) then
+        return
+    end
+    local ps, NGDX = NI7r1(FAczJ)
+    if(not(ps)) then
+        xP() Ot(0x0)
+    end
+end
+local function JTf3p(FAczJ, rG89)
+    if(not((dmEtJ()))) then
+        return
+    end
+    local ps = NI7r1(FAczJ)
+    if(not(ps)) then
+        Ot(rG89)
+    end
+end
+local function SNB()
+    if(not((dmEtJ()))) then
+        Ot((not((pvr) == (0x0))) and pvr or 0x63)
+    end
+end
+local rw1 = {print = print, setmetatable = setmetatable, pcall = b4, tostring = tostring, type = hvXf, typeof = typeof, getmetatable = getmetatable, rawget = xFo, rawset = rawset} dX35I(function()
+    if((tostring((pcall))) ~= (n8YNp)) then
+        Ot(0x1)
+    end
+    if((tostring((xpcall))) ~= (Uk2)) then
+        Ot(0x1)
+    end
+end) SNB() dX35I(function()
+    local ps, HiQ = b4(function()
+        return 0xDEAD
+    end)
+    if(not(ps)) or((HiQ) ~= (0xDEAD)) then
+        Ot(0x01)
+    end
+end) SNB() dX35I(function()
+    local ps, NGDX = b4(function()
+        error(("__ntt_probe__"), 0x0)
+    end)
+    if(not not(ps)) or((type(NGDX)) ~= (("string"))) or(not((NGDX:find(("__ntt_probe__"))))) then
+        Ot(0x1)
+    end
+end) SNB() dX35I(function()
+    local J7 = xFo((_G), ("isfunctionhooked"))
+    if((hvXf(J7)) == (("function"))) then
+        for vSC, FAczJ in jUc(rw1) do
+            if((hvXf(FAczJ)) == (("function"))) and J7(FAczJ) then
+                Ot(0x1)
+            end
+        end
+    end
+end) SNB() dX35I(function()
+    local hPv = xFo((_G), ("getgenv"))
+    if((hvXf(hPv)) ~= (("function"))) then
+        return
+    end
+    local UTMM = hPv()
+    if((hvXf(UTMM)) ~= (("table"))) then
+        return
+    end
+    local rJfr = {} UTMM [rJfr] = (true) task.wait()
+    if((xFo(UTMM, rJfr)) ~= ((true))) then
+        Ot(0x2)
+    end
+    UTMM [rJfr] = (nil)
+end) dX35I(function()
+    if((type((debug))) == (("table"))) and((type(debug.info)) == (("function"))) then
+        local ps, RUWj = NI7r1(debug.info, 0x1, ("s"))
+        if(not(ps)) or((type(RUWj)) ~= (("string"))) then
+            Ot(0x3)
+        end
+    end
+end)
+local xMI6 = ((syn) and syn.request) or((http) and http.request) or(http_request) or(request) or((fluxus) and fluxus.request) or((krnl) and krnl.request)
+if((type(xMI6)) ~= (("function"))) then
+    Ot(0x5)
+end
+dX35I(function()
+    local ps, oXB = NI7r1(xMI6, {["Url"] = ("https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/request"), ["Method"] = ("GET")})
+    if(not(ps)) or((type(oXB)) ~= (("table"))) then
+        Ot(0x6)
+    end
+    if((type(oXB ["StatusCode"])) ~= (("number"))) then
+        Ot(0x6)
+    end
+end) dX35I(function()
+    local PyGtk = (getidentity) or(getthreadidentity)
+    local gRAn = (setidentity) or(setthreadidentity)
+    if((type(PyGtk)) == (("function"))) and((type(gRAn)) == (("function"))) then
+        local HA = PyGtk() gRAn(HA)
+        if((PyGtk()) ~= (HA)) then
+            Ot(0x7)
+        end
+    end
+end) dX35I(function()
+    local O4H = ("__NTT-HUB_folder_check")
+    local Dj2Kb = Instance.new(("Folder")) Dj2Kb ["Name"] = O4H Dj2Kb ["Parent"] = (workspace) task.wait()
+    local yyF2 = workspace:FindFirstChild(O4H)
+    if((yyF2) ~= (Dj2Kb)) then
+        Ot(0x8)
+    end
+    Dj2Kb ["Name"] = ((O4H) .. (("_renamed"))) task.wait()
+    if(not((workspace:FindFirstChild(((O4H) .. (("_renamed"))))))) then
+        Ot(0x8)
+    end
+    Dj2Kb:Destroy() task.wait()
+    if(not not((workspace:FindFirstChild(((O4H) .. (("_renamed"))))))) then
+        Ot(0x8)
+    end
+end) dX35I(function()
+    local UQQi = game:GetService(("HttpService"))
+    local d1O2 = UQQi:JSONEncode({a = 0x1})
+    if((type(d1O2)) ~= (("string"))) then
+        Ot(0x9)
+    end
+end) dX35I(function()
+    if(not(((game:GetService(("RunService"))):IsClient()))) then
+        Ot(0xA)
+    end
+end) dX35I(function()
+    if((type((getcallingscript))) == (("function"))) then
+        local d1O2 = getcallingscript()
+        if(not not(d1O2)) and((d1O2) ~= ((script))) then
+        end
+    end
+end) dX35I(function()
+    if((type((hookfunction))) == (("function"))) then
+        local h0f9A = function()
+            return 0x1
+        end
+        local pVAg = hookfunction(h0f9A, function()
+            return 0x2
+        end)
+        if((h0f9A()) ~= (0x2)) then
+        end
+    end
+end) dX35I(function()
+    if((typeof((script))) ~= (("Instance"))) then
+    end
+end) dX35I(function()
+    local IFDoT = {} setmetatable(IFDoT, {})
+    if((getmetatable(IFDoT)) == ((nil))) then
+        Ot(0x9)
+    end
+end) dX35I(function()
+    if((type((clonefunction))) == (("function"))) then
+        local bvT2m = clonefunction(rw1 ["pcall"])
+        if((bvT2m) == (rw1 ["pcall"])) then
+        end
+        local ps = bvT2m(function()
+            return 0x7b
+        end)
+        if(not(ps)) then
+        end
+    end
+end)
+if(not((dmEtJ()))) then
+    Ot((not((pvr) == (0x0))) and pvr or 0x63)
+end
+if((cAHq) ~= (iJ)) then
+    Ot(0x63)
+end
+end
+do
+    _G.index_key = (nil) _G.prenium = nilpcall(function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/link")))()
+    end)
+    if((type((url_random))) == ((nil))) then
+        (game:GetService(("Players")) ["LocalPlayer"]):Kick(("Fetch Data Fail, Please Rejoin"))
+    end
+    _G.Settings = {["checkkey"] = (function()
+        local JVGQip1 = {};
+        local EEp = 0x75d0;
+        local pKfx = 0xFBC0;
+        local dX = {[0x0] = JVGQip1};
+        while not dX [EEp - pKfx] do
+            if dX [EEp - 0x75d0] then
+                local HAZA = (("_G.key"));
+                local GZ = ((""));
+                JVGQip1 [HAZA] = GZ;
+                local OmW6b = (("_G.random"));
+                JVGQip1 [OmW6b] = (("_NTT"));
+                EEp = 0x002f25
+            elseif dX [EEp - 0x4ACB] then
+                local xy8S = (("index"));
+                local gP9U = (os.time());
+                JVGQip1 [xy8S] = gP9U;
+                local djC = (("startus"));
+                local ICI = ((false));
+                JVGQip1 [djC] = ICI;
+                EEp = (0xfbc0)
+            elseif dX [EEp - 0x002F25] then
+                local NdwHN = (("time"));
+                local fWzPj = (tonumber(os.time() + 0x3c * 0x3C * 0x06));
+                JVGQip1 [NdwHN] = fWzPj;
+                EEp = 0x4ACB
+            else
+                EEp = pKfx
+            end
+        end
+        return JVGQip1
+    end)()}
+    function l5()
+        if(not not((readfile))) and(not not((writefile))) and(not not((isfile))) and(not not((isfolder))) then
+            if(not((isfolder(("NTT HUB"))))) then
+                makefolder(("NTT HUB"))
+            end
+            if(not((isfolder(("NTT HUB/Key v2/"))))) then
+                makefolder(("NTT HUB/Key v2/"))
+            end
+            if(not((isfile(("NTT HUB/Key v2/Key.json"))))) then
+                writefile(("NTT HUB/Key v2/Key.json"), (game:GetService(("HttpService"))):JSONEncode(_G.Settings))
+            else
+                local Mo0 = (game:GetService(("HttpService"))):JSONDecode(readfile(("NTT HUB/Key v2/Key.json")))
+                local Lmx = "Settings"
+                for TwhZ, IW87 in pairs(Mo0) do
+                    (_G) [Lmx] [TwhZ] = IW87
+                end
+            end
+        else
+            return warn(("Status : Undetected Executor"))
+        end
+    end
+    function hjS8l()
+        if(not not((readfile))) and(not not((writefile))) and(not not((isfile))) and(not not((isfolder))) then
+            if(not((isfile(("NTT HUB/Key v2/Key.json"))))) then
+                l5()
+            else
+                local Mo0 = (game:GetService(("HttpService"))):JSONDecode(readfile(("NTT HUB/Key v2/Key.json")))
+                local H7 = {}
+                local bcWJ = "Settings"
+                for TwhZ, IW87 in pairs((_G) [bcWJ]) do
+                    H7 [TwhZ] = IW87
+                end
+                writefile(("NTT HUB/Key v2/Key.json"), (game:GetService(("HttpService"))):JSONEncode(H7))
+            end
+        else
+            return warn(("Status : Undetected Executor"))
+        end
+    end
+    pcall(function()
+        l5()
+    end)
+    local function VuG(ID, FLj)
+        local TLZ = {}
+        local cST4gu, Rgmxu, SmRSmEK, Vda0a = "([^", "insert", "gmatch", "]+)"
+        for VK0I in(string) [SmRSmEK](ID, (((cST4gu)) .. (FLj) .. ((Vda0a)))) do
+            (table) [Rgmxu](TLZ, VK0I)
+        end
+        return TLZ
+    end
+    local function c7p(ID)
+        local xr = 0x0
+        local itZT = "byte"
+        for TwhZ = 0x1, #ID do
+            xr = (xr * 0x83 + (string) [itZT](ID, TwhZ)) % 0x2 ^ 0x20
+        end
+        return xr
+    end
+    local function gVcu(E7Wn)
+        return(E7Wn:gsub((".."), function(yO2y)
+            return string.char(tonumber(yO2y, 0x10))
+        end))
+    end
+    local function N2RQ(AjoWU, POCJ)
+        local FTKCa = VuG(AjoWU, ("|"))
+        local r7 = (
+        if(#FTKCa < 0x3) then
+            ({(nil)})
+        else
+            (nil))
+            if(not not(r7)) then
+                return r7 [0x1]
+            end
+            local ZyQJ = FTKCa [0x001]
+            local Jsvyr = tonumber(FTKCa [0x2])
+            local WWZO = FTKCa [0x3]
+            local aQ = (
+            if(not Jsvyr or not WWZO) then
+                ({(nil)})
+            else
+                (nil))
+                if(not not(aQ)) then
+                    return aQ [0x1]
+                end
+                local xtx = tostring(math.floor(c7p(((tostring(Jsvyr)) .. (("salt"))))))
+                local aHttE = (
+                if(xtx ~= ZyQJ) then
+                    ({("time out")})
+                else
+                    (nil))
+                    if(not not(aHttE)) then
+                        return aHttE [0x1]
+                    end
+                    local AlYc = (
+                    if(math.abs(os.time() - Jsvyr) > 0x014) then
+                        ({("time out")})
+                    else
+                        (nil))
+                        if(not not(AlYc)) then
+                            return AlYc [0x1]
+                        end
+                        WWZO = gVcu(WWZO)
+                        local LJ8 = ((tostring(POCJ)) .. ((":")) .. (tostring(Jsvyr)))
+                        local DQLj = c7p(LJ8)
+                        local TLZ = {}
+                        local M8Iw, f4RpdW, Tmbz, zinjy = "char", "bxor", "insert", "byte"
+                        for TwhZ = 0x1, #WWZO do
+                            local cp = (string) [zinjy](WWZO, TwhZ)
+                            local Ke = (DQLj + TwhZ * 0x7) % 0x100
+                            local WAgX = (cp - Ke) % 0x100 WAgX = (bit32) [f4RpdW](WAgX, Ke)(table) [Tmbz](TLZ, (string) [M8Iw](WAgX))
+                        end
+                        return table.concat(TLZ)
+                    end
+                    _G.key = _G.Settings ["checkkey"] [("_G.key")] _G.linkkey = ((("https://ntt-hub.xyz/key/main?hwid=")) .. (gethwid())) _G.getlink = ("https://nekokawaii.workers.dev?hwid")
+                    local zGoDO, pgQ pcall(function()
+                        _G.getscr = game:HttpGet(((_G.url_random) .. (("/?type=repo&id1=scr&id2=")) .. (_G.id)))
+                    end)
+                    function Za()
+                        print(_G.id)
+                        if(not not((_G.getscr))) then
+                            print(("data1")) loadstring(_G.getscr)()
+                        else
+                            print(("data2")) loadstring(game:HttpGet(((_G.url_random) .. (("/?type=repo&id1=scr&id2=")) .. (_G.id))))()
+                        end
+                        print(("Script loaded successfully"))
+                    end
+                    l4bvU = {("api-account"), ("api-account-s1"), ("api-account-s2"), ("api-account-s3")} l4bvU = l4bvU [math.random(0x1, #l4bvU)]
+                    local r0gEQ, WV2eH = pcall(function()
+                        yhJh = game:HttpGet(((("https://")) .. (l4bvU) .. ((".nekokawaii.workers.dev/api/data?name=")) .. (gethwid())))
+                    end) print(("NTT HUB"), gethwid()) pcall(function()
+                        if(not not(r0gEQ)) and(not not((string.find(yhJh, ("|"))))) then
+                            _G.prenium = N2RQ(yhJh, ("string.char"))
+                            if(not not((_G.prenium))) then
+                                _G.index_key = ("Key_123456") Za()
+                            end
+                        end
+                    end)
+                    if(not not((_G.prenium))) then
+                        return
+                    end
+                    local fh = Instance.new(("ScreenGui")) RTFa = Instance.new(("Frame")) do
+                        local dg = getfenv(0x0) dg [("UImain")] = Instance.new(("UICorner")) dg [("UIbar1")] = Instance.new(("UICorner")) dg [("UIbar2")] = Instance.new(("UICorner")) dg [("UIbar3")] = Instance.new(("UICorner")) dg [("UIbar4")] = Instance.new(("UICorner"))
+                    end
+                    do
+                        local D0HK = getfenv(0x000) D0HK [("UIbar")] = Instance.new(("UICorner")) D0HK [("bar")] = Instance.new(("TextLabel")) D0HK [("exit")] = Instance.new(("TextButton"))
+                    end
+                    do
+                        local DaWt0 = getfenv(0x0)
+                        local XdVe = {("bar_1"), ("bar_2"), ("bar_3"), ("bar_4"), ("t_1"), ("t_2")}
+                        local azG = {("TextLabel"), ("Frame"), ("Frame"), ("Frame"), ("TextLabel"), ("TextLabel")}
+                        local oX9OgJx = "new"
+                        for Q8z = 0x1, #XdVe do
+                            DaWt0 [XdVe [Q8z]] = (Instance) [oX9OgJx](azG [Q8z])
+                        end
+                    end
+                    fiaA = Instance.new(("TextLabel")) QcX = Instance.new(("TextLabel")) do
+                        local bnt = getfenv(0x0) bnt [("key_t")] = Instance.new(("TextLabel")) bnt [("key_tb")] = Instance.new(("TextBox")) bnt [("key_b")] = Instance.new(("TextButton")) bnt [("key_g")] = Instance.new(("TextButton"))
+                    end
+                    do
+                        local PN = getfenv(0x0)
+                        local Tes4 = {("load_t"), ("load_t1"), ("load_t2"), ("load_l"), ("load_b1"), ("load_b2")}
+                        local AiPQZ = {("TextLabel"), ("TextLabel"), ("TextLabel"), ("TextButton"), ("TextButton"), ("TextButton")}
+                        local qunoK4Y = "new"
+                        for X7T = 0x1, #Tes4 do
+                            PN [Tes4 [X7T]] = (Instance) [qunoK4Y](AiPQZ [X7T])
+                        end
+                    end
+                    fh ["Name"] = ("UIGUI") fh ["Parent"] = game:WaitForChild(("CoreGui")) fh ["ZIndexBehavior"] = Enum.ZIndexBehavior ["Sibling"] do
+                        local zptg = {} zptg [0x3183] = {
+                        function()
+                            return(exit)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x1e, 0x0, 0x1e))
+                        end} zptg [0x968c] = {
+                        function()
+                            return(bar)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0xff, 0xff, 0xff))
+                        end} zptg [0xA282] = {
+                        function()
+                            return(bar)
+                        end, (("Text")), function()
+                            return(("   NTT HUB | Key"))
+                        end} zptg [0x8DA4] = {
+                        function()
+                            return(exit)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x2F / 0x32), 0x000, 0x0, 0x00))
+                        end} zptg [0x79CD] = {
+                        function()
+                            return(bar)
+                        end, (("Parent")), function()
+                            return(RTFa)
+                        end} zptg [0xbd55] = {
+                        function()
+                            return(exit)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} zptg [0xb7d3] = {
+                        function()
+                            return RTFa
+                        end, (("Name")), function()
+                            return(("main"))
+                        end} zptg [0x8fb3] = {
+                        function()
+                            return(exit)
+                        end, (("BorderColor3")), function()
+                            return(Color3.fromRGB(0xFA, 0xFA, 0xfa))
+                        end} zptg [0x09BD1] = {
+                        function()
+                            return(bar)
+                        end, (("BorderColor3")), function()
+                            return(Color3.fromRGB(0xFA, 0xFA, 0xFA))
+                        end} zptg [0x2DE1] = {
+                        function()
+                            return RTFa
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} zptg [0xae92] = {
+                        function()
+                            return(bar)
+                        end, (("TextXAlignment")), function()
+                            return(Enum.TextXAlignment ["Left"])
+                        end} zptg [0x5F8A] = {
+                        function()
+                            return(exit)
+                        end, (("BackgroundTransparency")), function()
+                            return(0x1)
+                        end} zptg [0xa18] = {
+                        function()
+                            return(exit)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0xfa, 0xff, 0x0FA))
+                        end} zptg [0xeda2] = {
+                        function()
+                            return RTFa
+                        end, (("Parent")), function()
+                            return(fh)
+                        end} zptg [0x2D9F] = {
+                        function()
+                            return(UImain)
+                        end, (("Parent")), function()
+                            return(RTFa)
+                        end} zptg [0xb9ae] = {
+                        function()
+                            return RTFa
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x01f4, 0x0, 0xc8))
+                        end} zptg [0x7DB] = {
+                        function()
+                            return(bar)
+                        end, (("TextSize")), function()
+                            return(0xe)
+                        end} zptg [0x4CA0] = {
+                        function()
+                            return(bar)
+                        end, (("TextWrapped")), function()
+                            return((true))
+                        end} zptg [0x7E3F] = {
+                        function()
+                            return(exit)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0F, 0xF, 0xf))
+                        end} zptg [0x1e4f] = {
+                        function()
+                            return RTFa
+                        end, (("BackgroundTransparency")), function()
+                            return((0x7 / 0xa))
+                        end} zptg [0x9c85] = {
+                        function()
+                            return(bar)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x5, 0x5, 0x5))
+                        end} zptg [0x27b2] = {
+                        function()
+                            return(exit)
+                        end, (("Text")), function()
+                            return(("X"))
+                        end} zptg [0x86CC] = {
+                        function()
+                            return(bar)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} zptg [0xda9d] = {
+                        function()
+                            return(UIbar)
+                        end, (("Parent")), function()
+                            return((bar))
+                        end} zptg [0x00561b] = {
+                        function()
+                            return RTFa
+                        end, (("Position")), function()
+                            return(UDim2.new((0x1 / 0x4), 0x0, (0x1 / 0x04), 0x000))
+                        end} zptg [0x2b86] = {
+                        function()
+                            return(exit)
+                        end, (("Parent")), function()
+                            return((bar))
+                        end} zptg [0xEDEE] = {
+                        function()
+                            return(exit)
+                        end, (("TextSize")), function()
+                            return(0x14)
+                        end} zptg [0xD359] = {
+                        function()
+                            return(bar)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x1f2, 0x0, 0x1E))
+                        end} zptg [0x320f] = {
+                        function()
+                            return(exit)
+                        end, (("Name")), function()
+                            return(("exit"))
+                        end}
+                        local zlwz0 = {0xb7d3, 0xEDA2, 0x2DE1, 0x561B, 0x00B9AE, 0x1e4f, 0x02d9f, 0x79CD, 0x9C85, 0xD359, 0x9BD1, 0x086cc, 0xA282, 0x968c, 0x7DB, 0x04CA0, 0xae92, 0x0DA9D, 0x320f, 0x2b86, 0x7E3F, 0x8da4, 0x3183, 0xbd55, 0x27B2, 0x00A18, 0x5f8a, 0xedee, 0x8fb3}
+                        for T5me = 0x1, #zlwz0 do
+                            local Arihn = zptg [zlwz0 [T5me]];
+                            Arihn [0x1]() [Arihn [0x02]] = Arihn [0x3]()
+                        end
+                    end
+                    (exit.MouseButton1Down):connect(function()
+                        RTFa ["Visible"] = (false)
+                    end) do
+                        local KT7 = {} KT7 [0x14E6] = {
+                        function()
+                            return(bar_2)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x000, 0x0))
+                        end} KT7 [0x2df6] = {
+                        function()
+                            return fiaA
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} KT7 [0x11D3] = {
+                        function()
+                            return QcX
+                        end, (("TextSize")), function()
+                            return(0x0e)
+                        end} KT7 [0x755B] = {
+                        function()
+                            return(bar_3)
+                        end, (("Parent")), function()
+                            return(RTFa)
+                        end} KT7 [0xC3D7] = {
+                        function()
+                            return(bar_1)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0xFF, 0x00ff, 0x00FF))
+                        end} KT7 [0xf3f9] = {
+                        function()
+                            return(bar_1)
+                        end, (("TextYAlignment")), function()
+                            return(Enum.TextYAlignment ["Top"])
+                        end} KT7 [0xAD9D] = {
+                        function()
+                            return(t_1)
+                        end, (("Name")), function()
+                            return(("t_1"))
+                        end} KT7 [0xe80c] = {
+                        function()
+                            return QcX
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} KT7 [0x00ED13] = {
+                        function()
+                            return fiaA
+                        end, (("Parent")), function()
+                            return((bar_1))
+                        end} KT7 [0x1ab2] = {
+                        function()
+                            return QcX
+                        end, (("Text")), function()
+                            return(("Thank you for use"))
+                        end} KT7 [0x1A7C] = {
+                        function()
+                            return fiaA
+                        end, (("BackgroundTransparency")), function()
+                            return(0x1)
+                        end} KT7 [0xb367] = {
+                        function()
+                            return(bar_1)
+                        end, (("Text")), function()
+                            return(("Script NTT HUB Suport 32 bit / Pe"))
+                        end} KT7 [0x08f36] = {
+                        function()
+                            return(bar_1)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} KT7 [0x9a5e] = {
+                        function()
+                            return(UIbar1)
+                        end, (("Parent")), function()
+                            return((bar_1))
+                        end} KT7 [0xc3b3] = {
+                        function()
+                            return fiaA
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0x00ff, 0xFF, 0xff))
+                        end} KT7 [0x803b] = {
+                        function()
+                            return(bar_2)
+                        end, (("Name")), function()
+                            return(("bar_2"))
+                        end} KT7 [0x6757] = {
+                        function()
+                            return QcX
+                        end, (("TextWrapped")), function()
+                            return((true))
+                        end} KT7 [0xFB56] = {
+                        function()
+                            return(bar_3)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} KT7 [0x0FB51] = {
+                        function()
+                            return QcX
+                        end, (("BackgroundTransparency")), function()
+                            return(0x1)
+                        end} KT7 [0x0020C9] = {
+                        function()
+                            return(bar_1)
+                        end, (("Parent")), function()
+                            return(RTFa)
+                        end} KT7 [0xb276] = {
+                        function()
+                            return(bar_1)
+                        end, (("TextWrapped")), function()
+                            return((true))
+                        end} KT7 [0xB504] = {
+                        function()
+                            return(bar_1)
+                        end, (("Name")), function()
+                            return(("bar_1"))
+                        end} KT7 [0x3E10] = {
+                        function()
+                            return fiaA
+                        end, (("Position")), function()
+                            return(UDim2.new(0x0, 0x0, (0x3 / 0x14), 0x0))
+                        end} KT7 [0x9BEF] = {
+                        function()
+                            return(UIbar2)
+                        end, (("Parent")), function()
+                            return((bar_2))
+                        end} KT7 [0x06c00] = {
+                        function()
+                            return fiaA
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x78, 0x0, 0x1E))
+                        end} KT7 [0xb131] = {
+                        function()
+                            return fiaA
+                        end, (("Name")), function()
+                            return(("tt_name"))
+                        end} KT7 [0x4E0C] = {
+                        function()
+                            return(UIbar3)
+                        end, (("Parent")), function()
+                            return((bar_3))
+                        end} KT7 [0x6DFF] = {
+                        function()
+                            return(bar_1)
+                        end, (("Position")), function()
+                            return(UDim2.new(0x0, 0x0, (0x009 / 0x32), 0x0))
+                        end} KT7 [0x8DBA] = {
+                        function()
+                            return QcX
+                        end, (("Position")), function()
+                            return(UDim2.new(0x0, 0x000, (0x001b / 0x64), 0x0))
+                        end} KT7 [0x0017c1] = {
+                        function()
+                            return QcX
+                        end, (("Name")), function()
+                            return(("tt_1"))
+                        end} KT7 [0x7B5A] = {
+                        function()
+                            return(bar_1)
+                        end, (("TextSize")), function()
+                            return(0xe)
+                        end} KT7 [0xab0f] = {
+                        function()
+                            return(bar_3)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x78, 0x0, 0x0A0))
+                        end} KT7 [0x4A13] = {
+                        function()
+                            return(bar_3)
+                        end, (("Name")), function()
+                            return(("bar_3"))
+                        end} KT7 [0xdb4e] = {
+                        function()
+                            return(t_1)
+                        end, (("Parent")), function()
+                            return((bar_3))
+                        end} KT7 [0x118c] = {
+                        function()
+                            return fiaA
+                        end, (("TextWrapped")), function()
+                            return((true))
+                        end} KT7 [0x927] = {
+                        function()
+                            return(bar_1)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x78, 0x0, 0xa0))
+                        end} KT7 [0x00D93D] = {
+                        function()
+                            return(bar_2)
+                        end, (("Parent")), function()
+                            return(RTFa)
+                        end} KT7 [0xD6DA] = {
+                        function()
+                            return fiaA
+                        end, (("TextSize")), function()
+                            return(0xe)
+                        end} KT7 [0xA9BA] = {
+                        function()
+                            return(bar_2)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0xf8, 0x0, 0x0A0))
+                        end} KT7 [0x0d3e7] = {
+                        function()
+                            return fiaA
+                        end, (("Text")), function()
+                            return(("Notice"))
+                        end} KT7 [0x4052] = {
+                        function()
+                            return QcX
+                        end, (("Size")), function()
+                            return(UDim2.new(0x000, 0x78, 0x0, 0x001e))
+                        end} KT7 [0x727f] = {
+                        function()
+                            return QcX
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} KT7 [0x002A90] = {
+                        function()
+                            return fiaA
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} KT7 [0x6300] = {
+                        function()
+                            return(bar_2)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x1 / 0x4), 0x0, (0x9 / 0x0032), 0x00))
+                        end} KT7 [0x00F0A] = {
+                        function()
+                            return QcX
+                        end, (("Parent")), function()
+                            return((bar_1))
+                        end} KT7 [0x0040b3] = {
+                        function()
+                            return(bar_3)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x97 / 0xc8), 0x000, (0x9 / 0x32), 0x0))
+                        end} KT7 [0x2a67] = {
+                        function()
+                            return(bar_1)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} KT7 [0x8C30] = {
+                        function()
+                            return QcX
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0x00FF, 0xFF, 0xFF))
+                        end}
+                        local QE8 = {0x0b504, 0x20C9, 0x8F36, 0x6dff, 0x927, 0x2A67, 0xB367, 0xC3D7, 0x7B5A, 0xb276, 0xf3f9, 0x9A5E, 0x803b, 0xd93d, 0x14E6, 0x06300, 0xa9ba, 0x9bef, 0x4A13, 0x0755b, 0x00FB56, 0x40B3, 0xAB0F, 0x004e0c, 0xB131, 0xED13, 0x2df6, 0x6c00, 0x3E10, 0x1a7c, 0x2A90, 0x0d3e7, 0xC3B3, 0xD6DA, 0x0118c, 0x17c1, 0xf0a, 0x0e80c, 0x4052, 0x8dba, 0x0fb51, 0x00727F, 0x1AB2, 0x8c30, 0x11d3, 0x6757, 0x00ad9d, 0xDB4E}
+                        for Na7S1 = 0x1, #QE8 do
+                            local gZhp = KT7 [QE8 [Na7S1]];
+                            gZhp [0x1]() [gZhp [0x2]] = gZhp [0x3]()
+                        end
+                    end
+                    do
+                        local g8aVx = {} g8aVx [0xc1ed] = {
+                        function()
+                            return(t_1)
+                        end, (("TextSize")), function()
+                            return(0xE)
+                        end} g8aVx [0xD7B4] = {
+                        function()
+                            return(t_2)
+                        end, (("Text")), function()
+                            return(("   #\227\129\173\227\129\147 \227\129\139\227\130\143\227\129\132\227\129\132\n@nekokawaii4500"))
+                        end} g8aVx [0x77D4] = {
+                        function()
+                            return(key_t)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x1 / 0x5), 0x00, (0xD / 0x64), 0x0))
+                        end} g8aVx [0x5e0d] = {
+                        function()
+                            return(key_tb)
+                        end, (("Name")), function()
+                            return(("key_tb"))
+                        end} g8aVx [0x2185] = {
+                        function()
+                            return(key_b)
+                        end, (("Name")), function()
+                            return(("key_b"))
+                        end} g8aVx [0x550b] = {
+                        function()
+                            return(key_b)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x1 / 0x5), 0x0, (0x0B / 0x14), 0x0))
+                        end} g8aVx [0x4951] = {
+                        function()
+                            return(key_b)
+                        end, (("Parent")), function()
+                            return((bar_2))
+                        end} g8aVx [0x3DA5] = {
+                        function()
+                            return(key_tb)
+                        end, (("Parent")), function()
+                            return((bar_2))
+                        end} g8aVx [0xc60] = {
+                        function()
+                            return(key_t)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0x0ff, 0xff, 0xff))
+                        end} g8aVx [0x05DBF] = {
+                        function()
+                            return(key_t)
+                        end, (("Text")), function()
+                            return(("NTT HUB"))
+                        end} g8aVx [0xC5D3] = {
+                        function()
+                            return(t_2)
+                        end, (("TextXAlignment")), function()
+                            return(Enum.TextXAlignment ["Left"])
+                        end} g8aVx [0x1530] = {
+                        function()
+                            return(t_2)
+                        end, (("TextSize")), function()
+                            return(0xe)
+                        end} g8aVx [0x639F] = {
+                        function()
+                            return(key_tb)
+                        end, (("TextSize")), function()
+                            return(0xe)
+                        end} g8aVx [0xc3bb] = {
+                        function()
+                            return(key_t)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} g8aVx [0x641B] = {
+                        function()
+                            return(t_2)
+                        end, (("Parent")), function()
+                            return((bar_3))
+                        end} g8aVx [0x7556] = {
+                        function()
+                            return(key_t)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x00, 0x96, 0x0, 0x1E))
+                        end} g8aVx [0xb578] = {
+                        function()
+                            return(key_t)
+                        end, (("Name")), function()
+                            return(("key_t"))
+                        end} g8aVx [0x2AC] = {
+                        function()
+                            return(key_t)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} g8aVx [0x2e4d] = {
+                        function()
+                            return(key_b)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x00, 0x0))
+                        end} g8aVx [0x4827] = {
+                        function()
+                            return(key_b)
+                        end, (("Text")), function()
+                            return(("Check HWID"))
+                        end} g8aVx [0x3699] = {
+                        function()
+                            return(t_2)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} g8aVx [0x644a] = {
+                        function()
+                            return(t_2)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x78, 0x0, 0x1e))
+                        end} g8aVx [0xa02f] = {
+                        function()
+                            return(key_b)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0xff, 0xff, 0xFF))
+                        end} g8aVx [0x0e3b] = {
+                        function()
+                            return(key_b)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} g8aVx [0x8042] = {
+                        function()
+                            return(key_tb)
+                        end, (("Text")), function()
+                            return(("Enter The Key"))
+                        end} g8aVx [0x811D] = {
+                        function()
+                            return(t_2)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} g8aVx [0x4998] = {
+                        function()
+                            return(key_tb)
+                        end, (("BorderColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} g8aVx [0x549F] = {
+                        function()
+                            return(key_t)
+                        end, (("TextSize")), function()
+                            return(0xe)
+                        end} g8aVx [0xF74C] = {
+                        function()
+                            return(key_t)
+                        end, (("Parent")), function()
+                            return((bar_2))
+                        end} g8aVx [0x09225] = {
+                        function()
+                            return(t_2)
+                        end, (("Position")), function()
+                            return(UDim2.new(0x0, 0x0, (0x3 / 0x14), 0x000))
+                        end} g8aVx [0x0b047] = {
+                        function()
+                            return(key_tb)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x96, 0x0, 0x0019))
+                        end} g8aVx [0x61B8] = {
+                        function()
+                            return(key_tb)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} g8aVx [0x8E0C] = {
+                        function()
+                            return(t_2)
+                        end, (("Name")), function()
+                            return(("t_2"))
+                        end} g8aVx [0xF73A] = {
+                        function()
+                            return(t_1)
+                        end, (("TextWrapped")), function()
+                            return((true))
+                        end} g8aVx [0x77bc] = {
+                        function()
+                            return(key_tb)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x1 / 0x5), 0x0, (0x9 / 0x19), 0x0))
+                        end} g8aVx [0x2DA2] = {
+                        function()
+                            return(t_1)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0xff, 0xFF, 0x00ff))
+                        end} g8aVx [0x9A10] = {
+                        function()
+                            return(t_1)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} g8aVx [0x1480] = {
+                        function()
+                            return(t_1)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x000, 0x0, 0x0))
+                        end} g8aVx [0x1895] = {
+                        function()
+                            return(t_2)
+                        end, (("BackgroundTransparency")), function()
+                            return(0x1)
+                        end} g8aVx [0xB0AA] = {
+                        function()
+                            return(key_tb)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0xfa, 0xfa, 0x00fa))
+                        end} g8aVx [0x9729] = {
+                        function()
+                            return(key_b)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x96, 0x0, 0x1B))
+                        end} g8aVx [0xb7c7] = {
+                        function()
+                            return(t_1)
+                        end, (("Text")), function()
+                            return(("Credit"))
+                        end} g8aVx [0x6535] = {
+                        function()
+                            return(t_2)
+                        end, (("TextWrapped")), function()
+                            return((true))
+                        end} g8aVx [0xF8AD] = {
+                        function()
+                            return(key_b)
+                        end, (("BorderColor3")), function()
+                            return(Color3.fromRGB(0xfa, 0x0fa, 0xfa))
+                        end} g8aVx [0x0d473] = {
+                        function()
+                            return(key_t)
+                        end, (("BorderColor3")), function()
+                            return(Color3.fromRGB(0xfa, 0xfa, 0xFA))
+                        end} g8aVx [0x6dc4] = {
+                        function()
+                            return(t_2)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0xFF, 0xFF, 0xFF))
+                        end} g8aVx [0xEF45] = {
+                        function()
+                            return(t_1)
+                        end, (("BackgroundTransparency")), function()
+                            return(0x1)
+                        end} g8aVx [0x1172] = {
+                        function()
+                            return(t_1)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x0, 0x78, 0x0, 0x1E))
+                        end}
+                        local Ij = {0x1480, 0x1172, 0xef45, 0x9A10, 0xb7c7, 0x2da2, 0xc1ed, 0x00F73A, 0x8e0c, 0x641B, 0x811D, 0x9225, 0x644a, 0x01895, 0x3699, 0xd7b4, 0x6dc4, 0x1530, 0x6535, 0xC5D3, 0xB578, 0xf74c, 0x02AC, 0x77d4, 0x7556, 0x0C3BB, 0x5DBF, 0xC60, 0xd473, 0x549f, 0x5e0d, 0x3DA5, 0xb0aa, 0x77BC, 0xb047, 0x61B8, 0x8042, 0x4998, 0x639f, 0x2185, 0x04951, 0x002e4d, 0x550b, 0x9729, 0xE3B, 0x4827, 0x0A02F, 0xf8ad}
+                        for wEYXX = 0x1, #Ij do
+                            local kZ0W = g8aVx [Ij [wEYXX]];
+                            kZ0W [0x1]() [kZ0W [0x2]] = kZ0W [0x3]()
+                        end
+                    end
+                    key_b.TextSize = 0xE (key_b.MouseButton1Down):connect(function()
+                        key_tb.Text = ("Do Check Key")
+                        local r0gEQ, WV2eH = pcall(function()
+                            yhJh = game:HttpGet(((("https://")) .. (l4bvU) .. ((".nekokawaii.workers.dev/api/data?name=")) .. (gethwid())))
+                        end)
+                        if(not(r0gEQ)) then
+                            key_tb.Text = ("HWID False")
+                            return
+                        end
+                        if(not((string.find(yhJh, ("|"))))) then
+                            return
+                        end
+                        pcall(function()
+                            _G.prenium = N2RQ(yhJh, ("string.char")) _G.index_key = ("_") RTFa ["Visible"] = (false) Za()
+                        end)
+                    end) do
+                        local oh = {} oh [0x0013c9] = {
+                        function()
+                            return(key_g)
+                        end, (("Text")), function()
+                            return(("Get HWID"))
+                        end} oh [0x7BF2] = {
+                        function()
+                            return(key_g)
+                        end, (("Name")), function()
+                            return(("key_g"))
+                        end} oh [0x287] = {
+                        function()
+                            return(key_g)
+                        end, (("Size")), function()
+                            return(UDim2.new(0x00, 0x64, 0x0, 0xF))
+                        end} oh [0xfb83] = {
+                        function()
+                            return(key_g)
+                        end, (("Font")), function()
+                            return(Enum.Font ["Ubuntu"])
+                        end} oh [0x78dc] = {
+                        function()
+                            return(key_g)
+                        end, (("BackgroundColor3")), function()
+                            return(Color3.fromRGB(0x0, 0x0, 0x0))
+                        end} oh [0x4853] = {
+                        function()
+                            return(key_g)
+                        end, (("TextSize")), function()
+                            return(0x00E)
+                        end} oh [0x943c] = {
+                        function()
+                            return(key_g)
+                        end, (("Position")), function()
+                            return(UDim2.new((0x8 / 0x19), 0x0, (0x4 / 0x5), 0x0))
+                        end} oh [0x9fae] = {
+                        function()
+                            return(key_g)
+                        end, (("Parent")), function()
+                            return((bar_2))
+                        end} oh [0x06946] = {
+                        function()
+                            return(key_g)
+                        end, (("BorderColor3")), function()
+                            return(Color3.fromRGB(0xFA, 0xFA, 0x0fa))
+                        end} oh [0x4030] = {
+                        function()
+                            return(key_g)
+                        end, (("TextColor3")), function()
+                            return(Color3.fromRGB(0x00FF, 0xff, 0xff))
+                        end}
+                        local CVSA = {0x7BF2, 0x9fae, 0x78dc, 0x943C, 0x287, 0xFB83, 0x13c9, 0x4030, 0x6946, 0x4853}
+                        for lb = 0x1, #CVSA do
+                            local Wpm0G = oh [CVSA [lb]];
+                            Wpm0G [0x1]() [Wpm0G [0x002]] = Wpm0G [0x3]()
+                        end
+                    end
+                    (key_g.MouseButton1Down):connect(function()
+                        setclipboard(gethwid()) key_tb.Text = ("Link Save In Clipboard")
+                    end)
