@@ -1,0 +1,580 @@
+
+
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local TeleportService = game:GetService("TeleportService")
+local LocalPlayer = Players.LocalPlayer
+
+local API_V1_SAIL = "https://api-sever.nekokawaii.workers.dev/api/datasever-v1?name=Set-Sail"
+
+local State = {
+    AutoFarm = false, AutoKillBoss = false, AutoSea = false,
+    AutoBuyChest = false, AutoBuyKey = false, AutoFish = false,
+    AutoDungeon = false, AutoConquest = false, AutoAlly = false,
+    AutoDaily = false, AutoRandomFruit = false, BringFruit = false,
+    EspPlayer = false, EspFruit = false,
+    QuestName = "Kill 4 Bandit Beast Pirates", BossName = "",
+    DistanceAbove = 9, AttackDelay = 0.28, Status = "idle",
+}
+
+local Functions, Events
+do
+    local ok, rs = pcall(function() return game:GetService("ReplicatedStorage") end)
+    if ok and rs then
+        local chest = rs:FindFirstChild("Chest")
+        if chest then
+            local rem = chest:FindFirstChild("Remotes")
+            if rem then
+                Functions = rem:FindFirstChild("Functions")
+                Events = rem:FindFirstChild("Events")
+            end
+        end
+    end
+end
+
+local function invoke(name, ...)
+    if not Functions then return false, "no Functions" end
+    local r = Functions:FindFirstChild(name)
+    if not r then return false, "missing " .. tostring(name) end
+    local args = { ... }
+    local res = { pcall(function() return r:InvokeServer(unpack(args)) end) }
+    if res[1] then return true, res[2] end
+    return false, res[2]
+end
+
+local function fire(name, ...)
+    if not Events then return false, "no Events" end
+    local r = Events:FindFirstChild(name, true)
+    if not r then return false, "missing " .. tostring(name) end
+    local args = { ... }
+    local ok, err = pcall(function() r:FireServer(unpack(args)) end)
+    return ok, err
+end
+
+local function getHRP()
+    local c = LocalPlayer.Character
+    return c and c:FindFirstChild("HumanoidRootPart") or nil
+end
+
+local function currentToolName()
+    local c = LocalPlayer.Character
+    if c then local t = c:FindFirstChildOfClass("Tool") if t then return t.Name end end
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    if bp then local t = bp:FindFirstChildOfClass("Tool") if t then return t.Name end end
+    return nil
+end
+
+local function equipToolMatch(pat)
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    local c = LocalPlayer.Character
+    if c and c:FindFirstChildOfClass("Tool") then return true end
+    if bp then for _, t in ipairs(bp:GetChildren()) do
+        if t:IsA("Tool") and t.Name:lower():find(pat:lower()) then
+            pcall(function()
+                local h = c and c:FindFirstChild("Humanoid")
+                if h then h:EquipTool(t) end
+            end)
+            return true
+        end
+    end end
+    return false
+end
+
+local function swordM1()
+    local t = currentToolName()
+    if not t then return false end
+    local ok = invoke("SkillAction", "SW_" .. t .. "_M1")
+    return ok
+end
+
+local function combatFolders(sea)
+    local out = {}
+    local function add(p) if p then out[#out + 1] = p end end
+    if not sea then
+        local m = workspace:FindFirstChild("Monster")
+        if m then add(m:FindFirstChild("Mon")) add(m:FindFirstChild("Boss")) end
+    else
+
+        add(workspace:FindFirstChild("SeaMonster"))
+        add(workspace:FindFirstChild("GhostMonster"))
+        local ships = workspace:FindFirstChild("Ships")
+        if ships then for _, s in ipairs(ships:GetChildren()) do add(s) end end
+    end
+    return out
+end
+
+local function mobAlive(m)
+    if not m or not m:IsA("Model") then return false end
+    local h = m:FindFirstChild("Humanoid")
+    local hrp = m:FindFirstChild("HumanoidRootPart")
+    if not h or not hrp then return false end
+    local ok, hp = pcall(function() return h.Health end)
+    return ok and hp > 0
+end
+
+local function baseName(n) return tostring(n):gsub("%s*%[Lv%.?%s*%d+%]%s*$", "") end
+
+local function questTarget(questName)
+    return tostring(questName):match("Kill%s+%d+%s+(.+)") or tostring(questName)
+end
+
+local function matchScore(a, b)
+    a, b = a:lower(), b:lower()
+    if a == b then return 100 end
+    local function w(s) local t = {} for x in s:gmatch("%S+") do t[#t + 1] = x end return t end
+    local aw, bw, s = w(a), w(b), 0
+    for i = 1, math.min(2, #aw, #bw) do
+        local x, y = aw[i], bw[i]
+        if x == y or x == y .. "s" or y == x .. "s" or x:sub(1, 5) == y:sub(1, 5) then s = s + 10 end
+    end
+    return s
+end
+
+local function nearestMob(target, sea, bossOnly)
+    local hrp = getHRP()
+    if not hrp then return nil end
+    local best, bestD = nil, math.huge
+    for _, folder in ipairs(combatFolders(sea)) do
+        local guard = folder and folder:GetChildren()
+        if guard then for _, m in ipairs(guard) do
+            if mobAlive(m) then
+                local base = baseName(m.Name)
+                local okMatch = true
+                if target and target ~= "" then okMatch = matchScore(base, target) >= 10 end
+                if okMatch and bossOnly then
+                    okMatch = folder.Name == "Boss" or matchScore(base, target or "") >= 100
+                end
+                if okMatch then
+                    local mhrp = m:FindFirstChild("HumanoidRootPart")
+                    if mhrp then
+                        local d = (mhrp.Position - hrp.Position).Magnitude
+                        if d < bestD then best, bestD = m, d end
+                    end
+                end
+            end
+        end end
+    end
+    return best
+end
+
+local function gotoMob(m)
+    local hrp = getHRP()
+    local mhrp = m and m:FindFirstChild("HumanoidRootPart")
+    if not hrp or not mhrp then return false end
+    pcall(function()
+        hrp.CFrame = mhrp.CFrame * CFrame.new(0, State.DistanceAbove, 0) * CFrame.Angles(math.rad(-90), 0, 0)
+        hrp.Velocity = Vector3.new(0, 0, 0)
+    end)
+    return true
+end
+
+local farmToken, bossToken, seaToken, miscToken = 0, 0, 0, 0
+
+local function farmLoop()
+    farmToken = farmToken + 1 local my = farmToken
+    State.Status = "farm start"
+    invoke("Quest", "take", State.QuestName)
+    local lastRetake = 0
+    while State.AutoFarm and my == farmToken do
+        local ok = pcall(function()
+            local target = questTarget(State.QuestName)
+            local mob = nearestMob(target, false, false)
+            if not mob then
+                if os.clock() - lastRetake > 2 then
+                    lastRetake = os.clock()
+                    invoke("Quest", "take", State.QuestName)
+                    State.Status = "waiting spawn: " .. target
+                end
+                task.wait(0.5) return
+            end
+            gotoMob(mob) swordM1()
+            State.Status = "farming: " .. mob.Name
+        end)
+        if not ok then task.wait(0.5) end
+        task.wait(State.AttackDelay)
+    end
+    State.Status = "idle"
+end
+
+local function bossLoop()
+    bossToken = bossToken + 1 local my = bossToken
+    while State.AutoKillBoss and my == bossToken do
+        pcall(function()
+            local mob = nil
+            if State.BossName ~= "" then
+                for _, f in ipairs(combatFolders(false)) do
+                    for _, m in ipairs(f:GetChildren()) do
+                        if mobAlive(m) and baseName(m.Name):lower() == State.BossName:lower() then mob = m break end
+                    end
+                    if mob then break end
+                end
+            else
+                mob = nearestMob(nil, false, true)
+            end
+            if mob then gotoMob(mob) swordM1() State.Status = "boss: " .. mob.Name
+            else State.Status = "boss waiting spawn" task.wait(1) end
+        end)
+        task.wait(State.AttackDelay)
+    end
+    State.Status = "idle"
+end
+
+local function seaLoop(kind)
+    seaToken = seaToken + 1 local my = seaToken
+    while State.AutoSea and my == seaToken do
+        pcall(function()
+            local mob = nearestMob(kind ~= "" and kind or nil, true, false)
+            if mob then gotoMob(mob) swordM1() State.Status = "sea: " .. mob.Name
+            else State.Status = "sea waiting: " .. (kind ~= "" and kind or "any") task.wait(1) end
+        end)
+        task.wait(State.AttackDelay)
+    end
+    State.Status = "idle"
+end
+
+local function shopLoop()
+    miscToken = miscToken + 1 local my = miscToken
+    while (State.AutoBuyChest or State.AutoBuyKey) and my == miscToken do
+        pcall(function()
+            if State.AutoBuyKey then
+                local ok = invoke("BuyKey")
+                State.Status = "BuyKey " .. (ok and "sent" or "missing?")
+            end
+            if State.AutoBuyChest then
+                local ok1 = invoke("BuyFruitStock")
+                local ok2 = fire("BuyChest")
+                State.Status = "chest try BuyFruitStock=" .. tostring(ok1) .. " BuyChest=" .. tostring(ok2)
+            end
+        end)
+        task.wait(3)
+    end
+    State.Status = "idle"
+end
+
+local function fishLoop()
+    local my = miscToken + 1 miscToken = my
+    State.AutoFish = true
+    while State.AutoFish and miscToken == my do
+        pcall(function()
+            if equipToolMatch("rod") or equipToolMatch("fish") then
+                local c = LocalPlayer.Character
+                local t = c and c:FindFirstChildOfClass("Tool")
+                if t then pcall(function() t:Activate() end) end
+                State.Status = "fishing cast..."
+            else
+                State.Status = "[TPL] no rod tool found"
+            end
+        end)
+        task.wait(4)
+    end
+    State.Status = "idle"
+end
+
+local function dungeonOnce()
+    local ok1, r1 = invoke("SelectDungeon")
+    local ok2, r2 = fire("UpdateDungeonVote")
+    State.Status = "dungeon SelectDungeon=" .. tostring(ok1) .. " vote=" .. tostring(ok2)
+    print("[KL] dungeon:", ok1, r1, ok2, r2)
+end
+
+local function conquestLoop()
+    local my = miscToken + 1 miscToken = my
+    State.AutoConquest = true
+    while State.AutoConquest and miscToken == my do
+        pcall(function()
+            local f = workspace:FindFirstChild("FlagConquest")
+            if f and #f:GetChildren() > 0 then
+                local hrp = getHRP()
+                for _, p in ipairs(f:GetChildren()) do
+                    if not State.AutoConquest then break end
+                    local cf = p:IsA("BasePart") and p.CFrame or (p:FindFirstChildWhichIsA("BasePart") and p:FindFirstChildWhichIsA("BasePart").CFrame)
+                    if cf and hrp then pcall(function() hrp.CFrame = cf + Vector3.new(0, 8, 0) end) end
+                    State.Status = "conquest: " .. p.Name
+                    task.wait(2)
+                end
+            else
+                State.Status = "[TPL] no FlagConquest points"
+                task.wait(3)
+            end
+        end)
+        task.wait(1)
+    end
+    State.Status = "idle"
+end
+
+local function allyLoop()
+    local my = miscToken + 1 miscToken = my
+    State.AutoAlly = true
+    while State.AutoAlly and miscToken == my do
+        pcall(function()
+            local ok = invoke("Ally", "accept")
+            State.Status = "ally accept sent=" .. tostring(ok)
+        end)
+        task.wait(3)
+    end
+    State.Status = "idle"
+end
+
+local espOn = { fruit = false, player = false }
+local espGui = {}
+local function clearESP(k)
+    for _, g in ipairs(espGui[k] or {}) do pcall(function() g:Destroy() end) end
+    espGui[k] = {}
+end
+local function espTick()
+    pcall(function()
+        if espOn.fruit then
+            local f = workspace:FindFirstChild("AllDroppedFruit")
+            if f then for _, m in ipairs(f:GetChildren()) do
+                local p = m:IsA("BasePart") and m or m:FindFirstChildWhichIsA("BasePart")
+                if p and not p:FindFirstChild("KL_ESP") then
+                    local b = Instance.new("BillboardGui")
+                    b.Name = "KL_ESP" b.Size = UDim2.new(0, 120, 0, 30)
+                    b.AlwaysOnTop = true b.Adornee = p
+                    local t = Instance.new("TextLabel")
+                    t.Size = UDim2.new(1, 0, 1, 0) t.BackgroundTransparency = 1
+                    t.TextColor3 = Color3.fromRGB(0, 255, 0) t.Text = m.Name
+                    t.Parent = b b.Parent = p
+                end
+            end end
+        end
+    end)
+end
+task.spawn(function()
+    while task.wait(3) do
+        if espOn.fruit or espOn.player then espTick() end
+    end
+end)
+
+local function bringFruit()
+    local hrp = getHRP()
+    local f = workspace:FindFirstChild("AllDroppedFruit")
+    if not hrp or not f then return 0 end
+    local n = 0
+    for _, m in ipairs(f:GetChildren()) do
+        local p = m:IsA("BasePart") and m or m:FindFirstChildWhichIsA("BasePart")
+        if p then pcall(function() p.CFrame = hrp.CFrame end) n = n + 1 end
+    end
+    return n
+end
+
+local function httpGet(url)
+    local ok, res = pcall(function() return game:HttpGet(url) end)
+    return ok and res or nil
+end
+local function hopToJob(jobId)
+    pcall(function() TeleportService:TeleportToPlaceInstance(game.PlaceId, jobId, LocalPlayer) end)
+end
+
+local function getParent()
+    local ok, hui = pcall(function()
+        if typeof(gethui) == "function" then return gethui() end
+        return nil
+    end)
+    if ok and hui then return hui end
+    return CoreGui
+end
+pcall(function()
+    local p = getParent()
+    local o = p:FindFirstChild("KL_FULL")
+    if o then o:Destroy() end
+end)
+
+local Gui = Instance.new("ScreenGui")
+Gui.Name = "KL_FULL"
+Gui.ResetOnSpawn = false
+Gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Gui.Parent = getParent()
+
+local Main = Instance.new("Frame")
+Main.Size = UDim2.new(0, 440, 0, 330)
+Main.Position = UDim2.new(0.5, -220, 0.5, -165)
+Main.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Main.BorderSizePixel = 0
+Main.Active = true
+Main.Draggable = true
+Main.Parent = Gui
+local UIC = Instance.new("UICorner")
+UIC.CornerRadius = UDim.new(0, 8)
+UIC.Parent = Main
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, -40, 0, 28)
+Title.Position = UDim2.new(0, 10, 0, 4)
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 15
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Text = "King Legacy | Full"
+Title.Parent = Main
+
+local Close = Instance.new("TextButton")
+Close.Size = UDim2.new(0, 28, 0, 28)
+Close.Position = UDim2.new(1, -32, 0, 4)
+Close.BackgroundColor3 = Color3.fromRGB(60, 20, 20)
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.Font = Enum.Font.GothamBold
+Close.TextSize = 14
+Close.Text = "X"
+Close.Parent = Main
+Close.MouseButton1Click:Connect(function() pcall(function() Gui:Destroy() end) end)
+
+local Body = Instance.new("ScrollingFrame")
+Body.Size = UDim2.new(1, -20, 1, -80)
+Body.Position = UDim2.new(0, 10, 0, 40)
+Body.BackgroundTransparency = 1
+Body.ScrollBarThickness = 4
+Body.CanvasSize = UDim2.new(0, 0, 0, 0)
+pcall(function() Body.AutomaticCanvasSize = Enum.AutomaticSize.Y end)
+Body.Parent = Main
+local BL = Instance.new("UIListLayout")
+BL.Padding = UDim.new(0, 4)
+BL.Parent = Body
+
+local Status = Instance.new("TextLabel")
+Status.Size = UDim2.new(1, -20, 0, 22)
+Status.Position = UDim2.new(0, 10, 1, -28)
+Status.BackgroundTransparency = 1
+Status.TextColor3 = Color3.fromRGB(150, 150, 150)
+Status.Font = Enum.Font.Gotham
+Status.TextSize = 12
+Status.TextXAlignment = Enum.TextXAlignment.Left
+Status.Text = "idle"
+Status.Parent = Main
+
+local function section(t)
+    local l = Instance.new("TextLabel")
+    l.Size = UDim2.new(1, -6, 0, 20)
+    l.BackgroundTransparency = 1
+    l.TextColor3 = Color3.fromRGB(140, 200, 255)
+    l.Font = Enum.Font.GothamBold
+    l.TextSize = 13
+    l.TextXAlignment = Enum.TextXAlignment.Left
+    l.Text = t
+    l.Parent = Body
+end
+local function row(text)
+    local b = Instance.new("TextButton")
+    b.Size = UDim2.new(1, -6, 0, 26)
+    b.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+    b.TextColor3 = Color3.fromRGB(230, 230, 230)
+    b.Font = Enum.Font.Gotham
+    b.TextSize = 13
+    b.Text = text
+    local c = Instance.new("UICorner")
+    c.CornerRadius = UDim.new(0, 5)
+    c.Parent = b
+    b.Parent = Body
+    return b
+end
+
+section("Farm [REAL]")
+local farmBtn = row("[OFF] Auto Farm: " .. State.QuestName)
+farmBtn.MouseButton1Click:Connect(function()
+    State.AutoFarm = not State.AutoFarm
+    farmBtn.Text = (State.AutoFarm and "[ON] Auto Farm: " or "[OFF] Auto Farm: ") .. State.QuestName
+    if State.AutoFarm then task.spawn(farmLoop) end
+end)
+local bossBtn = row("[OFF] Auto Kill Boss")
+bossBtn.MouseButton1Click:Connect(function()
+    State.AutoKillBoss = not State.AutoKillBoss
+    bossBtn.Text = State.AutoKillBoss and "[ON] Auto Kill Boss" or "[OFF] Auto Kill Boss"
+    if State.AutoKillBoss then task.spawn(bossLoop) end
+end)
+row("Set quest _G.KL_Quest / boss _G.KL_Boss").MouseButton1Click:Connect(function()
+    if type(_G.KL_Quest) == "string" and _G.KL_Quest ~= "" then State.QuestName = _G.KL_Quest end
+    if type(_G.KL_Boss) == "string" then State.BossName = _G.KL_Boss end
+    farmBtn.Text = (State.AutoFarm and "[ON] Auto Farm: " or "[OFF] Auto Farm: ") .. State.QuestName
+    Status.Text = "quest=" .. State.QuestName .. " boss=" .. State.BossName
+end)
+
+section("Sea [REAL folders+M1]")
+local seaBtn = row("[OFF] Auto Sea (Ghost/Galleon/Serpent)")
+seaBtn.MouseButton1Click:Connect(function()
+    State.AutoSea = not State.AutoSea
+    seaBtn.Text = State.AutoSea and "[ON] Auto Sea" or "[OFF] Auto Sea"
+    if State.AutoSea then task.spawn(function() seaLoop("") end) end
+end)
+
+section("Teleport [REAL positions]")
+row("Teleport: Islands list -> _G.KL_TP index").MouseButton1Click:Connect(function()
+    local isf = workspace:FindFirstChild("Island")
+    if isf then
+        local names = {}
+        for _, m in ipairs(isf:GetChildren()) do names[#names + 1] = m.Name end
+        print("[KL] islands:", table.concat(names, ", "):sub(1, 500))
+        Status.Text = #names .. " islands printed (F9). Set _G.KL_TP='Name', press Go"
+    end
+end)
+row("Go _G.KL_TP").MouseButton1Click:Connect(function()
+    local hrp = getHRP()
+    local isf = workspace:FindFirstChild("Island")
+    local t = isf and type(_G.KL_TP) == "string" and isf:FindFirstChild(_G.KL_TP)
+    local p = t and (t:IsA("BasePart") and t or t:FindFirstChildWhichIsA("BasePart"))
+    if hrp and p then pcall(function() hrp.CFrame = p.CFrame + Vector3.new(0, 10, 0) end) Status.Text = "tp: " .. t.Name
+    else Status.Text = "set _G.KL_TP first (see list)" end
+end)
+
+section("Shop/Fish/Dungeon [TPL]")
+local chestBtn = row("[OFF] Auto Buy Chest [TPL]")
+chestBtn.MouseButton1Click:Connect(function()
+    State.AutoBuyChest = not State.AutoBuyChest
+    chestBtn.Text = State.AutoBuyChest and "[ON] Auto Buy Chest [TPL]" or "[OFF] Auto Buy Chest [TPL]"
+    if State.AutoBuyChest or State.AutoBuyKey then task.spawn(shopLoop) end
+end)
+local keyBtn = row("[OFF] Auto Buy Key")
+keyBtn.MouseButton1Click:Connect(function()
+    State.AutoBuyKey = not State.AutoBuyKey
+    keyBtn.Text = State.AutoBuyKey and "[ON] Auto Buy Key" or "[OFF] Auto Buy Key"
+    if State.AutoBuyChest or State.AutoBuyKey then task.spawn(shopLoop) end
+end)
+local fishBtn = row("[OFF] Auto Fish [TPL]")
+fishBtn.MouseButton1Click:Connect(function()
+    State.AutoFish = not State.AutoFish
+    fishBtn.Text = State.AutoFish and "[ON] Auto Fish [TPL]" or "[OFF] Auto Fish [TPL]"
+    if State.AutoFish then task.spawn(fishLoop) end
+end)
+row("Dungeon vote once [TPL]").MouseButton1Click:Connect(dungeonOnce)
+local conqBtn = row("[OFF] Conquest loop [TPL]")
+conqBtn.MouseButton1Click:Connect(function()
+    State.AutoConquest = not State.AutoConquest
+    conqBtn.Text = State.AutoConquest and "[ON] Conquest loop [TPL]" or "[OFF] Conquest loop [TPL]"
+    if State.AutoConquest then task.spawn(conquestLoop) end
+end)
+local allyBtn = row("[OFF] Auto Ally [TPL]")
+allyBtn.MouseButton1Click:Connect(function()
+    State.AutoAlly = not State.AutoAlly
+    allyBtn.Text = State.AutoAlly and "[ON] Auto Ally [TPL]" or "[OFF] Auto Ally [TPL]"
+    if State.AutoAlly then task.spawn(allyLoop) end
+end)
+
+section("Fruit/ESP/Server [REAL]")
+row("Bring Fruit (AllDroppedFruit)").MouseButton1Click:Connect(function()
+    Status.Text = "brought " .. bringFruit() .. " fruits"
+end)
+local espF = row("[OFF] ESP Fruit")
+espF.MouseButton1Click:Connect(function()
+    espOn.fruit = not espOn.fruit
+    espF.Text = espOn.fruit and "[ON] ESP Fruit" or "[OFF] ESP Fruit"
+    if not espOn.fruit then clearESP("fruit") end
+end)
+row("Server Hop: Set-Sail list").MouseButton1Click:Connect(function()
+    local body = httpGet(API_V1_SAIL)
+    if not body then Status.Text = "server list fetch failed" return end
+    local fn = loadstring(body)
+    if not fn then Status.Text = "server list parse failed" return end
+    pcall(fn)
+    local list = _G.api_server
+    _G.api_server = nil
+    if type(list) ~= "table" then Status.Text = "server list empty" return end
+    Status.Text = #list .. " servers (NTT_-encrypted). Set _G.KL_Job, press again to hop"
+    print("[KL] entries:", #list)
+    if type(_G.KL_Job) == "string" and _G.KL_Job ~= "" then hopToJob(_G.KL_Job) end
+end)
+
+task.spawn(function()
+    while Gui.Parent do task.wait(0.5) pcall(function() Status.Text = State.Status end) end
+end)
+
+print("[KL] FULL loaded. [REAL]=captured, [TPL]=template, check button labels.")
