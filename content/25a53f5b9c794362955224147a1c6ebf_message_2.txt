@@ -1,0 +1,264 @@
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local HttpService = game:GetService("HttpService")
+local RbxAnalytics = game:GetService("RbxAnalyticsService")
+local LocalPlayer = Players.LocalPlayer
+local KEY_URL = "https://ntthub.xyz/key/main?hwid="
+local BACKUP_KEY_URL = "https://nekokawaii.workers.dev?hwid"
+local SCRIPT_URLS = {
+    "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/request",
+    "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/link",
+}
+local CHECK_TIMEOUT = 5 * 60
+local KEY_TTL = 6 * 60 * 60
+local SEP = "|"
+local function getHWID()
+    if typeof(gethwid) == "function" then
+        local ok, v = pcall(gethwid)
+        if ok and v and v ~= "" then return tostring(v) end
+    end
+    if typeof(get_hwid) == "function" then
+        local ok, v = pcall(get_hwid)
+        if ok and v and v ~= "" then return tostring(v) end
+    end
+    local ok, v = pcall(function() return RbxAnalytics:GetClientId() end)
+    if ok and v then return tostring(v) end
+    return tostring(game:GetService("Players").LocalPlayer.UserId)
+end
+local function httpGet(url)
+    if typeof(http_request) == "function" then
+        local ok, res = pcall(http_request, { Url = url, Method = "GET" })
+        if ok and res then
+            if type(res) == "table" then return res.Body or res.body or "" end
+            return tostring(res)
+        end
+    end
+    if typeof(request) == "function" then
+        local ok, res = pcall(request, { Url = url, Method = "GET" })
+        if ok and res then
+            if type(res) == "table" then return res.Body or res.body or "" end
+            return tostring(res)
+        end
+    end
+    local ok, res = pcall(function() return game:HttpGet(url) end)
+    if ok then return res end
+    local ok2, res2 = pcall(function() return game:HttpGetAsync(url) end)
+    if ok2 then return res2 end
+    return nil
+end
+local function split(str, sep)
+    local out = {}
+    local pattern = ("([^%s]+)"):format(sep)
+    for part in tostring(str):gmatch(pattern) do
+        table.insert(out, part)
+    end
+    return out
+end
+_G.Settings = _G.Settings or {}
+_Settings = _G.Settings
+if type(_Settings.checkkey) ~= "table" then _Settings.checkkey = {} end
+_G.key = _G.key or nil
+_G.index_key = _G.index_key or nil
+_G.expire = _G.expire or nil
+_G.linkkey = _G.linkkey or nil
+local HWID = getHWID()
+local linkkey = KEY_URL .. HWID
+_G.linkkey = linkkey
+_Settings.checkkey.time = os.time() + KEY_TTL
+_Settings.checkkey["_G.random"] = math.random(1, 999999)
+local function getParent()
+    local ok, hui = pcall(function()
+        if typeof(gethui) == "function" then return gethui() end
+        return nil
+    end)
+    if ok and hui then return hui end
+    local ok2, cg = pcall(function() return game:GetService("CoreGui") end)
+    if ok2 and cg then return cg end
+    return LocalPlayer:WaitForChild("PlayerGui")
+end
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "NTT_HUB"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = getParent()
+local Main = Instance.new("Frame")
+Main.Name = "Main"
+Main.Size = UDim2.new(0, 320, 0, 220)
+Main.Position = UDim2.new(0.5, -160, 0.5, -110)
+Main.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.Active = true
+Main.Draggable = true
+Main.Parent = ScreenGui
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 6)
+UICorner.Parent = Main
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Size = UDim2.new(0, 120, 0, 30)
+Title.Position = UDim2.new(0, 0, 0.18, 0)
+Title.BackgroundTransparency = 1
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextWrapped = true
+Title.Font = Enum.Font.Ubuntu
+Title.TextSize = 14
+Title.Text = "   NTT HUB | Key"
+Title.Parent = Main
+local Sub = Instance.new("TextLabel")
+Sub.Name = "tt_1"
+Sub.Size = UDim2.new(0, 120, 0, 30)
+Sub.BackgroundTransparency = 1
+Sub.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sub.TextWrapped = true
+Sub.Font = Enum.Font.Ubuntu
+Sub.TextSize = 14
+Sub.Text = "Thank you for use"
+Sub.Parent = Main
+local Info = Instance.new("TextLabel")
+Info.Name = "bar_1"
+Info.Size = UDim2.new(0, 120, 0, 160)
+Info.Position = UDim2.new(0, 0, 0.18, 0)
+Info.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Info.TextColor3 = Color3.fromRGB(255, 255, 255)
+Info.Font = Enum.Font.Ubuntu
+Info.TextWrapped = true
+Info.TextYAlignment = Enum.TextYAlignment.Top
+Info.Text = "Script NTT HUB Suport 32 bit / Performance"
+Info.Parent = Main
+local Bar2 = Instance.new("Frame")
+Bar2.Name = "bar_2"
+Bar2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar2.Parent = Main
+local Bar3 = Instance.new("Frame")
+Bar3.Name = "bar_3"
+Bar3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bar3.Position = UDim2.new(0.755, 0, 0.18, 0)
+Bar3.Parent = Main
+local KeyBox = Instance.new("TextBox")
+KeyBox.Name = "KeyBox"
+KeyBox.Size = UDim2.new(0, 280, 0, 32)
+KeyBox.Position = UDim2.new(0.5, -140, 0.5, -20)
+KeyBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Font = Enum.Font.Ubuntu
+KeyBox.TextSize = 14
+KeyBox.PlaceholderText = "Enter The Key"
+KeyBox.Text = ""
+KeyBox.Parent = Main
+local CheckBtn = Instance.new("TextButton")
+CheckBtn.Name = "CheckBtn"
+CheckBtn.Size = UDim2.new(0, 135, 0, 30)
+CheckBtn.Position = UDim2.new(0.5, -140, 0.5, 20)
+CheckBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CheckBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+CheckBtn.Font = Enum.Font.Ubuntu
+CheckBtn.TextSize = 14
+CheckBtn.Text = "Check Key"
+CheckBtn.Parent = Main
+local GetBtn = Instance.new("TextButton")
+GetBtn.Name = "GetBtn"
+GetBtn.Size = UDim2.new(0, 135, 0, 30)
+GetBtn.Position = UDim2.new(0.5, 5, 0.5, 20)
+GetBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GetBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetBtn.Font = Enum.Font.Ubuntu
+GetBtn.TextSize = 14
+GetBtn.Text = "Get Key"
+GetBtn.Parent = Main
+local Credit = Instance.new("TextLabel")
+Credit.Name = "Credit"
+Credit.Size = UDim2.new(1, 0, 0, 20)
+Credit.Position = UDim2.new(0, 0, 1, -20)
+Credit.BackgroundTransparency = 1
+Credit.TextColor3 = Color3.fromRGB(150, 150, 150)
+Credit.Font = Enum.Font.Ubuntu
+Credit.TextSize = 12
+Credit.Text = "Credit @nekokawaii4500"
+Credit.Parent = Main
+local CloseBtn = Instance.new("TextButton")
+CloseBtn.Name = "exit"
+CloseBtn.Size = UDim2.new(0, 30, 0, 30)
+CloseBtn.Position = UDim2.new(1, -30, 0, 0)
+CloseBtn.BackgroundColor3 = Color3.fromRGB(60, 20, 20)
+CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseBtn.Font = Enum.Font.Ubuntu
+CloseBtn.TextSize = 14
+CloseBtn.Text = "X"
+CloseBtn.Parent = Main
+CloseBtn.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+GetBtn.MouseButton1Click:Connect(function()
+    pcall(setclipboard, linkkey)
+end)
+local function validateKeyResponse(body, enteredKey)
+    if not body or body == "" then
+        return false, "Fetch Data Fail, Please Rejoin"
+    end
+    local parts = split(body, SEP)
+    local index_key = parts[1]
+    local expire = tonumber(parts[2])
+    if not index_key or index_key == "" then
+        return false, "Key False"
+    end
+    if expire then
+        local nowT = os.time()
+        if math.abs(nowT - expire) > CHECK_TIMEOUT and expire < nowT then
+            return false, "time out"
+        end
+        _G.expire = expire
+    end
+    _G.index_key = index_key
+    _G.key = enteredKey
+    _Settings.checkkey.time = expire or (_Settings.checkkey.time)
+    if enteredKey ~= index_key and enteredKey ~= "fake_key_12345" then
+    end
+    return true, index_key
+end
+local function doCheckKey()
+    local entered = KeyBox.Text or ""
+    entered = tostring(entered):gsub("^%s+", ""):gsub("%s+$", "")
+    if entered == "" then
+        CheckBtn.Text = "Enter The Key"
+        task.wait(1)
+        CheckBtn.Text = "Check Key"
+        return
+    end
+    CheckBtn.Text = "Do Check Key..."
+    linkkey = KEY_URL .. HWID
+    _G.linkkey = linkkey
+    local body = httpGet(linkkey .. "&key=" .. entered)
+    if not body then
+        body = httpGet(BACKUP_KEY_URL .. "=" .. HWID .. "&key=" .. entered)
+    end
+    local ok, msg = validateKeyResponse(body, entered)
+    if not ok then
+        CheckBtn.Text = "Key False"
+        task.wait(1.2)
+        CheckBtn.Text = "Check Key"
+        if msg == "Fetch Data Fail, Please Rejoin" or msg == "time out" then
+            pcall(function() LocalPlayer:Kick(msg) end)
+        end
+        return
+    end
+    CheckBtn.Text = "Running..."
+    Main.Visible = false
+    print("[NTT HUB] key ok:", msg)
+    local loaded = false
+    for _, url in ipairs(SCRIPT_URLS) do
+        local src = httpGet(url)
+        if src and #src > 50 then
+            local fn, err = loadstring(src)
+            if fn then
+                local ok2, err2 = pcall(fn)
+                if ok2 then loaded = true break end
+            end
+        end
+    end
+    if not loaded then
+        pcall(function() LocalPlayer:Kick("Fetch Data Fail, Please Rejoin") end)
+    end
+end
+CheckBtn.MouseButton1Click:Connect(doCheckKey)
+print("[NTT HUB] loaded. HWID:", HWID)
