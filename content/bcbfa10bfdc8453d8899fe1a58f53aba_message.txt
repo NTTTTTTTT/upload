@@ -1,0 +1,411 @@
+
+local HttpService = game:GetService("HttpService")
+
+local function getDiscordInvite(inviteCode, field)
+    if not inviteCode or inviteCode == "" then
+        return nil
+    end
+
+    local requestFn = (http and http.request) or request or http_request
+    if not requestFn then
+        return nil
+    end
+
+    local ok, response = pcall(requestFn, {
+        Url = string.format("https://discord.com/api/v9/invites/%s?with_counts=true&with_expiration=true", inviteCode),
+        Method = "GET",
+        Headers = { ["User-Agent"] = "Mozilla/5.0" },
+    })
+
+    if not ok or not response or response.StatusCode ~= 200 then
+        return nil
+    end
+
+    local decodeOk, data = pcall(HttpService.JSONDecode, HttpService, response.Body)
+    if not decodeOk or not data or not data.guild then
+        return nil
+    end
+
+    local guild = data.guild
+    local info = {
+        Name = guild.name,
+        Description = guild.description,
+        GuildID = guild.id,
+        InviteCode = data.code,
+        MemberCount = data.approximate_member_count,
+        OnlineCount = data.approximate_presence_count,
+        Icon = guild.icon,
+        IconURL = guild.icon and string.format("https://cdn.discordapp.com/icons/%s/%s.png?size=1024", guild.id, guild.icon) or nil,
+        NSFW = guild.nsfw or false,
+        CreatedAt = data.created_at,
+    }
+
+    if field == nil or field == "All" then
+        return info
+    end
+
+    return info[field]
+end
+
+local scriptId
+
+if game.GameId == 9656201728 then
+    scriptId = "2a17c1c60d63936756831d9d94b44614"
+elseif game.GameId == 9880286438 then
+    scriptId = "6b4135a3dba8c9781b195f19f51bb02e"
+elseif game.GameId == 5595353122 then
+    scriptId = "39dfd10f0f84da534978c27597811f01"
+else
+    scriptId = "139fe4838778aaf1cd50a0665e9f777f"
+end
+
+makefolder("KeySystem")
+
+local scriptKey = script_key
+    or (isfile("KeySystem/Key.txt") and readfile("KeySystem/Key.txt"))
+    or nil
+
+local cloneRef = cloneref or clonereference or function(value)
+    return value
+end
+
+local Players = cloneRef(game:GetService("Players"))
+local Fluent = loadstring(game:HttpGet(
+    "https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"
+))()
+
+local Luarmor = loadstring(game:HttpGet(
+    "https://sdkAPI-public.luarmor.net/library.lua"
+))()
+Luarmor.script_id = scriptId
+
+local function notify(title, content, duration)
+    Fluent:Notify({
+        Title = title,
+        Content = content,
+        Duration = duration or 5,
+    })
+end
+
+local function checkKey(key)
+    local keyToCheck = key or scriptKey
+    local result = Luarmor.check_key(keyToCheck)
+
+    if result.code == "KEY_VALID" then
+        if result.data.note ~= "Ad Reward" then
+            _G.Premium = true
+            Status = "Premium"
+            print("Premium Mode: true")
+            queue_on_teleport("_G.Premium = true")
+        else
+            _G.Normal = true
+            print("Premium Mode: false")
+        end
+
+        scriptKey = keyToCheck
+        script_key = keyToCheck
+        writefile("KeySystem/Key.txt", keyToCheck)
+
+        Fluent:Destroy()
+        Luarmor.load_script()
+        return
+    end
+
+    if result.code and result.code:find("KEY_") then
+        local messages = {
+            KEY_HWID_LOCKED = "Key is locked to another HWID",
+            KEY_INCORRECT = "Key is incorrect",
+            KEY_INVALID = "Key is invalid",
+        }
+
+        notify(
+            "Key Check Failed",
+            messages[result.code] or result.message or "Unknown key error"
+        )
+        return
+    end
+
+    Players.LocalPlayer:Kick(
+        "Key check failed: "
+            .. tostring(result.message)
+            .. " Code: "
+            .. tostring(result.code)
+    )
+end
+
+checkKey()
+
+local window = Fluent:CreateWindow({
+    Title = "OMG Hub | Key System",
+    SubTitle = "Key verification",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(530, 340),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.End,
+})
+
+local tabs = {
+    Main = window:AddTab({ Title = "Verify Key", Icon = "settings" }),
+    GetKey = window:AddTab({ Title = "Get Key", Icon = "user" }),
+    About = window:AddTab({ Title = "About", Icon = "diamond" }),
+    Partner = window:AddTab({ Title = "Partners", Icon = "star" }),
+}
+
+tabs.Main:AddSection("Key Input")
+
+local keyInput = tabs.Main:AddInput("KeyInput", {
+    Title = "Enter Key:",
+    Default = scriptKey or "",
+    Placeholder = "Example: agKhRikQP..",
+    Numeric = false,
+    Finished = false,
+})
+
+tabs.Main:AddButton({
+    Title = "Check Key",
+    Callback = function()
+        checkKey(keyInput.Value)
+    end,
+})
+
+local discordInfo = getDiscordInvite("TdStSqtM8p", "All")
+tabs.About:AddSection("Discord Info")
+local discordParagraph = tabs.About:AddParagraph({ Title = "", Content = "" })
+
+spawn(function()
+    while task.wait(0.1) do
+        pcall(function()
+            if discordInfo then
+                local name = discordInfo.Name
+                local description = discordInfo.Description
+                local memberCount = discordInfo.MemberCount or 0
+                local onlineCount = discordInfo.OnlineCount or 0
+                discordParagraph:SetTitle(name .. " - " .. (discordInfo.InviteCode and "discord.gg/" .. discordInfo.InviteCode or "N/A"))
+                discordParagraph:SetDesc("Member Count: " .. memberCount .. " | Online Count: " .. onlineCount .. " | " .. description)
+            end
+        end)
+    end
+end)
+
+tabs.About:AddButton({
+    Title = "Copy Discord Link",
+    Callback = function()
+        if discordInfo then
+            setclipboard(discordInfo.InviteCode and "discord.gg/" .. discordInfo.InviteCode or "N/A")
+            notify("Copied To Clipboard", "Discord Link has been copied to your clipboard", 16)
+        end
+    end,
+})
+
+tabs.GetKey:AddSection("Get Key - Linkvertise")
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Linkvertise (6 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key-AqXGNPFEWOFM")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Linkvertise (12 hours)",
+    Callback = function()
+            setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key3-IvqPDhamitaJ")
+            notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Linkvertise (24 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key5-FFPUgHhulrnt")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Linkvertise (48 hours)",
+    Callback = function()
+            setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key7-CPaLpGirgfNA")
+            notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Linkvertise (72 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_17-IIZImyRUxTnu")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddSection("Get Key - Lootlabs")
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Lootlabs (6 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key6-grOmJZfLZuph")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Lootlabs (12 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_14-HdKMFzrjDJeX")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Lootlabs (24 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_13-iXflhaHkLYGB")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Lootlabs (48 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_15-yPvEOFMccumO")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Lootlabs (72 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_16-qkLJDZtLtorO")
+            notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddSection("Get Key - Workink")
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Workink (6 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_9-QJAwZqPaZQhM")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Workink (12 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key10-YdbqPgUkREbm")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Workink (24 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_11-FUfoEcGaudIj")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Workink (48 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_12-yLfCjeClkYcz")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.GetKey:AddButton({
+    Title = "Get Key Workink (72 hours)",
+    Callback = function()
+        setclipboard("https://ads.luarmor.net/get_key?for=OMG_Hub_Key_18-XenNAHpefglB")
+        notify("Copied To Clipboard", "Key Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.Partner:AddSection("UGPhone")
+tabs.Partner:AddParagraph({ Title = "# Best Farming AFK Ugphone - No Crash/Smoother", Content = "" })
+
+tabs.Partner:AddButton({
+    Title = "Click For Free 488 diamonds",
+    Callback = function()
+        setclipboard("https://www.ugphone.com/toc-page/promotion/#/r?partner_id=63c02520-5a19-76c9-eceb-2ad257cf7b0f&invitation_code=omghub")
+        notify("Copied To Clipboard", "Diamonds Link has been copied to your clipboard", 16)
+    end,
+})
+
+tabs.Partner:AddSection("Dabux")
+
+tabs.Partner:AddParagraph({
+    Title = "# Dabux | Robux Store",
+    Content = [[🚀 Looking for a trusted place to buy Robux? You've found it.
+
+At Dabux, we provide clean Robux through Gamepass and Group Payouts, ensuring a safe and professional experience from start to finish.
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+💰 OUR PRICE
+
+🔥 Only $8.99 per 1,000 Robux!
+
+📦 Examples:
+• 1,000 Robux — $8.99
+• 5,000 Robux — $44.95
+• 10,000 Robux — $89.90
+• 25,000 Robux — $224.75
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Clean Robux
+✅ Delivery via Gamepass
+✅ Delivery via Group Payout
+✅ Fast & Professional Support
+✅ Secure Transactions
+✅ Trusted Service
+✅ Quick Order Processing
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 Perfect for:
+🛒 Gamepasses
+👕 Avatar Items
+⚔️ In-Game Purchases
+💎 Limited Items
+🎁 Gifts for Friends
+🚀 Upgrading Your Roblox Experience
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+📦 How to Order
+1️⃣ Open a ticket
+2️⃣ Tell us how much Robux you need
+3️⃣ Choose delivery method
+4️⃣ Complete payment
+5️⃣ Receive your Robux
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ Important Information
+• We only sell clean Robux
+• Stock may be limited
+• Prices may change
+• Large orders welcome
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 Thousands of Robux waiting for you!
+
+💙 DABUX — Fast, Safe & Affordable Robux.]],
+})
+
+tabs.Partner:AddButton({
+    Title = "Copy Discord Link",
+    Callback = function()
+        setclipboard("https://discord.gg/k32cDCAA5")
+        notify("Copied To Clipboard", "Discord Link has been copied to your clipboard", 16)
+    end,
+})
+
+notify("OMG Hub Key System", "Key System Loaded!", 5)
+window:SelectTab(1)
