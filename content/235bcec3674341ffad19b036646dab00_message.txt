@@ -1,0 +1,165 @@
+-- Reconstructed readable equivalent of the payload in the attached NTT Obf v7.71 file.
+-- The behavior and UI values below were recovered by decoding and running the payload
+-- in a Roblox API stub. This is not a byte-for-byte restoration of the original source.
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local oldGui = playerGui:FindFirstChild("BasicObfTest")
+if oldGui then
+    oldGui:Destroy()
+end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "BasicObfTest"
+screenGui.ResetOnSpawn = false
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+screenGui.Parent = playerGui
+
+local function addCorner(instance, radius)
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, radius)
+    corner.Parent = instance
+end
+
+local panel = Instance.new("Frame")
+panel.Name = "Panel"
+panel.AnchorPoint = Vector2.new(0.5, 0.5)
+panel.Position = UDim2.fromScale(0.5, 0.5)
+panel.Size = UDim2.fromOffset(300, 354)
+panel.BackgroundColor3 = Color3.fromRGB(24, 27, 36)
+panel.BorderSizePixel = 0
+panel.Parent = screenGui
+addCorner(panel, 12)
+
+local function makeLabel(name, text, y, height, textSize, bold)
+    local label = Instance.new("TextLabel")
+    label.Name = name
+    label.BackgroundTransparency = 1
+    label.BorderSizePixel = 0
+    label.Position = UDim2.fromOffset(16, y)
+    label.Size = UDim2.new(1, -32, 0, height)
+    label.Text = text
+    label.TextColor3 = Color3.fromRGB(240, 242, 250)
+    label.Font = bold and Enum.Font.GothamBold or Enum.Font.Gotham
+    label.TextSize = textSize or 15
+    label.Parent = panel
+    addCorner(label, 8)
+    return label
+end
+
+local title = makeLabel("Title", "OBF TEST", 12, 30, 20, true)
+local statusLabel = makeLabel("Status", "Count: 0 | Auto: OFF", 50, 30, 15, false)
+
+local function makeButton(name, text, y, height, backgroundColor)
+    local button = Instance.new("TextButton")
+    button.Name = name
+    button.Text = text
+    button.Position = UDim2.fromOffset(16, y)
+    button.Size = UDim2.new(1, -32, 0, height)
+    button.Font = Enum.Font.Gotham
+    button.TextSize = 15
+    button.TextColor3 = Color3.fromRGB(240, 242, 250)
+    button.BackgroundColor3 = backgroundColor or Color3.fromRGB(42, 47, 62)
+    button.BorderSizePixel = 0
+    button.Parent = panel
+    addCorner(button, 8)
+    return button
+end
+
+local countButton = makeButton(
+    "CountButton",
+    "Click +1",
+    90,
+    38,
+    Color3.fromRGB(66, 106, 220)
+)
+local toggleButton = makeButton("ToggleButton", "Auto count: OFF", 136, 38)
+
+local inputBox = Instance.new("TextBox")
+inputBox.Name = "Input"
+inputBox.Text = ""
+inputBox.PlaceholderText = "Type text, then press Enter"
+inputBox.ClearTextOnFocus = false
+inputBox.MultiLine = false
+inputBox.Position = UDim2.fromOffset(16, 182)
+inputBox.Size = UDim2.new(1, -32, 0, 38)
+inputBox.Font = Enum.Font.Gotham
+inputBox.TextSize = 15
+inputBox.TextColor3 = Color3.fromRGB(240, 242, 250)
+inputBox.BackgroundColor3 = Color3.fromRGB(42, 47, 62)
+inputBox.BorderSizePixel = 0
+inputBox.Parent = panel
+addCorner(inputBox, 8)
+
+local echoLabel = makeLabel("Echo", "Text: test", 228, 34, 15, false)
+echoLabel.TextWrapped = true
+
+local resetButton = makeButton("ResetButton", "Reset count", 270, 32)
+local closeButton = makeButton(
+    "CloseButton",
+    "Close",
+    310,
+    28,
+    Color3.fromRGB(132, 55, 65)
+)
+
+local count = 0
+local autoCount = false
+
+local function updateStatus()
+    statusLabel.Text = string.format(
+        "Count: %d | Auto: %s",
+        count,
+        autoCount and "ON" or "OFF"
+    )
+end
+
+countButton.Activated:Connect(function()
+    count = count + 1
+    updateStatus()
+end)
+
+toggleButton.Activated:Connect(function()
+    autoCount = not autoCount
+    toggleButton.Text = "Auto count: " .. (autoCount and "ON" or "OFF")
+    toggleButton.BackgroundColor3 = autoCount
+        and Color3.fromRGB(40, 135, 88)
+        or Color3.fromRGB(42, 47, 62)
+    updateStatus()
+end)
+
+inputBox.FocusLost:Connect(function(enterPressed)
+    if not enterPressed then
+        return
+    end
+
+    echoLabel.Text = "Text: " .. inputBox.Text
+    print("[OBF TEST] Input:", inputBox.Text)
+end)
+
+resetButton.Activated:Connect(function()
+    count = 0
+    updateStatus()
+end)
+
+screenGui.Destroying:Connect(function()
+    autoCount = false
+end)
+
+closeButton.Activated:Connect(function()
+    screenGui:Destroy()
+end)
+
+task.spawn(function()
+    while screenGui.Parent do
+        task.wait(0.5)
+        if autoCount then
+            count = count + 1
+            updateStatus()
+        end
+    end
+end)
+
+print("[OBF TEST] GUI ready")
