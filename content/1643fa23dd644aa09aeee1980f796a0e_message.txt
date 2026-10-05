@@ -1,0 +1,1074 @@
+{
+  "input_file": "message (1).txt",
+  "identification": {
+    "header": "NTT Obf v7.71",
+    "file_size_bytes": 228450,
+    "line_count": 1,
+    "vm_detected": true
+  },
+  "static_recovery": {
+    "payload_transport_blocks": 16,
+    "blocks_with_validated_header_checksums": 16,
+    "string_references": 207,
+    "nested_string_containers_decoded": 52,
+    "binary_values": 1,
+    "source_level_lua_recovered": false,
+    "limitation": "The VM bytecode has not been lifted into ordinary Lua. A remote request is part of the execution path, and the sandboxed trace stopped in anti-tamper/parser logic."
+  },
+  "sandbox_trace": {
+    "network_enabled": false,
+    "filesystem_access_exposed_to_payload": false,
+    "blocked_requests": [
+      "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/request"
+    ],
+    "anti_tamper_codes_logged_after_local_handler_suppression": [
+      8,
+      8
+    ],
+    "execution_result": "instruction budget exceeded while the protected parser continued; no stable program output captured"
+  },
+  "behavior_indicators": [
+    "Roblox services and runtime properties: game, workspace, Players, RunService, HttpService, IsClient.",
+    "Executor/environment probing: getgenv, getidentity, getthreadidentity, setthreadidentity, hookfunction, isfunctionhooked, clonefunction, getcallingscript, fluxus, syn, krnl.",
+    "HTTP request path and method markers: request, http_request, http, GET, Url, StatusCode, JSONEncode.",
+    "Probe/test markers: __ntt_probe__, __NTT-HUB_folder_check, fake_key_12345, admin_mode, encryption_key, debug_enabled."
+  ],
+  "decoded_constants": [
+    {
+      "key": "0x6ac2",
+      "kind": "text",
+      "value": "wait"
+    },
+    {
+      "key": "0x6ac7",
+      "kind": "text",
+      "value": "aeb7aeb4f959"
+    },
+    {
+      "key": "0x6acc",
+      "kind": "text",
+      "value": "workspace"
+    },
+    {
+      "key": "0x6ad1",
+      "kind": "text",
+      "value": "xpcall"
+    },
+    {
+      "key": "0x6ad6",
+      "kind": "text",
+      "value": "498f148793"
+    },
+    {
+      "key": "0x6adb",
+      "kind": "text",
+      "value": "error"
+    },
+    {
+      "key": "0x6ae0",
+      "kind": "text",
+      "value": "tick"
+    },
+    {
+      "key": "0x6ae5",
+      "kind": "text",
+      "value": "Instance"
+    },
+    {
+      "key": "0x6bbc",
+      "kind": "text",
+      "value": "5199ea6931b8"
+    },
+    {
+      "key": "0x6c39",
+      "kind": "binary",
+      "length_bytes": 16088,
+      "prefix_hex": "be25a2f0ad109b3a2dafe2d1bf510066dfd67e64a80e6c02e6cfad1413f8c6cf"
+    },
+    {
+      "key": "0x6cb6",
+      "kind": "text",
+      "value": "getmetatable"
+    },
+    {
+      "key": "0x6cbb",
+      "kind": "text",
+      "value": "xpcall"
+    },
+    {
+      "key": "0x6cc0",
+      "kind": "text",
+      "value": "Name"
+    },
+    {
+      "key": "0x6cc5",
+      "kind": "text",
+      "value": "new"
+    },
+    {
+      "key": "0x6cca",
+      "kind": "text",
+      "value": "script"
+    },
+    {
+      "key": "0x6ccf",
+      "kind": "text",
+      "value": "math"
+    },
+    {
+      "key": "0x6cd4",
+      "kind": "text",
+      "value": "floor"
+    },
+    {
+      "key": "0x6cd9",
+      "kind": "text",
+      "value": "function"
+    },
+    {
+      "key": "0x6cde",
+      "kind": "text",
+      "value": "http"
+    },
+    {
+      "key": "0x6ce3",
+      "kind": "text",
+      "value": "wait"
+    },
+    {
+      "key": "0x6ce8",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x6ced",
+      "kind": "text",
+      "value": "wait"
+    },
+    {
+      "key": "0x6cf2",
+      "kind": "text",
+      "value": "735427d28c73"
+    },
+    {
+      "key": "0x6cf7",
+      "kind": "text",
+      "value": "band"
+    },
+    {
+      "key": "0x6cfc",
+      "kind": "text",
+      "value": "getmetatable"
+    },
+    {
+      "key": "0x6d01",
+      "kind": "text",
+      "value": "concat"
+    },
+    {
+      "key": "0x6d06",
+      "kind": "text",
+      "value": "request"
+    },
+    {
+      "key": "0x6d0b",
+      "kind": "text",
+      "value": "LocalPlayer"
+    },
+    {
+      "key": "0x6d10",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6d15",
+      "kind": "text",
+      "value": "fluxus"
+    },
+    {
+      "key": "0x6d1a",
+      "kind": "text",
+      "value": "tick"
+    },
+    {
+      "key": "0x6d1f",
+      "kind": "text",
+      "value": "5588d596ea20"
+    },
+    {
+      "key": "0x6d24",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6d29",
+      "kind": "text",
+      "value": "floor"
+    },
+    {
+      "key": "0x6d33",
+      "kind": "text",
+      "value": "workspace"
+    },
+    {
+      "key": "0x6d38",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x6d3d",
+      "kind": "text",
+      "value": "%02x"
+    },
+    {
+      "key": "0x6d42",
+      "kind": "text",
+      "value": "typeof"
+    },
+    {
+      "key": "0x6d47",
+      "kind": "text",
+      "value": "info"
+    },
+    {
+      "key": "0x6d4c",
+      "kind": "text",
+      "value": "clonefunction"
+    },
+    {
+      "key": "0x6d51",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x6d56",
+      "kind": "text",
+      "value": "tonumber"
+    },
+    {
+      "key": "0x6d5b",
+      "kind": "text",
+      "value": "math"
+    },
+    {
+      "key": "0x6d60",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6d65",
+      "kind": "text",
+      "value": "xpcall"
+    },
+    {
+      "key": "0x6d6a",
+      "kind": "text",
+      "value": "debug"
+    },
+    {
+      "key": "0x6d6f",
+      "kind": "text",
+      "value": "tick"
+    },
+    {
+      "key": "0x6d74",
+      "kind": "text",
+      "value": "game"
+    },
+    {
+      "key": "0x6d79",
+      "kind": "text",
+      "value": "GET"
+    },
+    {
+      "key": "0x6d7e",
+      "kind": "text",
+      "value": "7983f6a950a8"
+    },
+    {
+      "key": "0x6d83",
+      "kind": "text",
+      "value": "debug_enabled"
+    },
+    {
+      "key": "0x6d88",
+      "kind": "text",
+      "value": "s"
+    },
+    {
+      "key": "0x6d8d",
+      "kind": "text",
+      "value": "format"
+    },
+    {
+      "key": "0x6d92",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x6d97",
+      "kind": "text",
+      "value": "table"
+    },
+    {
+      "key": "0x6d9c",
+      "kind": "text",
+      "value": "band"
+    },
+    {
+      "key": "0x6da1",
+      "kind": "text",
+      "value": "task"
+    },
+    {
+      "key": "0x6da6",
+      "kind": "text",
+      "value": "typeof"
+    },
+    {
+      "key": "0x6db0",
+      "kind": "text",
+      "value": "request"
+    },
+    {
+      "key": "0x6db5",
+      "kind": "text",
+      "value": "setthreadidentity"
+    },
+    {
+      "key": "0x6dba",
+      "kind": "text",
+      "value": "band"
+    },
+    {
+      "key": "0x6dbf",
+      "kind": "text",
+      "value": "net"
+    },
+    {
+      "key": "0x6eaa",
+      "kind": "text",
+      "value": "8d39def5c73d"
+    },
+    {
+      "key": "0x6eaf",
+      "kind": "text",
+      "value": "pcall"
+    },
+    {
+      "key": "0x6eb4",
+      "kind": "text",
+      "value": "??"
+    },
+    {
+      "key": "0x6eb9",
+      "kind": "text",
+      "value": "byte"
+    },
+    {
+      "key": "0x6ebe",
+      "kind": "text",
+      "value": "pcall"
+    },
+    {
+      "key": "0x6ec3",
+      "kind": "text",
+      "value": "991dc62d2801"
+    },
+    {
+      "key": "0x6ec8",
+      "kind": "text",
+      "value": "dbg"
+    },
+    {
+      "key": "0x6ecd",
+      "kind": "text",
+      "value": "pcall"
+    },
+    {
+      "key": "0x6ed2",
+      "kind": "text",
+      "value": "a"
+    },
+    {
+      "key": "0x6ed7",
+      "kind": "text",
+      "value": "IsClient"
+    },
+    {
+      "key": "0x6edc",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6ee1",
+      "kind": "text",
+      "value": "Folder"
+    },
+    {
+      "key": "0x6ee6",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6eeb",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6ef0",
+      "kind": "text",
+      "value": "rawset"
+    },
+    {
+      "key": "0x6ef5",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x6efa",
+      "kind": "text",
+      "value": "typeof"
+    },
+    {
+      "key": "0x6eff",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x6f04",
+      "kind": "text",
+      "value": "isfunctionhooked"
+    },
+    {
+      "key": "0x6f09",
+      "kind": "text",
+      "value": "find"
+    },
+    {
+      "key": "0x6f0e",
+      "kind": "text",
+      "value": "string"
+    },
+    {
+      "key": "0x6f13",
+      "kind": "text",
+      "value": "game"
+    },
+    {
+      "key": "0x6f18",
+      "kind": "text",
+      "value": "setidentity"
+    },
+    {
+      "key": "0x6f1d",
+      "kind": "text",
+      "value": "getthreadidentity"
+    },
+    {
+      "key": "0x6f2c",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6f31",
+      "kind": "text",
+      "value": "math"
+    },
+    {
+      "key": "0x6f36",
+      "kind": "text",
+      "value": "getmetatable"
+    },
+    {
+      "key": "0x6f3b",
+      "kind": "text",
+      "value": "debug"
+    },
+    {
+      "key": "0x6f40",
+      "kind": "text",
+      "value": "RunService"
+    },
+    {
+      "key": "0x6f45",
+      "kind": "text",
+      "value": "band"
+    },
+    {
+      "key": "0x6f4a",
+      "kind": "text",
+      "value": "getgenv"
+    },
+    {
+      "key": "0x6f4f",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x6f54",
+      "kind": "text",
+      "value": "script"
+    },
+    {
+      "key": "0x6f59",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6f5e",
+      "kind": "text",
+      "value": "svc"
+    },
+    {
+      "key": "0x6f63",
+      "kind": "text",
+      "value": "string"
+    },
+    {
+      "key": "0x6f68",
+      "kind": "text",
+      "value": "format"
+    },
+    {
+      "key": "0x6f6d",
+      "kind": "text",
+      "value": "534093d660ef"
+    },
+    {
+      "key": "0x6f72",
+      "kind": "text",
+      "value": "request"
+    },
+    {
+      "key": "0x6fa4",
+      "kind": "text",
+      "value": "workspace"
+    },
+    {
+      "key": "0x6fa9",
+      "kind": "text",
+      "value": "_G"
+    },
+    {
+      "key": "0x6fae",
+      "kind": "text",
+      "value": "Method"
+    },
+    {
+      "key": "0x6fb3",
+      "kind": "text",
+      "value": "floor"
+    },
+    {
+      "key": "0x6fb8",
+      "kind": "text",
+      "value": "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/request"
+    },
+    {
+      "key": "0x6fbd",
+      "kind": "text",
+      "value": "encryption_key"
+    },
+    {
+      "key": "0x6fc2",
+      "kind": "text",
+      "value": "band"
+    },
+    {
+      "key": "0x6fc7",
+      "kind": "text",
+      "value": "hook"
+    },
+    {
+      "key": "0x6fcc",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x6fd1",
+      "kind": "text",
+      "value": "wait"
+    },
+    {
+      "key": "0x6fd6",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x6fdb",
+      "kind": "text",
+      "value": "bxor"
+    },
+    {
+      "key": "0x6fe0",
+      "kind": "text",
+      "value": "id"
+    },
+    {
+      "key": "0x6fe5",
+      "kind": "text",
+      "value": "fs"
+    },
+    {
+      "key": "0x6fea",
+      "kind": "text",
+      "value": "pcall"
+    },
+    {
+      "key": "0x6fef",
+      "kind": "text",
+      "value": "Players"
+    },
+    {
+      "key": "0x6ff4",
+      "kind": "text",
+      "value": "FindFirstChild"
+    },
+    {
+      "key": "0x6ff9",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x6ffe",
+      "kind": "text",
+      "value": "number"
+    },
+    {
+      "key": "0x7003",
+      "kind": "text",
+      "value": "58bc53ab10d6"
+    },
+    {
+      "key": "0x7008",
+      "kind": "text",
+      "value": "bxor"
+    },
+    {
+      "key": "0x700d",
+      "kind": "text",
+      "value": "21d92cef3e"
+    },
+    {
+      "key": "0x7012",
+      "kind": "text",
+      "value": "setmetatable"
+    },
+    {
+      "key": "0x7017",
+      "kind": "text",
+      "value": "getcallingscript"
+    },
+    {
+      "key": "0x7021",
+      "kind": "text",
+      "value": "GetService"
+    },
+    {
+      "key": "0x7026",
+      "kind": "text",
+      "value": "HttpService"
+    },
+    {
+      "key": "0x702b",
+      "kind": "text",
+      "value": "request"
+    },
+    {
+      "key": "0x7030",
+      "kind": "text",
+      "value": "4baa0960768e"
+    },
+    {
+      "key": "0x7035",
+      "kind": "text",
+      "value": "pairs"
+    },
+    {
+      "key": "0x703a",
+      "kind": "text",
+      "value": "clonefunction"
+    },
+    {
+      "key": "0x703f",
+      "kind": "text",
+      "value": "269e796bc7ab"
+    },
+    {
+      "key": "0x7044",
+      "kind": "text",
+      "value": "syn"
+    },
+    {
+      "key": "0x7049",
+      "kind": "text",
+      "value": "table"
+    },
+    {
+      "key": "0x704e",
+      "kind": "text",
+      "value": "__ntt_probe__"
+    },
+    {
+      "key": "0x7053",
+      "kind": "text",
+      "value": "pcall"
+    },
+    {
+      "key": "0x7058",
+      "kind": "text",
+      "value": "krnl"
+    },
+    {
+      "key": "0x705d",
+      "kind": "text",
+      "value": "pcall"
+    },
+    {
+      "key": "0x7062",
+      "kind": "text",
+      "value": "http"
+    },
+    {
+      "key": "0x7067",
+      "kind": "text",
+      "value": "JSONEncode"
+    },
+    {
+      "key": "0x706c",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x711b",
+      "kind": "text",
+      "value": "Parent"
+    },
+    {
+      "key": "0x7120",
+      "kind": "text",
+      "value": "tonumber"
+    },
+    {
+      "key": "0x7125",
+      "kind": "text",
+      "value": "getcallingscript"
+    },
+    {
+      "key": "0x712a",
+      "kind": "text",
+      "value": "setmetatable"
+    },
+    {
+      "key": "0x712f",
+      "kind": "text",
+      "value": "tick"
+    },
+    {
+      "key": "0x7134",
+      "kind": "text",
+      "value": "hookfunction"
+    },
+    {
+      "key": "0x7139",
+      "kind": "text",
+      "value": "tick"
+    },
+    {
+      "key": "0x713e",
+      "kind": "text",
+      "value": "_G"
+    },
+    {
+      "key": "0x7143",
+      "kind": "text",
+      "value": "rawget"
+    },
+    {
+      "key": "0x7148",
+      "kind": "text",
+      "value": "http"
+    },
+    {
+      "key": "0x714d",
+      "kind": "text",
+      "value": "Name"
+    },
+    {
+      "key": "0x7152",
+      "kind": "text",
+      "value": "string"
+    },
+    {
+      "key": "0x7157",
+      "kind": "text",
+      "value": "debug"
+    },
+    {
+      "key": "0x715c",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x7161",
+      "kind": "text",
+      "value": "http_request"
+    },
+    {
+      "key": "0x7166",
+      "kind": "text",
+      "value": "task"
+    },
+    {
+      "key": "0x716b",
+      "kind": "text",
+      "value": "fluxus"
+    },
+    {
+      "key": "0x7170",
+      "kind": "text",
+      "value": "%x:%s:%x"
+    },
+    {
+      "key": "0x7175",
+      "kind": "text",
+      "value": "admin_mode"
+    },
+    {
+      "key": "0x717a",
+      "kind": "text",
+      "value": "krnl"
+    },
+    {
+      "key": "0x717f",
+      "kind": "text",
+      "value": "__newindex"
+    },
+    {
+      "key": "0x7184",
+      "kind": "text",
+      "value": "gc"
+    },
+    {
+      "key": "0x7189",
+      "kind": "text",
+      "value": "efa2c695d5"
+    },
+    {
+      "key": "0x718e",
+      "kind": "text",
+      "value": "print"
+    },
+    {
+      "key": "0x7198",
+      "kind": "text",
+      "value": "game"
+    },
+    {
+      "key": "0x719d",
+      "kind": "text",
+      "value": "__NTT-HUB_folder_check"
+    },
+    {
+      "key": "0x71a2",
+      "kind": "text",
+      "value": "_renamed"
+    },
+    {
+      "key": "0x71a7",
+      "kind": "text",
+      "value": "function"
+    },
+    {
+      "key": "0x71ac",
+      "kind": "text",
+      "value": "fake_key_12345"
+    },
+    {
+      "key": "0x71b1",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x71b6",
+      "kind": "text",
+      "value": "info"
+    },
+    {
+      "key": "0x71bb",
+      "kind": "text",
+      "value": "workspace"
+    },
+    {
+      "key": "0x71c0",
+      "kind": "text",
+      "value": "hookfunction"
+    },
+    {
+      "key": "0x71c5",
+      "kind": "text",
+      "value": "StatusCode"
+    },
+    {
+      "key": "0x71ca",
+      "kind": "text",
+      "value": "Url"
+    },
+    {
+      "key": "0x71cf",
+      "kind": "text",
+      "value": "1a7a15fb1beb"
+    },
+    {
+      "key": "0x71d4",
+      "kind": "text",
+      "value": "__index"
+    },
+    {
+      "key": "0x71d9",
+      "kind": "text",
+      "value": "error"
+    },
+    {
+      "key": "0x71de",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x71e3",
+      "kind": "text",
+      "value": "cfb197d03f4d"
+    },
+    {
+      "key": "0x71e8",
+      "kind": "text",
+      "value": "print"
+    },
+    {
+      "key": "0x71ed",
+      "kind": "text",
+      "value": "rawget"
+    },
+    {
+      "key": "0x71f2",
+      "kind": "text",
+      "value": "tick"
+    },
+    {
+      "key": "0x71f7",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x71fc",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x7201",
+      "kind": "text",
+      "value": "string"
+    },
+    {
+      "key": "0x7206",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x720b",
+      "kind": "text",
+      "value": "syn"
+    },
+    {
+      "key": "0x7215",
+      "kind": "text",
+      "value": "getidentity"
+    },
+    {
+      "key": "0x721a",
+      "kind": "text",
+      "value": "request"
+    },
+    {
+      "key": "0x721f",
+      "kind": "text",
+      "value": "env2"
+    },
+    {
+      "key": "0x7224",
+      "kind": "text",
+      "value": "bxor"
+    },
+    {
+      "key": "0x7229",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x722e",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x7233",
+      "kind": "text",
+      "value": "setmetatable"
+    },
+    {
+      "key": "0x7238",
+      "kind": "text",
+      "value": "bit32"
+    },
+    {
+      "key": "0x723d",
+      "kind": "text",
+      "value": "task"
+    },
+    {
+      "key": "0x7242",
+      "kind": "text",
+      "value": "rawset"
+    },
+    {
+      "key": "0x7247",
+      "kind": "text",
+      "value": "setmetatable"
+    },
+    {
+      "key": "0x724c",
+      "kind": "text",
+      "value": "b885800c5b19"
+    },
+    {
+      "key": "0x7251",
+      "kind": "text",
+      "value": "Instance"
+    },
+    {
+      "key": "0x7256",
+      "kind": "text",
+      "value": "tostring"
+    },
+    {
+      "key": "0x725b",
+      "kind": "text",
+      "value": "type"
+    },
+    {
+      "key": "0x7260",
+      "kind": "text",
+      "value": "Destroy"
+    },
+    {
+      "key": "0x7265",
+      "kind": "text",
+      "value": "env"
+    },
+    {
+      "key": "0x726a",
+      "kind": "text",
+      "value": "task"
+    }
+  ]
+}
