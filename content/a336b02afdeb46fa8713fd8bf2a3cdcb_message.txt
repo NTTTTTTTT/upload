@@ -1,0 +1,223 @@
+-- NTT HUB: phần mã khôi phục được từ VM, viết lại để đọc bằng mắt.
+-- Các giá trị và helper dưới đây được xác nhận từ bytecode, không phải suy đoán.
+-- Đây chưa phải bản thay thế chạy đầy đủ: những callback xác thực/tải script
+-- không có prototype hợp lệ trong dữ liệu đã giải mã.
+
+local SCRIPT_URL = "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/link"
+local CACHE_FILE = "Cache.txt"
+local CACHE_TIME_FILE = "Cache_Time.txt"
+local CACHE_TTL_SECONDS = 600
+
+local AUTH_DOMAINS = {
+    "api-account",
+    "api-account-s1",
+    "api-account-s2",
+    "api-account-s3",
+}
+
+-- Khôi phục từ prototype root/const107 và root/const107/const2.
+local function decodeHex(hex)
+    return hex:gsub("..", function(pair)
+        return string.char(tonumber(pair, 16))
+    end)
+end
+
+-- Luồng ở root: chọn một AUTH_DOMAINS bằng math.random, gọi gethwid(),
+-- gọi check_auth(), rồi tạo GUI hoặc thực hiện nhánh tải script.
+-- Luồng tải/cache có gọi os.time(), isfile(), readfile(), writefile(),
+-- pcall(), loadstring() và dùng ba hằng số SCRIPT_URL/CACHE_*/TTL bên trên.
+-- Điều kiện kiểm tra nội dung, URL API đầy đủ và các callback nút chưa thể
+-- viết đúng từ file này. Không tự chế logic ở các vị trí đó.
+
+local function buildKeyGui()
+
+    local UIGUI = Instance.new("ScreenGui")
+    UIGUI.Name = "UIGUI"
+    UIGUI.Parent = game:WaitForChild("CoreGui")
+    UIGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    local main = Instance.new("Frame")
+    main.Name = "main"
+    main.Parent = UIGUI
+    main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    main.Position = UDim2.new(0.25, 0, 0.25, 0)
+    main.Size = UDim2.new(0, 500, 0, 200)
+    main.BackgroundTransparency = 0.7
+
+    local UImain = Instance.new("UICorner")
+    UImain.Parent = main
+
+    local bar = Instance.new("TextLabel")
+    bar.Parent = main
+    bar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+    bar.Size = UDim2.new(0, 498, 0, 30)
+    bar.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    bar.Font = Enum.Font.Ubuntu
+    bar.Text = "   NTT HUB | Premium"
+    bar.TextColor3 = Color3.fromRGB(255, 255, 255)
+    bar.TextSize = 14
+    bar.TextWrapped = true
+    bar.TextXAlignment = Enum.TextXAlignment.Left
+
+    local UIbar = Instance.new("UICorner")
+    UIbar.Parent = bar
+
+    local exit = Instance.new("TextButton")
+    exit.Name = "exit"
+    exit.Parent = bar
+    exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    exit.Position = UDim2.new(0.94, 0, 0, 0)
+    exit.Size = UDim2.new(0, 30, 0, 30)
+    exit.Font = Enum.Font.Ubuntu
+    exit.Text = "X"
+    exit.TextColor3 = Color3.fromRGB(250, 255, 250)
+    exit.BackgroundTransparency = 1
+    exit.TextSize = 20
+    exit.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+    local bar_1 = Instance.new("TextLabel")
+    bar_1.Name = "bar_1"
+    bar_1.Parent = main
+    bar_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    bar_1.Position = UDim2.new(0, 0, 0.18, 0)
+    bar_1.Size = UDim2.new(0, 120, 0, 160)
+    bar_1.Font = Enum.Font.Ubuntu
+    bar_1.Text = "Script NTT HUB Suport 32 bit / Pe"
+    bar_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    bar_1.TextSize = 14
+    bar_1.TextWrapped = true
+    bar_1.TextYAlignment = Enum.TextYAlignment.Top
+
+    local UIbar1 = Instance.new("UICorner")
+    UIbar1.Parent = bar_1
+
+    local bar_2 = Instance.new("Frame")
+    bar_2.Name = "bar_2"
+    bar_2.Parent = main
+    bar_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    bar_2.Position = UDim2.new(0.25, 0, 0.18, 0)
+    bar_2.Size = UDim2.new(0, 248, 0, 160)
+
+    local UIbar2 = Instance.new("UICorner")
+    UIbar2.Parent = bar_2
+
+    local bar_3 = Instance.new("Frame")
+    bar_3.Name = "bar_3"
+    bar_3.Parent = main
+    bar_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    bar_3.Position = UDim2.new(0.755, 0, 0.18, 0)
+    bar_3.Size = UDim2.new(0, 120, 0, 160)
+
+    local UIbar3 = Instance.new("UICorner")
+    UIbar3.Parent = bar_3
+
+    local tt_name = Instance.new("TextLabel")
+    tt_name.Name = "tt_name"
+    tt_name.Parent = bar_1
+    tt_name.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    tt_name.Size = UDim2.new(0, 120, 0, 30)
+    tt_name.Position = UDim2.new(0, 0, 0.15, 0)
+    tt_name.BackgroundTransparency = 1
+    tt_name.Font = Enum.Font.Ubuntu
+    tt_name.Text = "Notice"
+    tt_name.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tt_name.TextSize = 14
+    tt_name.TextWrapped = true
+
+    local tt_1 = Instance.new("TextLabel")
+    tt_1.Name = "tt_1"
+    tt_1.Parent = bar_1
+    tt_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    tt_1.Size = UDim2.new(0, 120, 0, 30)
+    tt_1.Position = UDim2.new(0, 0, 0.27, 0)
+    tt_1.BackgroundTransparency = 1
+    tt_1.Font = Enum.Font.Ubuntu
+    tt_1.Text = "Thank you for use"
+    tt_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tt_1.TextSize = 14
+    tt_1.TextWrapped = true
+
+    local t_1 = Instance.new("TextLabel")
+    t_1.Name = "t_1"
+    t_1.Parent = bar_3
+    t_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    t_1.Size = UDim2.new(0, 120, 0, 30)
+    t_1.BackgroundTransparency = 1
+    t_1.Font = Enum.Font.Ubuntu
+    t_1.Text = "Credit"
+    t_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    t_1.TextSize = 14
+    t_1.TextWrapped = true
+
+    local t_2 = Instance.new("TextLabel")
+    t_2.Name = "t_2"
+    t_2.Parent = bar_3
+    t_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    t_2.Position = UDim2.new(0, 0, 0.15, 0)
+    t_2.Size = UDim2.new(0, 120, 0, 30)
+    t_2.BackgroundTransparency = 1
+    t_2.Font = Enum.Font.Ubuntu
+    t_2.Text = "   #ねこ かわいい\n@nekokawaii4500"
+    t_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+    t_2.TextSize = 14
+    t_2.TextWrapped = true
+    t_2.TextXAlignment = Enum.TextXAlignment.Left
+
+    local key_t = Instance.new("TextLabel")
+    key_t.Name = "key_t"
+    key_t.Parent = bar_2
+    key_t.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    key_t.Position = UDim2.new(0.2, 0, 0.13, 0)
+    key_t.Size = UDim2.new(0, 150, 0, 30)
+    key_t.Font = Enum.Font.Ubuntu
+    key_t.Text = "NTT HUB"
+    key_t.TextColor3 = Color3.fromRGB(255, 255, 255)
+    key_t.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    key_t.TextSize = 14
+
+    local key_tb = Instance.new("TextBox")
+    key_tb.Name = "key_tb"
+    key_tb.Parent = bar_2
+    key_tb.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+    key_tb.Position = UDim2.new(0.2, 0, 0.36, 0)
+    key_tb.Size = UDim2.new(0, 150, 0, 25)
+    key_tb.Font = Enum.Font.Ubuntu
+    key_tb.Text = "Enter The Key"
+    key_tb.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    key_tb.TextSize = 14
+
+    local key_b = Instance.new("TextButton")
+    key_b.Name = "key_b"
+    key_b.Parent = bar_2
+    key_b.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    key_b.Position = UDim2.new(0.2, 0, 0.55, 0)
+    key_b.Size = UDim2.new(0, 150, 0, 27)
+    key_b.Font = Enum.Font.Ubuntu
+    key_b.Text = "Check HWID"
+    key_b.TextColor3 = Color3.fromRGB(255, 255, 255)
+    key_b.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    key_b.TextSize = 14
+
+    local key_g = Instance.new("TextButton")
+    key_g.Name = "key_g"
+    key_g.Parent = bar_2
+    key_g.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    key_g.Position = UDim2.new(0.32, 0, 0.8, 0)
+    key_g.Size = UDim2.new(0, 100, 0, 15)
+    key_g.Font = Enum.Font.Ubuntu
+    key_g.Text = "Get HWID"
+    key_g.TextColor3 = Color3.fromRGB(255, 255, 255)
+    key_g.BorderColor3 = Color3.fromRGB(250, 250, 250)
+    key_g.TextSize = 14
+
+    -- Prototype root/const106: the close button hides the main frame.
+    exit.MouseButton1Down:Connect(function()
+        main.Visible = false
+    end)
+
+    -- VM nối key_b với root/const144, key_g với root/const96.
+    -- Hai prototype này không giải mã hợp lệ; không thể phục hồi callback.
+    return UIGUI
+end
+
+return buildKeyGui
