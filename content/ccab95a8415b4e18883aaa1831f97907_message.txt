@@ -1,0 +1,189 @@
+-- cm.txt / NTT Obf v8.34: phần logic đã khôi phục qua chạy sandbox.
+-- Decoder tài khoản dưới đây là mã thật đã đối chiếu bằng phản hồi tự tạo.
+-- Các tác vụ game còn lại được ghi thành trạng thái và sự kiện quan sát được;
+-- đây chưa phải bản script Roblox tương đương hoàn toàn.
+
+local M = {}
+
+local RUN_REQUEST_URL =
+    "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/run-request"
+
+local ACCOUNT_HOSTS = {
+    "https://api-account.nekokawaii.workers.dev",
+    "https://api-account-s1.nekokawaii.workers.dev",
+    "https://api-account-s2.nekokawaii.workers.dev",
+    "https://api-account-s3.nekokawaii.workers.dev",
+}
+M.accountHosts = ACCOUNT_HOSTS
+
+-- Hàm eRaLdY trong mã gốc: băm từng byte theo cơ số 131, modulo 2^32.
+local function hash131(value)
+    local result = 0
+    for index = 1, #value do
+        result = (result * 131 + string.byte(value, index)) % 4294967296
+    end
+    return result
+end
+M.hash131 = hash131
+
+-- LNrdO: tách những trường không rỗng của chuỗi theo dấu '|'.
+local function splitAccountFields(response)
+    local fields = {}
+    for field in string.gmatch(response, "[^|]+") do
+        table.insert(fields, field)
+    end
+    return fields
+end
+
+-- fe3rX: mỗi cặp ký tự hex tạo ra một byte; ký tự lẻ cuối được giữ nguyên.
+local function hexToBytes(hex)
+    return (hex:gsub("..", function(pair)
+        return string.char(tonumber(pair, 16))
+    end))
+end
+
+-- Dd7lTqC: giải nội dung trả về từ /api/data?name=...
+-- Trả nil nếu sai cấu trúc; trả "time out" nếu sai checksum hoặc hết hạn.
+-- Chuỗi "time out" vẫn là truthy trong Lua, nên guard phía sau vẫn đi tiếp.
+function M.decodeAccountResponse(response, now)
+    if type(response) ~= "string" then return nil end
+    local fields = splitAccountFields(response)
+    if #fields ~= 3 then return nil end
+
+    local checksum, timestampText, hexPayload = fields[1], fields[2], fields[3]
+    local timestamp = tonumber(timestampText)
+    if not timestamp or not hexPayload then return nil end
+
+    local expected = tostring(math.floor(hash131(tostring(timestamp) .. "salt")))
+    if checksum ~= expected then return "time out" end
+    if math.abs((now or os.time()) - timestamp) > 20 then
+        return "time out"
+    end
+
+    local encoded = hexToBytes(hexPayload)
+    local seed = hash131("string.char:" .. tostring(timestamp))
+    local bytes = {}
+    for index = 1, #encoded do
+        local mask = (seed + index * 7) % 256
+        local shifted = (string.byte(encoded, index) - mask) % 256
+        bytes[index] = string.char(bit32.bxor(shifted, mask))
+    end
+    return table.concat(bytes)
+end
+
+-- Sau khi _G.skhd truthy, các phép chạy với game/Instance giả ghi được:
+--  * thiết lập các biến chung, cài hàm tiện ích và khởi tạo Setting;
+--  * tạo một ScreenGui với hai TextButton và đăng ký InputBegan;
+--  * đăng ký 26 callback, phần lớn được task.spawn đợi bằng task.wait;
+--  * đăng ký RunService.Stepped và TeleportInitFailed.
+-- Các hàm tiện ích và vòng farm thực tế vẫn nằm trong phụ lục VM.
+local function setupAfterAuthentication(globals, playerName, now)
+    if globals.fixhop == nil then globals.fixhop = true end
+    if globals.my_webhook == nil then
+        globals.my_webhook = "https://discord.com/api/webhooks/[REDACTED]"
+    end
+    globals.ghost_ship = false
+    globals.LvWv9Zd = now or os.time()
+
+    globals.Setting = {
+        server = {},
+        hop = { 0 },
+        [playerName] = { blacklist1 = {}, blacklist2 = {} },
+    }
+    globals.hop = true
+    globals.ntt_time = 0
+    globals.cgs = 0
+    globals.cskhd = 0
+
+    return {
+        startedAt = globals.LvWv9Zd,
+        setting = globals.Setting,
+        gui = {
+            class = "ScreenGui",
+            name = "BlackButtonGui",
+            parent = "game.CoreGui",
+            buttons = { "Farm : Run", "..." },
+        },
+        registeredEvents = {
+            "TextButton.MouseButton1Click",
+            "UserInputService.InputBegan",
+            "RunService.Stepped", "RunService.Stepped",
+            "TeleportService.TeleportInitFailed",
+        },
+        observedCallbacks = {
+            -- Một nhịp Stepped truy vấn Chest1 hai lần rồi gán _G.d=true.
+            "Workspace:FindFirstChild('Chest1') -> _G.d=true",
+            -- Callback teleport so sánh các kiểu lỗi GameFull,
+            -- GameNotFound, Flooded. Không có sự kiện lỗi thật trong phép thử.
+            "TeleportInitFailed: GameFull/GameNotFound/Flooded",
+        },
+    }
+end
+
+-- Callback của nút đầu tiên: hai lần nhấn liên tiếp đảo giá trị _G.hop.
+function M.toggleFarmButton(globals, gui)
+    if globals.hop then
+        gui.buttons[1] = "Farm : Stop"
+        globals.hop = false
+    else
+        gui.buttons[1] = "Farm : Run"
+        globals.hop = true
+    end
+end
+
+-- Đường chạy chính. game, HTTP, đồng hồ và tên nhân vật trong phép thử
+-- đều được cung cấp bởi sandbox. Host API được chọn ngẫu nhiên trong mẫu.
+function M.runObservedPath(game, globals, options)
+    globals = globals or {}
+    options = options or {}
+
+    -- Đây là điều kiện dừng quan sát được khi đã có skhd/extend từ trước.
+    -- Biểu thức guard gốc còn qua bảng toán tử VM.
+    if globals.skhd == true or globals.extend == true then return nil end
+
+    globals.ZEE = game:HttpGet(RUN_REQUEST_URL)
+    local players = game:GetService("Players")
+    local characterName = players.LocalPlayer.Character.Name
+    local playerName = game.Players.LocalPlayer.Name
+    if characterName ~= playerName then return nil end
+
+    local accountName = playerName
+    if globals.jjj == true then
+        if type(globals.gethwid) ~= "function" then return nil end
+        accountName = globals.gethwid()
+    end
+
+    local host = options.accountHost or ACCOUNT_HOSTS[1]
+    local response = game:HttpGet(host .. "/api/data?name=" .. tostring(accountName))
+    globals.content = response
+    if type(response) ~= "string" or not response:find("|", 1, true) then
+        return nil
+    end
+
+    globals.skhd = M.decodeAccountResponse(response, options.now)
+    if not globals.skhd then return nil end
+    return setupAfterAuthentication(globals, playerName, options.now)
+end
+
+-- Chuỗi được giải khỏi pool nhưng nhánh tương ứng chưa được kích hoạt.
+M.otherDecodedNames = {
+    gameplay = {
+        "Farm : Stop", "Seaking", "Sea King's Blood", "PhoenixFruit",
+        "ChestSpawner", "EquipTool", "FireServer", "InvokeServer",
+    },
+    services = {
+        "HttpService", "VirtualInputManager", "RbxAnalyticsService",
+    },
+    operations = {
+        "TeleportToPlaceInstance", "Kick", "SendKeyEvent", "GetClientId",
+        "JSONEncode", "JSONDecode", "http_request", "writefile",
+    },
+    otherURLs = {
+        "https://api-sever.nekokawaii.workers.dev/api/server?name=",
+        "https://api.nttsv.online/api/datasever-v1?name=skhdgs&id=24",
+        "https://raw.githubusercontent.com/NTT-HUB/Script/refs/heads/main/Kls1",
+        "https://discord.com/api/webhooks/[REDACTED]",
+    },
+}
+
+return M
